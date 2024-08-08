@@ -1,19 +1,23 @@
 .code-block-container {
     display: flex;
     align-items: flex-start;
-    position: relative;
     margin-bottom: 15px;
 }
 
 .copy-btn {
-    margin-left: 10px;
-    padding: 5px 10px;
+    margin-left: 5px;
+    padding: 5px 5px;
     cursor: pointer;
     background: #007bff;
     color: white;
     border: none;
     border-radius: 3px;
-    font-size: 12px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
 }
 
 .copy-btn:hover {

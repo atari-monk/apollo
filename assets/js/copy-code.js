@@ -5,11 +5,11 @@ function addCopyButtonsToCodeBlocks() {
         if (!block.parentElement.querySelector(".copy-btn")) {
             const button = document.createElement("button");
             button.className = "copy-btn";
-            button.textContent = "Copy";
+            button.textContent = "📋";
             button.addEventListener("click", () => {
                 navigator.clipboard.writeText(block.textContent).then(() => {
-                    button.textContent = "Copied!";
-                    setTimeout(() => (button.textContent = "Copy"), 2000);
+                    button.textContent = "✔️";
+                    setTimeout(() => (button.textContent = "📋"), 2000);
                 });
             });
 
