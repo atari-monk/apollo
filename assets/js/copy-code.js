@@ -1,6 +1,7 @@
 // Function to add copy buttons to code blocks
 function addCopyButtonsToCodeBlocks() {
-    const codeBlocks = document.querySelectorAll("pre code");
+    // Select only `bash` code blocks or other specific blocks
+    const codeBlocks = document.querySelectorAll("pre code.language-bash");
 
     codeBlocks.forEach((block) => {
         // Only add button if it doesn't already exist
@@ -27,5 +28,4 @@ function addCopyButtonsToCodeBlocks() {
 addCopyButtonsToCodeBlocks();
 
 // Example of handling dynamically added code blocks
-// You can call `addCopyButtonsToCodeBlocks` after dynamic content is added
-// Example: after an AJAX request or any event that modifies the DOM
+// Call `addCopyButtonsToCodeBlocks` after dynamic content is added, if needed
