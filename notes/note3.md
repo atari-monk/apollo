@@ -121,6 +121,8 @@ This structure will make your GitHub Pages site clean, easy to navigate, and mai
 
 ---
 
+### Additions
+
 #### 1. **Create a `_config.yml` File**
 
 -   You can create a `_config.yml` file in the root of your repository to override the default settings.
@@ -128,6 +130,23 @@ This structure will make your GitHub Pages site clean, easy to navigate, and mai
 
 ```yaml
 # _config.yml
+
+# Site settings
+title: Apollo Notes
+description: Notes repository
+```
+
+#### 2. **Selecting a Theme**
+
+[Adding a Theme](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#adding-a-theme)
+
+[Supported themes](https://pages.github.com/themes/)
+
+```yaml
+# _config.yml
+plugins:
+    - jekyll-remote-theme # add this line to the plugins list if you already have one
+remote_theme: pages-themes/midnight@v0.2.0
 
 # Site settings
 title: Apollo Notes
