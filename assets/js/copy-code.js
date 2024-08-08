@@ -1,8 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Function to observe mutations
-    function observeCodeBlocks() {
-        const codeBlocks = document.querySelectorAll("pre code");
-        codeBlocks.forEach((block) => {
+// Function to add copy buttons to code blocks
+function addCopyButtonsToCodeBlocks() {
+    const codeBlocks = document.querySelectorAll("pre code");
+
+    codeBlocks.forEach((block) => {
+        // Only add button if it doesn't already exist
+        if (!block.classList.contains("copy-btn-attached")) {
             const button = document.createElement("button");
             button.className = "copy-btn";
             button.textContent = "Copy";
@@ -12,23 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
                     setTimeout(() => (button.textContent = "Copy"), 2000);
                 });
             });
+
+            // Mark this block as processed
+            block.classList.add("copy-btn-attached");
             block.parentElement.style.position = "relative";
             block.parentElement.appendChild(button);
-        });
-    }
-
-    // Create a MutationObserver to watch for changes in the DOM
-    const observer = new MutationObserver((mutationsList) => {
-        for (const mutation of mutationsList) {
-            if (mutation.type === "childList") {
-                observeCodeBlocks(); // Re-run your function when DOM changes
-            }
         }
     });
+}
 
-    // Start observing the document body for changes
-    observer.observe(document.body, { childList: true, subtree: true });
+// Call the function to handle existing code blocks
+addCopyButtonsToCodeBlocks();
 
-    // Initial call to handle existing code blocks
-    observeCodeBlocks();
-});
+// Example of handling dynamically added code blocks
+// You can call `addCopyButtonsToCodeBlocks` after dynamic content is added
+// Example: after an AJAX request or any event that modifies the DOM
