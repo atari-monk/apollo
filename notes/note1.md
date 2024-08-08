@@ -1,5 +1,7 @@
 # Note 1
 
+[Back to Index](../index.md)
+
 This is the content of Note 1.
 
 ## Subheading
