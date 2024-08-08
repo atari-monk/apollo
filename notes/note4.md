@@ -1,43 +1,47 @@
-# Generating Api
+# Generating API
 
-Task: Generating api.  
+Task: Generating API.  
 Stack: NX, NestJS.
 
 ## Installation
 
 ### NX
 
-    ```bash
-    npm install -g nx
-    ```
+```bash
+npm install -g nx
+```
 
-    or if you're using Yarn:
+or if you're using Yarn:
 
-    ```bash
-    yarn global add nx
-    ```
+```bash
+yarn global add nx
+```
 
-    ```bash
-    nx --version
-    ```
+Check NX version:
 
-    or
+```bash
+nx --version
+```
 
-    ```bash
-    nx -v
-    ```
+or
+
+```bash
+nx -v
+```
 
 ---
 
 ## Create Workspace (project)
 
--   notes-nx is example name
+-   `notes-nx` is an example name.
 
 ```bash
 npx create-nx-workspace@latest notes-nx
 ```
 
--   Add NestJS plugin
+---
+
+## Add NestJS plugin
 
 ```bash
 npm install --save-dev @nrwl/nest
@@ -51,7 +55,7 @@ yarn add --dev @nrwl/nest
 
 ---
 
-## Generate nestjs app
+## Generate NestJS app
 
 ```bash
 npx nx g @nrwl/nest:application packages/notes-api
