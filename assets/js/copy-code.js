@@ -24,14 +24,19 @@ function addCopyButtonsToCodeBlocks() {
 
 addCopyButtonsToCodeBlocks();
 
-function addHideClassToElement(className) {
-    const element = document.querySelector(`.${className}`);
-
+function hideElement(selector, isId = false) {
+    const prefix = isId ? "#" : ".";
+    const element = document.querySelector(`${prefix}${selector}`);
     if (element) {
-        element.classList.add("hide-element");
+        if (!element.classList.contains("hide-element")) {
+            element.classList.add("hide-element");
+        }
     } else {
-        console.warn(`Element with class "${className}" not found.`);
+        console.warn(
+            `Element with ${isId ? "id" : "class"} "${selector}" not found.`
+        );
     }
 }
 
-addHideClassToElement("fork");
+hideElement("fork");
+hideElement("header", true);
