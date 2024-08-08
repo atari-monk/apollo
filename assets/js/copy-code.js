@@ -23,3 +23,15 @@ function addCopyButtonsToCodeBlocks() {
 }
 
 addCopyButtonsToCodeBlocks();
+
+function addHideClassToElement(className) {
+    const element = document.querySelector(`.${className}`);
+
+    if (element) {
+        element.classList.add("hide-element");
+    } else {
+        console.warn(`Element with class "${className}" not found.`);
+    }
+}
+
+addHideClassToElement("fork");
