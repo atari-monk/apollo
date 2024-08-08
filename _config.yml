@@ -1,0 +1,8 @@
+# _config.yml
+
+# Site settings
+title: Apollo Notes
+description: Notes repository
+
+# Disable the 'Edit this page' link
+github_edit_link: false
