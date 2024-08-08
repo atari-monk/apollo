@@ -2,7 +2,6 @@ function addCopyButtonsToCodeBlocks() {
     const codeBlocks = document.querySelectorAll("pre code");
 
     codeBlocks.forEach((block) => {
-        // Ensure button is only added once
         if (!block.parentElement.querySelector(".copy-btn")) {
             const button = document.createElement("button");
             button.className = "copy-btn";
@@ -14,7 +13,6 @@ function addCopyButtonsToCodeBlocks() {
                 });
             });
 
-            // Add button next to the code block
             const container = document.createElement("div");
             container.className = "code-block-container";
             block.parentElement.insertAdjacentElement("beforebegin", container);
