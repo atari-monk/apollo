@@ -142,13 +142,14 @@ description: Notes repository
 
 [Supported themes](https://pages.github.com/themes/)
 
+-   This one worked
+
 ```yaml
-# _config.yml
 plugins:
-    - jekyll-remote-theme # add this line to the plugins list if you already have one
+    - jekyll-remote-theme
+
 remote_theme: pages-themes/midnight@v0.2.0
 
-# Site settings
 title: Apollo Notes
 description: Notes repository
 ```

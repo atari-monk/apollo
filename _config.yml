@@ -1,8 +1,7 @@
-# _config.yml
-theme: minima
-minima:
-    skin: dark
+plugins:
+    - jekyll-remote-theme
 
-# Site settings
+remote_theme: pages-themes/midnight@v0.2.0
+
 title: Apollo Notes
 description: Notes repository
