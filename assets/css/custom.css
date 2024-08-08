@@ -27,3 +27,7 @@
 body .hide-element {
     display: none !important;
 }
+
+.wrapper > section:first-of-type {
+    margin: 0;
+}
