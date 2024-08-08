@@ -1,10 +1,7 @@
-// Function to add copy buttons to code blocks
 function addCopyButtonsToCodeBlocks() {
-    // Select only `bash` code blocks or other specific blocks
-    const codeBlocks = document.querySelectorAll("pre code.language-bash");
+    const codeBlocks = document.querySelectorAll("pre code");
 
     codeBlocks.forEach((block) => {
-        // Only add button if it doesn't already exist
         if (!block.classList.contains("copy-btn-attached")) {
             const button = document.createElement("button");
             button.className = "copy-btn";
@@ -16,7 +13,6 @@ function addCopyButtonsToCodeBlocks() {
                 });
             });
 
-            // Mark this block as processed
             block.classList.add("copy-btn-attached");
             block.parentElement.style.position = "relative";
             block.parentElement.appendChild(button);
@@ -24,8 +20,4 @@ function addCopyButtonsToCodeBlocks() {
     });
 }
 
-// Call the function to handle existing code blocks
 addCopyButtonsToCodeBlocks();
-
-// Example of handling dynamically added code blocks
-// Call `addCopyButtonsToCodeBlocks` after dynamic content is added, if needed
