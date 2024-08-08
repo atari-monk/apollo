@@ -25,5 +25,5 @@
 }
 
 body .hide-element {
-    display: none;
+    display: none !important;
 }
