@@ -2,7 +2,8 @@ function addCopyButtonsToCodeBlocks() {
     const codeBlocks = document.querySelectorAll("pre code");
 
     codeBlocks.forEach((block) => {
-        if (!block.classList.contains("copy-btn-attached")) {
+        // Ensure button is only added once
+        if (!block.parentElement.querySelector(".copy-btn")) {
             const button = document.createElement("button");
             button.className = "copy-btn";
             button.textContent = "Copy";
@@ -13,9 +14,12 @@ function addCopyButtonsToCodeBlocks() {
                 });
             });
 
-            block.classList.add("copy-btn-attached");
-            block.parentElement.style.position = "relative";
-            block.parentElement.appendChild(button);
+            // Add button next to the code block
+            const container = document.createElement("div");
+            container.className = "code-block-container";
+            block.parentElement.insertAdjacentElement("beforebegin", container);
+            container.appendChild(block.parentElement);
+            container.appendChild(button);
         }
     });
 }
