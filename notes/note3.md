@@ -183,4 +183,145 @@ Without a `_config.yml`, you're relying on default settings provided by GitHub P
 
 ---
 
+Yes, you can enable a dark mode for your GitHub Pages site by adding custom CSS or using a Jekyll theme that supports dark mode. Here are a few ways you can implement dark mode:
+
+### 1. **Using a Jekyll Theme with Dark Mode Support**
+
+Some Jekyll themes come with built-in support for dark mode. You can enable dark mode by configuring the theme or using a toggle switch.
+
+#### Example with Minimal Mistakes Theme:
+
+The `minimal-mistakes` theme is a popular Jekyll theme with dark mode support.
+
+**Steps:**
+
+1. **Add `_config.yml`**: If you don’t have one, create a `_config.yml` file in the root of your repository.
+
+2. **Set Up the Theme**:
+
+    ```yaml
+    remote_theme: mmistakes/minimal-mistakes
+    plugins:
+        - jekyll-remote-theme
+
+    # Theme settings
+    theme: minimal-mistakes
+    minimal_mistakes_skin: dark
+    ```
+
+3. **Customizing**:
+    - If you want to allow users to toggle between light and dark mode, you can add more customization. This might involve adding a JavaScript-based toggle switch.
+
+### 2. **Custom CSS for Dark Mode**
+
+You can add custom CSS to your site to implement dark mode, either as the default or with a toggle option.
+
+#### Example:
+
+1. **Create a CSS file (e.g., `assets/css/style.css`)**:
+
+    ```css
+    /* Dark Mode Styles */
+    body {
+        background-color: #121212;
+        color: #ffffff;
+    }
+    a {
+        color: #bb86fc;
+    }
+    /* Add more styles as needed */
+    ```
+
+2. **Link the CSS file in your HTML or Markdown files**:
+
+    - In your `index.md` or `default.html`, add a link to the CSS file:
+
+    ```html
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    ```
+
+3. **Optional: Implement Dark Mode Toggle with JavaScript**:
+
+    - You can add a toggle switch using JavaScript to allow users to switch between light and dark mode.
+
+    ```javascript
+    // Dark mode toggle
+    const toggleSwitch = document.querySelector(
+        '.theme-switch input[type="checkbox"]'
+    );
+    const currentTheme = localStorage.getItem("theme");
+
+    if (currentTheme) {
+        document.documentElement.setAttribute("data-theme", currentTheme);
+
+        if (currentTheme === "dark") {
+            toggleSwitch.checked = true;
+        }
+    }
+
+    toggleSwitch.addEventListener("change", function (e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("theme", "dark");
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
+        }
+    });
+    ```
+
+4. **HTML to Include the Toggle**:
+    ```html
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <em>Enable Dark Mode!</em>
+    </div>
+    ```
+
+### 3. **Using CSS `prefers-color-scheme` Media Query**
+
+Modern browsers support the `prefers-color-scheme` media query, which allows you to automatically adjust your site’s theme based on the user's system preference.
+
+#### Example:
+
+1. **Add CSS with `prefers-color-scheme`**:
+
+    ```css
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        a {
+            color: #bb86fc;
+        }
+        /* Add more dark mode styles here */
+    }
+
+    @media (prefers-color-scheme: light) {
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        a {
+            color: #1a0dab;
+        }
+        /* Add more light mode styles here */
+    }
+    ```
+
+### Summary
+
+-   **Jekyll Themes**: Use a theme with built-in dark mode support.
+-   **Custom CSS**: Implement dark mode by creating custom CSS.
+-   **User Toggle**: Allow users to switch between light and dark modes using JavaScript.
+-   **Automatic Dark Mode**: Utilize the `prefers-color-scheme` media query for automatic dark mode based on user preferences.
+
+By using these methods, you can have a dark mode for your GitHub Pages site, either as the default or as an option for your visitors.
+
+---
+
 [Back to Index](../index.md)

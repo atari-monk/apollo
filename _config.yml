@@ -6,3 +6,11 @@ description: Notes repository
 
 # Disable the 'Edit this page' link
 github_edit_link: false
+
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+    - jekyll-remote-theme
+
+# Theme settings
+theme: minimal-mistakes
+minimal_mistakes_skin: dark
