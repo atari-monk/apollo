@@ -79,7 +79,7 @@
 
 ### 09
 
-18:38 -
+xx:xx -
 x hours x minutes
 
 1.

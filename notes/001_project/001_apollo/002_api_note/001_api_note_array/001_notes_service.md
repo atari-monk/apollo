@@ -1,7 +1,7 @@
 # Note Api Array
 
 [Up](index.md)
-[Main](../../../../index.md)
+[Main](../../../../../index.md)
 
 -   This is a mock api that uses array as storage.
 
