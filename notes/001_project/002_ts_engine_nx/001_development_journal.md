@@ -77,7 +77,7 @@
 
 5. Update `Development Journal` format.
 
-### 09
+### 10
 
 xx:xx -
 x hours x minutes
