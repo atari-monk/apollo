@@ -1,6 +1,9 @@
-# Apollo Notes
+# Apollo Markdown
 
-[Back to Index](../index.md)
+[Up](index.md)
+[Main](../../../../index.md)
+
+## Markdown, Github Pages, Notes
 
 Creating a structured approach for your notes with a single Markdown file per note and an index page is a good strategy for organization and navigation. Here’s how you can structure your GitHub Pages repository to achieve this:
 
@@ -158,4 +161,5 @@ description: Notes repository
 
 ---
 
-[Back to Index](../index.md)
+[Up](index.md)
+[Main](../../../../index.md)

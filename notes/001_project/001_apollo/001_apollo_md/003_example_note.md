@@ -1,7 +1,5 @@
 # Note 2
 
-[Back to Index](../index.md)
-
 This is the content of Note 2.
 
 ## Subheading
@@ -10,4 +8,5 @@ Further details about this topic.
 
 See [Note 1](note1.md) for more details on this topic.
 
-[Back to Index](../index.md)
+[Up](index.md)
+[Main](../../../../index.md)

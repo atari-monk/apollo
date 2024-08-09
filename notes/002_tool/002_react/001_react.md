@@ -1,6 +1,7 @@
-# Note 1
+# React
 
-[Back to Index](../index.md)
+[Up](index.md)
+[Main](../../../index.md)
 
 This is the content of Note 1.
 
@@ -10,4 +11,5 @@ Some more detailed content.
 
 See [Note 2](note2.md) for more details on this topic.
 
-[Back to Index](../index.md)
+[Up](index.md)
+[Main](../../../index.md)

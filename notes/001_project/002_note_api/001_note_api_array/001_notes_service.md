@@ -1,6 +1,9 @@
-# Notes Api
+# Note Api on Array
 
-[Back to Index](../index.md)
+[Up](index.md)
+[Main](../../../../index.md)
+
+-   This is a mock api that uses array as storage.
 
 ```typescript
 import { Injectable } from "@nestjs/common";
@@ -49,4 +52,5 @@ export class NotesService {
 }
 ```
 
-[Back to Index](../index.md)
+[Up](../index.md)
+[Main](../../../../index.md)

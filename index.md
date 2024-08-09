@@ -1,11 +1,6 @@
-# Welcome to Apollo Notes
+# Apollo
 
-This is the index of all my notes.
+Welcome.
 
-## Notes
-
--   [Example Note 1](notes/note1.md)
--   [Example Note 2](notes/note2.md)
--   [Apollo Notes](notes/note3.md)
--   [Generating API, Nx, Nestjs](notes/note4.md)
--   [Notes Api](notes/note5.md)
+1. [Project](notes/001_project/index.md)
+2. [Tool](notes/002_tool/index.md)
