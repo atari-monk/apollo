@@ -1,6 +1,4 @@
-# Apollo/Tool/Nx
-
-Welcome.
+# Tool/Nx
 
 1. [Nx](001_nx.md)
 

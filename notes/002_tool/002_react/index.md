@@ -1,6 +1,4 @@
-# Apollo/Tool/React
-
-Welcome.
+# Tool/React
 
 1. [React](001_react.md)
 

@@ -1,6 +1,4 @@
-# Apollo\Project\Apollo\Apollo Markdown
-
-Welcome.
+# Project\Apollo\Apollo Markdown
 
 1. [Apollo Markdown](001_apollo_md.md)
 2. [Example Note 1](002_example_note.md)

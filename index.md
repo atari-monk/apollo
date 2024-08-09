@@ -1,5 +1,3 @@
-# Apollo
-
 Welcome.
 
 1. [Project](notes/001_project/index.md)

@@ -1,6 +1,4 @@
-# Apollo\Project\Note Api\Note Api Array
-
-Welcome.
+# Project\Note Api\Note Api Array
 
 1. [Notes Service](001_notes_service.md)
 
