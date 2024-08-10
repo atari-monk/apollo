@@ -6,16 +6,30 @@
 -   Files
 
 ```bash
-Square.js
+cd src
 ```
 
 ```bash
-Board.js
+mkdir components
 ```
 
 ```bash
-Game.js
+cd components
 ```
+
+```bash
+echo. > Square.js
+```
+
+```bash
+echo. > Board.js
+```
+
+```bash
+echo. > Game.js
+```
+
+---
 
 -   `Square.js`
 
