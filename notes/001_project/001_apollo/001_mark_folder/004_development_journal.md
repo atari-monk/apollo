@@ -1,11 +1,11 @@
-# Apollo md Development Journal
+# `MarkFolder` Development Journal
 
 [Up](index.md)
 [Main](../../../../index.md)
 
 ## 2024-08
 
-7 hours 19 minutes
+7 hours 49 minutes
 
 ### 08
 
@@ -23,6 +23,15 @@
 
 1. Notes structure reworked to be based on file system.
 2. Content update.
+
+---
+
+### 10
+
+15:00 - 15:30
+0 hours 30 minutes
+
+1. Renames in content.
 
 [Up](index.md)
 [Main](../../../../index.md)

@@ -1,7 +1,7 @@
-# Ts Engine Nx Development Journal
+# `Morpheus Forge` Development Journal
 
 [Up](index.md)
-[Main](../../../index.md)
+[Main](../../../../index.md)
 
 ## 2024-08
 
@@ -85,4 +85,4 @@ x hours x minutes
 1.
 
 [Up](index.md)
-[Main](../../../index.md)
+[Main](../../../../index.md)

@@ -1,9 +1,14 @@
-# Apollo Markdown
+# Apollo MarkFolder
 
 [Up](index.md)
 [Main](../../../../index.md)
 
-## Markdown, Github Pages, Notes
+## MarkFolder
+
+-   `MarkFolder` is a project based on GitHub Pages, Markdown.
+-   It's for accumulating knowlege.
+
+---
 
 Creating a structured approach for your notes with a single Markdown file per note and an index page is a good strategy for organization and navigation. Here’s how you can structure your GitHub Pages repository to achieve this:
 
