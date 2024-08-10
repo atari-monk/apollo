@@ -3,7 +3,7 @@
 [Up](index.md)
 [Main](../../../../index.md)
 
-# Create js react project
+## Create js react project
 
 -   VSCode terminal
 

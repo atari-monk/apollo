@@ -5,14 +5,14 @@
 
 ## 2024-08
 
-x hours x minutes
+0 hours 50 minutes
 
 ### 10
 
-16:07 -  
-xx minutes
+16:07 - 16:57
+50 minutes
 
-1.
+1. Create react js project.
 
 ---
 
