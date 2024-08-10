@@ -1,4 +1,4 @@
-# `Game js`
+# `Game jsx`
 
 [Up](index.md)
 [Main](../../../../index.md)
