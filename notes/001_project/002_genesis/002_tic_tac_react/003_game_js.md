@@ -18,15 +18,19 @@ cd components
 ```
 
 ```bash
-echo. > Square.js
+New-Item -Name "Square.js" -ItemType "file"
 ```
 
 ```bash
-echo. > Board.js
+New-Item -Name "Board.js" -ItemType "file"
 ```
 
 ```bash
-echo. > Game.js
+New-Item -Name "Game.js" -ItemType "file"
+```
+
+```bash
+Get-ChildItem
 ```
 
 ---
