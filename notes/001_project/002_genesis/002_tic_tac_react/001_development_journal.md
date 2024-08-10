@@ -9,7 +9,7 @@
 
 ### 10
 
-16:07 - 16:57, 18:15 -
+16:07 - 16:57, 18:15 - xx:xx  
 50 minutes
 
 1. Create react js project.
