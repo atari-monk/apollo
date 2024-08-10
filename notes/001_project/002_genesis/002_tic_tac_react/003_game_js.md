@@ -37,7 +37,7 @@ Get-ChildItem
 
 -   `Square.js`
 
-```javascript
+```jsx
 export default function Square({ value, onSquareClick }) {
     return (
         <button className="square" onClick={onSquareClick}>
@@ -49,7 +49,7 @@ export default function Square({ value, onSquareClick }) {
 
 -   `Board.js`
 
-```javascript
+```jsx
 import Square from "./Square";
 
 export default function Board({ xIsNext, squares, onPlay }) {
@@ -150,7 +150,7 @@ function calculateWinner(squares) {
 
 -   `Game.js`
 
-```javascript
+```jsx
 import Board from "./Board";
 import { useState } from "react";
 
@@ -203,7 +203,7 @@ export default function Game() {
 
 -   `App.js`
 
-```javascript
+```jsx
 import "./App.css";
 import "./components/Game.css";
 import Game from "./components/Game";
