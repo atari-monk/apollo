@@ -9,10 +9,11 @@
 
 ### 10
 
-16:07 - 16:57
+16:07 - 16:57, 18:15 -
 50 minutes
 
 1. Create react js project.
+2. Js game files.
 
 ---
 
