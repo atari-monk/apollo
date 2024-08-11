@@ -5,7 +5,7 @@
 
 ## 2024-08
 
-8 hours 4 minutes
+8 hours 46 minutes
 
 ### 08
 
@@ -35,8 +35,8 @@
 
 ### 11
 
-14:10 - 15:25
-15 minutes
+14:10 - 15:07
+57 minutes
 
 1. Content update.
 
