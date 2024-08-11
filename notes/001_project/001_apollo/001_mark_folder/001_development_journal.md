@@ -5,7 +5,7 @@
 
 ## 2024-08
 
-7 hours 49 minutes
+9 hours 4 minutes
 
 ### 08
 
@@ -28,15 +28,15 @@
 
 ### 10
 
-15:00 - 15:30
-0 hours 30 minutes
+15:00 - 15:30  
+30 minutes
 
 1. Renames in content.
 
 ### 11
 
-14:10 - 15:25
-75 minutes
+14:10 - 15:25  
+1 hour 15 minutes
 
 1. Content update.
 

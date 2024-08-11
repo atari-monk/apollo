@@ -5,13 +5,14 @@
 
 ## 2024-08
 
-x hours x minutes
+2 hours 43 minutes
 
 ### 11
 
-xx:xx - xx:xx
+18:26 - 20:32, 22:23 - 23:00  
+2 hours 43 minutes
 
-1.
+1. Pier Foundation
 
 ---
 
