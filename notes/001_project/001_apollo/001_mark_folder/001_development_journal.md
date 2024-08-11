@@ -35,8 +35,8 @@
 
 ### 11
 
-14:10 - 15:20
-70 minutes
+14:10 - 15:25
+75 minutes
 
 1. Content update.
 

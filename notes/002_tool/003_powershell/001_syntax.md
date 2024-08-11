@@ -1,4 +1,4 @@
-# Powershell Syntax
+# Tool/Powershell/Syntax
 
 [Up](index.md)
 [Main](../../../index.md)
