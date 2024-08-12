@@ -1,4 +1,4 @@
-# `Morpheus Forge` Development Journal
+# `Morpheus` Development Journal
 
 [Up](index.md)
 [Main](../../../../index.md)
@@ -77,12 +77,12 @@
 
 5. Update `Development Journal` format.
 
-### 10
+### 12
 
-xx:xx -
+17:51 -
 x hours x minutes
 
-1.
+1. 
 
 [Up](index.md)
 [Main](../../../../index.md)
