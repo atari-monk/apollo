@@ -79,7 +79,7 @@
 
 ### 12
 
-17:51 - 18:47, 21:26 - 22:49, 22:49 - 23:43
+17:51 - 18:47, 21:26 - 22:49, 22:49 - 23:43  
 3 hours 13 minutes
 
 1. Add documentation files, move from project.
