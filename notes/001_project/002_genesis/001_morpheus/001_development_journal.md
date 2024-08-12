@@ -79,10 +79,10 @@
 
 ### 12
 
-17:51 -
+17:51 - 18:47, 21:26 -  
 x hours x minutes
 
-1. 
+1. Add documentation files, move from project.
 
 [Up](index.md)
 [Main](../../../../index.md)
