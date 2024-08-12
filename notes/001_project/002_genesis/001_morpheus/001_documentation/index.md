@@ -4,8 +4,9 @@
 2. [CanvasScaler](002_canvas_scaler.md)
 3. [DebugRenderer](003_debug_renderer.md)
 4. [KeyboardMapping](004_keyboard_mapping.md)
-5. [MarkersRenderer](005_markers_renderer.md)
-6. [SpriteRendererV1](006_sprite_renderer_v1.md)
+5. [SpriteRendererV1](005_sprite_renderer_v1.md)
+6. [MarkersRenderer](006_markers_renderer.md)
+7. [MarkersRendererWithScaling](007_markers_renderer_with_scaling.md)
 
 [Up](../index.md)
 [Main](../../../../../index.md)

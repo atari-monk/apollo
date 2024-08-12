@@ -5,7 +5,7 @@
 
 ## 2024-08
 
-17 hours 58 minutes
+20 hours 17 minutes
 
 ### 04
 
@@ -79,10 +79,11 @@
 
 ### 12
 
-17:51 - 18:47, 21:26 -  
-x hours x minutes
+17:51 - 18:47, 21:26 - 22:49  
+2 hours 19 minutes
 
 1. Add documentation files, move from project.
+2. Document markersV2 and use them in ballDribbleV2.
 
 [Up](index.md)
 [Main](../../../../index.md)
