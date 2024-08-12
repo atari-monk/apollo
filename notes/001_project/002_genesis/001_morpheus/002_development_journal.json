@@ -3,8 +3,8 @@
         "Year": "2024",
         "Month": "08",
         "Total": {
-            "Hours": 20,
-            "Minutes": 17
+            "Hours": 21,
+            "Minutes": 11
         },
         "Days": [
             {
@@ -150,11 +150,15 @@
                     {
                         "Start": "21:26",
                         "End": "22:49"
+                    },
+                    {
+                        "Start": "22:49",
+                        "End": "23:43"
                     }
                 ],
                 "Total": {
-                    "Hours": 2,
-                    "Minutes": 19
+                    "Hours": 3,
+                    "Minutes": 13
                 }
             }
         ]

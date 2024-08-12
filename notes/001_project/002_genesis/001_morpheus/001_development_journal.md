@@ -5,7 +5,7 @@
 
 ## 2024-08
 
-20 hours 17 minutes
+21 hours 11 minutes
 
 ### 04
 
@@ -79,11 +79,12 @@
 
 ### 12
 
-17:51 - 18:47, 21:26 - 22:49  
-2 hours 19 minutes
+17:51 - 18:47, 21:26 - 22:49, 22:49 - 23:43
+3 hours 13 minutes
 
 1. Add documentation files, move from project.
 2. Document markersV2 and use them in ballDribbleV2.
+3. Script to calculate journal times using json.
 
 [Up](index.md)
 [Main](../../../../index.md)
