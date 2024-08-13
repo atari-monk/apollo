@@ -86,5 +86,12 @@
 2. Document markersV2 and use them in ballDribbleV2.
 3. Script to calculate journal times using json.
 
+### 13
+
+10:47 - 12:38,
+
+1. Fix points rendering in `CenterCollisionWithScaling`.  
+   Issues with points and rect rendering.
+
 [Up](index.md)
 [Main](../../../../index.md)
