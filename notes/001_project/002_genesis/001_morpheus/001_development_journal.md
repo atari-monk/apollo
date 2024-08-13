@@ -88,10 +88,11 @@
 
 ### 13
 
-10:47 - 12:38,
+10:47 - 12:38, [13:43 - 14:08, 14:20 - 14:48]
 
 1. Fix points rendering in `CenterCollisionWithScaling`.  
    Issues with points and rect rendering.
+2. Investigate `CollisionBoxRenderer`
 
 [Up](index.md)
 [Main](../../../../index.md)
