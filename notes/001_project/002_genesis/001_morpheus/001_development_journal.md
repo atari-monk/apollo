@@ -5,7 +5,7 @@
 
 ## 2024-08
 
-21 hours 11 minutes
+25 hours 26 minutes
 
 ### 04
 
@@ -88,12 +88,14 @@
 
 ### 13
 
-10:47 - 12:38, [13:43 - 14:08, 14:20 - 14:48], 17:03 - 17:59
+10:47 - 12:38, [13:43 - 14:08, 14:20 - 14:48], 17:03 - 17:59, 19:06 - 19:41  
+4 hours 15 minutes
 
 1. Fix points rendering in `CenterCollisionWithScaling`.  
    Issues with points and rect rendering.
 2. Investigate `CollisionBoxRenderer`.
 3. Investigate `CenterCollisionWithScaling`. Fix calculations.
+4. Investigate `BallDribble`.
 
 [Up](index.md)
 [Main](../../../../index.md)

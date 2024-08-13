@@ -3,8 +3,8 @@
         "Year": "2024",
         "Month": "08",
         "Total": {
-            "Hours": 21,
-            "Minutes": 11
+            "Hours": 25,
+            "Minutes": 26
         },
         "Days": [
             {
@@ -159,6 +159,35 @@
                 "Total": {
                     "Hours": 3,
                     "Minutes": 13
+                }
+            },
+            {
+                "Day": "13",
+                "Intervals": [
+                    {
+                        "Start": "10:47",
+                        "End": "12:38"
+                    },
+                    {
+                        "Start": "13:43",
+                        "End": "14:08"
+                    },
+                    {
+                        "Start": "14:20",
+                        "End": "14:48"
+                    },
+                    {
+                        "Start": "17:03",
+                        "End": "17:59"
+                    },
+                    {
+                        "Start": "19:06",
+                        "End": "19:41"
+                    }
+                ],
+                "Total": {
+                    "Hours": 4,
+                    "Minutes": 15
                 }
             }
         ]

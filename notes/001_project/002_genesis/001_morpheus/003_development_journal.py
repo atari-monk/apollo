@@ -11,7 +11,7 @@ def calculate_day_totals(data):
             total_time += end_time - start_time
         
         day["Total"] = {
-            "Hours": total_time.seconds // 3600,
+            "Hours": total_time.days * 24 + total_time.seconds // 3600,
             "Minutes": (total_time.seconds // 60) % 60,
         }
 
@@ -24,7 +24,7 @@ def calculate_month_total(data):
         )
     
     data["Total"] = {
-        "Hours": total_time.seconds // 3600,
+        "Hours": total_time.days * 24 + total_time.seconds // 3600,
         "Minutes": (total_time.seconds // 60) % 60,
     }
 
