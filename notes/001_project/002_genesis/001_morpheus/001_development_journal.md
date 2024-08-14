@@ -99,11 +99,13 @@
 
 ### 14
 
-11:56 - 12:42, 12:42 - 14:00, xx:xx  
+11:56 - 12:42, 12:42 - 14:10, 16:57 - 18:28, 19:06 - 19:48  
 x hours x minutes
 
 1. Upgrade script printing file system.
 2. Clean docs folder.
+3. BallDribbleFactory.
+4. BallDribbleWithScaling.
 
 [Up](index.md)
 [Main](../../../../index.md)
