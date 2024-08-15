@@ -1,5 +1,8 @@
 # How to add system to `Morpheus` engine
 
+[Up](index.md)
+[Main](../../../../index.md)
+
 ## Version 1.0.0
 
 - To add new system into ecs one needs to preform steps:
@@ -57,3 +60,6 @@ code packages/engine/src/ecs/system/builder/data_provider/step/validation/system
 ```bash
 code packages/client/src/assets/data/config/editor.json
 ```
+
+[Up](index.md)
+[Main](../../../../index.md)

@@ -1,5 +1,8 @@
 # Nx Setup
 
+[Up](index.md)
+[Main](../../../../index.md)
+
 - Logs from terminal collected during ts-engine-nx initial setup
 
 ```bash
@@ -201,3 +204,6 @@ To claim it, connect it to your Nx Cloud account:
   > NX 👀 View Details of server
   > Run "nx show project server --web" to view details about this project.
 ```
+
+[Up](index.md)
+[Main](../../../../index.md)
