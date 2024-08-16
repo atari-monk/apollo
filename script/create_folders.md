@@ -42,3 +42,6 @@ With each invoke of script it should add 10 more files and update index.md.
         3. [File003](file003.md)
         ...
     ```
+
+12. Lets do something diffrent. Lets take two params. First is storage number and second is folder number.  
+    I want to add so many folders as specified, to storage and 5 files to each. Rest stays same.
