@@ -9,10 +9,10 @@ x hours x minutes
 
 ### 15
 
-13:41 -
-x hours x minutes
+13:41 - 14:09
+28 minutes
 
-1.
+1. Setup project with nx.
 
 ---
 

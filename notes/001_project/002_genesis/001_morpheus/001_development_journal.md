@@ -109,10 +109,21 @@ x hours x minutes
 
 ### 15
 
-xx:xx -
+14:38 - 15:37, [16:37 - 17:54, 22:49 - 00:00]  
 x hours x minutes
 
-1.
+1. Realized mistake in rendering.
+2. Scene in version 3.0.0. Refactor to introduce new renderer.
+
+### 16
+
+13:31 - 14:05, 15:15 - 15:52  
+x hours x minutes
+
+1. Stash changes, that broke football 1.0.0 scene, proved it was these changes.
+2. Turned out that flipped renderer had NormalDraw() on 0,0.  
+   I have put position param there by mistake.  
+   It takes 0,0 becouse translation() before uses position to translate canvas.
 
 [Up](index.md)
 [Main](../../../../index.md)
