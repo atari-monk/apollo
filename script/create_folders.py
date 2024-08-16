@@ -9,9 +9,6 @@ def create_directory(path, description):
     else:
         print(f"{description} directory already exists: {path}")
 
-    # After creating the directory, create an index.md file
-    create_index_file(path)
-
 def create_index_file(folder_path):
     """Creates an index.md file with specific content in the given folder."""
     index_file_path = os.path.join(folder_path, "index.md")
@@ -31,11 +28,14 @@ def create_storage_directories(root_dir, storage_number):
     create_directory(root_dir, "Root")
     create_directory(full_storage_path, "Storage")
     
-    # Create 100 folders inside the storage directory
-    for i in range(100):
-        folder_name = f"folder{i:03}"  # Zero-padded folder names, e.g., folder000, folder001, etc.
+    # Create 99 folders inside the storage directory, starting from folder001 to folder099
+    for i in range(1, 100):  # Loop from 1 to 99
+        folder_name = f"folder{i:03}"  # Zero-padded folder names, e.g., folder001, folder002, etc.
         folder_path = os.path.join(full_storage_path, folder_name)
         create_directory(folder_path, f"Folder {folder_name}")
+        
+        # Create index.md only in the subfolders
+        create_index_file(folder_path)
 
 def main():
     # Set up argument parser
