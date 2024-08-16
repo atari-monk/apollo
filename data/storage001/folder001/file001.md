@@ -39,11 +39,12 @@
 
 ### 16
 
-17:00 - 19:32, [19:50 - 20:10, 23:09 - xx:xx]  
+17:00 - 19:32, 19:50 - 20:10, 23:09 - 00:43  
 x hour xx minutes
 
 1. folder.py to generate hard coded file system structure for notes.
 2. file.py to generate files for notes.
+3. index.py and testing/fixing scripts.
 
 [Index](index.md)
 [Main](../../../index.md)
