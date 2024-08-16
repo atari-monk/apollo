@@ -9,15 +9,27 @@ def create_directory(path, description):
     else:
         print(f"{description} directory already exists: {path}")
 
-def create_index_file(folder_path):
-    """Creates an index.md file with specific content in the given folder."""
-    index_file_path = os.path.join(folder_path, "index.md")
-    if not os.path.exists(index_file_path):
-        with open(index_file_path, 'w') as file:
-            file.write("# ")
-        print(f"Created index.md in: {folder_path}")
+def create_file(path, content):
+    """Creates a file with the specified content if it doesn't exist."""
+    if not os.path.exists(path):
+        with open(path, 'w') as file:
+            file.write(content)
+        print(f"Created file: {path}")
     else:
-        print(f"index.md already exists in: {folder_path}")
+        print(f"File already exists: {path}")
+
+def update_index_file(folder_path, start_file_number):
+    """Updates the index.md file with links to newly created files."""
+    index_file_path = os.path.join(folder_path, "index.md")
+    
+    # Prepare the content to be added to index.md
+    content = "#\n\n"
+    for i in range(start_file_number, start_file_number + 10):
+        file_name = f"file{i:03}.md"
+        content += f"1. [{file_name}](file{i:03}.md)\n"
+    
+    # Write the content to index.md
+    create_file(index_file_path, content)
 
 def create_storage_directories(root_dir, storage_number):
     # Define the storage directory name
@@ -34,12 +46,20 @@ def create_storage_directories(root_dir, storage_number):
         folder_path = os.path.join(full_storage_path, folder_name)
         create_directory(folder_path, f"Folder {folder_name}")
         
-        # Create index.md only in the subfolders
-        create_index_file(folder_path)
+        # Create 10 files and update index.md
+        start_file_number = (i - 1) * 10 + 1
+        for j in range(10):
+            file_number = start_file_number + j
+            file_name = f"file{file_number:03}.md"
+            file_path = os.path.join(folder_path, file_name)
+            create_file(file_path, "")
+        
+        # Update index.md
+        update_index_file(folder_path, start_file_number)
 
 def main():
     # Set up argument parser
-    parser = argparse.ArgumentParser(description="Create storage directories with subfolders.")
+    parser = argparse.ArgumentParser(description="Create storage directories with subfolders and files.")
     parser.add_argument('storage_number', type=int, help="The number of the storage directory to create")
     
     # Parse the command-line arguments

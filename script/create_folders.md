@@ -13,3 +13,13 @@
 6. This is fine, now add a method that will generate index.md in each folder001 - 99 with this content: #.
 
 7. Ok but do not place index.md in data and storage folders, only in folder000, also start numbering folders form 001 to 099.
+
+8. I would like also file001 - file010 created along with index.md
+
+```markdown
+#
+
+1. [File001](file001.md)
+```
+
+With each invoke of script it should add 10 more files and update index.md.
