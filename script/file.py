@@ -35,7 +35,9 @@ def create_files(folder_path, num_files):
         file_path = os.path.join(folder_path, file_name)
         if not os.path.exists(file_path):
             with open(file_path, 'w') as file:
-                file.write(f"# {file_name}\n\nThis is {file_name}.")
+                file.write(f"# {file_name}\n\nThis is {file_name}.\n\n")
+                file.write("[Index](index.md)\n")
+                file.write("[Main](../../../index.md)\n")
             print(f"Created file: {file_path}")
             new_files.append(file_name)
 

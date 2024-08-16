@@ -24,6 +24,9 @@ def create_index_file(folder_path):
     with open(index_file_path, 'w') as index_file:
         for i, file_name in enumerate(files, start=1):
             index_file.write(f"{i}. [{file_name}]({file_name})\n")
+        
+        # Add the "Home" link after the list of files
+        index_file.write("\n[Home](../../../index.md)\n")
     
     print(f"Created/Updated index file: {index_file_path}")
 
