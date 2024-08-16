@@ -8,7 +8,7 @@
 
 4. I see code is not dry.
 
-5. Lets leave data hard coded but lets take storage number as script param.
+5. Lets leave root folder name hard coded but lets take storage number as script param.
 
 6. This is fine, now add a method that will generate index.md in each folder001 - 99 with this content: #.
 
@@ -24,8 +24,21 @@
 
 With each invoke of script it should add 10 more files and update index.md.
 
-9. Thats fine but number files independently in each folder from 001 up.
+9.  Thats fine but number files independently in each folder from 001 up.
 
 10. Yes but i invoked script `python .\create_folders.py 1` and once more.  
     It didnt generate files from 011.  
     Didnt update index.md and numbers in index are only 1.
+
+11. Create a method that will add default content to files.  
+    Can we do something about index ?  
+    It should have a numbered list, we should also update this.
+
+    ```markdown
+        #
+
+        1. [File001](file001.md)
+        2. [File002](file002.md)
+        3. [File003](file003.md)
+        ...
+    ```

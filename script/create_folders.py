@@ -18,15 +18,24 @@ def create_file(path, content):
     else:
         print(f"File already exists: {path}")
 
+def add_default_content_to_files(folder_path, start_file_number):
+    """Adds default content to files in the folder, starting from a given number."""
+    for j in range(start_file_number, start_file_number + 10):
+        file_name = f"file{j:03}.md"
+        file_path = os.path.join(folder_path, file_name)
+        default_content = f"# File {j:03}\n\nThis is the default content for {file_name}."
+        create_file(file_path, default_content)
+
 def update_index_file(folder_path):
-    """Updates the index.md file with links to all files created in the folder."""
+    """Updates the index.md file with a numbered list of links to all files created in the folder."""
     index_file_path = os.path.join(folder_path, "index.md")
     
     # Prepare the content to be added to index.md
     content = "#\n\n"
     file_list = sorted([f for f in os.listdir(folder_path) if f.startswith('file') and f.endswith('.md')])
-    for file_name in file_list:
-        content += f"1. [{file_name}](file/{file_name})\n"
+    
+    for idx, file_name in enumerate(file_list, start=1):  # Enumerate starting from 1
+        content += f"{idx}. [{file_name}](file/{file_name})\n"
     
     # Write the content to index.md
     create_file(index_file_path, content)
@@ -50,11 +59,8 @@ def create_storage_directories(root_dir, storage_number):
         existing_files = [f for f in os.listdir(folder_path) if f.startswith('file') and f.endswith('.md')]
         start_file_number = len(existing_files) + 1
         
-        # Create 10 new files in each folder starting from the next available number
-        for j in range(start_file_number, start_file_number + 10):
-            file_name = f"file{j:03}.md"
-            file_path = os.path.join(folder_path, file_name)
-            create_file(file_path, "")
+        # Add default content to 10 new files in each folder
+        add_default_content_to_files(folder_path, start_file_number)
         
         # Update index.md to reflect all files
         update_index_file(folder_path)
