@@ -9,6 +9,19 @@ def create_directory(path, description):
     else:
         print(f"{description} directory already exists: {path}")
 
+    # After creating the directory, create an index.md file
+    create_index_file(path)
+
+def create_index_file(folder_path):
+    """Creates an index.md file with specific content in the given folder."""
+    index_file_path = os.path.join(folder_path, "index.md")
+    if not os.path.exists(index_file_path):
+        with open(index_file_path, 'w') as file:
+            file.write("# ")
+        print(f"Created index.md in: {folder_path}")
+    else:
+        print(f"index.md already exists in: {folder_path}")
+
 def create_storage_directories(root_dir, storage_number):
     # Define the storage directory name
     storage_dir = f"storage{storage_number}"
@@ -33,7 +46,7 @@ def main():
     args = parser.parse_args()
     
     # Define the root directory
-    root_directory = "data"
+    root_directory = "../data"
     
     # Create the directories based on the provided storage number
     create_storage_directories(root_directory, args.storage_number)
