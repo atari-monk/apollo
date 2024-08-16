@@ -18,9 +18,9 @@ def create_file(path, content):
     else:
         print(f"File already exists: {path}")
 
-def add_default_content_to_files(folder_path, start_file_number):
-    """Adds default content to files in the folder, starting from a given number."""
-    for j in range(start_file_number, start_file_number + 5):  # Create 5 files
+def add_default_content_to_files(folder_path, start_file_number, num_files):
+    """Adds default content to a specified number of files in the folder."""
+    for j in range(start_file_number, start_file_number + num_files):
         file_name = f"file{j:03}.md"
         file_path = os.path.join(folder_path, file_name)
         default_content = f"# File {j:03}\n\nThis is the default content for {file_name}."
@@ -40,7 +40,7 @@ def update_index_file(folder_path):
     # Write the content to index.md
     create_file(index_file_path, content)
 
-def create_storage_directories(root_dir, storage_number, num_folders):
+def create_storage_directories(root_dir, storage_number, num_folders, num_files):
     # Define the storage directory name
     storage_dir = f"storage{storage_number}"
     full_storage_path = os.path.join(root_dir, storage_dir)
@@ -59,8 +59,8 @@ def create_storage_directories(root_dir, storage_number, num_folders):
         existing_files = [f for f in os.listdir(folder_path) if f.startswith('file') and f.endswith('.md')]
         start_file_number = len(existing_files) + 1
         
-        # Add default content to 5 new files in each folder
-        add_default_content_to_files(folder_path, start_file_number)
+        # Add default content to specified number of new files in each folder
+        add_default_content_to_files(folder_path, start_file_number, num_files)
         
         # Update index.md to reflect all files
         update_index_file(folder_path)
@@ -70,6 +70,7 @@ def main():
     parser = argparse.ArgumentParser(description="Create storage directories with specified number of folders and files.")
     parser.add_argument('storage_number', type=int, help="The number of the storage directory to create")
     parser.add_argument('num_folders', type=int, help="The number of folders to create in the storage directory")
+    parser.add_argument('num_files', type=int, nargs='?', default=5, help="The number of files to create in each folder (default is 5)")
     
     # Parse the command-line arguments
     args = parser.parse_args()
@@ -77,8 +78,8 @@ def main():
     # Define the root directory
     root_directory = "../data"
     
-    # Create the directories based on the provided storage number and folder count
-    create_storage_directories(root_directory, args.storage_number, args.num_folders)
+    # Create the directories based on the provided parameters
+    create_storage_directories(root_directory, args.storage_number, args.num_folders, args.num_files)
 
 if __name__ == "__main__":
     main()
