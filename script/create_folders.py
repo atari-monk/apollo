@@ -18,13 +18,13 @@ def create_file(path, content):
     else:
         print(f"File already exists: {path}")
 
-def update_index_file(folder_path, start_file_number):
-    """Updates the index.md file with links to newly created files."""
+def update_index_file(folder_path):
+    """Updates the index.md file with links to files created in the folder."""
     index_file_path = os.path.join(folder_path, "index.md")
     
     # Prepare the content to be added to index.md
     content = "#\n\n"
-    for i in range(start_file_number, start_file_number + 10):
+    for i in range(1, 11):  # Numbering from 001 to 010
         file_name = f"file{i:03}.md"
         content += f"1. [{file_name}](file{i:03}.md)\n"
     
@@ -46,16 +46,14 @@ def create_storage_directories(root_dir, storage_number):
         folder_path = os.path.join(full_storage_path, folder_name)
         create_directory(folder_path, f"Folder {folder_name}")
         
-        # Create 10 files and update index.md
-        start_file_number = (i - 1) * 10 + 1
-        for j in range(10):
-            file_number = start_file_number + j
-            file_name = f"file{file_number:03}.md"
+        # Create 10 files in each folder
+        for j in range(1, 11):  # File numbering from 001 to 010
+            file_name = f"file{j:03}.md"
             file_path = os.path.join(folder_path, file_name)
             create_file(file_path, "")
         
         # Update index.md
-        update_index_file(folder_path, start_file_number)
+        update_index_file(folder_path)
 
 def main():
     # Set up argument parser

@@ -23,3 +23,9 @@
 ```
 
 With each invoke of script it should add 10 more files and update index.md.
+
+9. Thats fine but number files independently in each folder from 001 up.
+
+10. Yes but i invoked script `python .\create_folders.py 1` and once more.  
+    It didnt generate files from 011.  
+    Didnt update index.md and numbers in index are only 1.
