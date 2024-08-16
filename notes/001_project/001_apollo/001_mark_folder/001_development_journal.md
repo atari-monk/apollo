@@ -40,5 +40,12 @@
 
 1. Content update.
 
+### 16
+
+17:00 - 19:32  
+x hour xx minutes
+
+1. Scripts to generate hard coded file system structure for notes.
+
 [Up](index.md)
 [Main](../../../../index.md)
