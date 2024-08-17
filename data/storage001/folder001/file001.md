@@ -48,8 +48,9 @@ x hour xx minutes
 
 ### 17
 
-18:06 - 20:10, 22:05 - 00:52  
+18:06 - 20:10, 22:05 - 00:52, 00:52 - 01:15  
 x hour xx minutes
 
 1. Fix sidebar, mobile footers.
 2. Fix mobile profile style that was hiding links. Add content, using cli.
+3. Hide Home link on home page.
