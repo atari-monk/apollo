@@ -48,7 +48,7 @@ x hour xx minutes
 
 ### 17
 
-18:06 - xx:xx  
+18:06 - 20:10, 22:05 -  
 x hour xx minutes
 
 1.
