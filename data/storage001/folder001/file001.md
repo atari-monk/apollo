@@ -48,7 +48,8 @@ x hour xx minutes
 
 ### 17
 
-18:06 - 20:10, 22:05 -  
+18:06 - 20:10, 22:05 - 00:52  
 x hour xx minutes
 
-1.
+1. Fix sidebar, mobile footers.
+2. Fix mobile profile style that was hiding links. Add content, using cli.
