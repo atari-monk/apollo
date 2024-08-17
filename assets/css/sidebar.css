@@ -61,7 +61,7 @@
     padding: 10px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start; /* Align items to start */
     align-items: center;
     z-index: 1000;
     min-height: 50px; /* Ensure a minimum height */
@@ -106,14 +106,22 @@
     background-color: #444; /* Dark mode link hover background */
   }
 
-  /* Adjust for landscape orientation */
-  @media (orientation: landscape) and (max-width: 767px) {
+  /* Adjust for portrait mode */
+  @media (orientation: portrait) and (max-width: 767px) {
     #sidebar {
-      min-height: 60px; /* Increase height for better visibility in landscape */
+      min-height: 60px; /* Increase height for better visibility in portrait */
+      flex-direction: row; /* Align items in a row */
+      justify-content: space-between; /* Distribute space between items */
+      align-items: center; /* Center items vertically */
     }
 
     #sidebar ul {
-      flex-direction: row; /* Align items in a row */
+      flex-direction: row; /* Ensure items are in a row */
+      align-items: center; /* Center items vertically */
+    }
+
+    #sidebar li {
+      margin: 0 10px; /* Adjust margins for better spacing */
     }
   }
 }
