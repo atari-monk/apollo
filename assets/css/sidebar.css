@@ -1,29 +1,94 @@
-/* custom.css */
+/* Base styles for the sidebar */
 #sidebar {
-  position: fixed;
-  top: 80px; /* Adjust based on your header height */
-  left: 0;
-  width: 200px; /* Adjust based on your preference */
-  background-color: #f8f9fa; /* Light background */
-  padding: 15px;
-  border-right: 1px solid #ddd; /* Border on the right */
-  height: 100%;
+  width: 100%;
+  background: #f4f4f4;
+  padding: 10px;
 }
 
-#nav-links {
-  list-style-type: none;
-  padding: 0;
+/* Desktop view - sidebar on the left */
+@media (min-width: 768px) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  #sidebar nav {
+    padding: 20px;
+  }
+
+  #sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #sidebar li {
+    margin: 10px 0;
+  }
+
+  #sidebar a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+  }
+
+  #sidebar a:hover {
+    background-color: #ddd;
+  }
 }
 
-#nav-links li {
-  margin: 10px 0;
-}
+/* Mobile view - sidebar as a footer */
+@media (max-width: 767px) {
+  #sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #f4f4f4;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+  }
 
-#nav-links a {
-  text-decoration: none;
-  color: #007bff;
-}
+  #sidebar nav {
+    padding: 0;
+    margin: 0;
+  }
 
-#nav-links a:hover {
-  text-decoration: underline;
+  #sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #sidebar li {
+    margin: 0 5px;
+  }
+
+  #sidebar a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  #sidebar a:hover {
+    background-color: #ddd;
+  }
+
+  /* Optional: For mobile view, if you want to add more spacing */
+  body {
+    padding-bottom: 50px; /* Adjust based on the footer height */
+  }
 }
