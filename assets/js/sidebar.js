@@ -8,9 +8,12 @@ function addLinks() {
 
   const pathSegments = currentPath.split('/').filter(Boolean)
 
-  if (pathSegments.length > 2) {
+  const lastSegment = pathSegments[pathSegments.length - 1]
+  const filePattern = /^file\d{3}$/
+
+  if (filePattern.test(lastSegment)) {
     const baseIndexPath = pathSegments.slice(0, -1).join('/')
-    const indexLink = `<li><a href="https://atari-monk.github.io/${baseIndexPath}/">Current Folder Index</a></li>`
+    const indexLink = `<li><a href="https://atari-monk.github.io/${baseIndexPath}/">Index</a></li>`
     sidebar.innerHTML += indexLink
   }
 }
