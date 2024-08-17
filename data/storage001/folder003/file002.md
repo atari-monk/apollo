@@ -1,8 +1,5 @@
 # I code entire year yet i dont see much improvement.
 
-[Up](index.md)
-[Main](../../../../index.md)
-
 It's common to feel that progress is slow when learning to code, especially if you've been practicing for a while without seeing significant improvement. Here are some strategies to help you improve more effectively:
 
 1. **Set Specific Goals:**
@@ -118,6 +115,3 @@ Starting a new project from scratch is a great way to gain new perspectives and 
 By approaching your new project with these steps, you’ll gain valuable experience and see significant improvement in your skills. Let me know if you need more details or help with any particular step!
 
 ---
-
-[Up](index.md)
-[Main](../../../../index.md)
