@@ -4,6 +4,7 @@
   background: #333; /* Dark mode background */
   color: #f4f4f4; /* Dark mode text color */
   padding: 10px;
+  box-sizing: border-box; /* Ensure padding does not affect width */
 }
 
 /* Sidebar links styling */
@@ -27,6 +28,7 @@
     width: 250px;
     height: 100%;
     overflow-y: auto;
+    z-index: 1000; /* Ensure it stays on top */
   }
 
   #sidebar nav {
@@ -36,6 +38,7 @@
   #sidebar ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
   }
 
   #sidebar li {
@@ -45,6 +48,10 @@
 
 /* Mobile view - sidebar as a footer */
 @media (max-width: 767px) {
+  body {
+    margin-bottom: 50px; /* Space for the footer */
+  }
+
   #sidebar {
     position: fixed;
     bottom: 0;
@@ -59,6 +66,12 @@
     z-index: 1000;
     min-height: 50px; /* Ensure a minimum height */
     overflow-x: auto; /* Allow horizontal scrolling if needed */
+    transform: translateY(100%); /* Hide initially */
+    transition: transform 0.3s; /* Smooth transition */
+  }
+
+  #sidebar.show {
+    transform: translateY(0); /* Show when needed */
   }
 
   #sidebar nav {

@@ -20,3 +20,21 @@ function addLinks() {
 
 addLinks()
 document.body.classList.add('dark-mode')
+
+function handleScroll() {
+  const footer = document.getElementById('sidebar')
+  const scrollPosition = window.scrollY + window.innerHeight
+  const documentHeight = document.documentElement.scrollHeight
+
+  if (scrollPosition >= documentHeight - 100) {
+    // Show footer when near bottom
+    footer.classList.add('show')
+  } else {
+    footer.classList.remove('show')
+  }
+}
+
+// Check on scroll and resize
+window.addEventListener('scroll', handleScroll)
+window.addEventListener('resize', handleScroll) // Ensure footer adjusts on resize
+handleScroll() // Initial check
