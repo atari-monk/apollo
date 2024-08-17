@@ -1,94 +1,126 @@
 /* Base styles for the sidebar */
 #sidebar {
-  width: 100%;
-  background: #f4f4f4;
-  padding: 10px;
+    width: 100%;
+    background: #f4f4f4; /* Light mode background */
+    color: #333; /* Light mode text color */
+    padding: 10px;
+}
+
+/* Dark mode styles */
+body.dark-mode #sidebar {
+    background: #333; /* Dark mode background */
+    color: #f4f4f4; /* Dark mode text color */
+}
+
+body.dark-mode #sidebar a {
+    color: #f4f4f4; /* Dark mode link color */
+}
+
+body.dark-mode #sidebar a:hover {
+    background-color: #444; /* Dark mode link hover background */
 }
 
 /* Desktop view - sidebar on the left */
 @media (min-width: 768px) {
-  #sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    overflow-y: auto;
-  }
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100%;
+        overflow-y: auto;
+    }
 
-  #sidebar nav {
-    padding: 20px;
-  }
+    #sidebar nav {
+        padding: 20px;
+    }
 
-  #sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
+    #sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
 
-  #sidebar li {
-    margin: 10px 0;
-  }
+    #sidebar li {
+        margin: 10px 0;
+    }
 
-  #sidebar a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 10px;
-  }
+    #sidebar a {
+        text-decoration: none;
+        color: inherit; /* Inherit color for dark mode */
+        display: block;
+        padding: 10px;
+    }
 
-  #sidebar a:hover {
-    background-color: #ddd;
-  }
+    #sidebar a:hover {
+        background-color: #ddd;
+    }
 }
 
 /* Mobile view - sidebar as a footer */
 @media (max-width: 767px) {
-  #sidebar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #f4f4f4;
-    padding: 10px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1000;
-  }
+    #sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #f4f4f4; /* Light mode background */
+        padding: 10px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+    }
 
-  #sidebar nav {
-    padding: 0;
-    margin: 0;
-  }
+    #sidebar nav {
+        padding: 0;
+        margin: 0;
+    }
 
-  #sidebar ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+    #sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
 
-  #sidebar li {
-    margin: 0 5px;
-  }
+    #sidebar li {
+        margin: 0 5px;
+    }
 
-  #sidebar a {
-    text-decoration: none;
-    color: #333;
-    display: block;
-    padding: 8px;
-    font-size: 14px;
-    text-align: center;
-  }
+    #sidebar a {
+        text-decoration: none;
+        color: inherit; /* Inherit color for dark mode */
+        display: block;
+        padding: 8px;
+        font-size: 14px;
+        text-align: center;
+    }
 
-  #sidebar a:hover {
-    background-color: #ddd;
-  }
+    #sidebar a:hover {
+        background-color: #ddd;
+    }
 
-  /* Optional: For mobile view, if you want to add more spacing */
-  body {
-    padding-bottom: 50px; /* Adjust based on the footer height */
-  }
+    /* Optional: For mobile view, if you want to add more spacing */
+    body {
+        padding-bottom: 50px; /* Adjust based on the footer height */
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-width: 767px) {
+    #sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #f4f4f4; /* Light mode background */
+        padding: 10px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+    }
 }

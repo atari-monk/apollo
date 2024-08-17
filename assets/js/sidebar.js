@@ -19,3 +19,18 @@ function addLinks() {
 }
 
 addLinks()
+function toggleDarkMode() {
+  const currentMode = localStorage.getItem('dark-mode') === 'true'
+  document.body.classList.toggle('dark-mode', !currentMode)
+  localStorage.setItem('dark-mode', !currentMode)
+}
+
+addLinks()
+if (localStorage.getItem('dark-mode') === 'true') {
+  document.body.classList.add('dark-mode')
+}
+
+const darkModeButton = document.getElementById('dark-mode-toggle')
+if (darkModeButton) {
+  darkModeButton.addEventListener('click', toggleDarkMode)
+}
