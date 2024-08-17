@@ -1,4 +1,4 @@
-# `MarkFolder` Development Journal
+# MarkFolder Development Journal
 
 ## 2024-08
 
@@ -52,6 +52,3 @@ x hour xx minutes
 x hour xx minutes
 
 1.
-
-[Index](index.md)
-[Main](../../../index.md)

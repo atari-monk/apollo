@@ -1,6 +1,9 @@
-# file002.md
+# Note 1
 
-This is file002.md.
+This is the content of Note 1.
 
-[Index](index.md)
-[Main](../../../index.md)
+## Subheading
+
+Some more detailed content.
+
+See [Note 2](note2.md) for more details on this topic.
