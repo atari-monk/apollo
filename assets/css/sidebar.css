@@ -125,8 +125,10 @@
       margin: 0 10px; /* Adjust margins for better spacing */
     }
   }
+}
 
-  @media print, screen and (max-width: 480px) {
-    /* No styles here, so the media query does nothing */
+@media screen and (max-width: 480px) {
+  nav {
+    display: block !important; /* Ensure nav is displayed */
   }
 }
