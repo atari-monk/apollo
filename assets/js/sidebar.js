@@ -1,33 +1,18 @@
-function getCurrentFolderLevel() {
-  const pathArray = window.location.pathname.split('/')
-  const folderLevel = pathArray.length - 2
-  return folderLevel
-}
-
 function addLinks() {
   const sidebar = document.getElementById('nav-links')
-  const path = window.location.pathname
-  const folderLevel = getCurrentFolderLevel()
+  const currentPath = window.location.pathname
 
-  let homeLink = ''
-  let indexLink = ''
-  let mainLink = ''
+  const homeLink =
+    '<li><a href="https://atari-monk.github.io/apollo/">Home</a></li>'
+  sidebar.innerHTML = homeLink
 
-  if (folderLevel === 1) {
-    homeLink = `<li><a href="../../../index.md">Home</a></li>`
-  } else if (folderLevel === 2) {
-    indexLink = `<li><a href="index.md">Index</a></li>`
-    mainLink = `<li><a href="../../../index.md">Main</a></li>`
-  } else if (folderLevel > 2) {
-    indexLink = `<li><a href="../index.md">Index</a></li>`
-    mainLink = `<li><a href="../../../index.md">Main</a></li>`
+  const pathSegments = currentPath.split('/').filter(Boolean)
+
+  if (pathSegments.length > 2) {
+    const baseIndexPath = pathSegments.slice(0, -1).join('/')
+    const indexLink = `<li><a href="https://atari-monk.github.io/apollo/${baseIndexPath}/">Current Folder Index</a></li>`
+    sidebar.innerHTML += indexLink
   }
-
-  sidebar.innerHTML = `
-        ${homeLink}
-        ${indexLink}
-        ${mainLink}
-    `
 }
 
 addLinks()

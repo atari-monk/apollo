@@ -76,3 +76,6 @@
 2. Use js, css and layout.
 3. Put each feature in its function.
 4. Yes but you see file and folder names are numberd 001, 099 for folders and more for files.
+5. This is my link `https://atari-monk.github.io/apollo/` to Home page that i want to have on each page like 'https://atari-monk.github.io/apollo/data/storage001/folder001/' where numbers are variable.
+6. When on page ``we should also provide link to`https://atari-monk.github.io/apollo/data/storage001/folder001/` index page like this, but numbers can vary depending on witch path it is.
+7. Use absolute links for github not relative .md ones.
