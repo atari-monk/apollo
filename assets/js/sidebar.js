@@ -2,6 +2,10 @@ function addLinks() {
   const sidebar = document.getElementById('nav-links')
   const currentPath = window.location.pathname
 
+  if (currentPath === '/apollo/' || currentPath === '/apollo/index.html') {
+    return
+  }
+
   const homeLink =
     '<li><a href="https://atari-monk.github.io/apollo/">Home</a></li>'
   sidebar.innerHTML = homeLink
@@ -19,12 +23,24 @@ function addLinks() {
 }
 
 addLinks()
-document.body.classList.add('dark-mode')
+if (
+  window.location.pathname !== '/apollo/' &&
+  window.location.pathname !== '/apollo/index.html'
+) {
+  document.body.classList.add('dark-mode')
+}
 
 function handleScroll() {
   const footer = document.getElementById('sidebar')
   const scrollPosition = window.scrollY + window.innerHeight
   const documentHeight = document.documentElement.scrollHeight
+
+  if (
+    window.location.pathname === '/apollo/' ||
+    window.location.pathname === '/apollo/index.html'
+  ) {
+    return
+  }
 
   if (scrollPosition >= documentHeight - 100) {
     footer.classList.add('show')
