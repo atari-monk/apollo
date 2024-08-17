@@ -46,5 +46,12 @@ x hour xx minutes
 2. file.py to generate files for notes.
 3. index.py and testing/fixing scripts.
 
+### 17
+
+18:06 - xx:xx  
+x hour xx minutes
+
+1.
+
 [Index](index.md)
 [Main](../../../index.md)

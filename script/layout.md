@@ -1,3 +1,8 @@
+# Requirements
+
+- This is my md page layout for github pages.
+
+```html
 <!doctype html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
@@ -8,10 +13,9 @@
 
     <!-- Load theme CSS first -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    
+
     <!-- Load additional CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/copy_code.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/sidebar.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
     <!-- Load JavaScript libraries -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -23,7 +27,7 @@
     <!--[if lt IE 8]>
       <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
     <![endif]-->
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     {% include head-custom.html %}
   </head>
@@ -41,14 +45,6 @@
         </nav>
       </div><!-- end header -->
 
-    <div id="sidebar">
-      <nav>
-        <ul id="nav-links">
-          <!-- Links will be inserted here by JS -->
-        </ul>
-      </nav>
-    </div>
-
     <div class="wrapper">
       <section>
         <div id="title">
@@ -63,7 +59,20 @@
 
       </section>
     </div>
-    <script src="{{ '/assets/js/copy_code.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/sidebar.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/copy-code.js' | relative_url }}"></script>
   </body>
 </html>
+
+```
+
+- In assets i have also copy-code.js and custom.css.
+
+1. Add section available whole time on page where i can put links.
+
+- [Home](../../../index.md), this link when i am on index.md page in folder00n
+- [Index](index.md)
+  [Main](../../../index.md), these links when i am on file00n page in folder00n
+
+2. Use js, css and layout.
+3. Put each feature in its function.
+4. Yes but you see file and folder names are numberd 001, 099 for folders and more for files.

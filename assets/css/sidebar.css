@@ -1,0 +1,29 @@
+/* custom.css */
+#sidebar {
+  position: fixed;
+  top: 80px; /* Adjust based on your header height */
+  left: 0;
+  width: 200px; /* Adjust based on your preference */
+  background-color: #f8f9fa; /* Light background */
+  padding: 15px;
+  border-right: 1px solid #ddd; /* Border on the right */
+  height: 100%;
+}
+
+#nav-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+#nav-links li {
+  margin: 10px 0;
+}
+
+#nav-links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+#nav-links a:hover {
+  text-decoration: underline;
+}
