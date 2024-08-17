@@ -1,25 +1,22 @@
-/* Base styles for the sidebar */
 #sidebar {
   width: 100%;
-  background: #333; /* Dark mode background */
-  color: #f4f4f4; /* Dark mode text color */
+  background: #333;
+  color: #f4f4f4;
   padding: 10px;
-  box-sizing: border-box; /* Ensure padding does not affect width */
+  box-sizing: border-box;
 }
 
-/* Sidebar links styling */
 #sidebar a {
   text-decoration: none;
-  color: #f4f4f4; /* Dark mode link color */
+  color: #f4f4f4;
   display: block;
   padding: 10px;
 }
 
 #sidebar a:hover {
-  background-color: #444; /* Dark mode link hover background */
+  background-color: #444;
 }
 
-/* Desktop view - sidebar on the left */
 @media (min-width: 768px) {
   #sidebar {
     position: fixed;
@@ -46,10 +43,9 @@
   }
 }
 
-/* Mobile view - sidebar as a footer */
 @media (max-width: 767px) {
   body {
-    margin-bottom: 50px; /* Space for the footer */
+    margin-bottom: 50px;
   }
 
   #sidebar {
@@ -57,21 +53,21 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #333; /* Dark mode background */
+    background: #333;
     padding: 10px;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: flex-start; /* Align items to start */
+    justify-content: flex-start;
     align-items: center;
     z-index: 1000;
-    min-height: 50px; /* Ensure a minimum height */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-    transform: translateY(100%); /* Hide initially */
-    transition: transform 0.3s; /* Smooth transition */
+    min-height: 50px;
+    overflow-x: auto;
+    transform: translateY(100%);
+    transition: transform 0.3s;
   }
 
   #sidebar.show {
-    transform: translateY(0); /* Show when needed */
+    transform: translateY(0);
   }
 
   #sidebar nav {
@@ -81,11 +77,11 @@
 
   #sidebar ul {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping in horizontal view */
+    flex-wrap: nowrap;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    overflow-x: auto;
     white-space: nowrap;
   }
 
@@ -95,40 +91,39 @@
 
   #sidebar a {
     text-decoration: none;
-    color: #f4f4f4; /* Dark mode link color */
+    color: #f4f4f4;
     display: block;
     padding: 8px;
     font-size: 14px;
     text-align: center;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
   }
 
   #sidebar a:hover {
-    background-color: #444; /* Dark mode link hover background */
+    background-color: #444;
   }
 
-  /* Adjust for portrait mode */
   @media (orientation: portrait) and (max-width: 767px) {
     #sidebar {
-      min-height: 60px; /* Increase height for better visibility in portrait */
-      flex-direction: row; /* Align items in a row */
-      justify-content: space-between; /* Distribute space between items */
-      align-items: center; /* Center items vertically */
+      min-height: 60px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
 
     #sidebar ul {
-      flex-direction: row; /* Ensure items are in a row */
-      align-items: center; /* Center items vertically */
+      flex-direction: row;
+      align-items: center;
     }
 
     #sidebar li {
-      margin: 0 10px; /* Adjust margins for better spacing */
+      margin: 0 10px;
     }
   }
 }
 
 @media screen and (max-width: 480px) {
   nav {
-    display: block !important; /* Ensure nav is displayed */
+    display: block !important;
   }
 }

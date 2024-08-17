@@ -1,9 +1,9 @@
 # Endpoints
 
--   VSCode extention `REST Client by publisher:"Huachao Mao".
--   It has big manual.
+- VSCode extention `REST Client by publisher:"Huachao Mao".
+- It has big manual.
 
--  api_requests.http
+- api_requests.http
 
 ```plaintext
 # GET all notes

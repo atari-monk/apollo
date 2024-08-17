@@ -1,33 +1,33 @@
 .code-block-container {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
 }
 
 .copy-btn {
-    margin-left: 5px;
-    padding: 5px 5px;
-    cursor: pointer;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
+  margin-left: 5px;
+  padding: 5px 5px;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
 }
 
 .copy-btn:hover {
-    background: #0056b3;
+  background: #0056b3;
 }
 
 body .hide-element {
-    display: none !important;
+  display: none !important;
 }
 
 .wrapper > section:first-of-type {
-    margin: 0;
+  margin: 0;
 }
