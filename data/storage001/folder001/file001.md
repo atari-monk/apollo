@@ -57,7 +57,7 @@ x hour xx minutes
 
 ### 18
 
-12:58 - 13:25, 14:52 - xx:xx  
+12:58 - 13:25, 14:52 - 15:19, 15:47 - 16:08  
 x hour xx minutes
 
 1. Move content to new format.

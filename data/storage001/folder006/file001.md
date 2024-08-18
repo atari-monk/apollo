@@ -1,7 +1,4 @@
-# `TicTacReact` Development Journal
-
-[Up](index.md)
-[Main](../../../../index.md)
+# TicTacReact Development Journal
 
 ## 2024-08
 
@@ -18,6 +15,3 @@
 4. Docs.
 
 ---
-
-[Up](index.md)
-[Main](../../../../index.md)
