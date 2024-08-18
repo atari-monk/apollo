@@ -1,8 +1,5 @@
 # How to add system to `Morpheus` engine
 
-[Up](index.md)
-[Main](../../../../index.md)
-
 ## Version 1.0.0
 
 - To add new system into ecs one needs to preform steps:
@@ -36,7 +33,7 @@
 9. Run in terminal, (use path you need to load your scene, here as example):
 
    ```bash
-   code packages\client\src\assets\data\feature\scaling\field_colliders\system.json
+   code packages/client/src/assets/data/feature/scaling/field_colliders/system.json
    ```
 
 10. Add new record for a system
@@ -60,6 +57,3 @@ code packages/engine/src/ecs/system/builder/data_provider/step/validation/system
 ```bash
 code packages/client/src/assets/data/config/editor.json
 ```
-
-[Up](index.md)
-[Main](../../../../index.md)

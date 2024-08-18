@@ -1,7 +1,4 @@
-# Nx Cli
-
-[Up](index.md)
-[Main](../../../../index.md)
+# Nx Cli api
 
 ```bash
 npx -version
@@ -32,6 +29,3 @@ nx add @nx/webpack
 cd path
 code path
 ```
-
-[Up](index.md)
-[Main](../../../../index.md)

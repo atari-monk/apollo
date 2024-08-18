@@ -1,8 +1,5 @@
 # `Morpheus` Development Journal
 
-[Up](index.md)
-[Main](../../../../index.md)
-
 ## 2024-08
 
 25 hours 26 minutes
@@ -124,6 +121,3 @@ x hours x minutes
 2. Turned out that flipped renderer had NormalDraw() on 0,0.  
    I have put position param there by mistake.  
    It takes 0,0 becouse translation() before uses position to translate canvas.
-
-[Up](index.md)
-[Main](../../../../index.md)

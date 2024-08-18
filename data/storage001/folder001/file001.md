@@ -54,3 +54,10 @@ x hour xx minutes
 1. Fix sidebar, mobile footers.
 2. Fix mobile profile style that was hiding links. Add content, using cli.
 3. Hide Home link on home page.
+
+### 18
+
+12:58 - xx:xx  
+x hour xx minutes
+
+1. Move content to new format.

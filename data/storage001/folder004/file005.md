@@ -1,8 +1,5 @@
 # Draw sprite on Canvas
 
-[Up](index.md)
-[Main](../../../../index.md)
-
 ```typescript
 draw(ctx) {
         ctx.save();
@@ -23,6 +20,3 @@ draw(ctx) {
         ctx.restore();
     }
 ```
-
-[Up](index.md)
-[Main](../../../../index.md)
