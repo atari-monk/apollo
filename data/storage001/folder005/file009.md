@@ -1,8 +1,5 @@
 # CollisionBoxRenderer
 
-[Up](index.md)
-[Main](../../../../../index.md)
-
 ## Responsibility
 
 - Ecs system extending System class.
@@ -56,6 +53,3 @@ C:\atari-monk\code\ts-engine-nx\packages\engine\src\animation_system\ecs\system\
     "lineWidth": 2
 }
 ```
-
-[Up](index.md)
-[Main](../../../../../index.md)

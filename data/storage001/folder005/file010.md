@@ -1,8 +1,5 @@
 # BallDribble
 
-[Up](index.md)
-[Main](../../../../../index.md)
-
 ## Responsibility
 
 - Ecs system extending System class.
@@ -47,6 +44,3 @@ C:\atari-monk\code\ts-engine-nx\packages\engine\src\football\ecs\system\BallDrib
   "enableKick": false
 }
 ```
-
-[Up](index.md)
-[Main](../../../../../index.md)

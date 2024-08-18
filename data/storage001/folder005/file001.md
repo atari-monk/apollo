@@ -1,8 +1,5 @@
 # Documentation
 
-[Up](index.md)
-[Main](../../../../../index.md)
-
 ## Do you think i should document each class in my engine ?
 
 Documenting each class in your engine is generally a good idea, especially if the engine is complex or intended for use by others (or even your future self). Here are a few reasons why it's beneficial:
@@ -19,19 +16,16 @@ Documenting each class in your engine is generally a good idea, especially if th
 
 ### What to Document
 
--   **Class Purpose**: Briefly describe what the class is responsible for.
--   **Key Methods and Properties**: Explain the most important methods and properties, especially any that have non-obvious behaviors or side effects.
--   **Usage Examples**: If applicable, provide examples of how the class is intended to be used.
--   **Dependencies and Interactions**: Note any important relationships with other classes or modules.
--   **Limitations and Assumptions**: Mention any known limitations or assumptions within the class.
+- **Class Purpose**: Briefly describe what the class is responsible for.
+- **Key Methods and Properties**: Explain the most important methods and properties, especially any that have non-obvious behaviors or side effects.
+- **Usage Examples**: If applicable, provide examples of how the class is intended to be used.
+- **Dependencies and Interactions**: Note any important relationships with other classes or modules.
+- **Limitations and Assumptions**: Mention any known limitations or assumptions within the class.
 
 ### When to Document
 
--   **During Development**: It's often helpful to write at least some documentation as you develop the class, while the logic is fresh in your mind.
--   **Before Major Changes**: Documenting the current state before making major changes can help you understand what needs to be altered and why.
--   **After Finalizing**: Once a class is considered "complete," ensure the documentation is thorough and reflects the final design.
+- **During Development**: It's often helpful to write at least some documentation as you develop the class, while the logic is fresh in your mind.
+- **Before Major Changes**: Documenting the current state before making major changes can help you understand what needs to be altered and why.
+- **After Finalizing**: Once a class is considered "complete," ensure the documentation is thorough and reflects the final design.
 
 In summary, documenting each class in your engine will pay off in the long run, enhancing both the usability and longevity of your project.
-
-[Up](index.md)
-[Main](../../../../../index.md)

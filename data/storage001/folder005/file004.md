@@ -1,17 +1,14 @@
 # KeyboardMapping
 
-[Up](index.md)
-[Main](../../../../../index.md)
-
--   C:\atari-monk\code\ts-engine-nx\packages\engine\src\ecs\system\keyboard\KeyboardMapping.ts
--   Ecs system extending System class.
--   Subscribes to input KeyEvents.KeyDown.
--   Stores key list.
--   On key down sends event KeyboardEvent with key and entity id registered in this system
+- C:\atari-monk\code\ts-engine-nx\packages\engine\src\ecs\system\keyboard\KeyboardMapping.ts
+- Ecs system extending System class.
+- Subscribes to input KeyEvents.KeyDown.
+- Stores key list.
+- On key down sends event KeyboardEvent with key and entity id registered in this system
 
 #### Usage
 
--   Add data to entity.json
+- Add data to entity.json
 
 ```json
  "debugUI": {
@@ -43,12 +40,9 @@
 
 ```json
 {
-    "system": "keyboardMapping",
-    "entity": ["debugUI"],
-    "cache": "startSystemCache",
-    "name": "Keyboard Mapping"
+  "system": "keyboardMapping",
+  "entity": ["debugUI"],
+  "cache": "startSystemCache",
+  "name": "Keyboard Mapping"
 }
 ```
-
-[Up](index.md)
-[Main](../../../../../index.md)

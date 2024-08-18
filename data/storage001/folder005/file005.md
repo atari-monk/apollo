@@ -1,22 +1,19 @@
 # SpriteRendererV1
 
-[Up](index.md)
-[Main](../../../../../index.md)
-
--   C:\atari-monk\code\ts-engine-nx\packages\engine\src\animation_system\ecs\system\sprite_renderer\SpriteRendererV1.ts
--   Ecs system extending System class.
--   Used in football 1.0.0
--   For each entity regisered in system:
-    -   Caches sprite animation components Sprite, Transform.
-    -   Caches animator object.
-    -   Subscribes to AnimationSwitch event.
-    -   Updates animator frame.
-    -   Renders animator.
-    -   Renders in position transform.position + sprite.spriteOffset.
+- C:\atari-monk\code\ts-engine-nx\packages\engine\src\animation_system\ecs\system\sprite_renderer\SpriteRendererV1.ts
+- Ecs system extending System class.
+- Used in football 1.0.0
+- For each entity regisered in system:
+  - Caches sprite animation components Sprite, Transform.
+  - Caches animator object.
+  - Subscribes to AnimationSwitch event.
+  - Updates animator frame.
+  - Renders animator.
+  - Renders in position transform.position + sprite.spriteOffset.
 
 #### Usage
 
--   Add data to entity.json
+- Add data to entity.json
 
 ```json
   "player1": {
@@ -60,12 +57,9 @@
 
 ```json
 {
-    "system": "spriteRendererV1Tester",
-    "entity": ["player1"],
-    "cache": "rendererCache",
-    "name": "Sprite Renderer"
+  "system": "spriteRendererV1Tester",
+  "entity": ["player1"],
+  "cache": "rendererCache",
+  "name": "Sprite Renderer"
 }
 ```
-
-[Up](index.md)
-[Main](../../../../../index.md)
