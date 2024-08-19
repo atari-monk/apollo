@@ -74,9 +74,9 @@ x hour xx minutes
 
 ### 19
 
-20:55 - xx:xx
+20:55 - 21:39
 x hour xx minutes
 
-1.
+1. Move content to new format, old storage moved.
 
 ---
