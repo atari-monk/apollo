@@ -30,12 +30,16 @@
 
 1. Renames in content.
 
+---
+
 ### 11
 
 14:10 - 15:25  
 1 hour 15 minutes
 
 1. Content update.
+
+---
 
 ### 16
 
@@ -46,6 +50,8 @@ x hour xx minutes
 2. file.py to generate files for notes.
 3. index.py and testing/fixing scripts.
 
+---
+
 ### 17
 
 18:06 - 20:10, 22:05 - 00:52, 00:52 - 01:15  
@@ -55,9 +61,22 @@ x hour xx minutes
 2. Fix mobile profile style that was hiding links. Add content, using cli.
 3. Hide Home link on home page.
 
+---
+
 ### 18
 
 12:58 - 13:25, 14:52 - 15:19, 15:47 - 16:08  
 x hour xx minutes
 
 1. Move content to new format.
+
+---
+
+### 19
+
+20:55 - xx:xx
+x hour xx minutes
+
+1.
+
+---

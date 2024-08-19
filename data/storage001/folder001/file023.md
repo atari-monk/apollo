@@ -1,4 +1,4 @@
-# Requirements
+# index.py
 
 1. Create index.py script.
 2. Put each feature in separate function.
@@ -28,4 +28,3 @@ data
 6. Add or override a file named `index.md` where in content generate numbered list of links to files in format [File001](file001.md).
 7. For example `index 1 1` should add/override file 'index.md' to ../data/storage001/folder001 with links to files in this folder.
 8. Next `file 2 2` should add file 'index.md' to ../data/storage002/folder002 and so on.
-9. Add a link '[Home](../../../index.md)' after list.

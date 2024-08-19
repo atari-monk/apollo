@@ -1,4 +1,4 @@
-# Requirements
+# folders.py
 
 1. Create folders.py script.
 2. Put each feature in separate function.

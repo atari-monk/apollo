@@ -1,4 +1,4 @@
-# Requirements
+# file.py
 
 1. Create file.py script.
 2. Put each feature in separate function.
@@ -30,8 +30,3 @@ data
 11. Next `file 1 1 1` should add file 'file002.md' to ../data/storage001/folder001.
 12. Next `file 1 1 2` should add file 'file003.md'...'file004.md' to ../data/storage001/.
 13. Next `file 1 2 1` should add file 'file001.md' to ../data/storage001/folder001.
-14. Add links to file  
-```markdown
-[Index](index.md)  
-[Main](../../../index.md)
-```

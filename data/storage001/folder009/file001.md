@@ -1,8 +1,5 @@
 # Generating API, Nx, Nestjs
 
-[Up](index.md)
-[Main](../../../index.md)
-
 Task: Generating API.  
 Stack: NX, NestJS.
 
@@ -36,7 +33,7 @@ nx -v
 
 ## Create Workspace (project)
 
--   `notes-nx` is an example name.
+- `notes-nx` is an example name.
 
 ```bash
 npx create-nx-workspace@latest notes-nx
@@ -65,6 +62,3 @@ npx nx g @nrwl/nest:application packages/notes-api
 ```
 
 ---
-
-[Up](index.md)
-[Main](../../../index.md)
