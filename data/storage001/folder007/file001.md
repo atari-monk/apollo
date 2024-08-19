@@ -1,4 +1,4 @@
-# `Helios` Development Journal
+# Helios Development Journal
 
 ## 2024-08
 

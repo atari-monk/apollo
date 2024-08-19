@@ -10,3 +10,5 @@
 4. [Morpheus](data/storage001/folder004/index.md)
 5. [Morpheus Documentation](data/storage001/folder005/index.md)
 6. [TicTacReact](data/storage001/folder006/index.md)
+7. [Helios](data/storage001/folder007/index.md)
+8. [Pyrgos](data/storage001/folder008/index.md)
