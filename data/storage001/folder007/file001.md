@@ -1,8 +1,5 @@
 # `Helios` Development Journal
 
-[Up](index.md)
-[Main](../../../../index.md)
-
 ## 2024-08
 
 x hours x minutes
@@ -15,6 +12,3 @@ x hours x minutes
 1. Setup project with nx.
 
 ---
-
-[Up](index.md)
-[Main](../../../../index.md)

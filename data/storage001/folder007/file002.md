@@ -1,8 +1,5 @@
 # Project setup
 
-[Up](index.md)
-[Main](../../../../index.md)
-
 - Create project
 
 ```bash
@@ -22,6 +19,3 @@ nx g @nx/js:library engine --directory packages/engine
 ```
 
 ---
-
-[Up](index.md)
-[Main](../../../../index.md)
