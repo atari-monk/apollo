@@ -1,4 +1,4 @@
-# Project\Genesis\TicTacReact
+# Genesis\TicTacReact
 
 1. [Development Journal](file001.md)
 2. [Cli log](file002.md)

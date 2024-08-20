@@ -1,4 +1,4 @@
-# Project\Genesis\Morpheus
+# Genesis\Morpheus
 
 1. [Development Journal](file001.md)
 2. [Development Journal json](file001.json)

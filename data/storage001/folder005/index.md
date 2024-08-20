@@ -1,4 +1,4 @@
-# Project\Genesis\Morpheus\Documentation
+# Genesis\Morpheus\Documentation
 
 1. [Documentation](file001.md)
 2. [CanvasScaler](file002.md)
