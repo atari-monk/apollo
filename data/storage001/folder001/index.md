@@ -1,9 +1,9 @@
-# Apollo\MarkFolder
+# Apollo\MdFolder
 
 ## Project
 
 1. [Development Journal](file001.md)
-2. [MarkFolder](file002.md)
+2. [MdFolder](file002.md)
 
 ## Markdown example
 
