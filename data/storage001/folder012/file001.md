@@ -5,8 +5,8 @@
 I returned from 2 weeks vacations.  
 My family shack away from city.  
 Like to sit on my 4x4 concrete plates spot.  
-Take two light tables, chair, laptop, cables,
-keyborad, mouse, ear plugs, glasses, two sun umbrelas,
+Take two light tables, chair, laptop, cables,  
+keyborad, mouse, ear plugs, glasses, two sun umbrelas,  
 power cable spool.  
 Every day i setup this and take it back.  
 Best is to sit with my back to house.  
@@ -88,4 +88,4 @@ I would have joy to spend rest of my life alone.
 Stuck asking questions to chatgpt.  
 Question is more important than answears.  
 Watched 'Married With Children'.  
-Its 01:41 at night when i close laptop.
+Its 01:50 at night when i close laptop.
