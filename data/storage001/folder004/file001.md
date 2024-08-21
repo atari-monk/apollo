@@ -74,6 +74,8 @@
 
 5. Update `Development Journal` format.
 
+---
+
 ### 12
 
 17:51 - 18:47, 21:26 - 22:49, 22:49 - 23:43  
@@ -82,6 +84,8 @@
 1. Add documentation files, move from project.
 2. Document markersV2 and use them in ballDribbleV2.
 3. Script to calculate journal times using json.
+
+---
 
 ### 13
 
@@ -94,6 +98,8 @@
 3. Investigate `CenterCollisionWithScaling`. Fix calculations.
 4. Investigate `BallDribble`.
 
+---
+
 ### 14
 
 11:56 - 12:42, 12:42 - 14:10, 16:57 - 18:28, 19:06 - 19:48  
@@ -104,6 +110,8 @@ x hours x minutes
 3. BallDribbleFactory.
 4. BallDribbleWithScaling.
 
+---
+
 ### 15
 
 14:38 - 15:37, [16:37 - 17:54, 22:49 - 00:00]  
@@ -111,6 +119,8 @@ x hours x minutes
 
 1. Realized mistake in rendering.
 2. Scene in version 3.0.0. Refactor to introduce new renderer.
+
+---
 
 ### 16
 
@@ -121,3 +131,14 @@ x hours x minutes
 2. Turned out that flipped renderer had NormalDraw() on 0,0.  
    I have put position param there by mistake.  
    It takes 0,0 becouse translation() before uses position to translate canvas.
+
+---
+
+### 21
+
+13:35 - 15:27  
+x hours x minutes
+
+1. Fixed bugs. Investigated state of project.
+
+---

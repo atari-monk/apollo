@@ -1,9 +1,9 @@
 # Apollo/Chronologos
 
-## pl
+## Pl
 
 1. [2024-08](file002.md)
 
-## en
+## En
 
 1. [2024-08](file001.md)
