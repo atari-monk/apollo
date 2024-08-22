@@ -87,3 +87,26 @@ Utknąłem w zadawaniu pytań do chatgpt.
 Pytanie jest ważniejsze niż odpowiedzi.  
 Oglądałem 'Świat według Bundych'.  
 Jest 01:50 w nocy, gdy zamykam laptopa.
+
+# 22
+
+Poszedłem spać prawdopodobnie o 03:00.  
+Obudziłem się o 09:00.  
+Przygotowałem setup komputerowy, żeby streamować kodowanie.  
+Używam dużego komputera i laptopa, stojąc.  
+Zjadłem coś. Kawa.  
+Wróciłem do łużka.  
+Schowałem suche pranie.  
+Podlałem rośliny.  
+Zrobiłem naleśniki z dżemem. Zjadłem 3.  
+Oglądałem jingles komentującego rozgrywkę w grze.  
+Odpowiedziałem na kilka ofert pracy.  
+Herbata.  
+Przywiązałem kabel od lampy do łóżka, żeby móc  
+przesunąć pudełko z pościelą na podłodze.  
+Kodowałem trochę, w tle 'Married With Children'.  
+Postawiłem lampę na półce, 2m, mocowane ściskiem fo drewna.  
+Było za dużo odbić na monitorach.  
+Jest prawie 01:00.  
+Zjem naleśniki i obejrzę 'Married With Children'.  
+J. Krishnamurti na dobranoc.

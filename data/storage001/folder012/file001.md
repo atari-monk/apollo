@@ -89,4 +89,27 @@ I would have joy to spend rest of my life alone.
 Stuck asking questions to chatgpt.  
 Question is more important than answears.  
 Watched 'Married With Children'.  
-Its 01:50 at night when i close laptop.
+Its 02:00 at night when i close laptop.
+
+# 22
+
+Gone sleep probably at 03:00.  
+Wake up at 09:00.  
+Made my computer setup so i can stream coding.  
+Use big pc. Use laptop, standing.  
+Ate. Coffe.  
+Gone to bed.  
+Stored dry laundry.  
+Watered plants.  
+Made pancakes with jams. Ate 3.  
+Watched jingles comment game play.  
+Responded tp some jobs offers.  
+Tea.
+Tied cable for lamp to my bed so i can  
+move storage box on the floor.  
+Coding a bit. 'Married With Children' background.  
+Put lamp at 2m shelf with wood clamp.  
+There was to much reflections on monitors.  
+It's nearly 01:00.  
+Will have pancake and 'Married With Children'.  
+J Krisnamurti to drift in bed.
