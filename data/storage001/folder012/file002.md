@@ -107,6 +107,7 @@ przesunąć pudełko z pościelą na podłodze.
 Kodowałem trochę, w tle 'Married With Children'.  
 Postawiłem lampę na półce, 2m, mocowane ściskiem fo drewna.  
 Było za dużo odbić na monitorach.  
-Jest prawie 01:00.  
+Jest 01:00.  
+Posegregowałem maile.  
 Zjem naleśniki i obejrzę 'Married With Children'.  
 J. Krishnamurti na dobranoc.

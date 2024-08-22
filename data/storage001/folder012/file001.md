@@ -110,6 +110,7 @@ move storage box on the floor.
 Coding a bit. 'Married With Children' background.  
 Put lamp at 2m shelf with wood clamp.  
 There was to much reflections on monitors.  
-It's nearly 01:00.  
+It's 01:00.  
+Segregated mails.  
 Will have pancake and 'Married With Children'.  
 J Krisnamurti to drift in bed.
