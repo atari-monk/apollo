@@ -29,7 +29,7 @@ Zrobiłem pranie wszystkich ubrań, które miałem na miejscu wakacyjnym.
 Trochę się rozpakowałem.  
 Zjadłem kanapki.  
 Wysłałem kilka próśb o pracę.  
-Obejrzałem „Świat według Bundych”.  
+Obejrzałem 'Świat według Bundych'.  
 Siedziałem z laptopem.
 
 # 20
@@ -48,7 +48,7 @@ Usunąłem wszystkie wiadomości do moich braci na serwerze Discord.
 Z kilku lat, nie było łatwo.  
 Ugotowałem makaron.  
 Podgrzałem go w mikrofali z sosem pomidorowym i serem.  
-Obejrzałem „Świat według Bundych”.  
+Obejrzałem 'Świat według Bundych'.  
 Wypiłem drugą kawę z mlekiem.  
 Zaktualizowałem swoje notatki.  
 Dziś zrobiłem 30 pompek.  
@@ -72,11 +72,12 @@ Wszechświat nie musi mieć celu.
 Rozmyślałem o moim głównym projekcie i jego stanie.  
 Gotuję spaghetti tak samo jak wczoraj.  
 Oglądałem 'The Mighty Jingles', jak gra w grę.  
-Oglądałem 'Świat według Kiepskich'.  
+Oglądałem 'Świat według Bundych'.  
+Pralka wyprała kolejny ładunek ubrań.  
 Herbata.  
-Wysyłałem oferty pracy. Przez godziny.  
+Odpowiedziałem na oferty pracy. Przez godziny.  
 Freelancing nie jest dla mnie.  
-Po raz pierwszy wysłałem oferty na prace fizyczne.  
+Po raz pierwszy odpowiedziałem na oferty pracy fizycznej.  
 Wypróżnienie.  
 Prysznic.  
 Myślę o streamowaniu mojego kodowania.  
@@ -84,5 +85,5 @@ Mój setup nie jest gotowy.
 Miałbym radość spędzić resztę życia samemu.  
 Utknąłem w zadawaniu pytań do chatgpt.  
 Pytanie jest ważniejsze niż odpowiedzi.  
-Oglądałem 'Świat według Kiepskich'.  
+Oglądałem 'Świat według Bundych'.  
 Jest 01:50 w nocy, gdy zamykam laptopa.

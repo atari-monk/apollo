@@ -76,6 +76,7 @@ Pondered my main project and it's state.
 Coocking spagetii same as yesturday.  
 Watched 'The Mighty Jingles' playing game.  
 Watched 'Married With Children'.  
+Made another loundry load.  
 Tea.  
 Send job requests. For hours.  
 Freelancing is not for me.  
