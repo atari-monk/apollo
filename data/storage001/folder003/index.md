@@ -6,3 +6,7 @@
 2. [Scratch](file002.md)
 3. [Overcomplicate](file003.md)
 4. [Exercise](file004.md)
+
+# Existential
+
+1. [Exercise](file004.md)
