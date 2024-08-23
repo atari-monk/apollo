@@ -1,1122 +1,1132 @@
-1. Question: I need some kind of system for my ts app that will be able  
-   to provide instances of class avoiding to their version how  
-   would I construct that so i can handle 1000 classes no problem
+# 1. Question:
 
-   To handle multiple class instances based on their version in a TypeScript application, you can design a versioned class registry or factory system. This system will allow you to register different versions of a class and retrieve the appropriate versioned instance as needed. Here's how you can build such a system:
+I need some kind of system for my ts app that will be able  
+ to provide instances of class avoiding to their version how  
+ would I construct that so i can handle 1000 classes no problem
 
-   ### 1. **Define the Class Interface**
+To handle multiple class instances based on their version in a TypeScript application, you can design a versioned class registry or factory system. This system will allow you to register different versions of a class and retrieve the appropriate versioned instance as needed. Here's how you can build such a system:
 
-   First, define a common interface that all your classes will implement. This ensures that all classes, regardless of their version, will have the same set of methods and properties.
+### 1. **Define the Class Interface**
 
-   ```typescript
-   interface MyClass {
-     doSomething(): void
-   }
-   ```
+First, define a common interface that all your classes will implement. This ensures that all classes, regardless of their version, will have the same set of methods and properties.
 
-   ### 2. **Create a Versioned Class Registry**
+```typescript
+interface MyClass {
+  doSomething(): void
+}
+```
 
-   Next, create a registry that will map a class name or identifier to different versions of the class.
+### 2. **Create a Versioned Class Registry**
 
-   ```typescript
-   type Constructor<T> = new (...args: any[]) => T
+Next, create a registry that will map a class name or identifier to different versions of the class.
 
-   class VersionedClassRegistry {
-     private registry: Map<string, Map<string, Constructor<MyClass>>> =
-       new Map()
+```typescript
+type Constructor<T> = new (...args: any[]) => T
 
-     register(
-       version: string,
-       className: string,
-       classConstructor: Constructor<MyClass>
-     ): void {
-       if (!this.registry.has(className)) {
-         this.registry.set(className, new Map())
-       }
+class VersionedClassRegistry {
+  private registry: Map<string, Map<string, Constructor<MyClass>>> = new Map()
 
-       const versionMap = this.registry.get(className)!
-       versionMap.set(version, classConstructor)
-     }
+  register(
+    version: string,
+    className: string,
+    classConstructor: Constructor<MyClass>
+  ): void {
+    if (!this.registry.has(className)) {
+      this.registry.set(className, new Map())
+    }
 
-     getInstance(
-       className: string,
-       version: string,
-       ...args: any[]
-     ): MyClass | undefined {
-       const versionMap = this.registry.get(className)
-       if (!versionMap) {
-         throw new Error(`Class ${className} is not registered.`)
-       }
+    const versionMap = this.registry.get(className)!
+    versionMap.set(version, classConstructor)
+  }
 
-       const classConstructor = versionMap.get(version)
-       if (!classConstructor) {
-         throw new Error(
-           `Version ${version} of class ${className} is not registered.`
-         )
-       }
+  getInstance(
+    className: string,
+    version: string,
+    ...args: any[]
+  ): MyClass | undefined {
+    const versionMap = this.registry.get(className)
+    if (!versionMap) {
+      throw new Error(`Class ${className} is not registered.`)
+    }
 
-       return new classConstructor(...args)
-     }
-   }
-   ```
+    const classConstructor = versionMap.get(version)
+    if (!classConstructor) {
+      throw new Error(
+        `Version ${version} of class ${className} is not registered.`
+      )
+    }
 
-   ### 3. **Create Versioned Classes**
+    return new classConstructor(...args)
+  }
+}
+```
 
-   Now, define different versions of the classes that implement the common interface.
+### 3. **Create Versioned Classes**
 
-   ```typescript
-   class MyClassV1 implements MyClass {
-     doSomething(): void {
-       console.log('Doing something in version 1')
-     }
-   }
+Now, define different versions of the classes that implement the common interface.
 
-   class MyClassV2 implements MyClass {
-     doSomething(): void {
-       console.log('Doing something in version 2')
-     }
-   }
-   ```
+```typescript
+class MyClassV1 implements MyClass {
+  doSomething(): void {
+    console.log('Doing something in version 1')
+  }
+}
 
-   ### 4. **Register Classes in the Registry**
+class MyClassV2 implements MyClass {
+  doSomething(): void {
+    console.log('Doing something in version 2')
+  }
+}
+```
 
-   Instantiate the registry and register each version of your class.
+### 4. **Register Classes in the Registry**
 
-   ```typescript
-   const registry = new VersionedClassRegistry()
+Instantiate the registry and register each version of your class.
 
-   registry.register('1.0.0', 'MyClass', MyClassV1)
-   registry.register('2.0.0', 'MyClass', MyClassV2)
-   ```
+```typescript
+const registry = new VersionedClassRegistry()
 
-   ### 5. **Retrieve and Use Instances**
+registry.register('1.0.0', 'MyClass', MyClassV1)
+registry.register('2.0.0', 'MyClass', MyClassV2)
+```
 
-   Finally, you can retrieve instances of your class based on the version and use them.
+### 5. **Retrieve and Use Instances**
 
-   ```typescript
-   const instanceV1 = registry.getInstance('MyClass', '1.0.0')
-   instanceV1?.doSomething() // Output: Doing something in version 1
+Finally, you can retrieve instances of your class based on the version and use them.
 
-   const instanceV2 = registry.getInstance('MyClass', '2.0.0')
-   instanceV2?.doSomething() // Output: Doing something in version 2
-   ```
+```typescript
+const instanceV1 = registry.getInstance('MyClass', '1.0.0')
+instanceV1?.doSomething() // Output: Doing something in version 1
 
-   ### 6. **Handling Many Classes**
+const instanceV2 = registry.getInstance('MyClass', '2.0.0')
+instanceV2?.doSomething() // Output: Doing something in version 2
+```
 
-   This system will scale well as you add more classes and versions. You just need to ensure that each class version is registered properly in the registry.
+### 6. **Handling Many Classes**
 
-   ### **Advantages:**
+This system will scale well as you add more classes and versions. You just need to ensure that each class version is registered properly in the registry.
 
-   - **Scalability**: The system can handle a large number of classes and versions efficiently.
-   - **Flexibility**: Easily switch between different versions of the same class.
-   - **Type Safety**: The use of interfaces ensures that all versions of a class adhere to the expected contract.
+### **Advantages:**
 
-   ### **Considerations:**
+- **Scalability**: The system can handle a large number of classes and versions efficiently.
+- **Flexibility**: Easily switch between different versions of the same class.
+- **Type Safety**: The use of interfaces ensures that all versions of a class adhere to the expected contract.
 
-   - If you're dealing with a large number of versions, consider using version comparison libraries to handle versioning logic (e.g., `semver`).
-   - Depending on your application, you might want to add caching or pooling mechanisms to optimize instance creation for frequently requested classes.
+### **Considerations:**
 
-   This setup should work efficiently even with a large number of classes and versions, ensuring your application remains maintainable and scalable.
+- If you're dealing with a large number of versions, consider using version comparison libraries to handle versioning logic (e.g., `semver`).
+- Depending on your application, you might want to add caching or pooling mechanisms to optimize instance creation for frequently requested classes.
 
-2. Question: So can I use library for this?
+This setup should work efficiently even with a large number of classes and versions, ensuring your application remains maintainable and scalable.
 
-   Yes, you can use a library to handle versioned class instances in your TypeScript application, which might simplify your implementation and reduce boilerplate code. One popular library that can help with this is **`tsyringe`**, a dependency injection (DI) library.
+# 2. Question:
 
-   ### Using `tsyringe` for Versioned Class Instances
+So can I use library for this?
 
-   `tsyringe` allows you to manage class instances and their versions using dependency injection, which can simplify managing and switching between different versions of classes.
+Yes, you can use a library to handle versioned class instances in your TypeScript application, which might simplify your implementation and reduce boilerplate code. One popular library that can help with this is **`tsyringe`**, a dependency injection (DI) library.
 
-   #### 1. **Install `tsyringe`**
+### Using `tsyringe` for Versioned Class Instances
 
-   First, install the `tsyringe` library via npm or yarn:
+`tsyringe` allows you to manage class instances and their versions using dependency injection, which can simplify managing and switching between different versions of classes.
 
-   ```bash
-   npm install tsyringe
-   ```
+#### 1. **Install `tsyringe`**
 
-   or
+First, install the `tsyringe` library via npm or yarn:
 
-   ```bash
-   yarn add tsyringe
-   ```
+```bash
+npm install tsyringe
+```
 
-   #### 2. **Define Your Classes**
+or
 
-   Create your classes, just as before, implementing the common interface.
+```bash
+yarn add tsyringe
+```
 
-   ```typescript
-   import { injectable } from 'tsyringe'
+#### 2. **Define Your Classes**
 
-   interface MyClass {
-     doSomething(): void
-   }
+Create your classes, just as before, implementing the common interface.
 
-   @injectable()
-   class MyClassV1 implements MyClass {
-     doSomething(): void {
-       console.log('Doing something in version 1')
-     }
-   }
+```typescript
+import { injectable } from 'tsyringe'
 
-   @injectable()
-   class MyClassV2 implements MyClass {
-     doSomething(): void {
-       console.log('Doing something in version 2')
-     }
-   }
-   ```
+interface MyClass {
+  doSomething(): void
+}
 
-   #### 3. **Register Classes with the Container**
+@injectable()
+class MyClassV1 implements MyClass {
+  doSomething(): void {
+    console.log('Doing something in version 1')
+  }
+}
 
-   Use the `container` from `tsyringe` to register different versions of your classes. You can use the version as a token to differentiate between them.
+@injectable()
+class MyClassV2 implements MyClass {
+  doSomething(): void {
+    console.log('Doing something in version 2')
+  }
+}
+```
 
-   ```typescript
-   import { container } from 'tsyringe'
+#### 3. **Register Classes with the Container**
 
-   container.register('MyClass-1.0.0', { useClass: MyClassV1 })
-   container.register('MyClass-2.0.0', { useClass: MyClassV2 })
-   ```
+Use the `container` from `tsyringe` to register different versions of your classes. You can use the version as a token to differentiate between them.
 
-   #### 4. **Resolve Instances Based on Version**
+```typescript
+import { container } from 'tsyringe'
 
-   Now, you can resolve the instances of your class based on the version by using the appropriate token.
+container.register('MyClass-1.0.0', { useClass: MyClassV1 })
+container.register('MyClass-2.0.0', { useClass: MyClassV2 })
+```
 
-   ```typescript
-   const instanceV1 = container.resolve<MyClass>('MyClass-1.0.0')
-   instanceV1.doSomething() // Output: Doing something in version 1
+#### 4. **Resolve Instances Based on Version**
 
-   const instanceV2 = container.resolve<MyClass>('MyClass-2.0.0')
-   instanceV2.doSomething() // Output: Doing something in version 2
-   ```
+Now, you can resolve the instances of your class based on the version by using the appropriate token.
 
-   #### 5. **Scaling with Many Classes**
+```typescript
+const instanceV1 = container.resolve<MyClass>('MyClass-1.0.0')
+instanceV1.doSomething() // Output: Doing something in version 1
 
-   If you have many classes, you can follow a similar pattern by registering each class version with a unique token (e.g., `ClassName-Version`). The `container` will efficiently manage all your classes and their dependencies.
+const instanceV2 = container.resolve<MyClass>('MyClass-2.0.0')
+instanceV2.doSomething() // Output: Doing something in version 2
+```
 
-   ### **Advantages of Using `tsyringe`:**
+#### 5. **Scaling with Many Classes**
 
-   - **Simplified Code**: Less boilerplate for registering and resolving class instances.
-   - **Automatic Dependency Injection**: Supports constructor injection out of the box, which is useful if your classes depend on other services or classes.
-   - **Scalability**: The container can easily manage many classes and their versions.
+If you have many classes, you can follow a similar pattern by registering each class version with a unique token (e.g., `ClassName-Version`). The `container` will efficiently manage all your classes and their dependencies.
 
-   ### **Other Libraries to Consider:**
+### **Advantages of Using `tsyringe`:**
 
-   - **`inversify`**: A more feature-rich DI library with support for advanced use cases.
-   - **`awilix`**: A powerful DI library with an easy-to-use API.
-   - **`typedi`**: A DI library similar to `tsyringe`, but with additional features like custom scopes.
+- **Simplified Code**: Less boilerplate for registering and resolving class instances.
+- **Automatic Dependency Injection**: Supports constructor injection out of the box, which is useful if your classes depend on other services or classes.
+- **Scalability**: The container can easily manage many classes and their versions.
 
-   These libraries will help you manage versioned classes and dependencies in a scalable and maintainable way. If you're dealing with a large number of classes, a DI library like `tsyringe` or one of the alternatives can greatly simplify your development process.
+### **Other Libraries to Consider:**
 
-3. Question: Somehow i didn't use any libraries in my project for now. Maybe i should start
+- **`inversify`**: A more feature-rich DI library with support for advanced use cases.
+- **`awilix`**: A powerful DI library with an easy-to-use API.
+- **`typedi`**: A DI library similar to `tsyringe`, but with additional features like custom scopes.
 
-   Incorporating libraries into your project can be a good move, especially as your project grows in complexity. Libraries can save you time by providing well-tested solutions to common problems, like dependency injection, state management, or handling HTTP requests.
+These libraries will help you manage versioned classes and dependencies in a scalable and maintainable way. If you're dealing with a large number of classes, a DI library like `tsyringe` or one of the alternatives can greatly simplify your development process.
 
-   ### Why You Might Want to Start Using Libraries:
+# 3. Question:
 
-   1. **Efficiency**: Libraries often offer pre-built functionality that can save you time. Instead of reinventing the wheel, you can leverage a library to focus on your core application logic.
+Somehow i didn't use any libraries in my project for now. Maybe i should start
 
-   2. **Scalability**: As your project grows, managing dependencies, versions, and other complex logic manually can become challenging. Libraries like `tsyringe` for dependency injection or `axios` for HTTP requests provide scalable solutions.
+Incorporating libraries into your project can be a good move, especially as your project grows in complexity. Libraries can save you time by providing well-tested solutions to common problems, like dependency injection, state management, or handling HTTP requests.
 
-   3. **Maintainability**: Libraries usually follow best practices and patterns, making your code easier to maintain and less error-prone. Plus, popular libraries have large communities and documentation to help you when you encounter issues.
+### Why You Might Want to Start Using Libraries:
 
-   4. **Consistency**: Using well-established libraries can help standardize your codebase, especially if you're working with a team. Everyone follows the same patterns and practices, reducing the learning curve for new developers.
+1.  **Efficiency**: Libraries often offer pre-built functionality that can save you time. Instead of reinventing the wheel, you can leverage a library to focus on your core application logic.
 
-   ### Getting Started with Libraries
+2.  **Scalability**: As your project grows, managing dependencies, versions, and other complex logic manually can become challenging. Libraries like `tsyringe` for dependency injection or `axios` for HTTP requests provide scalable solutions.
 
-   If you're new to using libraries, here's a general approach to start incorporating them into your project:
+3.  **Maintainability**: Libraries usually follow best practices and patterns, making your code easier to maintain and less error-prone. Plus, popular libraries have large communities and documentation to help you when you encounter issues.
 
-   1. **Identify the Need**: Determine which part of your application could benefit most from a library. For instance:
+4.  **Consistency**: Using well-established libraries can help standardize your codebase, especially if you're working with a team. Everyone follows the same patterns and practices, reducing the learning curve for new developers.
 
-   - If you’re manually managing dependencies between classes, a DI library like `tsyringe` or `inversify` could help.
-   - If you’re handling a lot of API requests, a library like `axios` can simplify the process.
-   - For managing application state, you might consider `Redux` or `MobX`.
+### Getting Started with Libraries
 
-   2. **Start Small**: Introduce one library at a time to avoid overwhelming yourself. Implement it in a small, isolated part of your project first to get comfortable with it.
+If you're new to using libraries, here's a general approach to start incorporating them into your project:
 
-   3. **Follow Best Practices**: Read the documentation and best practices for the library you choose. This will help you avoid common pitfalls and get the most out of the library.
+1.  **Identify the Need**: Determine which part of your application could benefit most from a library. For instance:
 
-   4. **Refactor Incrementally**: Once you're comfortable with a library, gradually refactor other parts of your code to use it. This approach minimizes the risk of introducing bugs and allows you to maintain a working codebase throughout the process.
+- If you’re manually managing dependencies between classes, a DI library like `tsyringe` or `inversify` could help.
+- If you’re handling a lot of API requests, a library like `axios` can simplify the process.
+- For managing application state, you might consider `Redux` or `MobX`.
 
-   5. **Evaluate Performance and Overhead**: While libraries can save time, they can also add some overhead (in terms of performance or bundle size). Make sure to evaluate if the trade-offs are worth it for your specific use case.
+2.  **Start Small**: Introduce one library at a time to avoid overwhelming yourself. Implement it in a small, isolated part of your project first to get comfortable with it.
 
-   ### Example: Introducing `tsyringe`
+3.  **Follow Best Practices**: Read the documentation and best practices for the library you choose. This will help you avoid common pitfalls and get the most out of the library.
 
-   If you decide to start with a dependency injection library like `tsyringe`, here’s a step-by-step on how you might introduce it:
+4.  **Refactor Incrementally**: Once you're comfortable with a library, gradually refactor other parts of your code to use it. This approach minimizes the risk of introducing bugs and allows you to maintain a working codebase throughout the process.
 
-   1. **Install the Library**:
+5.  **Evaluate Performance and Overhead**: While libraries can save time, they can also add some overhead (in terms of performance or bundle size). Make sure to evaluate if the trade-offs are worth it for your specific use case.
 
-   ```bash
-   npm install tsyringe
-   ```
+### Example: Introducing `tsyringe`
 
-   2. **Refactor a Simple Part of Your Code**:
+If you decide to start with a dependency injection library like `tsyringe`, here’s a step-by-step on how you might introduce it:
 
-   - Start by refactoring one class or service to use `tsyringe` for dependency injection.
+1.  **Install the Library**:
 
-   3. **Test Thoroughly**:
+```bash
+npm install tsyringe
+```
 
-   - Make sure the refactored code works as expected. This will build confidence as you start using the library in more parts of your application.
+2.  **Refactor a Simple Part of Your Code**:
 
-   4. **Expand Gradually**:
+- Start by refactoring one class or service to use `tsyringe` for dependency injection.
 
-   - Once the initial refactor is successful, gradually expand the use of `tsyringe` across your project.
+3.  **Test Thoroughly**:
 
-   ### Example of How It Might Look:
+- Make sure the refactored code works as expected. This will build confidence as you start using the library in more parts of your application.
 
-   **Before** (without DI):
+4.  **Expand Gradually**:
 
-   ```typescript
-   class Logger {
-     log(message: string) {
-       console.log(message)
-     }
-   }
+- Once the initial refactor is successful, gradually expand the use of `tsyringe` across your project.
 
-   class UserService {
-     private logger: Logger
+### Example of How It Might Look:
 
-     constructor() {
-       this.logger = new Logger()
-     }
+**Before** (without DI):
 
-     createUser(name: string) {
-       this.logger.log(`User ${name} created.`)
-     }
-   }
-   ```
+```typescript
+class Logger {
+  log(message: string) {
+    console.log(message)
+  }
+}
 
-   **After** (with `tsyringe`):
+class UserService {
+  private logger: Logger
 
-   ```typescript
-   import { injectable, container } from 'tsyringe'
+  constructor() {
+    this.logger = new Logger()
+  }
 
-   @injectable()
-   class Logger {
-     log(message: string) {
-       console.log(message)
-     }
-   }
+  createUser(name: string) {
+    this.logger.log(`User ${name} created.`)
+  }
+}
+```
 
-   @injectable()
-   class UserService {
-     constructor(private logger: Logger) {}
+**After** (with `tsyringe`):
 
-     createUser(name: string) {
-       this.logger.log(`User ${name} created.`)
-     }
-   }
+```typescript
+import { injectable, container } from 'tsyringe'
 
-   const userService = container.resolve(UserService)
-   userService.createUser('Alice')
-   ```
+@injectable()
+class Logger {
+  log(message: string) {
+    console.log(message)
+  }
+}
 
-   In the refactored code, `tsyringe` handles the creation of `Logger` and injects it into `UserService`. This makes the `UserService` class more flexible and easier to test.
+@injectable()
+class UserService {
+  constructor(private logger: Logger) {}
 
-   ### Conclusion
+  createUser(name: string) {
+    this.logger.log(`User ${name} created.`)
+  }
+}
 
-   Introducing libraries into your project can significantly improve your development process, making your code more efficient, scalable, and maintainable. Start with small, incremental changes, and leverage the strengths of libraries to focus more on building features and less on solving common development challenges.
+const userService = container.resolve(UserService)
+userService.createUser('Alice')
+```
 
-4. Question: Unfortunately there is a balance between new technology and what i have now. I can't break my code. It is already unstable.
+In the refactored code, `tsyringe` handles the creation of `Logger` and injects it into `UserService`. This makes the `UserService` class more flexible and easier to test.
 
-   It's understandable that introducing new technology into an already unstable codebase can feel risky. Balancing the need for improvements with the stability of your existing project is crucial. Here’s a strategy to help you improve your code without disrupting your current system:
+### Conclusion
 
-   ### 1. **Start with Small, Low-Risk Changes**
+Introducing libraries into your project can significantly improve your development process, making your code more efficient, scalable, and maintainable. Start with small, incremental changes, and leverage the strengths of libraries to focus more on building features and less on solving common development challenges.
 
-   Instead of making sweeping changes or introducing a large, complex library, start by refactoring small, non-critical parts of your codebase. This allows you to test new concepts and patterns in isolation without risking the stability of your entire project.
+# 4. Question:
 
-   ### 2. **Use Feature Flags**
+Unfortunately there is a balance between new technology and what i have now. I can't break my code. It is already unstable.
 
-   Introduce changes behind feature flags. This way, new code can be tested in production without impacting existing functionality. You can enable the feature flag for a small subset of users or even just for internal testing. If something goes wrong, you can quickly disable the flag without rolling back your code.
+It's understandable that introducing new technology into an already unstable codebase can feel risky. Balancing the need for improvements with the stability of your existing project is crucial. Here’s a strategy to help you improve your code without disrupting your current system:
 
-   ### 3. **Write Tests for Critical Parts**
+### 1. **Start with Small, Low-Risk Changes**
 
-   Before making any changes, write tests for the most critical parts of your application. This can include unit tests, integration tests, or even manual testing scripts. Even if you don’t have a comprehensive test suite, having some tests in place gives you confidence that changes won’t break core functionality.
+Instead of making sweeping changes or introducing a large, complex library, start by refactoring small, non-critical parts of your codebase. This allows you to test new concepts and patterns in isolation without risking the stability of your entire project.
 
-   - **Focus on Regression Testing**: Ensure that the existing behavior is preserved after changes.
-   - **Prioritize High-Impact Areas**: Start with areas that are most critical to your application's operation.
+### 2. **Use Feature Flags**
 
-   ### 4. **Incremental Refactoring**
+Introduce changes behind feature flags. This way, new code can be tested in production without impacting existing functionality. You can enable the feature flag for a small subset of users or even just for internal testing. If something goes wrong, you can quickly disable the flag without rolling back your code.
 
-   When introducing a library or refactoring code, do it incrementally. For example, if you decide to use a dependency injection (DI) library like `tsyringe`:
+### 3. **Write Tests for Critical Parts**
 
-   - Start with a single class or component.
-   - Ensure that the new setup works as expected.
-   - Gradually expand the usage of the library across your project.
+Before making any changes, write tests for the most critical parts of your application. This can include unit tests, integration tests, or even manual testing scripts. Even if you don’t have a comprehensive test suite, having some tests in place gives you confidence that changes won’t break core functionality.
 
-   ### 5. **Parallel Development Branches**
+- **Focus on Regression Testing**: Ensure that the existing behavior is preserved after changes.
+- **Prioritize High-Impact Areas**: Start with areas that are most critical to your application's operation.
 
-   Work on your improvements in a separate branch or even a separate environment if possible. This allows you to make changes, run tests, and ensure stability without affecting the main codebase.
+### 4. **Incremental Refactoring**
 
-   - **Create a “Stabilization” Branch**: Use this branch to introduce and test new changes before merging them into the main branch.
-   - **Use Continuous Integration (CI)**: If you have CI set up, it can automatically run tests on new branches to catch issues early.
+When introducing a library or refactoring code, do it incrementally. For example, if you decide to use a dependency injection (DI) library like `tsyringe`:
 
-   ### 6. **Document Everything**
+- Start with a single class or component.
+- Ensure that the new setup works as expected.
+- Gradually expand the usage of the library across your project.
 
-   As you introduce new technology or refactor existing code, document your changes thoroughly. This includes:
+### 5. **Parallel Development Branches**
 
-   - **Why**: The reasoning behind introducing new technology or patterns.
-   - **How**: Instructions on how the new system works.
-   - **Impact**: Any potential impact on the current system and how to mitigate it.
+Work on your improvements in a separate branch or even a separate environment if possible. This allows you to make changes, run tests, and ensure stability without affecting the main codebase.
 
-   Clear documentation helps both you and any future developers understand the changes and their implications.
+- **Create a “Stabilization” Branch**: Use this branch to introduce and test new changes before merging them into the main branch.
+- **Use Continuous Integration (CI)**: If you have CI set up, it can automatically run tests on new branches to catch issues early.
 
-   ### 7. **Stabilize Before Scaling**
+### 6. **Document Everything**
 
-   If your codebase is unstable, prioritize fixing critical issues before introducing new technology. Stabilizing your existing codebase will make it easier to integrate new libraries or frameworks later. This might include:
+As you introduce new technology or refactor existing code, document your changes thoroughly. This includes:
 
-   - **Refactoring Legacy Code**: Clean up any outdated or poorly maintained code.
-   - **Improving Error Handling**: Ensure that your code gracefully handles errors and edge cases.
-   - **Optimizing Performance**: Identify and fix performance bottlenecks that might be contributing to instability.
+- **Why**: The reasoning behind introducing new technology or patterns.
+- **How**: Instructions on how the new system works.
+- **Impact**: Any potential impact on the current system and how to mitigate it.
 
-   ### 8. **Selective Library Introduction**
+Clear documentation helps both you and any future developers understand the changes and their implications.
 
-   Instead of adopting a new library across your entire project, consider introducing it only in specific areas where it provides the most benefit. For example:
+### 7. **Stabilize Before Scaling**
 
-   - **Use DI only where it simplifies dependency management**: Apply `tsyringe` or similar libraries in areas with complex dependency chains rather than everywhere.
-   - **Introduce new patterns in non-critical features**: Start by refactoring less critical parts of your application.
+If your codebase is unstable, prioritize fixing critical issues before introducing new technology. Stabilizing your existing codebase will make it easier to integrate new libraries or frameworks later. This might include:
 
-   ### 9. **Seek Quick Wins**
+- **Refactoring Legacy Code**: Clean up any outdated or poorly maintained code.
+- **Improving Error Handling**: Ensure that your code gracefully handles errors and edge cases.
+- **Optimizing Performance**: Identify and fix performance bottlenecks that might be contributing to instability.
 
-   Look for changes that provide immediate benefits with minimal risk. For example:
+### 8. **Selective Library Introduction**
 
-   - **Refactor repetitive code into reusable functions or classes**: This can reduce bugs and make your code easier to maintain.
-   - **Simplify complex logic**: Break down complicated functions into smaller, more manageable pieces.
-   - **Improve logging**: Enhance your logging to get better insights into what’s going wrong when issues occur.
+Instead of adopting a new library across your entire project, consider introducing it only in specific areas where it provides the most benefit. For example:
 
-   ### 10. **Be Prepared for Rollbacks**
+- **Use DI only where it simplifies dependency management**: Apply `tsyringe` or similar libraries in areas with complex dependency chains rather than everywhere.
+- **Introduce new patterns in non-critical features**: Start by refactoring less critical parts of your application.
 
-   As you introduce changes, ensure that you have a plan for rolling back to a stable state if something goes wrong. This might involve:
+### 9. **Seek Quick Wins**
 
-   - **Version Control**: Ensure that you can quickly revert changes via Git or another version control system.
-   - **Database Backups**: If your changes involve database migrations or other irreversible changes, have backups ready.
-   - **Monitoring and Alerts**: Set up monitoring to quickly detect if something goes wrong after a deployment.
+Look for changes that provide immediate benefits with minimal risk. For example:
 
-   ### Conclusion
+- **Refactor repetitive code into reusable functions or classes**: This can reduce bugs and make your code easier to maintain.
+- **Simplify complex logic**: Break down complicated functions into smaller, more manageable pieces.
+- **Improve logging**: Enhance your logging to get better insights into what’s going wrong when issues occur.
 
-   Balancing the introduction of new technology with maintaining stability is challenging, especially in a complex or unstable codebase. By taking a cautious, incremental approach and focusing on stabilizing your existing code, you can gradually introduce improvements without breaking your project. Remember to prioritize stability, write tests, and document changes to minimize risks and ensure a smoother transition.
+### 10. **Be Prepared for Rollbacks**
 
-5. Question: The problem with Ts syringe is that i don't trust it or not even that.  
-   But i will no longer know or control how my instances are created
+As you introduce changes, ensure that you have a plan for rolling back to a stable state if something goes wrong. This might involve:
 
-   It's completely valid to have concerns about losing control over how your instances are created, especially when introducing a dependency injection (DI) library like `tsyringe`. If you want to maintain control over instance creation while still gaining some of the benefits of DI or similar patterns, there are a few strategies you can consider:
+- **Version Control**: Ensure that you can quickly revert changes via Git or another version control system.
+- **Database Backups**: If your changes involve database migrations or other irreversible changes, have backups ready.
+- **Monitoring and Alerts**: Set up monitoring to quickly detect if something goes wrong after a deployment.
 
-   ### 1. **Manual Dependency Injection**
+### Conclusion
 
-   Instead of using a DI library, you can implement manual dependency injection. This allows you to keep full control over how instances are created while still benefiting from the flexibility of dependency injection.
+Balancing the introduction of new technology with maintaining stability is challenging, especially in a complex or unstable codebase. By taking a cautious, incremental approach and focusing on stabilizing your existing code, you can gradually introduce improvements without breaking your project. Remember to prioritize stability, write tests, and document changes to minimize risks and ensure a smoother transition.
 
-   #### Example:
+# 5. Question:
 
-   ```typescript
-   class Logger {
-     log(message: string) {
-       console.log(message)
-     }
-   }
+The problem with Ts syringe is that i don't trust it or not even that.  
+ But i will no longer know or control how my instances are created
 
-   class UserService {
-     private logger: Logger
+It's completely valid to have concerns about losing control over how your instances are created, especially when introducing a dependency injection (DI) library like `tsyringe`. If you want to maintain control over instance creation while still gaining some of the benefits of DI or similar patterns, there are a few strategies you can consider:
 
-     constructor(logger: Logger) {
-       this.logger = logger
-     }
+### 1. **Manual Dependency Injection**
 
-     createUser(name: string) {
-       this.logger.log(`User ${name} created.`)
-     }
-   }
+Instead of using a DI library, you can implement manual dependency injection. This allows you to keep full control over how instances are created while still benefiting from the flexibility of dependency injection.
 
-   // Manual injection
-   const logger = new Logger()
-   const userService = new UserService(logger)
+#### Example:
 
-   userService.createUser('Alice')
-   ```
+```typescript
+class Logger {
+  log(message: string) {
+    console.log(message)
+  }
+}
 
-   ### 2. **Factory Pattern**
+class UserService {
+  private logger: Logger
 
-   You can use the Factory Pattern to create instances of your classes. This pattern provides a centralized way to manage instance creation while giving you the flexibility to control how and when objects are instantiated.
+  constructor(logger: Logger) {
+    this.logger = logger
+  }
 
-   #### Example:
+  createUser(name: string) {
+    this.logger.log(`User ${name} created.`)
+  }
+}
 
-   ```typescript
-   interface MyClass {
-     doSomething(): void
-   }
+// Manual injection
+const logger = new Logger()
+const userService = new UserService(logger)
 
-   class MyClassV1 implements MyClass {
-     doSomething(): void {
-       console.log('Doing something in version 1')
-     }
-   }
+userService.createUser('Alice')
+```
 
-   class MyClassV2 implements MyClass {
-     doSomething(): void {
-       console.log('Doing something in version 2')
-     }
-   }
+### 2. **Factory Pattern**
 
-   class MyClassFactory {
-     static create(version: string): MyClass {
-       switch (version) {
-         case '1.0.0':
-           return new MyClassV1()
-         case '2.0.0':
-           return new MyClassV2()
-         default:
-           throw new Error('Unsupported version')
-       }
-     }
-   }
+You can use the Factory Pattern to create instances of your classes. This pattern provides a centralized way to manage instance creation while giving you the flexibility to control how and when objects are instantiated.
 
-   // Usage
-   const myClassInstance = MyClassFactory.create('1.0.0')
-   myClassInstance.doSomething()
-   ```
+#### Example:
 
-   With this pattern, you control the creation process and can easily extend it to support more versions or configurations.
+```typescript
+interface MyClass {
+  doSomething(): void
+}
 
-   ### 3. **Service Locator Pattern**
+class MyClassV1 implements MyClass {
+  doSomething(): void {
+    console.log('Doing something in version 1')
+  }
+}
 
-   If you need a bit more flexibility but still want to control instance creation, you could consider the Service Locator pattern. This pattern involves a central registry (service locator) that provides instances of your services on demand.
+class MyClassV2 implements MyClass {
+  doSomething(): void {
+    console.log('Doing something in version 2')
+  }
+}
 
-   #### Example:
+class MyClassFactory {
+  static create(version: string): MyClass {
+    switch (version) {
+      case '1.0.0':
+        return new MyClassV1()
+      case '2.0.0':
+        return new MyClassV2()
+      default:
+        throw new Error('Unsupported version')
+    }
+  }
+}
 
-   ```typescript
-   class ServiceLocator {
-     private services: Map<string, any> = new Map()
+// Usage
+const myClassInstance = MyClassFactory.create('1.0.0')
+myClassInstance.doSomething()
+```
 
-     register<T>(name: string, service: T): void {
-       this.services.set(name, service)
-     }
+With this pattern, you control the creation process and can easily extend it to support more versions or configurations.
 
-     get<T>(name: string): T {
-       const service = this.services.get(name)
-       if (!service) {
-         throw new Error(`Service ${name} not found`)
-       }
-       return service
-     }
-   }
+### 3. **Service Locator Pattern**
 
-   class Logger {
-     log(message: string) {
-       console.log(message)
-     }
-   }
+If you need a bit more flexibility but still want to control instance creation, you could consider the Service Locator pattern. This pattern involves a central registry (service locator) that provides instances of your services on demand.
 
-   class UserService {
-     constructor(private logger: Logger) {}
+#### Example:
 
-     createUser(name: string) {
-       this.logger.log(`User ${name} created.`)
-     }
-   }
+```typescript
+class ServiceLocator {
+  private services: Map<string, any> = new Map()
 
-   // Setup
-   const serviceLocator = new ServiceLocator()
-   serviceLocator.register('logger', new Logger())
+  register<T>(name: string, service: T): void {
+    this.services.set(name, service)
+  }
 
-   // Manual dependency injection using the service locator
-   const logger = serviceLocator.get<Logger>('logger')
-   const userService = new UserService(logger)
+  get<T>(name: string): T {
+    const service = this.services.get(name)
+    if (!service) {
+      throw new Error(`Service ${name} not found`)
+    }
+    return service
+  }
+}
 
-   userService.createUser('Alice')
-   ```
+class Logger {
+  log(message: string) {
+    console.log(message)
+  }
+}
 
-   With the Service Locator pattern, you keep control over how services are instantiated and registered while still gaining the flexibility to manage dependencies centrally.
+class UserService {
+  constructor(private logger: Logger) {}
 
-   ### 4. **Custom Lightweight DI Framework**
+  createUser(name: string) {
+    this.logger.log(`User ${name} created.`)
+  }
+}
 
-   If you want something more than manual DI but less opaque than a full DI library, you could implement a lightweight DI framework that you fully control. This would give you the best of both worlds: control and flexibility.
+// Setup
+const serviceLocator = new ServiceLocator()
+serviceLocator.register('logger', new Logger())
 
-   #### Example:
+// Manual dependency injection using the service locator
+const logger = serviceLocator.get<Logger>('logger')
+const userService = new UserService(logger)
 
-   ```typescript
-   type Constructor<T> = new (...args: any[]) => T
+userService.createUser('Alice')
+```
 
-   class SimpleDIContainer {
-     private services: Map<string, any> = new Map()
+With the Service Locator pattern, you keep control over how services are instantiated and registered while still gaining the flexibility to manage dependencies centrally.
 
-     register<T>(
-       name: string,
-       constructor: Constructor<T>,
-       ...args: any[]
-     ): void {
-       const instance = new constructor(...args)
-       this.services.set(name, instance)
-     }
+### 4. **Custom Lightweight DI Framework**
 
-     resolve<T>(name: string): T {
-       const service = this.services.get(name)
-       if (!service) {
-         throw new Error(`Service ${name} not found`)
-       }
-       return service
-     }
-   }
+If you want something more than manual DI but less opaque than a full DI library, you could implement a lightweight DI framework that you fully control. This would give you the best of both worlds: control and flexibility.
 
-   // Define your classes
-   class Logger {
-     log(message: string) {
-       console.log(message)
-     }
-   }
+#### Example:
 
-   class UserService {
-     constructor(private logger: Logger) {}
+```typescript
+type Constructor<T> = new (...args: any[]) => T
 
-     createUser(name: string) {
-       this.logger.log(`User ${name} created.`)
-     }
-   }
+class SimpleDIContainer {
+  private services: Map<string, any> = new Map()
 
-   // Use the custom DI container
-   const diContainer = new SimpleDIContainer()
-   diContainer.register('logger', Logger)
-   diContainer.register(
-     'userService',
-     UserService,
-     diContainer.resolve('logger')
-   )
+  register<T>(name: string, constructor: Constructor<T>, ...args: any[]): void {
+    const instance = new constructor(...args)
+    this.services.set(name, instance)
+  }
 
-   const userService = diContainer.resolve<UserService>('userService')
-   userService.createUser('Alice')
-   ```
+  resolve<T>(name: string): T {
+    const service = this.services.get(name)
+    if (!service) {
+      throw new Error(`Service ${name} not found`)
+    }
+    return service
+  }
+}
 
-   ### 5. **Hybrid Approach**
+// Define your classes
+class Logger {
+  log(message: string) {
+    console.log(message)
+  }
+}
 
-   You can mix manual dependency management with selective use of DI where it makes sense. For instance, you could manually create instances for critical services where you need control and use DI for less critical or more generic parts of your application.
+class UserService {
+  constructor(private logger: Logger) {}
 
-   ### Conclusion
+  createUser(name: string) {
+    this.logger.log(`User ${name} created.`)
+  }
+}
 
-   It's important to strike the right balance between maintaining control over your code and adopting new patterns or libraries that can make your development process more efficient. By considering options like manual dependency injection, factory patterns, or a custom lightweight DI container, you can introduce flexibility into your codebase without sacrificing control. These approaches allow you to gradually move towards more maintainable code while keeping a firm grip on how your instances are created.
+// Use the custom DI container
+const diContainer = new SimpleDIContainer()
+diContainer.register('logger', Logger)
+diContainer.register('userService', UserService, diContainer.resolve('logger'))
 
-6. Question: What about singleton vs new instance in my implementation of di or locator.
+const userService = diContainer.resolve<UserService>('userService')
+userService.createUser('Alice')
+```
 
-   Deciding between using a singleton pattern or creating new instances for each request (transient instances) in your Dependency Injection (DI) or Service Locator implementation involves understanding the implications of each approach and applying them according to the needs of your application. Here’s a breakdown of both strategies and their use cases:
+### 5. **Hybrid Approach**
 
-   ### **Singleton Pattern**
+You can mix manual dependency management with selective use of DI where it makes sense. For instance, you could manually create instances for critical services where you need control and use DI for less critical or more generic parts of your application.
 
-   In the Singleton pattern, only one instance of a class is created and shared throughout the application. This is useful when you want to ensure that a single instance is used across different parts of your application, which can help with resource management and maintaining global state.
+### Conclusion
 
-   #### **When to Use Singletons:**
+It's important to strike the right balance between maintaining control over your code and adopting new patterns or libraries that can make your development process more efficient. By considering options like manual dependency injection, factory patterns, or a custom lightweight DI container, you can introduce flexibility into your codebase without sacrificing control. These approaches allow you to gradually move towards more maintainable code while keeping a firm grip on how your instances are created.
 
-   - **Shared State**: When the class maintains state or data that should be consistent across the application.
-   - **Expensive to Create**: When creating an instance is resource-intensive and you want to avoid the overhead of multiple creations.
-   - **Global Access**: When you need a globally accessible instance, such as a configuration or logging service.
+# 6. Question:
 
-   #### **Implementation Example:**
+What about singleton vs new instance in my implementation of di or locator.
 
-   ```typescript
-   class Logger {
-     private static instance: Logger
+Deciding between using a singleton pattern or creating new instances for each request (transient instances) in your Dependency Injection (DI) or Service Locator implementation involves understanding the implications of each approach and applying them according to the needs of your application. Here’s a breakdown of both strategies and their use cases:
 
-     private constructor() {
-       // Private constructor prevents direct instantiation
-     }
+### **Singleton Pattern**
 
-     static getInstance(): Logger {
-       if (!Logger.instance) {
-         Logger.instance = new Logger()
-       }
-       return Logger.instance
-     }
+In the Singleton pattern, only one instance of a class is created and shared throughout the application. This is useful when you want to ensure that a single instance is used across different parts of your application, which can help with resource management and maintaining global state.
 
-     log(message: string): void {
-       console.log(message)
-     }
-   }
+#### **When to Use Singletons:**
 
-   // Usage
-   const logger = Logger.getInstance()
-   logger.log('Singleton Logger')
-   ```
+- **Shared State**: When the class maintains state or data that should be consistent across the application.
+- **Expensive to Create**: When creating an instance is resource-intensive and you want to avoid the overhead of multiple creations.
+- **Global Access**: When you need a globally accessible instance, such as a configuration or logging service.
 
-   ### **Transient Instances**
+#### **Implementation Example:**
 
-   Transient instances are created anew each time they are requested. This is useful when you need a fresh instance of a class for each use, or when instances maintain state that should not be shared.
+```typescript
+class Logger {
+  private static instance: Logger
 
-   #### **When to Use Transients:**
+  private constructor() {
+    // Private constructor prevents direct instantiation
+  }
 
-   - **Stateless**: When the class does not maintain any state that should be shared or persisted across requests.
-   - **Customization**: When each instance might be configured differently.
-   - **Isolation**: When you need isolated instances to avoid unintended interactions or state leakage.
+  static getInstance(): Logger {
+    if (!Logger.instance) {
+      Logger.instance = new Logger()
+    }
+    return Logger.instance
+  }
 
-   #### **Implementation Example:**
+  log(message: string): void {
+    console.log(message)
+  }
+}
 
-   ```typescript
-   class DatabaseConnection {
-     constructor(public connectionString: string) {}
+// Usage
+const logger = Logger.getInstance()
+logger.log('Singleton Logger')
+```
 
-     connect(): void {
-       console.log(`Connecting to ${this.connectionString}`)
-     }
-   }
+### **Transient Instances**
 
-   // Simple DI Container with Transient Instances
-   class SimpleDIContainer {
-     private services: Map<string, any> = new Map()
+Transient instances are created anew each time they are requested. This is useful when you need a fresh instance of a class for each use, or when instances maintain state that should not be shared.
 
-     register<T>(
-       name: string,
-       constructor: new (...args: any[]) => T,
-       ...args: any[]
-     ): void {
-       this.services.set(name, { constructor, args })
-     }
+#### **When to Use Transients:**
 
-     resolve<T>(name: string): T {
-       const service = this.services.get(name)
-       if (!service) {
-         throw new Error(`Service ${name} not found`)
-       }
-       return new service.constructor(...service.args)
-     }
-   }
+- **Stateless**: When the class does not maintain any state that should be shared or persisted across requests.
+- **Customization**: When each instance might be configured differently.
+- **Isolation**: When you need isolated instances to avoid unintended interactions or state leakage.
 
-   // Setup
-   const diContainer = new SimpleDIContainer()
-   diContainer.register('dbConnection', DatabaseConnection, 'DatabaseURL')
+#### **Implementation Example:**
 
-   // Usage
-   const dbConnection1 = diContainer.resolve<DatabaseConnection>('dbConnection')
-   dbConnection1.connect() // Connecting to DatabaseURL
+```typescript
+class DatabaseConnection {
+  constructor(public connectionString: string) {}
 
-   const dbConnection2 = diContainer.resolve<DatabaseConnection>('dbConnection')
-   dbConnection2.connect() // Connecting to DatabaseURL
-   ```
+  connect(): void {
+    console.log(`Connecting to ${this.connectionString}`)
+  }
+}
 
-   ### **Hybrid Approach**
+// Simple DI Container with Transient Instances
+class SimpleDIContainer {
+  private services: Map<string, any> = new Map()
 
-   You can combine both singleton and transient scopes in your DI setup depending on the service's requirements.
+  register<T>(
+    name: string,
+    constructor: new (...args: any[]) => T,
+    ...args: any[]
+  ): void {
+    this.services.set(name, { constructor, args })
+  }
 
-   #### **Hybrid Example:**
+  resolve<T>(name: string): T {
+    const service = this.services.get(name)
+    if (!service) {
+      throw new Error(`Service ${name} not found`)
+    }
+    return new service.constructor(...service.args)
+  }
+}
 
-   ```typescript
-   class Logger {
-     private static instance: Logger
+// Setup
+const diContainer = new SimpleDIContainer()
+diContainer.register('dbConnection', DatabaseConnection, 'DatabaseURL')
 
-     private constructor() {}
+// Usage
+const dbConnection1 = diContainer.resolve<DatabaseConnection>('dbConnection')
+dbConnection1.connect() // Connecting to DatabaseURL
 
-     static getInstance(): Logger {
-       if (!Logger.instance) {
-         Logger.instance = new Logger()
-       }
-       return Logger.instance
-     }
+const dbConnection2 = diContainer.resolve<DatabaseConnection>('dbConnection')
+dbConnection2.connect() // Connecting to DatabaseURL
+```
 
-     log(message: string): void {
-       console.log(message)
-     }
-   }
+### **Hybrid Approach**
 
-   class RequestHandler {
-     constructor(private logger: Logger) {}
+You can combine both singleton and transient scopes in your DI setup depending on the service's requirements.
 
-     handleRequest(request: string): void {
-       this.logger.log(`Handling request: ${request}`)
-     }
-   }
+#### **Hybrid Example:**
 
-   // Setup
-   const diContainer = new SimpleDIContainer()
-   diContainer.register('logger', Logger.getInstance)
-   diContainer.register('requestHandler', RequestHandler, Logger.getInstance())
+```typescript
+class Logger {
+  private static instance: Logger
 
-   // Usage
-   const handler1 = diContainer.resolve<RequestHandler>('requestHandler')
-   handler1.handleRequest('Request 1')
+  private constructor() {}
 
-   const handler2 = diContainer.resolve<RequestHandler>('requestHandler')
-   handler2.handleRequest('Request 2')
-   ```
+  static getInstance(): Logger {
+    if (!Logger.instance) {
+      Logger.instance = new Logger()
+    }
+    return Logger.instance
+  }
 
-   In this example:
+  log(message: string): void {
+    console.log(message)
+  }
+}
 
-   - `Logger` is a singleton.
-   - `RequestHandler` is a transient instance that receives the singleton `Logger`.
+class RequestHandler {
+  constructor(private logger: Logger) {}
 
-   ### **Considerations:**
+  handleRequest(request: string): void {
+    this.logger.log(`Handling request: ${request}`)
+  }
+}
 
-   1. **Lifecycle Management**: Singletons are suitable for services that have a long lifecycle or shared state, while transients are better for services with short-lived lifecycles or no shared state.
+// Setup
+const diContainer = new SimpleDIContainer()
+diContainer.register('logger', Logger.getInstance)
+diContainer.register('requestHandler', RequestHandler, Logger.getInstance())
 
-   2. **Testing**: Singletons can make testing harder due to shared state. Transients offer more isolated testing scenarios.
+// Usage
+const handler1 = diContainer.resolve<RequestHandler>('requestHandler')
+handler1.handleRequest('Request 1')
 
-   3. **Thread Safety**: If your application is multi-threaded (e.g., in some Node.js environments or certain back-end setups), ensure that singletons are thread-safe.
+const handler2 = diContainer.resolve<RequestHandler>('requestHandler')
+handler2.handleRequest('Request 2')
+```
 
-   4. **Memory Management**: Be mindful of the memory footprint when using singletons. While they reduce overhead by reusing instances, they also hold onto memory for the lifetime of the application.
+In this example:
 
-   ### **Conclusion**
+- `Logger` is a singleton.
+- `RequestHandler` is a transient instance that receives the singleton `Logger`.
 
-   Choosing between singletons and transient instances depends on the specific needs of your application. Singletons are useful for global services with shared state, while transient instances are suitable for services that should be instantiated afresh each time. A hybrid approach allows you to leverage both patterns according to the requirements of different components in your application.
+### **Considerations:**
 
-7. Question: Can't you give me di container that handles singleton  
-   and transient so I don't have to implement singleton in class manualy?
+1.  **Lifecycle Management**: Singletons are suitable for services that have a long lifecycle or shared state, while transients are better for services with short-lived lifecycles or no shared state.
 
-   Certainly! You can implement a Dependency Injection (DI) container that handles both singleton and transient lifetimes, so you don’t have to manually manage singletons in your classes. Here’s a simple example of a DI container that supports both singleton and transient instances:
+2.  **Testing**: Singletons can make testing harder due to shared state. Transients offer more isolated testing scenarios.
 
-   ### **DI Container Implementation**
+3.  **Thread Safety**: If your application is multi-threaded (e.g., in some Node.js environments or certain back-end setups), ensure that singletons are thread-safe.
 
-   ```typescript
-   type Constructor<T> = new (...args: any[]) => T
+4.  **Memory Management**: Be mindful of the memory footprint when using singletons. While they reduce overhead by reusing instances, they also hold onto memory for the lifetime of the application.
 
-   interface ServiceDescriptor<T> {
-     type: 'singleton' | 'transient'
-     constructor: Constructor<T>
-     args: any[]
-   }
+### **Conclusion**
 
-   class DIContainer {
-     private singletons: Map<string, any> = new Map()
-     private transientServices: Map<string, ServiceDescriptor<any>> = new Map()
+Choosing between singletons and transient instances depends on the specific needs of your application. Singletons are useful for global services with shared state, while transient instances are suitable for services that should be instantiated afresh each time. A hybrid approach allows you to leverage both patterns according to the requirements of different components in your application.
 
-     // Register a service as singleton
-     registerSingleton<T>(
-       name: string,
-       constructor: Constructor<T>,
-       ...args: any[]
-     ): void {
-       this.singletons.set(name, new constructor(...args))
-     }
+# 7. Question:
 
-     // Register a service as transient
-     registerTransient<T>(
-       name: string,
-       constructor: Constructor<T>,
-       ...args: any[]
-     ): void {
-       this.transientServices.set(name, {
-         type: 'transient',
-         constructor,
-         args,
-       })
-     }
+Can't you give me di container that handles singleton  
+ and transient so I don't have to implement singleton in class manualy?
 
-     // Resolve a service
-     resolve<T>(name: string): T {
-       if (this.singletons.has(name)) {
-         return this.singletons.get(name) as T
-       }
+Certainly! You can implement a Dependency Injection (DI) container that handles both singleton and transient lifetimes, so you don’t have to manually manage singletons in your classes. Here’s a simple example of a DI container that supports both singleton and transient instances:
 
-       const descriptor = this.transientServices.get(name)
-       if (descriptor) {
-         const instance = new descriptor.constructor(...descriptor.args)
-         return instance as T
-       }
+### **DI Container Implementation**
 
-       throw new Error(`Service ${name} not registered`)
-     }
-   }
-   ```
+```typescript
+type Constructor<T> = new (...args: any[]) => T
 
-   ### **Example Usage**
+interface ServiceDescriptor<T> {
+  type: 'singleton' | 'transient'
+  constructor: Constructor<T>
+  args: any[]
+}
 
-   #### **Define Your Classes**
+class DIContainer {
+  private singletons: Map<string, any> = new Map()
+  private transientServices: Map<string, ServiceDescriptor<any>> = new Map()
 
-   ```typescript
-   class Logger {
-     log(message: string): void {
-       console.log(`LOG: ${message}`)
-     }
-   }
+  // Register a service as singleton
+  registerSingleton<T>(
+    name: string,
+    constructor: Constructor<T>,
+    ...args: any[]
+  ): void {
+    this.singletons.set(name, new constructor(...args))
+  }
 
-   class UserService {
-     constructor(private logger: Logger) {}
+  // Register a service as transient
+  registerTransient<T>(
+    name: string,
+    constructor: Constructor<T>,
+    ...args: any[]
+  ): void {
+    this.transientServices.set(name, {
+      type: 'transient',
+      constructor,
+      args,
+    })
+  }
 
-     createUser(name: string): void {
-       this.logger.log(`User ${name} created.`)
-     }
-   }
-   ```
+  // Resolve a service
+  resolve<T>(name: string): T {
+    if (this.singletons.has(name)) {
+      return this.singletons.get(name) as T
+    }
 
-   #### **Register Services in the Container**
+    const descriptor = this.transientServices.get(name)
+    if (descriptor) {
+      const instance = new descriptor.constructor(...descriptor.args)
+      return instance as T
+    }
 
-   ```typescript
-   // Setup the DI container
-   const diContainer = new DIContainer()
+    throw new Error(`Service ${name} not registered`)
+  }
+}
+```
 
-   // Register Logger as a singleton
-   diContainer.registerSingleton('logger', Logger)
+### **Example Usage**
 
-   // Register UserService as transient
-   diContainer.registerTransient(
-     'userService',
-     UserService,
-     diContainer.resolve('logger')
-   )
-   ```
+#### **Define Your Classes**
 
-   #### **Resolve and Use Services**
+```typescript
+class Logger {
+  log(message: string): void {
+    console.log(`LOG: ${message}`)
+  }
+}
 
-   ```typescript
-   // Resolve instances and use them
-   const userService1 = diContainer.resolve<UserService>('userService')
-   userService1.createUser('Alice') // Output: LOG: User Alice created.
+class UserService {
+  constructor(private logger: Logger) {}
 
-   const userService2 = diContainer.resolve<UserService>('userService')
-   userService2.createUser('Bob') // Output: LOG: User Bob created.
-   ```
+  createUser(name: string): void {
+    this.logger.log(`User ${name} created.`)
+  }
+}
+```
 
-   ### **Key Points:**
+#### **Register Services in the Container**
 
-   1. **Singleton Registration**: Use `registerSingleton` to ensure only one instance of the service is created and shared.
+```typescript
+// Setup the DI container
+const diContainer = new DIContainer()
 
-   2. **Transient Registration**: Use `registerTransient` to create a new instance of the service every time it’s resolved.
+// Register Logger as a singleton
+diContainer.registerSingleton('logger', Logger)
 
-   3. **Service Resolution**: The `resolve` method checks if the service is registered as a singleton or transient and returns the appropriate instance.
+// Register UserService as transient
+diContainer.registerTransient(
+  'userService',
+  UserService,
+  diContainer.resolve('logger')
+)
+```
 
-   4. **Error Handling**: If a service is not registered, an error is thrown, ensuring you know when something goes wrong with dependency resolution.
+#### **Resolve and Use Services**
 
-   ### **Extending the Container**
+```typescript
+// Resolve instances and use them
+const userService1 = diContainer.resolve<UserService>('userService')
+userService1.createUser('Alice') // Output: LOG: User Alice created.
 
-   You can extend this DI container to support additional features such as:
+const userService2 = diContainer.resolve<UserService>('userService')
+userService2.createUser('Bob') // Output: LOG: User Bob created.
+```
 
-   - **Scoped Instances**: For managing instances that live for the duration of a request or operation.
-   - **Factory Functions**: For dynamically creating instances based on more complex logic.
-   - **Decorator Support**: To handle additional configuration or setup via decorators.
+### **Key Points:**
 
-   This container provides a flexible and straightforward way to manage both singleton and transient instances without manually implementing singletons in your classes.
+1.  **Singleton Registration**: Use `registerSingleton` to ensure only one instance of the service is created and shared.
 
-8. Question: I will test this implementation.
+2.  **Transient Registration**: Use `registerTransient` to create a new instance of the service every time it’s resolved.
 
-   Great! Testing the implementation is a crucial step to ensure it meets your needs and behaves as expected. Here are a few tips and common scenarios to test for when working with your DI container:
+3.  **Service Resolution**: The `resolve` method checks if the service is registered as a singleton or transient and returns the appropriate instance.
 
-   ### **Testing Tips**
+4.  **Error Handling**: If a service is not registered, an error is thrown, ensuring you know when something goes wrong with dependency resolution.
 
-   1. **Basic Functionality**: Verify that services are correctly registered and resolved as singletons or transients.
-   2. **Singleton Behavior**: Ensure that singleton services return the same instance across multiple resolves.
-   3. **Transient Behavior**: Confirm that transient services provide a new instance each time they are resolved.
-   4. **Error Handling**: Test cases where services are not registered to ensure appropriate error messages are thrown.
-   5. **Constructor Arguments**: Check that constructor arguments are passed correctly and that they influence the instance as expected.
+### **Extending the Container**
 
-   ### **Example Test Cases**
+You can extend this DI container to support additional features such as:
 
-   #### **1. Basic Singleton Test**
+- **Scoped Instances**: For managing instances that live for the duration of a request or operation.
+- **Factory Functions**: For dynamically creating instances based on more complex logic.
+- **Decorator Support**: To handle additional configuration or setup via decorators.
 
-   ```typescript
-   const diContainer = new DIContainer()
-   diContainer.registerSingleton('logger', Logger)
+This container provides a flexible and straightforward way to manage both singleton and transient instances without manually implementing singletons in your classes.
 
-   const logger1 = diContainer.resolve<Logger>('logger')
-   const logger2 = diContainer.resolve<Logger>('logger')
+# 8. Question:
 
-   console.assert(logger1 === logger2, 'Singleton instances should be the same')
-   ```
+I will test this implementation.
 
-   #### **2. Basic Transient Test**
+Great! Testing the implementation is a crucial step to ensure it meets your needs and behaves as expected. Here are a few tips and common scenarios to test for when working with your DI container:
 
-   ```typescript
-   diContainer.registerTransient(
-     'userService',
-     UserService,
-     diContainer.resolve('logger')
-   )
+### **Testing Tips**
 
-   const userService1 = diContainer.resolve<UserService>('userService')
-   const userService2 = diContainer.resolve<UserService>('userService')
+1.  **Basic Functionality**: Verify that services are correctly registered and resolved as singletons or transients.
+2.  **Singleton Behavior**: Ensure that singleton services return the same instance across multiple resolves.
+3.  **Transient Behavior**: Confirm that transient services provide a new instance each time they are resolved.
+4.  **Error Handling**: Test cases where services are not registered to ensure appropriate error messages are thrown.
+5.  **Constructor Arguments**: Check that constructor arguments are passed correctly and that they influence the instance as expected.
 
-   console.assert(
-     userService1 !== userService2,
-     'Transient instances should be different'
-   )
-   ```
+### **Example Test Cases**
 
-   #### **3. Error Handling Test**
+#### **1. Basic Singleton Test**
 
-   ```typescript
-   try {
-     diContainer.resolve<Logger>('nonExistentService')
-   } catch (error) {
-     console.assert(
-       error.message === 'Service nonExistentService not registered',
-       'Should throw an error for unregistered services'
-     )
-   }
-   ```
+```typescript
+const diContainer = new DIContainer()
+diContainer.registerSingleton('logger', Logger)
 
-   #### **4. Constructor Arguments Test**
+const logger1 = diContainer.resolve<Logger>('logger')
+const logger2 = diContainer.resolve<Logger>('logger')
 
-   ```typescript
-   class GreetingService {
-     constructor(public greeting: string) {}
-     greet(name: string): string {
-       return `${this.greeting}, ${name}!`
-     }
-   }
+console.assert(logger1 === logger2, 'Singleton instances should be the same')
+```
 
-   diContainer.registerTransient('greetingService', GreetingService, 'Hello')
+#### **2. Basic Transient Test**
 
-   const greetingService =
-     diContainer.resolve<GreetingService>('greetingService')
-   console.assert(
-     greetingService.greet('Alice') === 'Hello, Alice!',
-     'Constructor argument should be used correctly'
-   )
-   ```
+```typescript
+diContainer.registerTransient(
+  'userService',
+  UserService,
+  diContainer.resolve('logger')
+)
 
-   ### **Next Steps**
+const userService1 = diContainer.resolve<UserService>('userService')
+const userService2 = diContainer.resolve<UserService>('userService')
 
-   - **Run the Tests**: Execute your test cases to ensure everything works as expected.
-   - **Expand Tests**: Consider adding more tests based on the specific features and requirements of your application.
-   - **Edge Cases**: Test edge cases and error scenarios to make sure your container handles them gracefully.
-   - **Documentation**: Document the usage and configuration of your DI container for future reference and other team members.
+console.assert(
+  userService1 !== userService2,
+  'Transient instances should be different'
+)
+```
 
-   If you encounter any issues or need further modifications, feel free to ask for help. Good luck with your testing!
+#### **3. Error Handling Test**
 
-9. Question: What is better, sticking with one project and refactoring it,  
-   or rewrite it entirely or rewrite only parts keeping it functional all the time.
+```typescript
+try {
+  diContainer.resolve<Logger>('nonExistentService')
+} catch (error) {
+  console.assert(
+    error.message === 'Service nonExistentService not registered',
+    'Should throw an error for unregistered services'
+  )
+}
+```
 
-   Deciding between sticking with one project and refactoring it, rewriting it entirely, or rewriting only parts while keeping it functional is a significant decision that depends on various factors. Each approach has its own advantages and challenges. Here’s a detailed comparison to help you make an informed choice:
+#### **4. Constructor Arguments Test**
 
-   ### **1. Sticking with One Project and Refactoring**
+```typescript
+class GreetingService {
+  constructor(public greeting: string) {}
+  greet(name: string): string {
+    return `${this.greeting}, ${name}!`
+  }
+}
 
-   **Advantages:**
+diContainer.registerTransient('greetingService', GreetingService, 'Hello')
 
-   - **Incremental Improvement**: Refactoring allows you to improve your codebase gradually. You can make changes in manageable chunks and continuously deploy improvements.
-   - **Preservation of Investment**: You keep your existing code, which may include valuable business logic, user interfaces, and integrations.
-   - **Continuity**: Since you’re working within the same project, you avoid the risks associated with starting from scratch, like missing requirements or scope creep.
+const greetingService = diContainer.resolve<GreetingService>('greetingService')
+console.assert(
+  greetingService.greet('Alice') === 'Hello, Alice!',
+  'Constructor argument should be used correctly'
+)
+```
 
-   **Challenges:**
+### **Next Steps**
 
-   - **Technical Debt**: If the codebase is highly entangled or has a lot of technical debt, refactoring might be complex and time-consuming.
-   - **Risk of Disruption**: Refactoring can introduce new bugs if not done carefully, potentially affecting your application's stability.
-   - **Slower Progress**: Incremental changes might not immediately address underlying architectural issues.
+- **Run the Tests**: Execute your test cases to ensure everything works as expected.
+- **Expand Tests**: Consider adding more tests based on the specific features and requirements of your application.
+- **Edge Cases**: Test edge cases and error scenarios to make sure your container handles them gracefully.
+- **Documentation**: Document the usage and configuration of your DI container for future reference and other team members.
 
-   **Best for:**
+If you encounter any issues or need further modifications, feel free to ask for help. Good luck with your testing!
 
-   - Codebases that are generally sound but need improvement in terms of maintainability, performance, or scalability.
-   - Projects where the business logic and functionality are still valuable, but the codebase needs modernization.
+# 9. Question:
 
-   **Example Approach:**
+What is better, sticking with one project and refactoring it,  
+ or rewrite it entirely or rewrite only parts keeping it functional all the time.
 
-   - Start by identifying and isolating key areas for improvement.
-   - Refactor code incrementally, ensuring each change is tested and validated.
-   - Use feature flags to control the deployment of new features or changes.
+Deciding between sticking with one project and refactoring it, rewriting it entirely, or rewriting only parts while keeping it functional is a significant decision that depends on various factors. Each approach has its own advantages and challenges. Here’s a detailed comparison to help you make an informed choice:
 
-   ### **2. Rewriting Entirely**
+### **1. Sticking with One Project and Refactoring**
 
-   **Advantages:**
+**Advantages:**
 
-   - **Clean Slate**: You can address architectural issues and implement best practices from the start.
-   - **Modern Technologies**: Allows you to use the latest technologies, frameworks, and design patterns.
-   - **Optimized Codebase**: Provides an opportunity to streamline and optimize your code without legacy constraints.
+- **Incremental Improvement**: Refactoring allows you to improve your codebase gradually. You can make changes in manageable chunks and continuously deploy improvements.
+- **Preservation of Investment**: You keep your existing code, which may include valuable business logic, user interfaces, and integrations.
+- **Continuity**: Since you’re working within the same project, you avoid the risks associated with starting from scratch, like missing requirements or scope creep.
 
-   **Challenges:**
+**Challenges:**
 
-   - **High Risk**: A complete rewrite can be risky, with potential for scope creep, missed requirements, or unforeseen challenges.
-   - **Time and Cost**: Rewriting from scratch is often time-consuming and expensive.
-   - **Loss of Existing Features**: It can be challenging to ensure that all existing features are accurately replicated in the new system.
+- **Technical Debt**: If the codebase is highly entangled or has a lot of technical debt, refactoring might be complex and time-consuming.
+- **Risk of Disruption**: Refactoring can introduce new bugs if not done carefully, potentially affecting your application's stability.
+- **Slower Progress**: Incremental changes might not immediately address underlying architectural issues.
 
-   **Best for:**
+**Best for:**
 
-   - Projects where the current codebase is fundamentally flawed or outdated, making incremental improvements impractical.
-   - Situations where new technologies or requirements necessitate a complete overhaul.
+- Codebases that are generally sound but need improvement in terms of maintainability, performance, or scalability.
+- Projects where the business logic and functionality are still valuable, but the codebase needs modernization.
 
-   **Example Approach:**
+**Example Approach:**
 
-   - Conduct thorough planning and requirements analysis.
-   - Create a detailed roadmap with milestones and phases.
-   - Ensure continuous testing and validation during development.
+- Start by identifying and isolating key areas for improvement.
+- Refactor code incrementally, ensuring each change is tested and validated.
+- Use feature flags to control the deployment of new features or changes.
 
-   ### **3. Rewriting Only Parts While Keeping It Functional**
+### **2. Rewriting Entirely**
 
-   **Advantages:**
+**Advantages:**
 
-   - **Focused Improvement**: Allows you to target specific areas of the codebase that need updating or replacement.
-   - **Lower Risk**: By keeping the rest of the application functional, you reduce the risk of disrupting existing features.
-   - **Gradual Transition**: Enables a smoother transition to new architectures or technologies without a complete overhaul.
+- **Clean Slate**: You can address architectural issues and implement best practices from the start.
+- **Modern Technologies**: Allows you to use the latest technologies, frameworks, and design patterns.
+- **Optimized Codebase**: Provides an opportunity to streamline and optimize your code without legacy constraints.
 
-   **Challenges:**
+**Challenges:**
 
-   - **Integration Complexity**: Ensuring new and old parts of the system work together seamlessly can be complex.
-   - **Partial Benefits**: The benefits of rewriting may be limited if only parts of the system are updated.
-   - **Coordination Effort**: Requires careful coordination to manage dependencies and ensure consistency across the codebase.
+- **High Risk**: A complete rewrite can be risky, with potential for scope creep, missed requirements, or unforeseen challenges.
+- **Time and Cost**: Rewriting from scratch is often time-consuming and expensive.
+- **Loss of Existing Features**: It can be challenging to ensure that all existing features are accurately replicated in the new system.
 
-   **Best for:**
+**Best for:**
 
-   - Projects where specific components are outdated or problematic, but the overall system is still functional and valuable.
-   - Scenarios where you need to modernize parts of the system without disrupting ongoing operations.
+- Projects where the current codebase is fundamentally flawed or outdated, making incremental improvements impractical.
+- Situations where new technologies or requirements necessitate a complete overhaul.
 
-   **Example Approach:**
+**Example Approach:**
 
-   - Identify components or modules that need rewriting.
-   - Develop and test new components incrementally.
-   - Use integration tests to ensure new and old components work together effectively.
+- Conduct thorough planning and requirements analysis.
+- Create a detailed roadmap with milestones and phases.
+- Ensure continuous testing and validation during development.
 
-   ### **Decision Factors**
+### **3. Rewriting Only Parts While Keeping It Functional**
 
-   - **Codebase Quality**: If the existing codebase is maintainable but outdated, refactoring might be a good option. If the codebase is deeply problematic, a complete rewrite may be necessary.
-   - **Project Scope**: For large-scale projects with complex requirements, a partial rewrite or incremental refactoring can be less disruptive.
-   - **Business Needs**: Consider the urgency of changes. If new features or improvements are needed quickly, partial rewrites or refactoring might be more practical.
-   - **Resource Availability**: Assess the availability of development resources, including time, budget, and expertise.
+**Advantages:**
 
-   ### **Conclusion**
+- **Focused Improvement**: Allows you to target specific areas of the codebase that need updating or replacement.
+- **Lower Risk**: By keeping the rest of the application functional, you reduce the risk of disrupting existing features.
+- **Gradual Transition**: Enables a smoother transition to new architectures or technologies without a complete overhaul.
 
-   Choosing the right approach depends on your project's specific context and needs. If you can address issues incrementally and maintain functionality, refactoring or partial rewrites are often preferable. However, if the codebase is significantly flawed or outdated, a complete rewrite might be the better choice. Carefully weigh the benefits and challenges of each approach, and consider starting with a detailed analysis of your project's current state and requirements.
+**Challenges:**
 
-10. Question: So i guess i should have 2 projects one continue and one risky from scratch.
+- **Integration Complexity**: Ensuring new and old parts of the system work together seamlessly can be complex.
+- **Partial Benefits**: The benefits of rewriting may be limited if only parts of the system are updated.
+- **Coordination Effort**: Requires careful coordination to manage dependencies and ensure consistency across the codebase.
 
-    Maintaining two projects—one for ongoing, stable work and another for more experimental or risky development—is a strategic approach that can help balance the need for stability with the desire for innovation. Here's how you can effectively manage this dual-project setup:
+**Best for:**
 
-    ### **1. Establish Clear Goals and Boundaries**
+- Projects where specific components are outdated or problematic, but the overall system is still functional and valuable.
+- Scenarios where you need to modernize parts of the system without disrupting ongoing operations.
 
-    **Stable Project:**
+**Example Approach:**
 
-    - **Purpose**: Continue to support and improve the existing system. Focus on stability, performance, and incremental updates.
-    - **Goals**: Maintain and enhance existing features, fix bugs, and gradually refactor code as needed.
-    - **Scope**: Limit changes to avoid introducing new risks. Prioritize stability and reliability.
+- Identify components or modules that need rewriting.
+- Develop and test new components incrementally.
+- Use integration tests to ensure new and old components work together effectively.
 
-    **Experimental Project:**
+### **Decision Factors**
 
-    - **Purpose**: Develop new features, explore new technologies, or rewrite parts of the system from scratch.
-    - **Goals**: Experiment with new architectures, frameworks, and technologies. Validate new ideas and solutions.
-    - **Scope**: Be flexible and open to significant changes or even complete overhauls. Aim to innovate and explore.
+- **Codebase Quality**: If the existing codebase is maintainable but outdated, refactoring might be a good option. If the codebase is deeply problematic, a complete rewrite may be necessary.
+- **Project Scope**: For large-scale projects with complex requirements, a partial rewrite or incremental refactoring can be less disruptive.
+- **Business Needs**: Consider the urgency of changes. If new features or improvements are needed quickly, partial rewrites or refactoring might be more practical.
+- **Resource Availability**: Assess the availability of development resources, including time, budget, and expertise.
 
-    ### **2. Implement Robust Communication and Coordination**
+### **Conclusion**
 
-    - **Documentation**: Maintain thorough documentation for both projects to ensure team members understand the goals, progress, and decisions made in each.
-    - **Regular Updates**: Schedule regular meetings or check-ins to discuss progress, share insights, and coordinate between the two projects.
-    - **Knowledge Sharing**: Facilitate knowledge transfer between teams working on the stable and experimental projects to leverage learnings and avoid duplication of effort.
+Choosing the right approach depends on your project's specific context and needs. If you can address issues incrementally and maintain functionality, refactoring or partial rewrites are often preferable. However, if the codebase is significantly flawed or outdated, a complete rewrite might be the better choice. Carefully weigh the benefits and challenges of each approach, and consider starting with a detailed analysis of your project's current state and requirements.
 
-    ### **3. Manage Resources Wisely**
+# 10. Question:
 
-    - **Team Allocation**: Assign dedicated teams or individuals to each project. Ensure that the experimental project has the necessary expertise and resources for development.
-    - **Budgeting**: Allocate budgets according to the needs and risks associated with each project. The stable project may require more funding for maintenance, while the experimental project might need resources for research and development.
+So i guess i should have 2 projects one continue and one risky from scratch.
 
-    ### **4. Define Success Metrics and Evaluation Criteria**
+Maintaining two projects—one for ongoing, stable work and another for more experimental or risky development—is a strategic approach that can help balance the need for stability with the desire for innovation. Here's how you can effectively manage this dual-project setup:
 
-    - **Stable Project**: Metrics might include system uptime, bug fix rates, user satisfaction, and performance benchmarks.
-    - **Experimental Project**: Metrics could focus on innovation, proof of concept success, adoption of new technologies, and integration feasibility.
+### **1. Establish Clear Goals and Boundaries**
 
-    ### **5. Plan for Integration**
+**Stable Project:**
 
-    - **Incremental Integration**: If the experimental project produces valuable results, plan for gradual integration into the stable project. This could involve a phased rollout or feature flagging.
-    - **Testing**: Ensure that new components or features from the experimental project are thoroughly tested before integration to minimize disruptions to the stable project.
+- **Purpose**: Continue to support and improve the existing system. Focus on stability, performance, and incremental updates.
+- **Goals**: Maintain and enhance existing features, fix bugs, and gradually refactor code as needed.
+- **Scope**: Limit changes to avoid introducing new risks. Prioritize stability and reliability.
 
-    ### **6. Address Risks and Contingencies**
+**Experimental Project:**
 
-    - **Risk Management**: Identify potential risks associated with both projects and develop contingency plans. This includes handling failures or setbacks in the experimental project without impacting the stable project.
-    - **Fallback Strategies**: Maintain fallback strategies for the experimental project in case certain innovations or changes do not pan out as expected.
+- **Purpose**: Develop new features, explore new technologies, or rewrite parts of the system from scratch.
+- **Goals**: Experiment with new architectures, frameworks, and technologies. Validate new ideas and solutions.
+- **Scope**: Be flexible and open to significant changes or even complete overhauls. Aim to innovate and explore.
 
-    ### **7. Review and Adjust**
+### **2. Implement Robust Communication and Coordination**
 
-    - **Regular Reviews**: Conduct periodic reviews of both projects to assess progress, identify issues, and adjust strategies as needed.
-    - **Feedback Loops**: Incorporate feedback from stakeholders, users, and team members to refine approaches and ensure alignment with business goals.
+- **Documentation**: Maintain thorough documentation for both projects to ensure team members understand the goals, progress, and decisions made in each.
+- **Regular Updates**: Schedule regular meetings or check-ins to discuss progress, share insights, and coordinate between the two projects.
+- **Knowledge Sharing**: Facilitate knowledge transfer between teams working on the stable and experimental projects to leverage learnings and avoid duplication of effort.
 
-    ### **Example Setup**
+### **3. Manage Resources Wisely**
 
-    **Stable Project Example:**
+- **Team Allocation**: Assign dedicated teams or individuals to each project. Ensure that the experimental project has the necessary expertise and resources for development.
+- **Budgeting**: Allocate budgets according to the needs and risks associated with each project. The stable project may require more funding for maintenance, while the experimental project might need resources for research and development.
 
-    - **Project Name**: Legacy System
-    - **Focus**: Bug fixes, performance improvements, incremental feature updates.
-    - **Team**: Maintainers and developers focused on stability and user support.
+### **4. Define Success Metrics and Evaluation Criteria**
 
-    **Experimental Project Example:**
+- **Stable Project**: Metrics might include system uptime, bug fix rates, user satisfaction, and performance benchmarks.
+- **Experimental Project**: Metrics could focus on innovation, proof of concept success, adoption of new technologies, and integration feasibility.
 
-    - **Project Name**: NextGen System
-    - **Focus**: New technologies, architectural experiments, major feature innovations.
-    - **Team**: Innovators and researchers experimenting with new approaches.
+### **5. Plan for Integration**
 
-    ### **Conclusion**
+- **Incremental Integration**: If the experimental project produces valuable results, plan for gradual integration into the stable project. This could involve a phased rollout or feature flagging.
+- **Testing**: Ensure that new components or features from the experimental project are thoroughly tested before integration to minimize disruptions to the stable project.
 
-    Maintaining both a stable project and an experimental one allows you to keep your current system reliable while exploring new opportunities for growth and innovation. This approach helps mitigate risks by isolating the stability of your existing system from the uncertainties of new developments. Ensure clear goals, effective communication, and careful resource management to make the most of both projects.
+### **6. Address Risks and Contingencies**
+
+- **Risk Management**: Identify potential risks associated with both projects and develop contingency plans. This includes handling failures or setbacks in the experimental project without impacting the stable project.
+- **Fallback Strategies**: Maintain fallback strategies for the experimental project in case certain innovations or changes do not pan out as expected.
+
+### **7. Review and Adjust**
+
+- **Regular Reviews**: Conduct periodic reviews of both projects to assess progress, identify issues, and adjust strategies as needed.
+- **Feedback Loops**: Incorporate feedback from stakeholders, users, and team members to refine approaches and ensure alignment with business goals.
+
+### **Example Setup**
+
+**Stable Project Example:**
+
+- **Project Name**: Legacy System
+- **Focus**: Bug fixes, performance improvements, incremental feature updates.
+- **Team**: Maintainers and developers focused on stability and user support.
+
+**Experimental Project Example:**
+
+- **Project Name**: NextGen System
+- **Focus**: New technologies, architectural experiments, major feature innovations.
+- **Team**: Innovators and researchers experimenting with new approaches.
+
+### **Conclusion**
+
+Maintaining both a stable project and an experimental one allows you to keep your current system reliable while exploring new opportunities for growth and innovation. This approach helps mitigate risks by isolating the stability of your existing system from the uncertainties of new developments. Ensure clear goals, effective communication, and careful resource management to make the most of both projects.
