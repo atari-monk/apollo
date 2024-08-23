@@ -8,3 +8,4 @@
 6. [Draw](file005.md)
 7. [Policy](file006.md)
 8. [Documentation](../folder005/index.md)
+9. [Pondering Class Versioning](file007.md)
