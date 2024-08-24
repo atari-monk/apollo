@@ -128,6 +128,41 @@ Watered plants. Cut dry leafs.
 Ate sandwitches. Banana. Tea.  
 'Married With Children'.  
 Made pan burgers.
+Mopped flors. Dark water.  
 Coding. I liked.  
 Satisfaction, happy felling good.  
 It's 02:00, sleepy.
+
+# 24
+
+Up later at 10:00.  
+Snack. Coffe.  
+More bed.  
+Watered plants.
+Idea of sheet pinned with wood clamps over sunbed.  
+Tested. To much work, need these parts.  
+Setup my pc for streaming.  
+Declutter. Fix features.  
+Sandwitches.  
+Fix lamp cable to bed with strings to move box under.  
+Did it again to fix bugs.  
+Made spagetti.  
+'jingles' plays 'Horizon' game.  
+Changed sheet in bed to one with no elastic.  
+Stuffing blankets under boards probably would help.  
+This way bed feels better.  
+Mopped flors again and balcony, cleaner water.  
+Fixed my poster holder, pc monitor sun blocker screen.  
+Added thin boards to hold poster. Used wood clamps.  
+'Married With Children'.  
+Sat to Pc. It's quiet, compared, laptop fan gives noise.  
+Wearing good glasses. Have to fix broken ones i used on wire for to long.  
+I thinked they had less powerfull lens and my eye would be safer,  
+but a frikin wire is not comfortable.  
+Those little things add up and you just dont want to do anything.  
+Those little anoyences. To do you have to make it comfortable.  
+Life dosent have plan.
+Today was hot, 32 degrees. At 00:00 its 21.  
+20 pushups today, from 2024.04.21 to 2024.08.25 i did 2735.  
+I use app on phone that counts pushups with camera.  
+5x30x20 is 3000 so it checks out.
