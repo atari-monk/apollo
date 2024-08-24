@@ -114,3 +114,20 @@ It's 01:00.
 Segregated mails.  
 Will have pancake and 'Married With Children'.  
 J Krisnamurti to drift in bed.
+
+# 23
+
+Gone sleep at 03:00.  
+Up at 9:00.  
+Ate pancakes. Coffe.  
+More bed.  
+Gone shoping to Biedronka on bike.  
+Two bags and backpack of groceries.  
+Stored it.  
+Watered plants. Cut dry leafs.  
+Ate sandwitches. Banana. Tea.  
+'Married With Children'.  
+Made pan burgers.
+Coding. I liked.  
+Satisfaction, happy felling good.  
+It's 02:00, sleepy.

@@ -39,3 +39,14 @@ export default interface ISystemFileData {
 ---
 
 - These data are used to control systems in scene.
+- System resides in:
+
+```bash
+C:\atari-monk\code\ts-engine-nx\packages\engine\src\ecs_system_builder
+```
+
+```bash
+packages\engine\src\ecs_system_builder
+```
+
+- 

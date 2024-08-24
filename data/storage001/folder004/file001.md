@@ -154,9 +154,9 @@ x hours x minutes
 
 ### 23
 
-18:17 -
+18:17 - 20:11, 21:21 - 00:17
 x hours x minutes
 
-1.
+1. SceneRenderer version in json.
 
 ---
