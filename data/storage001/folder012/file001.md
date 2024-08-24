@@ -165,4 +165,7 @@ Life dosent have plan.
 Today was hot, 32 degrees. At 00:00 its 21.  
 20 pushups today, from 2024.04.21 to 2024.08.25 i did 2735.  
 I use app on phone that counts pushups with camera.  
-5x30x20 is 3000 so it checks out.
+5x30x20 is 3000 so it checks out.  
+I have many traumas, from childhood, like most.  
+I refactored class, it's to late.  
+01:30 moving to bed.
