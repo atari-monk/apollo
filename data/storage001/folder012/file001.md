@@ -169,3 +169,23 @@ I use app on phone that counts pushups with camera.
 I have many traumas, from childhood, like most.  
 I refactored class, it's to late.  
 01:30 moving to bed.
+
+# 25
+
+Up later 10:00.  
+Coffe. Snack.  
+More bed.  
+Watered plants.  
+Poster fell from holder.  
+Plastic broke a bit on top.  
+Fix by placing wooden holders on both sides.  
+Sandwitches.  
+Spagetti.  
+'Jingles playing Horizon'.  
+'Thunderfoot in usa'.  
+Felling a little down.  
+I should sleep more.  
+Dialog with chatgpt.  
+Refactoring my code project.  
+'Married with Children'.  
+At 01:25 tired, bed.

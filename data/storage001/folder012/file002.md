@@ -111,3 +111,78 @@ Jest 01:00.
 Posegregowałem maile.  
 Zjem naleśniki i obejrzę 'Married With Children'.  
 J. Krishnamurti na dobranoc.
+
+# 23
+
+Poszedłem spać o 03:00.  
+Obudziłem się o 9:00.  
+Zjadłem naleśniki. Kawa.  
+Więcej w łóżku.  
+Pojechałem na zakupy do Biedronki na rowerze.  
+Dwa worki i plecak z zakupami.  
+Włożyłem je do schowka.  
+Podlałem rośliny. Przyciąłem suche liście.  
+Zjadłem kanapki. Banana. Herbata.  
+'Married With Children'.  
+Zrobiłem burgery z patelni.  
+Zmyłem podłogi. Woda ciemna.  
+Programowanie. Spodobało mi się.  
+Zadowolenie, szczęśliwe uczucie.  
+Jest 02:00, jestem senny.
+
+# 24
+
+Obudziłem się później o 10:00.
+Przekąska. Kawa.
+Więcej w łóżku.
+Podlałem rośliny.
+Pomysł na prześcieradło przypięte za pomocą zacisków do leżaka.
+Wypróbowane. Za dużo pracy, potrzebuję tych części.
+Skonfigurowałem komputer do streamowania.
+Opróżniłem, naprawiłem funkcje.
+Kanapki.
+Naprawiłem kabel lampy do łóżka sznurkami, by przenieść pudełko pod łóżko.
+Zrobiłem to jeszcze raz, by naprawić błędy.
+Zrobiłem spaghetti.
+'Jingles' gra w grę 'Horizon'.
+Zmieniłem prześcieradło na takie bez gumki.
+Włóż kocyki pod deski, to powinno pomóc.
+W ten sposób łóżko jest wygodniejsze.
+Ponownie zmyłem podłogi i balkon, woda czystsza.
+Naprawiłem uchwyt na plakat, osłonę monitora komputerowego przed słońcem.
+Dodałem cienkie deski, żeby utrzymać plakat. Użyłem zacisków drewnianych.
+'Married With Children'.
+Usiadłem do komputera. Jest cicho, w porównaniu, wentylator laptopa hałasuje.
+Noszę dobre okulary. Muszę naprawić te zepsute, których używałem za długo na drucie.
+Myślałem, że mają słabsze soczewki i moje oczy byłyby bezpieczniejsze,
+ale ten cholerny drut nie jest wygodny.
+Te małe rzeczy się sumują i po prostu nie chce się niczego robić.
+Te małe irytacje. Żeby coś zrobić, musi być wygodnie.
+Życie nie ma planu.
+Dziś było gorąco, 32 stopnie. O północy jest 21.
+Dzisiaj zrobiłem 20 pompek, od 2024.04.21 do 2024.08.25 zrobiłem 2735.
+Używam aplikacji na telefon, która liczy pompki za pomocą kamery.
+5x30x20 to 3000, więc się zgadza.
+Mam wiele traum z dzieciństwa, jak większość ludzi.
+Przerobiłem klasę, jest za późno.
+01:30 przenoszę się do łóżka.
+
+# 25
+
+Obudziłem się później o 10:00.
+Kawa. Przekąska.
+Więcej w łóżku.
+Podlałem rośliny.
+Plakat spadł z uchwytu.
+Plastik lekko się złamał na górze.
+Naprawiłem to, umieszczając drewniane uchwyty po obu stronach.
+Kanapki.
+Spaghetti.
+'Jingles' gra w 'Horizon'.
+'Thunderfoot w USA'.
+Czuję się trochę przygnębiony.
+Powinienem spać więcej.
+Dialog z chatgpt.
+Przerabiam swój projekt kodu.
+'Married With Children'.
+O 01:25 jestem zmęczony, idę spać.

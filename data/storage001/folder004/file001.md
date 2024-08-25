@@ -172,7 +172,7 @@ x hours x minutes
 
 ### 25
 
-16:07 - 17:40,
+[16:07 - 17:40, 22:11 - 01:00]
 x hours x minutes
 
 1. Refactoring.  
