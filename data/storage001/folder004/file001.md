@@ -169,3 +169,15 @@ x hours x minutes
 1. Move one system.
 
 ---
+
+### 25
+
+16:07 - 17:40,
+x hours x minutes
+
+1. Refactoring.  
+   Flattening folders according to policy.  
+   Factories with new system data features that control version,  
+   isOn and sys additional features flags.
+
+---
