@@ -205,4 +205,6 @@ Watching 'Married with Children' on balcony.
 Despite sleepiness i waked up from the malaze form stupor.  
 I mean in coding. It seems to go somewhere.  
 Feeling that i rearly have. I like it.  
-Nevermind coding, this feeling is what counts.
+Nevermind coding, this feeling is what counts.  
+Tomorow i have job meeting for cleaner worker at supermarket.  
+Pc turned of at 23:11.
