@@ -6,6 +6,6 @@
 - Rendered sprite so that origin was at top left.
 - Used offset prop to position sprite.
 
-2. GameState
+2. GameState, GameScore 1.0.0
 
 - what it does ?
