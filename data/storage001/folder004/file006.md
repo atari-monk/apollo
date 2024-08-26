@@ -11,3 +11,8 @@
 
 4. Classes versions are named in convention className, classNameV2, ....  
    Versions Should be documented.
+
+5. It's nice to first open files related to those on witch job is done,  
+   pin them, and open changed files.  
+   This way work is done on files open normally and files that needs  
+   to be updated related to that, are pinned and ready to modiffy.
