@@ -184,9 +184,10 @@ x hours x minutes
 
 ### 26
 
-[11:47 - 12:50, 14:03 - 14:57, 15:25 - 15:55, 17:05 - 17:54]
+[11:47 - 12:50, 14:03 - 14:57, 15:25 - 15:55, 17:05 - 17:54, 20:14 - 21:00], 21:00 - 22:12
 x hours x minutes
 
-1.
+1. Finished refactoring scene 1.0.0 to new system standard.
+2. Finished refactoring scene 2.0.0 to new system standard.
 
 ---

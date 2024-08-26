@@ -199,5 +199,10 @@ Sandwitches.
 Jingles talks about games.  
 Watered plants.  
 Refactoring code to new policies.  
-Second coffe, sunbed, on balcony.
-Taking pictures of my clothes from wardrobe box.
+Second coffe, sunbed, on balcony.  
+Taking pictures of my clothes from wardrobe box.  
+Watching 'Married with Children' on balcony.  
+Despite sleepiness i waked up from the malaze form stupor.  
+I mean in coding. It seems to go somewhere.  
+Feeling that i rearly have. I like it.  
+Nevermind coding, this feeling is what counts.
