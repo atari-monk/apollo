@@ -191,3 +191,12 @@ x hours x minutes
 2. Finished refactoring scene 2.0.0 to new system standard.
 
 ---
+
+### 27
+
+[12:53 - 17:02]
+x hours x minutes
+
+1. Flattened assets folders in client. Fixing data to new system file standard.
+
+---

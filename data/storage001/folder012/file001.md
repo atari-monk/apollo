@@ -209,3 +209,20 @@ Nevermind coding, this feeling is what counts.
 Tomorow i have job meeting for cleaner worker at supermarket.  
 Pc turned of at 23:35.  
 Evryone can spout some bulshit, this is content creation basically.
+
+# 27
+
+Moved from bed at 09:00.  
+Snack, coffe.  
+Sandwitches.  
+Watered plants.  
+'Jingles', 'Married with Children'.  
+Ignored job meeting in supermaket.  
+No point without basic infromation i dint get.  
+Second coffe on the balcony.  
+Trun on big pc.  
+In the evening i must turn my setup other way.  
+Sound of refrigerator is killing me.  
+Did 4 hours on code.  
+We do what dosent interest us to survive,  
+in order to continue doing that, insanity ?
