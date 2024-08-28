@@ -225,4 +225,7 @@ In the evening i must turn my setup other way.
 Sound of refrigerator is killing me.  
 Did 4 hours on code.  
 We do what dosent interest us to survive,  
-in order to continue doing that, insanity ?
+in order to continue doing that, insanity ?  
+It's not about knowing. Cant know anything for sure.  
+It's about obrservation and action.  
+We are ai, software can be better version.
