@@ -203,9 +203,9 @@ x hours x minutes
 
 ### 28
 
-14:12 - 15:06, 16:42 - 18:00, 18:43 - 19:35
+14:12 - 15:06, 16:42 - 18:00, 18:43 - 19:35, 20:32 - 22:33, 23:30 - 01:41
 x hours x minutes
 
-1.
+1. Flattened assets folders in client. Fixing data to new system file standard.
 
 ---

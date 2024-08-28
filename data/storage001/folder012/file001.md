@@ -229,3 +229,12 @@ in order to continue doing that, insanity ?
 It's not about knowing. Cant know anything for sure.  
 It's about obrservation and action.  
 We are ai, software can be better version.
+
+# 28
+
+Wake up at 09:00.  
+Watered plants.  
+Colected 0.6 l of small tomatos.  
+Eat. Drink water.  
+Grinding my code project.  
+Watching Yt in background.
