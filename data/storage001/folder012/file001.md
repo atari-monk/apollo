@@ -244,4 +244,9 @@ Watching Yt in background.
 Falling aspleep at 02:00, wake up at 10:00.  
 Ate snacks, sandwitches, coffe.  
 Sit to code.  
+Tortillas.  
+Coocked beans.  
+Washed laundry, run dishwasher.  
 With code i had a moment like healing of theoden king scene.
+These code base is quite limited and thats is great since i bearly handle it.
+Late time for bed.
