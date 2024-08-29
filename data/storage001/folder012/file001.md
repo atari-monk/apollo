@@ -244,3 +244,4 @@ Watching Yt in background.
 Falling aspleep at 02:00, wake up at 10:00.  
 Ate snacks, sandwitches, coffe.  
 Sit to code.  
+With code i had a moment like healing of theoden king scene.
