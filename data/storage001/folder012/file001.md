@@ -238,3 +238,9 @@ Colected 0.6 l of small tomatos.
 Eat. Drink water.  
 Grinding my code project.  
 Watching Yt in background.
+
+# 29
+
+Falling aspleep at 02:00, wake up at 10:00.  
+Ate snacks, sandwitches, coffe.  
+Sit to code.  

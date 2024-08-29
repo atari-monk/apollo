@@ -209,3 +209,11 @@ x hours x minutes
 1. Flattened assets folders in client. Fixing data to new system file standard.
 
 ---
+
+# 29
+
+11:38 - 12:52
+
+1. Finished with refactoring data.
+
+---
