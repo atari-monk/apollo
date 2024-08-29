@@ -212,8 +212,9 @@ x hours x minutes
 
 # 29
 
-11:38 - 12:52
+11:38 - 12:52, 15:18 - 16:40
 
 1. Finished with refactoring data.
+2. Flattened file system to 1 level nearly evrywhere, some 2 level, max 3 level.
 
 ---
