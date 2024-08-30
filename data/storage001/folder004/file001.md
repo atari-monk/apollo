@@ -185,7 +185,7 @@ x hours x minutes
 
 ### 30
 
-[15:06 - 16:22, 16:56 - 17:58], [19:34 - 20:59]
+[15:06 - 16:22, 16:56 - 17:58], [19:34 - 20:59, 22:32 - 23:48]
 
 1. Introduce prototypes for spriteRenderer.
-2. Refactoring versions of spriteRenderer.
+2. Refactoring versions of spriteRenderer, decluttering.
