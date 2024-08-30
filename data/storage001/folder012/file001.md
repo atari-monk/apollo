@@ -250,3 +250,6 @@ Washed laundry, run dishwasher.
 With code i had a moment like healing of theoden king scene.
 These code base is quite limited and thats is great since i bearly handle it.
 Late time for bed.
+
+# 30
+

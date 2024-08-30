@@ -14,8 +14,6 @@
 
 2. Introduced this `Development Journal` doc.
 
----
-
 ### 05
 
 12:20 - 12:42, 12:55 - 13:17, [13:47 - 14:54, 15:14 - 15:28], 16:15 - 17:30  
@@ -30,8 +28,6 @@
 
 4. Test `ballDribble` scene in `football_editor 2.0.0` scene.
 
----
-
 ### 06
 
 09:59 - 10:20, [12:12 - 14:08, 15:06 - 15:28], 17:12 - 19:20, 21:52 - 22:32  
@@ -42,8 +38,6 @@
 3. Investigate collision detection on scaled canvas, by rendering its elements.
 4. Visualization of collision detection in fixed resolution.
 
----
-
 ### 07
 
 13:07 - 13:29, [13:51 - 14:44, 15:58 - 16:33, 16:53 - 18:20]  
@@ -52,8 +46,6 @@
 1. Fix visualization of collision detection in fixed resolution.
 2. Visualization of collision detection in scaled canvas.  
    Concluded that markers need to be fixed first.
-
----
 
 ### 08
 
@@ -74,8 +66,6 @@
 
 5. Update `Development Journal` format.
 
----
-
 ### 12
 
 17:51 - 18:47, 21:26 - 22:49, 22:49 - 23:43  
@@ -84,8 +74,6 @@
 1. Add documentation files, move from project.
 2. Document markersV2 and use them in ballDribbleV2.
 3. Script to calculate journal times using json.
-
----
 
 ### 13
 
@@ -98,8 +86,6 @@
 3. Investigate `CenterCollisionWithScaling`. Fix calculations.
 4. Investigate `BallDribble`.
 
----
-
 ### 14
 
 11:56 - 12:42, 12:42 - 14:10, 16:57 - 18:28, 19:06 - 19:48  
@@ -110,8 +96,6 @@ x hours x minutes
 3. BallDribbleFactory.
 4. BallDribbleWithScaling.
 
----
-
 ### 15
 
 14:38 - 15:37, [16:37 - 17:54, 22:49 - 00:00]  
@@ -119,8 +103,6 @@ x hours x minutes
 
 1. Realized mistake in rendering.
 2. Scene in version 3.0.0. Refactor to introduce new renderer.
-
----
 
 ### 16
 
@@ -132,16 +114,12 @@ x hours x minutes
    I have put position param there by mistake.  
    It takes 0,0 becouse translation() before uses position to translate canvas.
 
----
-
 ### 21
 
 13:35 - 15:27  
 x hours x minutes
 
 1. Fixed bugs. Investigated state of project.
-
----
 
 ### 22
 
@@ -150,8 +128,6 @@ x hours x minutes
 
 1. Flatten folders for sys builder. Docs.
 
----
-
 ### 23
 
 18:17 - 20:11, 21:21 - 00:17
@@ -159,16 +135,12 @@ x hours x minutes
 
 1. SceneRenderer version in json.
 
----
-
 ### 24
 
 00:23 - 01:27,
 x hours x minutes
 
 1. Move one system.
-
----
 
 ### 25
 
@@ -180,8 +152,6 @@ x hours x minutes
    Factories with new system data features that control version,  
    isOn and sys additional features flags.
 
----
-
 ### 26
 
 [11:47 - 12:50, 14:03 - 14:57, 15:25 - 15:55, 17:05 - 17:54, 20:14 - 21:00], 21:00 - 22:12
@@ -190,16 +160,12 @@ x hours x minutes
 1. Finished refactoring scene 1.0.0 to new system standard.
 2. Finished refactoring scene 2.0.0 to new system standard.
 
----
-
 ### 27
 
 [12:53 - 17:02, 22:03 - 23:03]
 x hours x minutes
 
 1. Flattened assets folders in client. Fixing data to new system file standard.
-
----
 
 ### 28
 
@@ -208,9 +174,7 @@ x hours x minutes
 
 1. Flattened assets folders in client. Fixing data to new system file standard.
 
----
-
-# 29
+### 29
 
 11:38 - 12:52, 15:18 - 16:40, 18:39 - 19:43, 22:10 - 23:36
 
@@ -219,4 +183,8 @@ x hours x minutes
 3. Removed wrappers on socket-io. Tested client, server sync.
 4. Optimizing sprite renderer v1.
 
----
+### 30
+
+[15:06 - 16:22, 16:56 - 17:58]
+
+1. Introduce prototypes for spriteRenderer.
