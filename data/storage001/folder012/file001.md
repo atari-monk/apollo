@@ -253,3 +253,12 @@ Late time for bed.
 
 # 30
 
+Woke up around 08, but get form bed very late, noon or later.  
+I was angry and misarable today. Comparing to others made it.  
+Mother called. I blew up. This year summer break conficts was  
+not avoided again.  
+I wish it was organized better.  
+Stored dishes from dishwaser and laundry.  
+Ate two meals.  
+Coded. See my code as junky. I loth that.  
+Getting to bed 00:30 but with phone.
