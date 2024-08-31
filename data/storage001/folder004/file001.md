@@ -192,6 +192,8 @@ x hours x minutes
 
 ### 31
 
-12:55 - 14:54
+12:55 - 14:54, 18:40 - 20:00, 20:11 - 21:37
 
 1. Fix data after consolidating spriteRenderer versions.
+2. Addig scenes for version 3.0.0.
+3. Setup sprite 3.0.0 scene.
