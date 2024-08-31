@@ -262,3 +262,11 @@ Stored dishes from dishwaser and laundry.
 Ate two meals.  
 Coded. See my code as junky. I loth that.  
 Getting to bed 00:30 but with phone.
+
+# 31
+
+Woke up around 08, snack coffe.  
+French toast.  
+Allan Watts, 'Married with Childern'.  
+Mopped floors.  
+Coding.
