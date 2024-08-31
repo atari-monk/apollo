@@ -269,4 +269,12 @@ Woke up around 08, snack coffe.
 French toast.  
 Allan Watts, 'Married with Childern'.  
 Mopped floors.  
-Coding.
+Coding.  
+Torrtilas.  
+Tim Dilon.  
+Feeling anxcious, trying to be fine with it.  
+Trying to coding in flow.  
+To do this, dont care about blockage so much ?  
+Thouth is mechanic, no need to put it from product  
+to my psychology. As alive it should just move.  
+It self organizing software.
