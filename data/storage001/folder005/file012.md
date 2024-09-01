@@ -1,11 +1,20 @@
 # Systems Descriptions
 
-1. SpriteRendererV1
+## SpriteRenderer
 
-- A version of sprite renderer when i was not knowing what i was doing a lot.
-- Rendered sprite so that origin was at top left.
-- Used offset prop to position sprite.
+### Version 1.0.0
 
-2. GameState, GameScore 1.0.0
+- Caches components.
+- Creates animator.
+- Event 'AnimationSwitch'.
+- Updates animation frames switching with animator.
+- Renders animation sprites on canvas.
+- Position uses formula:
 
-- what it does ?
+```plaintext
+  transform.position.x + sprite.spriteOffset.x
+```
+
+- This is first, old version where sprite origin was in top left.  
+  Offset was used to ajust sprite. Didnt know better.
+- Canvas draw methods in 'DefaultRenderer'.

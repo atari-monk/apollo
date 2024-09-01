@@ -198,3 +198,12 @@ x hours x minutes
 2. Addig scenes for version 3.0.0.
 3. Setup sprite 3.0.0 scene.
 4. More 3.0.0 scenes.
+
+## 2024-08
+
+# 1
+
+14:00 - 15:28, 15:29 - 18:17
+
+1. Scene football_editor 3.0.0. DrawDirection. Working on this is hell, need refactor.
+2. Refactored system validation.

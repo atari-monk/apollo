@@ -278,3 +278,12 @@ To do this, dont care about blockage so much ?
 Thouth is mechanic, no need to put it from product  
 to my psychology. As alive it should just move.  
 It self organizing software.
+
+# 2024-08
+
+# 1
+
+Woke up 10:00.  
+Coffe, 2 sandwitches, snack.  
+Still confused about my project.  
+Just get on with it then anyway.
