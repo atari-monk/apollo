@@ -203,7 +203,9 @@ x hours x minutes
 
 # 1
 
-14:00 - 15:28, 15:29 - 18:17
+14:00 - 15:28, 15:29 - 18:17, 22:53 - 00:10, 00:10 - 00:46
 
 1. Scene football_editor 3.0.0. DrawDirection. Working on this is hell, need refactor.
 2. Refactored system validation.
+3. Refactored system validation, finish.
+4. Refactored tests.

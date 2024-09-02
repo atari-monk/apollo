@@ -286,4 +286,8 @@ It self organizing software.
 Woke up 10:00.  
 Coffe, 2 sandwitches, snack.  
 Still confused about my project.  
-Just get on with it then anyway.
+Just get on with it then anyway.  
+Tortilla, french toast.  
+Coding, ordering it, decloutering.  
+Cleaning notes.  
+Going to sleep at 02:14.
