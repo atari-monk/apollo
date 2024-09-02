@@ -209,3 +209,10 @@ x hours x minutes
 2. Refactored system validation.
 3. Refactored system validation, finish.
 4. Refactored tests.
+
+# 2
+
+11:58 - 13:00, 13:21 - 14:03
+
+1. Setup version 4.0.0, this should be more robust. To heal form 1-3.
+2. RendererV4, worked, now need of test, refactor.

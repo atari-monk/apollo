@@ -291,3 +291,14 @@ Tortilla, french toast.
 Coding, ordering it, decloutering.  
 Cleaning notes.  
 Going to sleep at 02:14.
+
+# 2
+
+Woke up 09:00.  
+Oatmeal, coffe.  
+Later shower.  
+Sitting on balcony, planning.  
+Water.  
+Project.
+Shit, shower.  
+Project.

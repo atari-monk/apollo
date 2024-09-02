@@ -16,3 +16,5 @@
    pin them, and open changed files.  
    This way work is done on files open normally and files that needs  
    to be updated related to that, are pinned and ready to modiffy.
+
+6. Before each commit, check diffs view.
