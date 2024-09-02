@@ -299,6 +299,17 @@ Oatmeal, coffe.
 Later shower.  
 Sitting on balcony, planning.  
 Water.  
-Project.
+Project.  
 Shit, shower.  
+Project.  
+I must watch to not get burned again.  
+Grocery shoping using bike.  
+Storing grocery in refrigerator and shelves.  
+Cooking oven potatos, pan burger meat with fresh tomatos.  
+'Maried with Children'.  
+Today i felt calmer, les stressed,  
+but not well slept.  
+Moved my pc's setup away from noisy refrigerator.  
+Removed old router. Using new from net provider directly.  
+Probably better lan and wifi.
 Project.

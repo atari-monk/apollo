@@ -212,7 +212,8 @@ x hours x minutes
 
 # 2
 
-11:58 - 13:00, 13:21 - 14:03
+11:58 - 13:00, 13:21 - 14:03, 23:23 - 00:16
 
 1. Setup version 4.0.0, this should be more robust. To heal form 1-3.
 2. RendererV4, worked, now need of test, refactor.
+3. Add new scene, prepare scene rendering campaing.

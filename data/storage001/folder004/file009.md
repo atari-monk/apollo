@@ -45,3 +45,21 @@ The class looks much cleaner now! It’s well-structured, focusing on core funct
 ## I think RendererV4 worked fine, sprite is drawn so that position is in center, and it scales with resizing canvas. Much tests and refactor need to be done still.
 
 It looks like your `drawNormal` function is well-implemented for centering the sprite and scaling it with the canvas. Testing and refactoring will definitely help ensure robustness and maintainability. Great progress!
+
+## I think i will name my scenes render1, render2, ... and last number will have full scene rendered.
+
+That’s a straightforward and effective naming convention! It will help you easily track the progression of your scenes.
+
+## Will this be sorted in order ?
+
+If you're using a system that sorts files alphabetically, `render1`, `render2`, etc., will sort correctly up to `render9`. However, starting with `render10`, it might sort like this: `render1`, `render10`, `render2`, and so on.
+
+To ensure proper sorting, consider using zero-padding, like `render01`, `render02`, etc. This way, even `render10` and beyond will sort in the correct order.
+
+## So 99 will sort ok.
+
+Yes, with zero-padding, `render01` to `render99` will sort correctly in order. Just ensure you pad all numbers consistently (e.g., `render01`, `render02`, ..., `render99`).
+
+## I am ashamed, i got very lost with this project, i am just begining to get better
+
+No need to be ashamed! Getting lost in a project is a common part of learning and growth. It’s great that you’re finding your way and improving. Keep at it, and your skills will continue to develop!
