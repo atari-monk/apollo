@@ -313,3 +313,21 @@ Moved my pc's setup away from noisy refrigerator.
 Removed old router. Using new from net provider directly.  
 Probably better lan and wifi.
 Project.
+
+# 3
+
+Woke up suprizingly 07:00.  
+Reorganizing room again.  
+Sandwitches, coffe.  
+Removed one stool, removed parts from two others.  
+Unscrewed with driller.  
+Stored it in storage.  
+Water with ice.  
+Sit on balcony for moment.  
+Tomatos are nearly spent.  
+Soil still wet.  
+3m from refrigerator but still annoying.  
+Ear plugs.  
+Project.  
+Phone from mother. She wants me to job.
+Project.

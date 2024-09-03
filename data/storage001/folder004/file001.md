@@ -217,3 +217,9 @@ x hours x minutes
 1. Setup version 4.0.0, this should be more robust. To heal form 1-3.
 2. RendererV4, worked, now need of test, refactor.
 3. Add new scene, prepare scene rendering campaing.
+
+# 3
+
+14:32 -
+
+1.
