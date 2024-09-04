@@ -103,7 +103,7 @@ x hour xx minutes
 
 ### 4
 
-21:27 - 22:25, 22:25 -
+21:27 - 22:25, 22:25 - 23:00
 
 1. Adding content, list of outfits from wardrobe box.
-2.
+2. Chatgot content of the day.
