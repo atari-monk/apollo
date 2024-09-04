@@ -7,11 +7,16 @@
 
 ## Markdown example
 
-1. [Note 1](file011.md)
-2. [Note 2](file012.md)
+1. [Note 1](file003.md)
+2. [Note 2](file004.md)
 
 ## Script requirements
 
-1. [Folder](file021.md)
-2. [File](file022.md)
-3. [Index](file023.md)
+1. [Folder](file005.md)
+2. [File](file006.md)
+3. [Index](file007.md)
+
+## Content assumptions
+
+1. [Image size for inventory](file008.md)
+2. [Markdown](file009.md)

@@ -201,7 +201,7 @@ x hours x minutes
 
 ## 2024-08
 
-# 1
+### 1
 
 14:00 - 15:28, 15:29 - 18:17, 22:53 - 00:10, 00:10 - 00:46
 
@@ -210,7 +210,7 @@ x hours x minutes
 3. Refactored system validation, finish.
 4. Refactored tests.
 
-# 2
+### 2
 
 11:58 - 13:00, 13:21 - 14:03, 23:23 - 00:16
 
@@ -218,7 +218,7 @@ x hours x minutes
 2. RendererV4, worked, now need of test, refactor.
 3. Add new scene, prepare scene rendering campaing.
 
-# 3
+### 3
 
 15:07 - 15:38, 16:47 - 18:24, 20:23 - 22:12
 
@@ -227,7 +227,7 @@ x hours x minutes
 3. Improved Render2 scene. Bug fixing for SpriteRendererV4, SpriteAnimatorV4.
    todo: fixes, refactor, tests
 
-# 4
+### 4
 
 13:40 - 19:22
 
