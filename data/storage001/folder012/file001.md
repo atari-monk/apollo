@@ -331,3 +331,14 @@ Ear plugs.
 Project.  
 Phone from mother. She wants me to job.
 Project.
+Balcony with 'Married with Children', coffe, sugar, milk, snacks.  
+Project.
+Spagetti, laying, phone.
+Project.
+
+# 4
+
+Woke up 07:30, coffe, oats, up 11:20.  
+Searching job.  
+Project.  
+Inventory of my stuff.

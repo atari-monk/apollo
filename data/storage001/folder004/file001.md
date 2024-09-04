@@ -220,6 +220,15 @@ x hours x minutes
 
 # 3
 
-14:32 -
+15:07 - 15:38, 16:47 - 18:24, 20:23 - 22:12
 
-1.
+1. SpriteRendererV4, SpriteAnimatorV4 refactor.
+2. Fix bug.
+3. Improved Render2 scene. Bug fixing for SpriteRendererV4, SpriteAnimatorV4.
+   todo: fixes, refactor, tests
+
+# 4
+
+13:40 - 19:22
+
+1. Unit test, scene slideshow, footballv4 feaure published as github page.

@@ -33,3 +33,11 @@ This feeling of coercion and lack of agency is a significant and real concern fo
 In such a system, the notion that "only force and violence" dictate outcomes can be seen as a critique of the broader structural inequalities and power imbalances that force individuals into these situations. This can be a source of deep existential frustration, where the struggle for basic needs and survival overshadows the pursuit of personal fulfillment and autonomy.
 
 It's important to recognize that there are efforts and movements aimed at addressing these systemic issues, advocating for more equitable systems, and creating spaces where individual agency and well-being are prioritized. While these efforts might not immediately change the larger structural issues, they can offer support, hope, and practical steps towards a more balanced and humane society.
+
+# Most of our lives is just going throu with the motion that is set up for us. No freedom at all. Espetially in social context. Maybe art offers some freedom, but it is still within the knowlege.
+
+It's true that many aspects of life can feel predetermined or constrained by societal norms and expectations. We often follow routines and adhere to roles that are defined for us, which can sometimes feel limiting. Art, as you mentioned, can offer a space for freedom and expression, though it’s still influenced by the context and knowledge available to us.
+
+Art allows us to explore and express emotions, ideas, and perspectives that might not fit neatly into the conventions of everyday life. It can provide a glimpse into different ways of thinking and being, offering a kind of liberation from the usual constraints. However, even in art, we’re working within the bounds of existing knowledge, language, and cultural frameworks.
+
+The tension between freedom and constraint is a deep and complex issue. While we may not always be able to escape societal constraints entirely, finding and creating spaces where we can express ourselves more freely can be a powerful way to navigate and perhaps transcend those limitations.
