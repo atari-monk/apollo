@@ -342,3 +342,5 @@ Woke up 07:30, coffe, oats, up 11:20.
 Searching job.  
 Project.  
 Inventory of my stuff.
+Started do pushups again, after some pains, still some.  
+It's 00:20, should be sleeping 2 hrs already.
