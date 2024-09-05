@@ -235,6 +235,10 @@ x hours x minutes
 
 ### 5
 
-10:41 -
+10:41 - 13:45, 14:01 - 14:53, 17:39 - 20:32
 
-1.
+1. First session. Bunch fixes/upgrades to football 4.0.0 scenes.
+2. Scene 3, field colliders.
+3. Scene 4, got a little lost adding to already working version  
+   and that can lose time by breaking it and not gaining new feature,  
+   thats way its good to use new versions.

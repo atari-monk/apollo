@@ -14,3 +14,15 @@
 6. Change footbal_slideshow publish on github pages to static content (simpler, faster).
 7. Change footbal_slideshow title to Slideshow
 8. Add py script to copy build.
+9. Add scene with field colliders.
+
+## AIMovement
+
+Using new system template and method for pressing key.  
+Can i similate player movement ?  
+Player uses WSAD, position is in transform.  
+Center of screen is 960, 540. Player starts from 760, 540.  
+Can u write simulating movment in circular shape ?  
+By just simulating key presses in some times.  
+U can check position to correct stuff.  
+Or maybe you have better idea for this kind of movement simulation.

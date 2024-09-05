@@ -20,3 +20,7 @@
 6. Before each commit, check diffs view.
 
 7. Do small changes and commit every 20 minutes.
+
+8. Do only one feature at the time. Use versioning to add new prototypes.
+
+9. Do not allow feature creap. Keep to plan and keep speed.
