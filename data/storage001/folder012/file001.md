@@ -341,6 +341,19 @@ Project.
 Woke up 07:30, coffe, oats, up 11:20.  
 Searching job.  
 Project.  
-Inventory of my stuff.
+Oven potatos, pan burger meat and beans.  
+Inventory of my stuff.  
 Started do pushups again, after some pains, still some.  
 It's 00:20, should be sleeping 2 hrs already.
+
+# 5
+
+Woke 08:30.  
+Snack, coffe.  
+Two sandwitches with meat.  
+Tea.  
+Watered plants.  
+My flat looks well :).  
+'Married with Childeren'.  
+Allan Watts.  
+Project.

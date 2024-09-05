@@ -20,3 +20,6 @@
 
 1. [Image size for inventory](file008.md)
 2. [Markdown](file009.md)
+
+## Styles
+1. [Theme](file010.md)

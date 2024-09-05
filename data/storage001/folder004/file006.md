@@ -18,3 +18,5 @@
    to be updated related to that, are pinned and ready to modiffy.
 
 6. Before each commit, check diffs view.
+
+7. Do small changes and commit every 20 minutes.
