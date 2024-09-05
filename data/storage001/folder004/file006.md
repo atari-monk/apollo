@@ -24,3 +24,9 @@
 8. Do only one feature at the time. Use versioning to add new prototypes.
 
 9. Do not allow feature creap. Keep to plan and keep speed.
+
+10. Main project no more that 4hrs daily.
+
+11. Do not code after 20:00.
+
+12. Start day from learning project.
