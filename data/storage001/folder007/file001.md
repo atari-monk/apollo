@@ -12,3 +12,11 @@ x hours x minutes
 1. Setup project with nx.
 
 ---
+
+## 2024-09
+
+### 6
+
+20:57 -
+
+1.

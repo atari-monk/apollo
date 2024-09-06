@@ -245,7 +245,7 @@ x hours x minutes
 
 ### 6
 
-16:22 - 17:30, 18:12 - 19:07
+16:22 - 17:30, 18:12 - 19:07, 23:02 -
 
 1. Scene5, goal posts.
    - todo: problem with ordering of renderers
