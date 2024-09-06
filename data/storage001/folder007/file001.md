@@ -17,6 +17,6 @@ x hours x minutes
 
 ### 6
 
-20:57 -
+20:57 - 00:21
 
-1.
+1. Setup nx nextjs react ts tailwind app, babylon demo.
