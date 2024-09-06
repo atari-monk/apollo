@@ -242,3 +242,11 @@ x hours x minutes
 3. Scene 4, got a little lost adding to already working version  
    and that can lose time by breaking it and not gaining new feature,  
    thats way its good to use new versions.
+
+### 6
+
+16:22 - 17:30, 18:12 - 19:07
+
+1. Scene5, goal posts.
+   - todo: problem with ordering of renderers
+2. Scene6-8, players, ball, score.
