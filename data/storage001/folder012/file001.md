@@ -1,6 +1,6 @@
 # 2024-08
 
-# 18
+## 18
 
 I returned from 2 weeks vacations.  
 My family shack away from city.  
@@ -23,7 +23,7 @@ I pushed my bags around these.
 I was sitting behind driver with headphones.  
 In city i didnt sleep.
 
-# 19
+## 19
 
 I stayed in bed late.  
 Did loundry of all clothes i had on vacation spot.  
@@ -33,7 +33,7 @@ Send some job requests.
 Watched 'Married With Children'.  
 Sat with laptop.
 
-# 20
+## 20
 
 Today i wake up at 09:00.  
 Eaten sandwiches, drank coffe, no sugar.  
@@ -60,7 +60,7 @@ I paid bill.
 Its nearly midnight as i close laptop.  
 On phone till 02:00.
 
-# 21
+## 21
 
 Wake up at 09:00.  
 Coffe, sandwitches. No more bread.  
@@ -91,7 +91,7 @@ Question is more important than answears.
 Watched 'Married With Children'.  
 Its 02:00 at night when i close laptop.
 
-# 22
+## 22
 
 Gone sleep probably at 03:00.  
 Wake up at 09:00.  
@@ -115,7 +115,7 @@ Segregated mails.
 Will have pancake and 'Married With Children'.  
 J Krisnamurti to drift in bed.
 
-# 23
+## 23
 
 Gone sleep at 03:00.  
 Up at 9:00.  
@@ -133,7 +133,7 @@ Coding. I liked.
 Satisfaction, happy felling good.  
 It's 02:00, sleepy.
 
-# 24
+## 24
 
 Up later at 10:00.  
 Snack. Coffe.  
@@ -170,7 +170,7 @@ I have many traumas, from childhood, like most.
 I refactored class, it's to late.  
 01:30 moving to bed.
 
-# 25
+## 25
 
 Up later 10:00.  
 Coffe. Snack.  
@@ -190,7 +190,7 @@ Refactoring my code project.
 'Married with Children'.  
 At 01:25 tired, bed.
 
-# 26
+## 26
 
 Sleep at 03:00.  
 Alarm at 07:00.  
@@ -210,7 +210,7 @@ Tomorow i have job meeting for cleaner worker at supermarket.
 Pc turned of at 23:35.  
 Evryone can spout some bulshit, this is content creation basically.
 
-# 27
+## 27
 
 Moved from bed at 09:00.  
 Snack, coffe.  
@@ -230,7 +230,7 @@ It's not about knowing. Cant know anything for sure.
 It's about obrservation and action.  
 We are ai, software can be better version.
 
-# 28
+## 28
 
 Wake up at 09:00.  
 Watered plants.  
@@ -239,7 +239,7 @@ Eat. Drink water.
 Grinding my code project.  
 Watching Yt in background.
 
-# 29
+## 29
 
 Falling aspleep at 02:00, wake up at 10:00.  
 Ate snacks, sandwitches, coffe.  
@@ -251,7 +251,7 @@ With code i had a moment like healing of theoden king scene.
 These code base is quite limited and thats is great since i bearly handle it.
 Late time for bed.
 
-# 30
+## 30
 
 Woke up around 08, but get form bed very late, noon or later.  
 I was angry and misarable today. Comparing to others made it.  
@@ -263,7 +263,7 @@ Ate two meals.
 Coded. See my code as junky. I loth that.  
 Getting to bed 00:30 but with phone.
 
-# 31
+## 31
 
 Woke up around 08, snack coffe.  
 French toast.  
@@ -281,7 +281,7 @@ It self organizing software.
 
 # 2024-08
 
-# 1
+## 1
 
 Woke up 10:00.  
 Coffe, 2 sandwitches, snack.  
@@ -292,7 +292,7 @@ Coding, ordering it, decloutering.
 Cleaning notes.  
 Going to sleep at 02:14.
 
-# 2
+## 2
 
 Woke up 09:00.  
 Oatmeal, coffe.  
@@ -314,7 +314,7 @@ Removed old router. Using new from net provider directly.
 Probably better lan and wifi.
 Project.
 
-# 3
+## 3
 
 Woke up suprizingly 07:00.  
 Reorganizing room again.  
@@ -336,7 +336,7 @@ Project.
 Spagetti, laying, phone.
 Project.
 
-# 4
+## 4
 
 Woke up 07:30, coffe, oats, up 11:20.  
 Searching job.  
@@ -346,7 +346,7 @@ Inventory of my stuff.
 Started do pushups again, after some pains, still some.  
 It's 00:20, should be sleeping 2 hrs already.
 
-# 5
+## 5
 
 Woke 08:30.  
 Snack, coffe.  
@@ -357,3 +357,23 @@ My flat looks well :).
 'Married with Childeren'.  
 Allan Watts.  
 Project.
+
+## 6
+
+Mopped floors and balcony.  
+Did some experimenting with available webtech.  
+Sleep late as usual.
+
+## 7
+
+Up at 10:00.  
+Coffe, snack.  
+Watered plants.  
+Fist of mini tomatos.  
+Project on laptop.  
+Then diy.  
+Moved wood to apartment.  
+Dit prototype of high stand for lamp.  
+Then cuts, drilling, glueing, screws in basement storage cell.  
+Tim Dillon. Sandwitches, frozen fruit.  
+Shower after at 23:15.  

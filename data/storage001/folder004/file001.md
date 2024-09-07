@@ -250,3 +250,11 @@ x hours x minutes
 1. Scene5, goal posts.
    - todo: problem with ordering of renderers
 2. Scene6-8, players, ball, score.
+
+### 7
+
+14:06 - 14:45, 14:46 - 14:59
+
+1. Ordered scenes 4.0.0, published slideshow, todo: make some resource cache so slideshow  
+   dosent transfer so much data.
+2. Scene with ball dribble. Works in scale 1,1.
