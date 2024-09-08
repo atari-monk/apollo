@@ -376,4 +376,16 @@ Moved wood to apartment.
 Dit prototype of high stand for lamp.  
 Then cuts, drilling, glueing, screws in basement storage cell.  
 Tim Dillon. Sandwitches, frozen fruit.  
-Shower after at 23:15.  
+Shower after at 23:15.
+
+## 8
+
+Very late up.  
+Listen to Krisnamurti with Anderson for 1hr.  
+I feel frustrated with my projects.  
+Streming imposible with my pc setup.  
+Changed setup again. Whole day.  
+Late lunch.  
+I refuse to do project late.  
+I feel its just pointless play.  
+Will listen to philosophy and go to sleep.
