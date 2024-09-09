@@ -261,8 +261,9 @@ x hours x minutes
 
 ### 9
 
-10:48 - 11:51, 11:51 - 12:36
+10:48 - 11:51, 11:51 - 12:36, 19:57 - 21:17
 
 1. Creating script to request viewer count from twitch api with chatgpt,  
    got result, than failed reset, after showing my keys on stream.
-1. Player04 scene. Feature - kick ball.
+2. Player04 scene. Feature - kick ball.
+3. Player05 scene, draw Direction, mouse coordinates scaled.
