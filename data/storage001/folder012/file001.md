@@ -388,4 +388,10 @@ Changed setup again. Whole day.
 Late lunch.  
 I refuse to do project late.  
 I feel its just pointless play.  
-Will listen to philosophy and go to sleep.
+Will listen to philosophy and go to sleep.  
+Actually did not take phone to bed.
+
+## 9
+
+First chill stream.  
+Under first semi comfortable setup i created.

@@ -258,3 +258,11 @@ x hours x minutes
 1. Ordered scenes 4.0.0, published slideshow, todo: make some resource cache so slideshow  
    dosent transfer so much data.
 2. Scene with ball dribble. Works in scale 1,1.
+
+### 9
+
+10:48 - 11:51, 11:51 - 12:36
+
+1. Creating script to request viewer count from twitch api with chatgpt,  
+   got result, than failed reset, after showing my keys on stream.
+1. Player04 scene. Feature - kick ball.
