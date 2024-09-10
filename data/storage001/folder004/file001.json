@@ -3,8 +3,8 @@
         "Year": "2024",
         "Month": "08",
         "Total": {
-            "Hours": 25,
-            "Minutes": 26
+            "Hours": 19,
+            "Minutes": 39
         },
         "Days": [
             {
@@ -188,6 +188,112 @@
                 "Total": {
                     "Hours": 4,
                     "Minutes": 15
+                }
+            },
+            {
+                "Day": "14",
+                "Intervals": [
+                    {
+                        "Start": "11:56",
+                        "End": "12:42"
+                    },
+                    {
+                        "Start": "12:42",
+                        "End": "14:10"
+                    },
+                    {
+                        "Start": "16:57",
+                        "End": "18:28"
+                    },
+                    {
+                        "Start": "19:06",
+                        "End": "19:48"
+                    }
+                ],
+                "Total": {
+                    "Hours": 4,
+                    "Minutes": 27
+                }
+            },
+            {
+                "Day": "15",
+                "Intervals": [
+                    {
+                        "Start": "14:38",
+                        "End": "15:37"
+                    },
+                    {
+                        "Start": "16:37",
+                        "End": "17:54"
+                    },
+                    {
+                        "Start": "22:49",
+                        "End": "23:59"
+                    }
+                ],
+                "Total": {
+                    "Hours": 3,
+                    "Minutes": 26
+                }
+            },
+            {
+                "Day": "16",
+                "Intervals": [
+                    {
+                        "Start": "13:31",
+                        "End": "14:05"
+                    },
+                    {
+                        "Start": "15:15",
+                        "End": "15:52"
+                    }
+                ],
+                "Total": {
+                    "Hours": 1,
+                    "Minutes": 11
+                }
+            },
+            {
+                "Day": "21",
+                "Intervals": [
+                    {
+                        "Start": "13:35",
+                        "End": "15:27"
+                    }
+                ],
+                "Total": {
+                    "Hours": 1,
+                    "Minutes": 52
+                }
+            },
+            {
+                "Day": "22",
+                "Intervals": [
+                    {
+                        "Start": "21:03",
+                        "End": "23:30"
+                    }
+                ],
+                "Total": {
+                    "Hours": 2,
+                    "Minutes": 27
+                }
+            },
+            {
+                "Day": "23",
+                "Intervals": [
+                    {
+                        "Start": "18:17",
+                        "End": "20:11"
+                    },
+                    {
+                        "Start": "21:21",
+                        "End": "00:17"
+                    }
+                ],
+                "Total": {
+                    "Hours": -20,
+                    "Minutes": 50
                 }
             }
         ]

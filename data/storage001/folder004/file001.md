@@ -89,7 +89,7 @@
 ### 14
 
 11:56 - 12:42, 12:42 - 14:10, 16:57 - 18:28, 19:06 - 19:48  
-x hours x minutes
+4 hours 27 minutes
 
 1. Upgrade script printing file system.
 2. Clean docs folder.
@@ -99,7 +99,7 @@ x hours x minutes
 ### 15
 
 14:38 - 15:37, [16:37 - 17:54, 22:49 - 00:00]  
-x hours x minutes
+3 hours 26 minutes
 
 1. Realized mistake in rendering.
 2. Scene in version 3.0.0. Refactor to introduce new renderer.
@@ -117,14 +117,14 @@ x hours x minutes
 ### 21
 
 13:35 - 15:27  
-x hours x minutes
+1 hours 52 minutes
 
 1. Fixed bugs. Investigated state of project.
 
 ### 22
 
 21:03 - 23:30
-x hours x minutes
+2 hours 27 minutes
 
 1. Flatten folders for sys builder. Docs.
 
@@ -270,6 +270,7 @@ x hours x minutes
 
 ### 10
 
-10:30 - 11:16
+10:30 - 11:16, 13:55 - 16:17
 
 1. Ecs systems for drawing scaling velocity and point.
+2. Mending rendering methods for v 4.0.0.

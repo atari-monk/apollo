@@ -1,0 +1,53 @@
+[
+  {
+    "Year": "",
+    "Month": "",
+    "Total": {
+      "Hours": 0,
+      "Minutes": 0
+    },
+    "Days": [
+      {
+        "Day": "",
+        "Intervals": [
+          {
+            "Start": "",
+            "End": ""
+          },
+          {
+            "Start": "",
+            "End": ""
+          },
+          {
+            "Start": "",
+            "End": ""
+          },
+          {
+            "Start": "",
+            "End": ""
+          },
+          {
+            "Start": "",
+            "End": ""
+          },
+          {
+            "Start": "",
+            "End": ""
+          },
+          {
+            "Start": "",
+            "End": ""
+          },
+          {
+            "Start": "",
+            "End": ""
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      }
+    ]
+  }
+]

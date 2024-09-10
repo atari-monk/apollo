@@ -29,7 +29,7 @@ def calculate_month_total(data):
     }
 
 # Load the JSON data from the file
-with open('002_development_journal.json', 'r') as file:
+with open('./../data/storage001/folder004/file001.json', 'r') as file:
     journal_data = json.load(file)
 
 # Calculate totals
@@ -37,7 +37,7 @@ calculate_day_totals(journal_data[0])
 calculate_month_total(journal_data[0])
 
 # Write the updated JSON data back to the file
-with open('002_development_journal.json', 'w') as file:
+with open('./../data/storage001/folder004/file001.json', 'w') as file:
     json.dump(journal_data, file, indent=4)
 
 # Output the result to verify the correctness
