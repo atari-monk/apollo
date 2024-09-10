@@ -204,7 +204,7 @@ x hours x minutes
 
 ## 2024-09
 
-37 hours 16 minutes
+38 hours 1 minutes
 
 ### 1
 
@@ -283,11 +283,12 @@ x hours x minutes
 
 ### 10
 
-10:30 - 11:16, 13:55 - 16:17, 16:17 - 17:48
-4 hours 39 minutes
+10:30 - 11:16, 13:55 - 16:17, 16:17 - 17:48, 22:33 - 23:18
+5 hours 24 minutes
 
 1. Ecs systems for drawing scaling velocity and point.
 2. Mending rendering methods for v 4.0.0.
 3. Updating times script and data.
+4. fillCenteredRectScaling method.
 
 Feeling:, Productivity:
