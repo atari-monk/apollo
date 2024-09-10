@@ -267,3 +267,9 @@ x hours x minutes
    got result, than failed reset, after showing my keys on stream.
 2. Player04 scene. Feature - kick ball.
 3. Player05 scene, draw Direction, mouse coordinates scaled.
+
+### 10
+
+10:30 - 11:16
+
+1. Ecs systems for drawing scaling velocity and point.
