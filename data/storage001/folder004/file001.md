@@ -2,7 +2,7 @@
 
 ## 2024-08
 
-25 hours 26 minutes
+83 hours 7 minutes
 
 ### 04
 
@@ -131,21 +131,21 @@ x hours x minutes
 ### 23
 
 18:17 - 20:11, 21:21 - 00:17
-x hours x minutes
+4 hours 50 minutes
 
 1. SceneRenderer version in json.
 
 ### 24
 
 00:23 - 01:27,
-x hours x minutes
+1 hours 4 minutes
 
 1. Move one system.
 
 ### 25
 
 [16:07 - 17:40, 22:11 - 01:00]
-x hours x minutes
+4 hours 22 minutes
 
 1. Refactoring.  
    Flattening folders according to policy.  
@@ -155,7 +155,7 @@ x hours x minutes
 ### 26
 
 [11:47 - 12:50, 14:03 - 14:57, 15:25 - 15:55, 17:05 - 17:54, 20:14 - 21:00], 21:00 - 22:12
-x hours x minutes
+5 hours 14 minutes
 
 1. Finished refactoring scene 1.0.0 to new system standard.
 2. Finished refactoring scene 2.0.0 to new system standard.
@@ -163,20 +163,21 @@ x hours x minutes
 ### 27
 
 [12:53 - 17:02, 22:03 - 23:03]
-x hours x minutes
+5 hours 9 minutes
 
 1. Flattened assets folders in client. Fixing data to new system file standard.
 
 ### 28
 
 14:12 - 15:06, 16:42 - 18:00, 18:43 - 19:35, 20:32 - 22:33, 23:30 - 01:41
-x hours x minutes
+7 hours 16 minutes
 
 1. Flattened assets folders in client. Fixing data to new system file standard.
 
 ### 29
 
 11:38 - 12:52, 15:18 - 16:40, 18:39 - 19:43, 22:10 - 23:36
+5 hours 6 minutes
 
 1. Finished with refactoring data.
 2. Flattened file system to 1 level nearly evrywhere, some 2 level, max 3 level.
@@ -186,6 +187,7 @@ x hours x minutes
 ### 30
 
 [15:06 - 16:22, 16:56 - 17:58], [19:34 - 20:59, 22:32 - 23:48]
+4 hours 59 minutes
 
 1. Introduce prototypes for spriteRenderer.
 2. Refactoring versions of spriteRenderer, decluttering.
@@ -193,6 +195,7 @@ x hours x minutes
 ### 31
 
 12:55 - 14:54, 18:40 - 20:00, 20:11 - 21:37, 22:51 - 00:24
+6 hours 18 minutes
 
 1. Fix data after consolidating spriteRenderer versions.
 2. Addig scenes for version 3.0.0.
@@ -274,3 +277,5 @@ x hours x minutes
 
 1. Ecs systems for drawing scaling velocity and point.
 2. Mending rendering methods for v 4.0.0.
+
+Feeling:, Productivity:
