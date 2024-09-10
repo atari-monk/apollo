@@ -481,5 +481,196 @@
         }
       }
     ]
+  },
+  {
+    "Year": "2024",
+    "Month": "09",
+    "Total": {
+      "Hours": 37,
+      "Minutes": 16
+    },
+    "Days": [
+      {
+        "Day": "1",
+        "Intervals": [
+          {
+            "Start": "14:00",
+            "End": "15:28"
+          },
+          {
+            "Start": "15:29",
+            "End": "18:17"
+          },
+          {
+            "Start": "22:53",
+            "End": "00:10"
+          },
+          {
+            "Start": "00:10",
+            "End": "00:46"
+          }
+        ],
+        "Total": {
+          "Hours": 6,
+          "Minutes": 9
+        }
+      },
+      {
+        "Day": "2",
+        "Intervals": [
+          {
+            "Start": "11:58",
+            "End": "13:00"
+          },
+          {
+            "Start": "13:21",
+            "End": "14:03"
+          },
+          {
+            "Start": "23:23",
+            "End": "00:16"
+          }
+        ],
+        "Total": {
+          "Hours": 2,
+          "Minutes": 37
+        }
+      },
+      {
+        "Day": "3",
+        "Intervals": [
+          {
+            "Start": "15:07",
+            "End": "15:38"
+          },
+          {
+            "Start": "16:47",
+            "End": "18:24"
+          },
+          {
+            "Start": "20:23",
+            "End": "22:12"
+          }
+        ],
+        "Total": {
+          "Hours": 3,
+          "Minutes": 57
+        }
+      },
+      {
+        "Day": "4",
+        "Intervals": [
+          {
+            "Start": "13:40",
+            "End": "19:22"
+          }
+        ],
+        "Total": {
+          "Hours": 5,
+          "Minutes": 42
+        }
+      },
+      {
+        "Day": "5",
+        "Intervals": [
+          {
+            "Start": "10:41",
+            "End": "13:45"
+          },
+          {
+            "Start": "14:01",
+            "End": "14:53"
+          },
+          {
+            "Start": "17:39",
+            "End": "20:32"
+          }
+        ],
+        "Total": {
+          "Hours": 6,
+          "Minutes": 49
+        }
+      },
+      {
+        "Day": "6",
+        "Intervals": [
+          {
+            "Start": "16:22",
+            "End": "17:30"
+          },
+          {
+            "Start": "18:12",
+            "End": "19:07"
+          },
+          {
+            "Start": "23:02",
+            "End": "00:22"
+          }
+        ],
+        "Total": {
+          "Hours": 3,
+          "Minutes": 23
+        }
+      },
+      {
+        "Day": "7",
+        "Intervals": [
+          {
+            "Start": "14:06",
+            "End": "14:45"
+          },
+          {
+            "Start": "14:46",
+            "End": "14:59"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 52
+        }
+      },
+      {
+        "Day": "9",
+        "Intervals": [
+          {
+            "Start": "10:48",
+            "End": "11:51"
+          },
+          {
+            "Start": "11:51",
+            "End": "12:36"
+          },
+          {
+            "Start": "19:57",
+            "End": "21:17"
+          }
+        ],
+        "Total": {
+          "Hours": 3,
+          "Minutes": 8
+        }
+      },
+      {
+        "Day": "10",
+        "Intervals": [
+          {
+            "Start": "10:30",
+            "End": "11:16"
+          },
+          {
+            "Start": "13:55",
+            "End": "16:17"
+          },
+          {
+            "Start": "16:17",
+            "End": "17:48"
+          }
+        ],
+        "Total": {
+          "Hours": 4,
+          "Minutes": 39
+        }
+      }
+    ]
   }
 ]

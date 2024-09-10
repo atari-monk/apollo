@@ -202,11 +202,14 @@ x hours x minutes
 3. Setup sprite 3.0.0 scene.
 4. More 3.0.0 scenes.
 
-## 2024-08
+## 2024-09
+
+37 hours 16 minutes
 
 ### 1
 
 14:00 - 15:28, 15:29 - 18:17, 22:53 - 00:10, 00:10 - 00:46
+6 hours 9 minutes
 
 1. Scene football_editor 3.0.0. DrawDirection. Working on this is hell, need refactor.
 2. Refactored system validation.
@@ -216,6 +219,7 @@ x hours x minutes
 ### 2
 
 11:58 - 13:00, 13:21 - 14:03, 23:23 - 00:16
+2 hours 37 minutes
 
 1. Setup version 4.0.0, this should be more robust. To heal form 1-3.
 2. RendererV4, worked, now need of test, refactor.
@@ -224,6 +228,7 @@ x hours x minutes
 ### 3
 
 15:07 - 15:38, 16:47 - 18:24, 20:23 - 22:12
+3 hours 57 minutes
 
 1. SpriteRendererV4, SpriteAnimatorV4 refactor.
 2. Fix bug.
@@ -233,12 +238,14 @@ x hours x minutes
 ### 4
 
 13:40 - 19:22
+5 hours 42 minutes
 
 1. Unit test, scene slideshow, footballv4 feaure published as github page.
 
 ### 5
 
 10:41 - 13:45, 14:01 - 14:53, 17:39 - 20:32
+6 hours 49 minutes
 
 1. First session. Bunch fixes/upgrades to football 4.0.0 scenes.
 2. Scene 3, field colliders.
@@ -248,7 +255,8 @@ x hours x minutes
 
 ### 6
 
-16:22 - 17:30, 18:12 - 19:07, 23:02 -
+16:22 - 17:30, 18:12 - 19:07, 23:02 - 00:22
+3 hours 23 minutes
 
 1. Scene5, goal posts.
    - todo: problem with ordering of renderers
@@ -257,6 +265,7 @@ x hours x minutes
 ### 7
 
 14:06 - 14:45, 14:46 - 14:59
+0 hours 52 minutes
 
 1. Ordered scenes 4.0.0, published slideshow, todo: make some resource cache so slideshow  
    dosent transfer so much data.
@@ -265,6 +274,7 @@ x hours x minutes
 ### 9
 
 10:48 - 11:51, 11:51 - 12:36, 19:57 - 21:17
+3 hours 8 minutes
 
 1. Creating script to request viewer count from twitch api with chatgpt,  
    got result, than failed reset, after showing my keys on stream.
@@ -273,9 +283,11 @@ x hours x minutes
 
 ### 10
 
-10:30 - 11:16, 13:55 - 16:17
+10:30 - 11:16, 13:55 - 16:17, 16:17 - 17:48
+4 hours 39 minutes
 
 1. Ecs systems for drawing scaling velocity and point.
 2. Mending rendering methods for v 4.0.0.
+3. Updating times script and data.
 
 Feeling:, Productivity:

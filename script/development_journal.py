@@ -9,7 +9,7 @@ def calculate_day_totals(data):
             start_time = datetime.strptime(interval["Start"], "%H:%M")
             end_time = datetime.strptime(interval["End"], "%H:%M")
             
-            # Check if end time is before start time assuming it's the next day
+            # Check if end time is before start time, assuming it's the next day
             if end_time < start_time:
                 end_time += timedelta(days=1)  # Add a day to end time
             
@@ -37,9 +37,10 @@ def calculate_month_total(data):
 with open('./../data/storage001/folder004/file001.json', 'r') as file:
     journal_data = json.load(file)
 
-# Calculate totals
-calculate_day_totals(journal_data[0])
-calculate_month_total(journal_data[0])
+# Loop through all the months in the journal data and calculate totals
+for month_data in journal_data:
+    calculate_day_totals(month_data)
+    calculate_month_total(month_data)
 
 # Write the updated JSON data back to the file
 with open('./../data/storage001/folder004/file001.json', 'w') as file:
