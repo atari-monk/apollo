@@ -291,4 +291,10 @@ x hours x minutes
 3. Updating times script and data.
 4. fillCenteredRectScaling method.
 
-Feeling:, Productivity:
+Feeling: bad, Productivity: ok
+
+### 11
+
+16:50 -
+
+1.
