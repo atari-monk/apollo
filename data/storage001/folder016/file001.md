@@ -173,3 +173,8 @@ Or maybe you have better idea for this kind of movement simulation.
 
 ## 11
 
+Goal is to fix collision system.  
+Witch is pain but... I need collisions.  
+V2,V3 were 'insane'.  
+V4 is original/normal rect algo used, plus point in center correction  
+and plus correct position of transform.position.add(collider.center).

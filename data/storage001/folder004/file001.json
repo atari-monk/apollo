@@ -486,8 +486,8 @@
     "Year": "2024",
     "Month": "09",
     "Total": {
-      "Hours": 38,
-      "Minutes": 1
+      "Hours": 41,
+      "Minutes": 29
     },
     "Days": [
       {
@@ -673,6 +673,19 @@
         "Total": {
           "Hours": 5,
           "Minutes": 24
+        }
+      },
+      {
+        "Day": "11",
+        "Intervals": [
+          {
+            "Start": "16:50",
+            "End": "20:18"
+          }
+        ],
+        "Total": {
+          "Hours": 3,
+          "Minutes": 28
         }
       }
     ]
