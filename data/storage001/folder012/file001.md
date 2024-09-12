@@ -407,4 +407,7 @@ Streaming. Collision detection.
 
 ## 12
 
-Alarm 06:00.
+Alarm 06:00.  
+Coffe, oats.  
+'Krisnamurti Anderson' dialog.
+Notes.
