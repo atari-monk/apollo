@@ -33,6 +33,7 @@
 # Anger
 
 1. [Letting Steam Out](file015.md)
+2. [Zmechanizowani](mechanized.md)
 
 # Art
 
