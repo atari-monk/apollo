@@ -204,7 +204,7 @@ x hours x minutes
 
 ## 2024-09
 
-38 hours 1 minutes
+41 hours 29 minutes
 
 ### 1
 
@@ -291,4 +291,13 @@ x hours x minutes
 3. Updating times script and data.
 4. fillCenteredRectScaling method.
 
-Feeling:, Productivity:
+Feeling: bad, Productivity: ok
+
+### 11
+
+16:50 - 20:18
+3 hours 28 minutes
+
+1. Fix of rect collision in V4.
+
+Feeling: bad, Productivity: terrible but dragged to some result.
