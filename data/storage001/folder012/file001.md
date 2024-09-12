@@ -394,4 +394,17 @@ Actually did not take phone to bed.
 ## 9
 
 First chill stream.  
-Under first semi comfortable setup i created.
+Under first semi comfortable setup i created.  
+My youngest brother disturebed me late with call with job topics.
+
+## 11
+
+Sending a lot of cv.  
+I easily anger on people.  
+I should care not to do this.  
+Time to see this simple truth, it only hurts me.  
+Streaming. Collision detection.
+
+## 12
+
+Alarm 06:00.
