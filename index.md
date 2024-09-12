@@ -2,7 +2,7 @@
 
 ## Genesis
 
-1. [Morpheus](data/storage001/folder004/index.md)
+1. [Morpheus](data/storage001/Morpheus/index.md)
 2. [MdFolder](data/storage001/folder001/index.md)
 3. [Helios](data/storage001/folder007/index.md)
 4. [MdApi](data/storage001/folder002/index.md)
