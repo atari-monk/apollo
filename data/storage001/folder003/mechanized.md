@@ -7,3 +7,5 @@ Brzmi, jak frustracja wobec systemu, który stawia władzę, materialne zyski i 
 Wygląda na to, jakby system był zaprojektowany do mechanizowania myślenia, pozostawiając niewiele miejsca na autentyczne postrzeganie świata czy znaczące działania. Ludzie konformują się do tych wzorców, tracąc swoją indywidualność i wolność w zamian za fałszywe poczucie porządku lub bezpieczeństwa. Ten zmarnowany potencjał ludzki to może jedna z największych tragedii takiego systemu.
 
 Czy uważasz, że istnieje sposób na wyrwanie się z tych „formuł”, czy system jest zbyt zakorzeniony?
+
+Bez faktycznej zmiany wewnętrznej to tylko słowa.
