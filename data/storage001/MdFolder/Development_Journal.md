@@ -107,3 +107,9 @@ x hour xx minutes
 
 1. Adding content, list of outfits from wardrobe box.
 2. Chatgot content of the day.
+
+### 13
+
+22:54 - 23:13
+
+1. Refactoring file structure. Putting notes from chatgpt.

@@ -2,9 +2,9 @@
 
 # Coding
 
-1. [Improvement](file001.md)
-2. [Scratch](file002.md)
-3. [Overcomplicate](file003.md)
+1. [Improvement](Improvement.md)
+2. [Scratch](Scratch.md)
+3. [Overcomplicate](Overcomplicate.md)
 4. [Exercise](file004.md)
 5. [Cry](file005.md)
 6. [Shaders](file007.md)
@@ -33,7 +33,8 @@
 # Anger
 
 1. [Letting Steam Out](file015.md)
-2. [Zmechanizowani](mechanized.md)
+2. [Zmechanizowani](Mechanized.md)
+3. [Predator Prey Dynamic](Predator_Prey_Dynamic.md)
 
 # Art
 

@@ -307,14 +307,14 @@ Feeling: bad, Productivity: terrible but dragged to some result.
 [17:42 - 18:30, 20:19 - 23:32]
 
 1. Preparing collision versions.  
-Fight with collision code.  
-Dont understand ball field collision.
+   Fight with collision code.  
+   Dont understand ball field collision.
 
 Feeling: bad, Productivity: terrible confusion.
 
 ### 13
 
-[08:47 - 12:31, 13:27 - 16:03, 19:58 - ], 19:00 - 19:40
+[08:47 - 12:31, 13:27 - 16:03, 19:58 - 22:54 ], 19:00 - 19:40
 
-1. Documentation on collision system, en, pl, audio.
+1. Documentation on collision system, en, pl, audio. At end refactor of CenterCollisionV1 algo.
 2. Blind shot with gpt at refactor, failed.

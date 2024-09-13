@@ -3,7 +3,7 @@
 ## Genesis
 
 1. [Morpheus](data/storage001/Morpheus/index.md)
-2. [MdFolder](data/storage001/folder001/index.md)
+2. [MdFolder](data/storage001/MdFolder/index.md)
 3. [Helios](data/storage001/folder007/index.md)
 4. [MdApi](data/storage001/folder002/index.md)
 5. [AddressApi](data/storage001/folder015/index.md)
@@ -17,7 +17,7 @@
 
 1. [Chronologos](data/storage001/folder012/index.md)
 2. [Listalogos](data/storage001/folder013/index.md)
-3. [Echomelos](data/storage001/folder003/index.md)
+3. [Echomelos](data/storage001/Echomelos/index.md)
 
 ## Atlas
 
