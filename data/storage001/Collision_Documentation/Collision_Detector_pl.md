@@ -79,3 +79,23 @@ export default interface ICollisionCallback {
 <iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRUHHC6AKsVSaVhtkmRrnJ_AZS8jt6upBuOn9riIMS5JDU" width="300" height="120" frameborder="0" scrolling="no"></iframe>
 Interfejs `ICollisionCallback` definiuje funkcję, która przyjmuje obiekt typu `ICollision` jako parametr i zwraca `void`.  
 Służy jako callback do obsługi zdarzeń kolizji między dwoma obiektami.
+
+## ICollisionAlgorithm
+
+```typescript
+import { ICollision } from './ICollision'
+
+export default interface ICollisionAlgorithm {
+  start(collision: ICollision): void
+  isColliding(collision: ICollision): boolean
+  draw(collision: ICollision): void
+}
+```
+
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQSYLJHco841TaK22tO3g4TGARyL0w1iPtnq8pr9_d1TUS4" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+Interfejs `ICollisionAlgorithm` definiuje strukturę algorytmu wykrywania kolizji. Zawiera trzy metody:
+- `start(collision: ICollision)`: Inicjuje lub przetwarza początek kolizji.
+- `isColliding(collision: ICollision)`: Zwraca wartość logiczną, która wskazuje, czy kolizja ma miejsce.
+- `draw(collision: ICollision)`: Wizualizuje kolizję.
+
+Ten interfejs zapewnia ramy do zarządzania i oceny kolizji między obiektami.

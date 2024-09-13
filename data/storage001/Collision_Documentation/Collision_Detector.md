@@ -79,3 +79,23 @@ export default interface ICollisionCallback {
 <iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQrpMzmghxwQqpsN8_cB79yAT-g5JbacyMDf59g5T6PQCc" width="300" height="120" frameborder="0" scrolling="no"></iframe>
 The `ICollisionCallback` interface defines a function that takes an `ICollision` object as a parameter and returns `void`.  
 It is used as a callback to handle collision events between two entities.
+
+## ICollisionAlgorithm
+
+```typescript
+import { ICollision } from './ICollision'
+
+export default interface ICollisionAlgorithm {
+  start(collision: ICollision): void
+  isColliding(collision: ICollision): boolean
+  draw(collision: ICollision): void
+}
+```
+
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQVB155XGEZQpns79x6_mwRARWfYBPCBhdSIW58KZ_9Tzc" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+The `ICollisionAlgorithm` interface defines the structure for a collision detection algorithm. It includes three methods:
+- `start(collision: ICollision)`: Initializes or processes the start of a collision.
+- `isColliding(collision: ICollision)`: Returns a boolean indicating if a collision is occurring.
+- `draw(collision: ICollision)`: Visualizes the collision.
+
+This interface provides a framework for managing and evaluating collisions between entities.
