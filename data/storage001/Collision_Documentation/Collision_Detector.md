@@ -37,7 +37,7 @@ The `ICollisionEntity` interface defines an entity involved in collision detecti
 
 This interface integrates components for positioning, collision detection, and physics simulation in a game or simulation system.
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQ1YOAXBx_TS7RYKORW3_IuAadD943cM_25apf0S2yZvek" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRqygCAPZ3nQ75raB5yAvfhAZodjLzD1-q_XTeJvdlVqxw" width="300" height="120" frameborder="0" scrolling="no"></iframe>
 Interfejs `ICollisionEntity` definiuje jednostkę zaangażowaną w wykrywanie kolizji i fizykę. Zawiera:
 
 1. **entityId**: Unikalny identyfikator jednostki.
