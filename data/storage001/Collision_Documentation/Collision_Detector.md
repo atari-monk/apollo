@@ -48,7 +48,7 @@ This interface integrates components for positioning, collision detection, and p
 
 ## ICollision
 
-```
+```typescript
 import IVector2 from '../math/IVector2'
 import ICollisionEntity from './ICollisionEntity'
 import { IRect } from './IRect'
@@ -65,3 +65,17 @@ export interface ICollision {
 <iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQ9hXiIE7s7SaDMKkI_C44FAcFgnezr36MWD835LrOH_s4" width="300" height="120" frameborder="0" scrolling="no"></iframe>
 The `ICollision` interface represents a collision between two entities, `object1` and `object2`, both of type `ICollisionEntity`.  
 It also includes two corresponding rectangular bounds, `rect1` and `rect2`, of type `IRect`, which define the areas where the collision occurs.
+
+## ICollisionCallback
+
+```typescript
+import { ICollision } from './ICollision'
+
+export default interface ICollisionCallback {
+  (collision: ICollision): void
+}
+```
+
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQrpMzmghxwQqpsN8_cB79yAT-g5JbacyMDf59g5T6PQCc" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+The `ICollisionCallback` interface defines a function that takes an `ICollision` object as a parameter and returns `void`.  
+It is used as a callback to handle collision events between two entities.

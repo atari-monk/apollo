@@ -65,3 +65,17 @@ export interface ICollision {
 <iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQTX4YTF1Ef3S5QVPF9wPK53AW0x30mMp_XhfMr5ksT812E" width="300" height="120" frameborder="0" scrolling="no"></iframe>
 Interfejs `ICollision` reprezentuje kolizję między dwoma obiektami, `object1` i `object2`, które są typu `ICollisionEntity`.  
 Zawiera również dwa odpowiadające prostokątne obszary, `rect1` i `rect2`, typu `IRect`, które definiują miejsca, gdzie dochodzi do kolizji.
+
+## ICollisionCallback
+
+```typescript
+import { ICollision } from './ICollision'
+
+export default interface ICollisionCallback {
+  (collision: ICollision): void
+}
+```
+
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRUHHC6AKsVSaVhtkmRrnJ_AZS8jt6upBuOn9riIMS5JDU" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+Interfejs `ICollisionCallback` definiuje funkcję, która przyjmuje obiekt typu `ICollision` jako parametr i zwraca `void`.  
+Służy jako callback do obsługi zdarzeń kolizji między dwoma obiektami.
