@@ -114,3 +114,78 @@ The `ICollisionAlgorithm` interface defines the structure for a collision detect
 - `draw(collision: ICollision)`: Visualizes the collision.
 
 This interface provides a framework for managing and evaluating collisions between entities.
+
+## CollisionDetector
+
+```typescript
+import { ICollision } from './ICollision'
+import ICollisionAlgorithm from './ICollisionAlgorithm'
+import ICollisionCallback from './ICollisionCallback'
+
+export default class CollisionDetector {
+  private _collisionCallbacks: Map<string, ICollisionCallback> = new Map()
+  private _noCollisionCallbacks: Map<string, ICollisionCallback> = new Map()
+
+  constructor(private readonly _collisionAlgorithm: ICollisionAlgorithm) {}
+
+  start(collision: ICollision): void {
+    this._collisionAlgorithm.start(collision)
+  }
+
+  private getCollisionKey(collision: ICollision): string {
+    const id1 = collision.object1.entityId
+    const cid1 = collision.object1.collider.id
+    const id2 = collision.object2.entityId
+
+    const key = cid1 ? `${id1}_${cid1}_${id2}` : `${id1}_${id2}`
+
+    return key
+  }
+
+  update(collision: ICollision) {
+    const isColliding = this._collisionAlgorithm.isColliding(collision)
+
+    const key = this.getCollisionKey(collision)
+
+    if (isColliding) {
+      const callback = this._collisionCallbacks.get(key)
+      if (callback) {
+        callback(collision)
+      }
+    } else {
+      const callback = this._noCollisionCallbacks.get(key)
+      if (callback) {
+        callback(collision)
+      }
+    }
+  }
+
+  subscribe(
+    collision: ICollision,
+    collisionCallback: ICollisionCallback,
+    noCollisionCallback: ICollisionCallback
+  ): void {
+    const key = this.getCollisionKey(collision)
+    this._collisionCallbacks.set(key, collisionCallback)
+    this._noCollisionCallbacks.set(key, noCollisionCallback)
+  }
+
+  draw(collision: ICollision) {
+    this._collisionAlgorithm.draw(collision)
+  }
+}
+```
+
+<audio controls>
+  <source src="./audio_en/CollisionDetector.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+The `CollisionDetector` class is responsible for managing collision detection and handling in a system. Here's a brief overview of its functionality:
+
+- **Constructor**: Takes an `ICollisionAlgorithm` instance to handle the specifics of collision detection and visualization.
+- **`start(collision: ICollision): void`**: Initializes the collision process using the provided collision algorithm.
+- **`update(collision: ICollision): void`**: Checks if a collision is occurring and triggers the appropriate callback based on whether a collision is detected.
+- **`subscribe(collision: ICollision, collisionCallback: ICollisionCallback, noCollisionCallback: ICollisionCallback): void`**: Registers callbacks to be called when a collision occurs or stops occurring.
+- **`draw(collision: ICollision): void`**: Uses the collision algorithm to visualize the collision.
+
+The class maintains two maps of callbacks: one for when a collision is detected and one for when no collision is detected, identified by a unique key generated from the involved entities.

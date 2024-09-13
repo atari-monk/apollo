@@ -114,3 +114,78 @@ Interfejs `ICollisionAlgorithm` definiuje strukturę algorytmu wykrywania kolizj
 - `draw(collision: ICollision)`: Wizualizuje kolizję.
 
 Ten interfejs zapewnia ramy do zarządzania i oceny kolizji między obiektami.
+
+## CollisionDetector
+
+```typescript
+import { ICollision } from './ICollision'
+import ICollisionAlgorithm from './ICollisionAlgorithm'
+import ICollisionCallback from './ICollisionCallback'
+
+export default class CollisionDetector {
+  private _collisionCallbacks: Map<string, ICollisionCallback> = new Map()
+  private _noCollisionCallbacks: Map<string, ICollisionCallback> = new Map()
+
+  constructor(private readonly _collisionAlgorithm: ICollisionAlgorithm) {}
+
+  start(collision: ICollision): void {
+    this._collisionAlgorithm.start(collision)
+  }
+
+  private getCollisionKey(collision: ICollision): string {
+    const id1 = collision.object1.entityId
+    const cid1 = collision.object1.collider.id
+    const id2 = collision.object2.entityId
+
+    const key = cid1 ? `${id1}_${cid1}_${id2}` : `${id1}_${id2}`
+
+    return key
+  }
+
+  update(collision: ICollision) {
+    const isColliding = this._collisionAlgorithm.isColliding(collision)
+
+    const key = this.getCollisionKey(collision)
+
+    if (isColliding) {
+      const callback = this._collisionCallbacks.get(key)
+      if (callback) {
+        callback(collision)
+      }
+    } else {
+      const callback = this._noCollisionCallbacks.get(key)
+      if (callback) {
+        callback(collision)
+      }
+    }
+  }
+
+  subscribe(
+    collision: ICollision,
+    collisionCallback: ICollisionCallback,
+    noCollisionCallback: ICollisionCallback
+  ): void {
+    const key = this.getCollisionKey(collision)
+    this._collisionCallbacks.set(key, collisionCallback)
+    this._noCollisionCallbacks.set(key, noCollisionCallback)
+  }
+
+  draw(collision: ICollision) {
+    this._collisionAlgorithm.draw(collision)
+  }
+}
+```
+
+<audio controls>
+  <source src="./audio_pl/CollisionDetector.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+Klasa `CollisionDetector` odpowiada za zarządzanie wykrywaniem i obsługą kolizji w systemie. Oto krótki przegląd jej funkcji:
+
+- **Konstruktor**: Przyjmuje instancję `ICollisionAlgorithm`, która obsługuje szczegóły wykrywania kolizji i wizualizacji.
+- **`start(collision: ICollision): void`**: Inicjuje proces kolizji przy użyciu dostarczonego algorytmu kolizji.
+- **`update(collision: ICollision): void`**: Sprawdza, czy kolizja występuje, i wywołuje odpowiedni callback w zależności od tego, czy kolizja została wykryta.
+- **`subscribe(collision: ICollision, collisionCallback: ICollisionCallback, noCollisionCallback: ICollisionCallback): void`**: Rejestruje funkcje zwrotne (callbacki), które są wywoływane, gdy kolizja występuje lub przestaje występować.
+- **`draw(collision: ICollision): void`**: Używa algorytmu kolizji do wizualizacji kolizji.
+
+Klasa utrzymuje dwie mapy callbacków: jedną dla wykrytych kolizji, a drugą dla braku kolizji, identyfikowanych za pomocą unikalnego klucza generowanego na podstawie zaangażowanych obiektów.
