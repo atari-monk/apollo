@@ -12,6 +12,15 @@ export interface IRect {
 }
 ```
 
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQTLqMF1XK1GRqImvPbh4D4yAXd2RUO6lpSNw7EgIdI4oyI" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+The `IRect` interface describes a rectangle with:
+
+1. **position**: Coordinates of the rectangle's location.
+2. **size**: Width and height of the rectangle.
+3. **halfSize**: Half of the rectangle’s width and height.
+
+It provides a structure for handling 2D rectangles, including their position, dimensions, and bounds.
+
 ## ICollisionEntity
 
 ```typescript
@@ -36,13 +45,3 @@ The `ICollisionEntity` interface defines an entity involved in collision detecti
 4. **rigidBody**: Simulates physical properties like mass and velocity for interaction with the physics system.
 
 This interface integrates components for positioning, collision detection, and physics simulation in a game or simulation system.
-
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRqygCAPZ3nQ75raB5yAvfhAZodjLzD1-q_XTeJvdlVqxw" width="300" height="120" frameborder="0" scrolling="no"></iframe>
-Interfejs `ICollisionEntity` definiuje jednostkę zaangażowaną w wykrywanie kolizji i fizykę. Zawiera:
-
-1. **entityId**: Unikalny identyfikator jednostki.
-2. **transform**: Definiuje pozycję, rotację i skalę jednostki.
-3. **collider**: Reprezentuje kształt kolizji jednostki jako pudełko.
-4. **rigidBody**: Symuluje właściwości fizyczne, takie jak masa i prędkość, do interakcji z systemem fizyki.
-
-Ten interfejs integruje komponenty do pozycjonowania, wykrywania kolizji i symulacji fizyki w systemie gry lub symulacji.

@@ -1,6 +1,7 @@
-# Collision Documentation
+# Collision Documentation/Dokumentacja Kolizji
 
 1. [Collision Detector](Collision_Detector.md)
+1. [Detektor Kolizji](Collision_Detector_pl.md)
 
 ## Technicals
 
