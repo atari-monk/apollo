@@ -12,7 +12,7 @@ export interface IRect {
 }
 ```
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQTLqMF1XK1GRqImvPbh4D4yAXd2RUO6lpSNw7EgIdI4oyI" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRHChuioIr3QJG3hDB5PM85AeFt3vIUwTNh-vYDHWrlG74" width="300" height="120" frameborder="0" scrolling="no"></iframe>
 The `IRect` interface describes a rectangle with:
 
 1. **position**: Coordinates of the rectangle's location.
