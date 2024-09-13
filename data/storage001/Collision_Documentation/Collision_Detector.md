@@ -23,4 +23,4 @@ export default interface ICollisionEntity {
 }
 ```
 
-[](<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQUvEfTMO2QT7qucF4uMCyXAbkhsAJuKD0bRiVY1vp8New" width="98" height="120" frameborder="0" scrolling="no"></iframe>)
+[ICollisionEntity]('https://1drv.ms/u/c/37f44e52f80d7972/IQQUvEfTMO2QT7qucF4uMCyXAbkhsAJuKD0bRiVY1vp8New')
