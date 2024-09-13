@@ -13,7 +13,7 @@ export interface IRect {
 ```
 
 <audio controls>
-  <source src="./audio_en/IRect.mp3" type="audio/mpeg">
+  <source src="./audio_pl/IRect.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 Interfejs `IRect` opisuje prostokąt z:
@@ -40,7 +40,7 @@ export default interface ICollisionEntity {
 ```
 
 <audio controls>
-  <source src="./audio_en/ICollisionEntity.mp3" type="audio/mpeg">
+  <source src="./audio_pl/ICollisionEntity.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 Interfejs `ICollisionEntity` definiuje jednostkę zaangażowaną w wykrywanie kolizji i fizykę. Zawiera:
@@ -69,7 +69,7 @@ export interface ICollision {
 ```
 
 <audio controls>
-  <source src="./audio_en/ICollision.mp3" type="audio/mpeg">
+  <source src="./audio_pl/ICollision.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 Interfejs `ICollision` reprezentuje kolizję między dwoma obiektami, `object1` i `object2`, które są typu `ICollisionEntity`.  
@@ -86,7 +86,7 @@ export default interface ICollisionCallback {
 ```
 
 <audio controls>
-  <source src="./audio_en/ICollisionCallback.mp3" type="audio/mpeg">
+  <source src="./audio_pl/ICollisionCallback.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 Interfejs `ICollisionCallback` definiuje funkcję, która przyjmuje obiekt typu `ICollision` jako parametr i zwraca `void`.  
@@ -105,7 +105,7 @@ export default interface ICollisionAlgorithm {
 ```
 
 <audio controls>
-  <source src="./audio_en/ICollisionAlgorithm.mp3" type="audio/mpeg">
+  <source src="./audio_pl/ICollisionAlgorithm.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 Interfejs `ICollisionAlgorithm` definiuje strukturę algorytmu wykrywania kolizji. Zawiera trzy metody:
