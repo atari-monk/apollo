@@ -45,3 +45,23 @@ Interfejs `ICollisionEntity` definiuje jednostkę zaangażowaną w wykrywanie ko
 4. **rigidBody**: Symuluje właściwości fizyczne, takie jak masa i prędkość, do interakcji z systemem fizyki.
 
 Ten interfejs integruje komponenty do pozycjonowania, wykrywania kolizji i symulacji fizyki w systemie gry lub symulacji.
+
+## ICollision
+
+```
+import IVector2 from '../math/IVector2'
+import ICollisionEntity from './ICollisionEntity'
+import { IRect } from './IRect'
+
+export interface ICollision {
+  object1: ICollisionEntity
+  object2: ICollisionEntity
+
+  rect1: IRect
+  rect2: IRect
+}
+```
+
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQTX4YTF1Ef3S5QVPF9wPK53AW0x30mMp_XhfMr5ksT812E" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+Interfejs `ICollision` reprezentuje kolizję między dwoma obiektami, `object1` i `object2`, które są typu `ICollisionEntity`.  
+Zawiera również dwa odpowiadające prostokątne obszary, `rect1` i `rect2`, typu `IRect`, które definiują miejsca, gdzie dochodzi do kolizji.

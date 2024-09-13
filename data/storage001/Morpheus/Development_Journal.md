@@ -314,6 +314,6 @@ Feeling: bad, Productivity: terrible confusion.
 
 ### 13
 
-08:47 - 12:19
+08:47 - 12:31, 13:27 - 
 
 1. Documentation on collision system, en, pl, audio.

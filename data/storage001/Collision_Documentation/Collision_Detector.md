@@ -45,3 +45,23 @@ The `ICollisionEntity` interface defines an entity involved in collision detecti
 4. **rigidBody**: Simulates physical properties like mass and velocity for interaction with the physics system.
 
 This interface integrates components for positioning, collision detection, and physics simulation in a game or simulation system.
+
+## ICollision
+
+```
+import IVector2 from '../math/IVector2'
+import ICollisionEntity from './ICollisionEntity'
+import { IRect } from './IRect'
+
+export interface ICollision {
+  object1: ICollisionEntity
+  object2: ICollisionEntity
+
+  rect1: IRect
+  rect2: IRect
+}
+```
+
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQ9hXiIE7s7SaDMKkI_C44FAcFgnezr36MWD835LrOH_s4" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+The `ICollision` interface represents a collision between two entities, `object1` and `object2`, both of type `ICollisionEntity`.  
+It also includes two corresponding rectangular bounds, `rect1` and `rect2`, of type `IRect`, which define the areas where the collision occurs.
