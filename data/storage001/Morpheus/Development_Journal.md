@@ -1,4 +1,4 @@
-# `Morpheus` Development Journal
+# Morpheus Development Journal
 
 ## 2024-08
 
@@ -301,3 +301,17 @@ Feeling: bad, Productivity: ok
 1. Fix of rect collision in V4.
 
 Feeling: bad, Productivity: terrible but dragged to some result.
+
+### 12
+
+[17:42 - 18:30, 20:19 - 23:32]
+
+1. Preparing collision versions.  
+Fight with collision code.  
+Dont understand ball field collision.
+
+Feeling: bad, Productivity: terrible confusion.
+
+### 13
+
+08:47 
