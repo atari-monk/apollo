@@ -12,7 +12,7 @@ export interface IRect {
 }
 ```
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRZHSi7xMw8TaFcDUCj33rWATEbYX7mqjzMiKqrlaA66D4" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRZHSi7xMw8TaFcDUCj33rWATEbYX7mqjzMiKqrlaA66D4" width="200" height="120" frameborder="0" scrolling="no"></iframe>
 Interfejs `IRect` opisuje prostokąt z:
 
 1. **position**: Współrzędne lokalizacji prostokąta.
@@ -36,7 +36,7 @@ export default interface ICollisionEntity {
 }
 ```
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRqygCAPZ3nQ75raB5yAvfhAZodjLzD1-q_XTeJvdlVqxw" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQSQgQBiNoyETq16SHZ6QiYvARiCL5heTu2lnvHCT-DamfY" width="200" height="120" frameborder="0" scrolling="no"></iframe>
 Interfejs `ICollisionEntity` definiuje jednostkę zaangażowaną w wykrywanie kolizji i fizykę. Zawiera:
 
 1. **entityId**: Unikalny identyfikator jednostki.
@@ -62,7 +62,7 @@ export interface ICollision {
 }
 ```
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQTX4YTF1Ef3S5QVPF9wPK53AW0x30mMp_XhfMr5ksT812E" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQTX4YTF1Ef3S5QVPF9wPK53AW0x30mMp_XhfMr5ksT812E" width="200" height="120" frameborder="0" scrolling="no"></iframe>
 Interfejs `ICollision` reprezentuje kolizję między dwoma obiektami, `object1` i `object2`, które są typu `ICollisionEntity`.  
 Zawiera również dwa odpowiadające prostokątne obszary, `rect1` i `rect2`, typu `IRect`, które definiują miejsca, gdzie dochodzi do kolizji.
 
@@ -76,7 +76,7 @@ export default interface ICollisionCallback {
 }
 ```
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRUHHC6AKsVSaVhtkmRrnJ_AZS8jt6upBuOn9riIMS5JDU" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRw4_mVoBaFSYd2nzQAO9b7AeSXba9K1MZh7LDfq-UslX8" width="200" height="120" frameborder="0" scrolling="no"></iframe>
 Interfejs `ICollisionCallback` definiuje funkcję, która przyjmuje obiekt typu `ICollision` jako parametr i zwraca `void`.  
 Służy jako callback do obsługi zdarzeń kolizji między dwoma obiektami.
 
@@ -92,7 +92,7 @@ export default interface ICollisionAlgorithm {
 }
 ```
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQSYLJHco841TaK22tO3g4TGARyL0w1iPtnq8pr9_d1TUS4" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRxB7hgeE1oSIQjsn242RrYAYCCoOKtQZ8T3T0obE_82oU" width="200" height="120" frameborder="0" scrolling="no"></iframe>
 Interfejs `ICollisionAlgorithm` definiuje strukturę algorytmu wykrywania kolizji. Zawiera trzy metody:
 - `start(collision: ICollision)`: Inicjuje lub przetwarza początek kolizji.
 - `isColliding(collision: ICollision)`: Zwraca wartość logiczną, która wskazuje, czy kolizja ma miejsce.
