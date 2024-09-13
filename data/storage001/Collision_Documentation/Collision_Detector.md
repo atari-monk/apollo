@@ -28,6 +28,12 @@ export default interface ICollisionEntity {
 ```
 
 [🔊 En](https://1drv.ms/u/c/37f44e52f80d7972/IQQUvEfTMO2QT7qucF4uMCyXAabp4nc9h6h7EEn2pIdPnBA)  
+<audio controls>
+
+  <source src="https://1drv.ms/u/c/37f44e52f80d7972/IQQUvEfTMO2QT7qucF4uMCyXAabp4nc9h6h7EEn2pIdPnBA" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQUvEfTMO2QT7qucF4uMCyXAabp4nc9h6h7EEn2pIdPnBA" width="98" height="120" frameborder="0" scrolling="no"></iframe>
 The `ICollisionEntity` interface defines an entity involved in collision detection and physics. It includes:
 
 1. **entityId**: A unique identifier for the entity.
