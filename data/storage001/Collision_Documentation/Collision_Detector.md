@@ -12,7 +12,7 @@ export interface IRect {
 }
 ```
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRHChuioIr3QJG3hDB5PM85AeFt3vIUwTNh-vYDHWrlG74" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQvOc9RRIP5SbJ-zdwl3wqJAQqds-5DL7IzmTwC-Q3ErlQ" width="200" height="120" frameborder="0" scrolling="no"></iframe>
 The `IRect` interface describes a rectangle with:
 
 1. **position**: Coordinates of the rectangle's location.
@@ -36,7 +36,7 @@ export default interface ICollisionEntity {
 }
 ```
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQUvEfTMO2QT7qucF4uMCyXAabp4nc9h6h7EEn2pIdPnBA" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQS5lJQPv-zQKJU13VpkeCAAfb1wLMapO_2Cr0VrDbL26k" width="200" height="120" frameborder="0" scrolling="no"></iframe>
 The `ICollisionEntity` interface defines an entity involved in collision detection and physics. It includes:
 
 1. **entityId**: A unique identifier for the entity.
@@ -62,7 +62,7 @@ export interface ICollision {
 }
 ```
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQ9hXiIE7s7SaDMKkI_C44FAcFgnezr36MWD835LrOH_s4" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRCUyFG_0sfQ4JW3_uP7fnoAfkQt0QDiX5mN9BARXPiZn8" width="200" height="120" frameborder="0" scrolling="no"></iframe>
 The `ICollision` interface represents a collision between two entities, `object1` and `object2`, both of type `ICollisionEntity`.  
 It also includes two corresponding rectangular bounds, `rect1` and `rect2`, of type `IRect`, which define the areas where the collision occurs.
 
@@ -76,7 +76,7 @@ export default interface ICollisionCallback {
 }
 ```
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQrpMzmghxwQqpsN8_cB79yAT-g5JbacyMDf59g5T6PQCc" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQSUHPUoRunjQJSm34t7TnysAaoNJJNVYSPgtWJZ7oVjRuA" width="200" height="120" frameborder="0" scrolling="no"></iframe>
 The `ICollisionCallback` interface defines a function that takes an `ICollision` object as a parameter and returns `void`.  
 It is used as a callback to handle collision events between two entities.
 
@@ -92,7 +92,7 @@ export default interface ICollisionAlgorithm {
 }
 ```
 
-<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQQVB155XGEZQpns79x6_mwRARWfYBPCBhdSIW58KZ_9Tzc" width="300" height="120" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRSRBRbli-7RqzVx9rn6Zm9Adup5LWpc1ZwkFYGHwSeoSw" width="200" height="120" frameborder="0" scrolling="no"></iframe>
 The `ICollisionAlgorithm` interface defines the structure for a collision detection algorithm. It includes three methods:
 - `start(collision: ICollision)`: Initializes or processes the start of a collision.
 - `isColliding(collision: ICollision)`: Returns a boolean indicating if a collision is occurring.
