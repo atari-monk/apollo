@@ -23,6 +23,7 @@ export default interface ICollisionEntity {
 }
 ```
 
+[Audio En](https://1drv.ms/u/c/37f44e52f80d7972/IQQUvEfTMO2QT7qucF4uMCyXAabp4nc9h6h7EEn2pIdPnBA)  
 The `ICollisionEntity` interface defines an entity involved in collision detection and physics. It includes:
 
 1. **entityId**: A unique identifier for the entity.
@@ -31,8 +32,8 @@ The `ICollisionEntity` interface defines an entity involved in collision detecti
 4. **rigidBody**: Simulates physical properties like mass and velocity for interaction with the physics system.
 
 This interface integrates components for positioning, collision detection, and physics simulation in a game or simulation system.
-[Audio En](https://1drv.ms/u/c/37f44e52f80d7972/IQQUvEfTMO2QT7qucF4uMCyXAabp4nc9h6h7EEn2pIdPnBA)
 
+[Audio Pl](https://1drv.ms/u/c/37f44e52f80d7972/IQQ1YOAXBx_TS7RYKORW3_IuAadD943cM_25apf0S2yZvek)  
 Interfejs `ICollisionEntity` definiuje jednostkę zaangażowaną w wykrywanie kolizji i fizykę. Zawiera:
 
 1. **entityId**: Unikalny identyfikator jednostki.
@@ -41,4 +42,3 @@ Interfejs `ICollisionEntity` definiuje jednostkę zaangażowaną w wykrywanie ko
 4. **rigidBody**: Symuluje właściwości fizyczne, takie jak masa i prędkość, do interakcji z systemem fizyki.
 
 Ten interfejs integruje komponenty do pozycjonowania, wykrywania kolizji i symulacji fizyki w systemie gry lub symulacji.
-[Audio Pl](https://1drv.ms/u/c/37f44e52f80d7972/IQQ1YOAXBx_TS7RYKORW3_IuAfTfKglfi8AAP64_gtaG2oE)
