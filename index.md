@@ -4,19 +4,19 @@
 
 1. [Morpheus](data/storage001/Morpheus/index.md)
 2. [MdFolder](data/storage001/MdFolder/index.md)
-3. [Helios](data/storage001/folder007/index.md)
-4. [MdApi](data/storage001/folder002/index.md)
+3. [Helios](data/storage001/Helios/index.md)
+4. [MdApi](data/storage001/MdApi/index.md)
 5. [AddressApi](data/storage001/folder015/index.md)
 
 ### React
 
-1. [TicTacReact](data/storage001/folder006/index.md)
-2. [FormReact](data/storage001/folder018/index.md)
+1. [TicTacReact](data/storage001/TicTacReact/index.md)
+2. [FormReact](data/storage001/FormReact/index.md)
 
 ## Apollo
 
-1. [Chronologos](data/storage001/folder012/index.md)
-2. [Listalogos](data/storage001/folder013/index.md)
+1. [Chronologos](data/storage001/Chronologos/index.md)
+2. [Listalogos](data/storage001/Listalogos/index.md)
 3. [Echomelos](data/storage001/Echomelos/index.md)
 
 ## Atlas

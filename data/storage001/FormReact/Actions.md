@@ -5,4 +5,4 @@
 2. Open tutorial source
    - https://react.dev/learn/thinking-in-react
 3. Create doc on tutorial content.
-   - [Notes](./file003.md)
+   - [Notes](./Notes.md)
