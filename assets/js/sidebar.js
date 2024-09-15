@@ -7,13 +7,13 @@ function addLinks() {
   }
 
   const homeLink =
-    '<li><a href="https://atari-monk.github.io/apollo/">Home</a></li>'
+    '<li><a href="https://atari-monk.github.io/apollo/">Index</a></li>'
   sidebar.innerHTML = homeLink
 
   const pathSegments = currentPath.split('/').filter(Boolean)
 
   const lastSegment = pathSegments[pathSegments.length - 1]
-  const filePattern = /^file\d{3}\.html$/
+  const filePattern = /\.html$/
 
   if (filePattern.test(lastSegment)) {
     const baseIndexPath = pathSegments.slice(0, -1).join('/')
@@ -30,7 +30,7 @@ if (
   document.body.classList.add('dark-mode')
 }
 
-function handleScroll() {
+function handleScrollForSidebar() {
   const footer = document.getElementById('sidebar')
   const scrollPosition = window.scrollY + window.innerHeight
   const documentHeight = document.documentElement.scrollHeight
@@ -49,6 +49,6 @@ function handleScroll() {
   }
 }
 
-window.addEventListener('scroll', handleScroll)
-window.addEventListener('resize', handleScroll)
-handleScroll()
+window.addEventListener('scroll', handleScrollForSidebar)
+window.addEventListener('resize', handleScrollForSidebar)
+handleScrollForSidebar()

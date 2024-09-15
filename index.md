@@ -1,5 +1,3 @@
-# Home
-
 ## Genesis
 
 1. [Morpheus](data/storage001/Morpheus/index.md)
@@ -8,7 +6,7 @@
 4. [MdApi](data/storage001/MdApi/index.md)
 5. [AddressApi](data/storage001/AddressApi/index.md)
 
-### React
+## React
 
 1. [TicTacReact](data/storage001/TicTacReact/index.md)
 2. [FormReact](data/storage001/FormReact/index.md)
