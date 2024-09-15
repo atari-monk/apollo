@@ -16,8 +16,8 @@
 
 ## Folders
 
-1. [Test Scenes](../Morpheus_Test/index.md)
-2. [Collision Documentation](../Morpheus_Collision/index.md)
-3. [Documentation](../Morpheus_Documentation/index.md)
-4. [Flow Log](../Morpheus_Flow/index.md)
-5. [Code](../Morpheus_Code/index.md)
+1. [Test Scenes](Test/index.md)
+2. [Collision Documentation](Collision/index.md)
+3. [Documentation](Documentation/index.md)
+4. [Flow Log](Flow/index.md)
+5. [Code](Code/index.md)

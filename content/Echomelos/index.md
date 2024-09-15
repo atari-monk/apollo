@@ -14,9 +14,9 @@
 10. [Prefab](Prefab.md)
 11. [Lib Wrappers](Lib_Wrappers.md)
 12. [React Basics](React_Basics.md)
-13. [Coffe, Tea app](Coffe_Tea_app.md)
-14. [Time script](Time_script.md)
-15. [Web Game Dev Resources](Web_Game_Dev_Resources.md)
+13. [Coffe, Tea app](Coffe_App.md)
+14. [Time script](Time_Script.md)
+15. [Web Game Dev Resources](Resources.md)
 
 # Relation
 
@@ -24,7 +24,7 @@
 
 # Recipe
 
-1. [Ciasto mieszane łyżką](Ciasto_mieszane_łyżką.md)
+1. [Ciasto mieszane łyżką](Ciasto_Proste.md)
 
 # Diy
 
@@ -32,10 +32,10 @@
 
 # Anger
 
-1. [Letting Steam Out](Letting_Steam_Out.md)
+1. [Letting Steam Out](Venting.md)
 2. [Zmechanizowani](Mechanized.md)
-3. [Predator Prey Dynamic](Predator_Prey_Dynamic.md)
+3. [Predator Prey Dynamic](Predator_Prey.md)
 
 # Art
 
-1. ['Married with Childern'](Married_with_Childern.md)
+1. ['Married with Childern'](Married_Show.md)
