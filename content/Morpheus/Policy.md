@@ -30,3 +30,7 @@
 11. Do not code after 20:00.
 
 12. Start day from learning project.
+
+13. The point of making notes is to order your mind.
+
+14. The point of doing stream is hold attention.

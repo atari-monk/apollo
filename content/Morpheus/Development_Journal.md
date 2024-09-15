@@ -321,6 +321,6 @@ Feeling: bad, Productivity: terrible confusion.
 
 ### 15
 
-17:06 -
+17:06 - 19:33
 
-1.
+1. Renderer100 test scene and documentation to it.
