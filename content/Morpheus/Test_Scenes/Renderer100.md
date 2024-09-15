@@ -1,9 +1,11 @@
 # Renderer100
 
+todo: add or update spriteRendererV1 class documentation in documentation folder.
+
 1. This scene point is to test spriteRenderer system.  
 2. It also uses canvasScaler, witch is in each scene.  
 3. Also drawTransformPosition. All in version 1.0.0.  
-4. It has two players.  
+4. It has four players.  
 5. Player1 is at transfrom.position 430,540.  
 This point is rendered to show that it is top left of the sprite.  
 System spriteRenderer 1.0.0 does that.  
@@ -13,6 +15,7 @@ It is used to translate sprite so point form transform.position is in center of 
 I dint delete this version becouse a lot of features worked on it and wanted to transfer them.  
 Even as transfer is done it remains a point to show of what 'not to do'.  
 Also to show that, at the beggining and always, one makes weird assumptions/decisions.
+8. Also player 3 and 4 was added to test flipping of sprite. They are 1,2 but flipped and moved by x+100.
 
 ---
 
