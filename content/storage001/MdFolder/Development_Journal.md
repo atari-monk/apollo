@@ -116,7 +116,8 @@ x hour xx minutes
 
 ### 15
 
-13:16 -
+13:16 - 14:55
 
 1. Renaming file structure. Put index into it.  
-   From strorage001->folder001->file001.md to names from actuall content.
+   From strorage001->folder001->file001.md to names from actuall content.  
+   Fixed bumch of issues resulted and more. Page looks and feels better.
