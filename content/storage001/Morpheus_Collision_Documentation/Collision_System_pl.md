@@ -1,5 +1,7 @@
 # System Kolizji
 
+---
+
 ```typescript
 import BoxCollider from '../ecs_component/BoxCollider'
 import RigidBody from '../ecs_component/RigidBody'

@@ -1,5 +1,7 @@
 # Detektor Kolizji
 
+---
+
 ## IRect
 
 ```typescript
@@ -23,6 +25,8 @@ Interfejs `IRect` opisuje prostokąt z:
 3. **halfSize**: Połowa szerokości i wysokości prostokąta.
 
 Zapewnia strukturę do obsługi prostokątów 2D, w tym ich położenia, wymiarów i granic.
+
+---
 
 ## ICollisionEntity
 
@@ -52,6 +56,8 @@ Interfejs `ICollisionEntity` definiuje jednostkę zaangażowaną w wykrywanie ko
 
 Ten interfejs integruje komponenty do pozycjonowania, wykrywania kolizji i symulacji fizyki w systemie gry lub symulacji.
 
+---
+
 ## ICollision
 
 ```
@@ -75,6 +81,8 @@ export interface ICollision {
 Interfejs `ICollision` reprezentuje kolizję między dwoma obiektami, `object1` i `object2`, które są typu `ICollisionEntity`.  
 Zawiera również dwa odpowiadające prostokątne obszary, `rect1` i `rect2`, typu `IRect`, które definiują miejsca, gdzie dochodzi do kolizji.
 
+---
+
 ## ICollisionCallback
 
 ```typescript
@@ -91,6 +99,8 @@ export default interface ICollisionCallback {
 </audio>
 Interfejs `ICollisionCallback` definiuje funkcję, która przyjmuje obiekt typu `ICollision` jako parametr i zwraca `void`.  
 Służy jako callback do obsługi zdarzeń kolizji między dwoma obiektami.
+
+---
 
 ## ICollisionAlgorithm
 
@@ -114,6 +124,8 @@ Interfejs `ICollisionAlgorithm` definiuje strukturę algorytmu wykrywania kolizj
 - `draw(collision: ICollision)`: Wizualizuje kolizję.
 
 Ten interfejs zapewnia ramy do zarządzania i oceny kolizji między obiektami.
+
+---
 
 ## CollisionDetector
 

@@ -1,5 +1,7 @@
 # Collision Detector
 
+---
+
 ## IRect
 
 ```typescript
@@ -23,6 +25,8 @@ The `IRect` interface describes a rectangle with:
 3. **halfSize**: Half of the rectangle’s width and height.
 
 It provides a structure for handling 2D rectangles, including their position, dimensions, and bounds.
+
+---
 
 ## ICollisionEntity
 
@@ -52,6 +56,8 @@ The `ICollisionEntity` interface defines an entity involved in collision detecti
 
 This interface integrates components for positioning, collision detection, and physics simulation in a game or simulation system.
 
+---
+
 ## ICollision
 
 ```typescript
@@ -75,6 +81,8 @@ export interface ICollision {
 The `ICollision` interface represents a collision between two entities, `object1` and `object2`, both of type `ICollisionEntity`.  
 It also includes two corresponding rectangular bounds, `rect1` and `rect2`, of type `IRect`, which define the areas where the collision occurs.
 
+---
+
 ## ICollisionCallback
 
 ```typescript
@@ -91,6 +99,8 @@ export default interface ICollisionCallback {
 </audio>
 The `ICollisionCallback` interface defines a function that takes an `ICollision` object as a parameter and returns `void`.  
 It is used as a callback to handle collision events between two entities.
+
+---
 
 ## ICollisionAlgorithm
 
@@ -114,6 +124,8 @@ The `ICollisionAlgorithm` interface defines the structure for a collision detect
 - `draw(collision: ICollision)`: Visualizes the collision.
 
 This interface provides a framework for managing and evaluating collisions between entities.
+
+---
 
 ## CollisionDetector
 
