@@ -113,3 +113,10 @@ x hour xx minutes
 22:54 - 23:13
 
 1. Refactoring file structure. Putting notes from chatgpt.
+
+### 15
+
+13:16 -
+
+1. Renaming file structure. Put index into it.  
+   From strorage001->folder001->file001.md to names from actuall content.

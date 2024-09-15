@@ -6,7 +6,7 @@
 2. [MdFolder](data/storage001/MdFolder/index.md)
 3. [Helios](data/storage001/Helios/index.md)
 4. [MdApi](data/storage001/MdApi/index.md)
-5. [AddressApi](data/storage001/folder015/index.md)
+5. [AddressApi](data/storage001/AddressApi/index.md)
 
 ### React
 
@@ -21,11 +21,11 @@
 
 ## Atlas
 
-1. [Pyrgos](data/storage001/folder008/index.md)
+1. [Pyrgos](data/storage001/Pyrgos/index.md)
 
 ## Gnosis
 
-1. [Nx](data/storage001/folder009/index.md)
-2. [React](data/storage001/folder010/index.md)
-3. [Powershell](data/storage001/folder011/index.md)
-4. [Multithreading](data/storage001/folder014/index.md)
+1. [Nx](data/storage001/Nx/index.md)
+2. [React](data/storage001/React/index.md)
+3. [Powershell](data/storage001/Powershell/index.md)
+4. [Multithreading](data/storage001/Multithreading/index.md)
