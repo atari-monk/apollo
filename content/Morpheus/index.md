@@ -16,8 +16,8 @@
 
 ## Folders
 
-1. [Test Scenes](Test/index.md)
-2. [Collision Documentation](Collision/index.md)
+1. [Test Scenes](Test_Scenes/index.md)
+2. [Collision Documentation](Collision_Documentation/index.md)
 3. [Documentation](Documentation/index.md)
-4. [Flow Log](Flow/index.md)
+4. [Flow Log](Flow_Log/index.md)
 5. [Code](Code/index.md)
