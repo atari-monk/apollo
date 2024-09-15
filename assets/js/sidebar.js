@@ -17,7 +17,9 @@ function addLinks() {
 
   if (filePattern.test(lastSegment)) {
     const baseIndexPath = pathSegments.slice(0, -1).join('/')
-    const indexLink = `<li><a href="https://atari-monk.github.io/${baseIndexPath}/">Index</a></li>`
+    const indexLink = `<li><a href="https://atari-monk.github.io/${baseIndexPath}/">${
+      pathSegments[pathSegments.length - 2]
+    }</a></li>`
     sidebar.innerHTML += indexLink
   }
 }
