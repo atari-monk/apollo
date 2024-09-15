@@ -3,7 +3,7 @@ import sys
 
 def get_storage_folder_path(storage_num):
     """Return the path to the specified storage folder."""
-    return f'../data/storage{storage_num:03}'
+    return f'../content/storage{storage_num:03}'
 
 def get_folder_path(storage_num, folder_num):
     """Return the path to the specified folder within a storage folder."""

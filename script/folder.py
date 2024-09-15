@@ -2,15 +2,15 @@ import os
 import sys
 
 def create_root_folder():
-    """Create the root folder '../data' if it does not exist."""
-    root_folder = '../data'
+    """Create the root folder '../content' if it does not exist."""
+    root_folder = '../content'
     if not os.path.exists(root_folder):
         os.makedirs(root_folder)
         print(f"Created root folder: {root_folder}")
 
 def create_storage_folder(storage_num):
     """Create a storage folder named 'storage00n' where n is the storage number."""
-    root_folder = '../data'
+    root_folder = '../content'
     storage_folder_name = f'storage{storage_num:03}'
     storage_folder_path = os.path.join(root_folder, storage_folder_name)
     
@@ -24,12 +24,17 @@ def create_folders(storage_folder_path, num_folders):
     """Create the specified number of folders in the given storage folder."""
     existing_folders = [d for d in os.listdir(storage_folder_path) if os.path.isdir(os.path.join(storage_folder_path, d))]
     
-    if existing_folders:
-        existing_folders.sort()
-        last_folder = existing_folders[-1]
-        last_index = int(last_folder[6:])  # Extract the number part of folder name 'folder00n'
-    else:
-        last_index = 0
+    # Find the highest existing folder index
+    last_index = 0
+    for folder in existing_folders:
+        if folder.startswith('folder') and len(folder) == 9:  # 'folder' + 3 digits
+            try:
+                index = int(folder[6:])  # Extract the number part of folder name 'folder00n'
+                if index > last_index:
+                    last_index = index
+            except ValueError:
+                # If conversion fails, skip the folder
+                continue
     
     new_folders = []
     for i in range(last_index + 1, last_index + 1 + num_folders):
