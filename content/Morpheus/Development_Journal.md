@@ -321,7 +321,14 @@ Feeling: bad, Productivity: terrible confusion.
 
 ### 15
 
-17:06 - 19:33, 20:44 - 22:21
+17:06 - 19:33, 20:44 - 22:21, 00:08 - 00:25
 
 1. Renderer100 test scene and documentation to it.
 2. Renderer200 test scene and documentation to it. Fixed editor menu to not have subFolder if not in data.
+3. Renderer300, 400 scenes.
+
+### 16
+
+22:36 - 00:54
+
+1. Test, doc on class RendererV1.
