@@ -1,6 +1,10 @@
 # BallDribble
 
-## Responsibility
+## Path
+
+- packages\engine\src\ecs_system\BallDribble.ts
+
+## Short Description
 
 - Ecs system extending System class.
 - Used in football 1.0.0.
@@ -9,21 +13,17 @@
 - Kick.enableKick is set by collision detection of ball and player collider box with id: `kick`.
 - If `Kick.enableKick` springForce is calculated and added to ball Transform.position.
 - Stiffness is hardcoded to 0.1, todo: move to component data.
-- Spring is calculated with formula:
-
-```typescript
-const displacement = playerTransform.position
-  .add(playerCollider.center)
-  .subtract(ballTransform.position)
-```
-
-## Path
-
-```plaintext
-C:\atari-monk\code\ts-engine-nx\packages\engine\src\football\ecs\system\BallDribble.ts
-```
 
 ## Usage
+
+- Add to player entity.json
+
+```json
+"kick":
+{
+  "enableKick": false
+}
+```
 
 - Add to system.json
 
@@ -33,14 +33,5 @@ C:\atari-monk\code\ts-engine-nx\packages\engine\src\football\ecs\system\BallDrib
   "entity": ["player1"],
   "cache": "rendererCache",
   "name": "Ball Dribble"
-}
-```
-
-- Add to player entity.json
-
-```json
-"kick":
-{
-  "enableKick": false
 }
 ```

@@ -1,6 +1,11 @@
 # KeyboardMapping
 
-- C:\atari-monk\code\ts-engine-nx\packages\engine\src\ecs\system\keyboard\KeyboardMapping.ts
+## Path
+
+- packages\engine\src\ecs_system\KeyboardMapping.ts
+
+## Short Description
+
 - Ecs system extending System class.
 - Subscribes to input KeyEvents.KeyDown.
 - Stores key list.

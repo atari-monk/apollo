@@ -1,6 +1,10 @@
 # CollisionBoxRenderer
 
-## Responsibility
+## Path
+
+- packages\engine\src\ecs_system\CollisionBoxRenderer.ts
+
+## Short Description
 
 - Ecs system extending System class.
 - Used in football 2.0.0.
@@ -11,17 +15,7 @@
 - Updates colliders calculation.
 - Renders colliders rects.
 - Calculates sprite center.
-
-```typescript
-const spriteCenterX = (transform.position.x + halfFrameSizeX) * scale.x
-```
-
 - Calculates collider box center.
-
-```typescript
-const boxCenterX = spriteCenterX + (box.center.x - box.size.x / 2) * scale.x
-```
-
 - Flag origin.isCenter decides if center or top left is used.
 - Renders strokeRect or fillRect, depending on box.style, fill with no style.
 - Box center and size is scaled with `CanvalScale`.
@@ -31,21 +25,11 @@ const boxCenterX = spriteCenterX + (box.center.x - box.size.x / 2) * scale.x
 - It switches only colliders with ids: 'body', 'boots', 'kick', 'ball'.
 - Box.center is really top left, todo: change names.
 
-## Path
-
-```plaintext
-C:\atari-monk\code\ts-engine-nx\packages\engine\src\animation_system\ecs\system\sprite_renderer\CollisionBoxRenderer.ts
-```
-
 ## Usage
 
-- Add `origin` and `style` to collider in entity.json.
+- Add `style` to collider in entity.json.
 
 ```json
-"origin": {
-        "isTopLeft": false,
-        "isCenter": true
-    },
 "style": {
     "isFill": false,
     "isStroke": true,

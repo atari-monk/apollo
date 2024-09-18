@@ -1,6 +1,11 @@
 # DebugRenderer
 
-- C:\atari-monk\code\ts-engine-nx\packages\engine\src\ecs\system\renderer\DebugRenderer.ts
+## Path
+
+- packages\engine\src\ecs_system\DebugRenderer.ts
+
+## Short Description
+
 - Ecs system extending System class.
 - Used in football 1.0.0
 - For each entity regisered in system:

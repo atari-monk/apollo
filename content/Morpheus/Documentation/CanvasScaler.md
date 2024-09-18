@@ -1,6 +1,11 @@
 # CanvasScaler
 
-- C:\atari-monk\code\ts-engine-nx\packages\engine\src\ecs\system\CanvasScaler.ts
+## Path
+
+- packages\engine\src\ecs_system\CanvasScaler.ts
+
+## Short Description
+
 - Ecs system extending System class.
 - Required by scene to give canvas size.
 - Requires canvas entity that holds CanvasScale component.
