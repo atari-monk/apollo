@@ -332,3 +332,9 @@ Feeling: bad, Productivity: terrible confusion.
 22:36 - 00:54
 
 1. Test, doc on class RendererV1.
+
+### 17
+
+17:14 - 18:23
+
+1. 
