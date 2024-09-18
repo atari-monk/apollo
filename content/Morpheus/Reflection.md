@@ -17,3 +17,8 @@ It’s common to feel this way, especially when you measure your progress agains
 
 Perhaps focusing on your own progress and celebrating small victories could help shift the perspective back to the joy and learning you find in your projects.  
 Is there anything specific that you find particularly challenging or discouraging when comparing yourself to others?
+
+## Points
+
+1. Cli app should be simple script.
+2. Personal projects, todo: reflect on those.
