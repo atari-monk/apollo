@@ -337,10 +337,10 @@ Feeling: bad, Productivity: terrible confusion.
 
 17:14 - 18:23
 
-1. Refactor, documentation.
+1. Refactoring, documentation.
 
 ### 18
 
-15:56 - 17:00, 18:10 - 19:20, 22:54
+15:56 - 17:00, 18:10 - 19:20, 22:54 - 00:00
 
-1. Refactoring, documenting SpriteRendererV1.
+1. Refactoring, documentation.
