@@ -8,21 +8,29 @@
 
 2. **OneDrive embeding**
 
-   - Need to open new tab, not convenient.
+   Move file to onedrive. Generate embed iframe with link on onedrive page. Tested link in some options.
+
+   - Md Link
 
    [🔊 En](https://1drv.ms/u/c/37f44e52f80d7972/IQRoqaRxwZwHQp7DhgsZ1OuHAe1_SFLcJBV_GhykONj7804)
 
-   - Disabled player for some reason.
+   - Need to open new tab, not convenient.
+
+   - Audio html element
 
     <audio controls>
     <source src="https://1drv.ms/u/c/37f44e52f80d7972/IQRoqaRxwZwHQp7DhgsZ1OuHAe1_SFLcJBV_GhykONj7804" type="audio/mpeg">
     Your browser does not support the audio element.
     </audio>
 
-   - I think this may work when one iframe per page.
-     Tested with more, wasnt working well.
+   - Disabled player for some reason.
+
+   - IFrame from OneDrive
 
     <iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRoqaRxwZwHQp7DhgsZ1OuHAe1_SFLcJBV_GhykONj7804" width="200" height="120" frameborder="0" scrolling="no"></iframe>
+
+   - I think this may work when one iframe per page.
+     Tested with more, wasnt working well.
 
 3. **Files on server**
 
