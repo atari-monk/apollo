@@ -2,13 +2,13 @@
 
 ### Journal
 
-[Journal](Journal.md), [Journal Json](Journal_Json.json), [Journal Scheme](Journal_Scheme.json)
+[Journal](Journal.md)
 
 ### [Documentation](Documentation/index.md)
 
 ### Reflections
 
-[Policy](Policy.md)
+[Policy](Policy.md)  
 [Reflection](Reflection.md)
 
 ### Log
