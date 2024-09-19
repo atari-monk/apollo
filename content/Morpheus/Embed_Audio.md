@@ -8,7 +8,9 @@
 
 2. **OneDrive embeding**
 
-   Move file to onedrive. Generate embed iframe with link on onedrive page. Tested link in some options.
+   Move file to onedrive.  
+   On onedrive page, generate embed iframe with link.  
+   Tested link in some options.
 
    - Md Link
 
