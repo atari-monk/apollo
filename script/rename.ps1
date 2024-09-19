@@ -1,6 +1,6 @@
 $FolderPath = "C:\atari-monk\code\apollo\content"  # Set your folder path here
-$OldFileName = "temp.md"
-$NewFileName = "Index.md"
+$OldFileName = "Index.md"
+$NewFileName = "temp.md"
 
 # Check if the folder exists
 if (-Not (Test-Path -Path $FolderPath)) {
