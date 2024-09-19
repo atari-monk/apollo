@@ -19,16 +19,16 @@
     Your browser does not support the audio element.
     </audio>
 
-   - This kind of works.  
-     After more tests resigned from this.  
-     It loads or not, quite randomly.  
-     Instead directly storing audio in repo.
+   - I think this may work when one iframe per page.
+     Tested with more, wasnt working well.
 
     <iframe src="https://1drv.ms/u/c/37f44e52f80d7972/IQRoqaRxwZwHQp7DhgsZ1OuHAe1_SFLcJBV_GhykONj7804" width="200" height="120" frameborder="0" scrolling="no"></iframe>
 
 3. **Files on server**
 
    - Direct files on server.
+     Works even with many players per page.
+     Although, in markdown, one per page feels and look best.
 
    <audio controls>
    <source src="./../Morpheus_Documentation/audio_en/IRect.mp3" type="audio/mpeg">
