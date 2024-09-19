@@ -6,7 +6,7 @@
 2. [Journal Json](./Journal/Journal_Json.json)
 3. [Journal Scheme](./Journal/Journal_Scheme.json)
 
-## 2. [Documentation](./../Morpheus_Documentation/Index.md)
+## 2. [Documentation](./../Morpheus_Documentation/index.md)
 
 ## 3. Reflections
 
