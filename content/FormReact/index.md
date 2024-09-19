@@ -1,5 +1,5 @@
-# FormReact
+### FormReact
 
-1. [FormReact Development Journal](Development_Journal.md)
-2. [Actions](Actions.md)
-3. [Notes](Notes.md)
+[FormReact Development Journal](Development_Journal.md)  
+[Actions](Actions.md)  
+[Notes](Notes.md)

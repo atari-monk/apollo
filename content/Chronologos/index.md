@@ -1,11 +1,4 @@
-# Apollo/Chronologos
+### Apollo/Chronologos
 
-## En
-
-1. [2024](2024_en.md)
-
----
-
-## Pl
-
-1. [2024](2024_pl.md)
+[2024 En](2024_en.md)  
+[2024 Pl](2024_pl.md)
