@@ -2,9 +2,7 @@
 
 ### Journal
 
-[Journal](Journal.md)
-[Journal Json](Journal_Json.json)
-[Journal Scheme](Journal_Scheme.json)
+[Journal](Journal.md), [Journal Json](Journal_Json.json), [Journal Scheme](Journal_Scheme.json)
 
 ### [Documentation](Documentation/index.md)
 
