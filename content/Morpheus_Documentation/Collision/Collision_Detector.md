@@ -11,7 +11,7 @@ The `IRect` interface describes a rectangle with:
 It provides a structure for handling 2D rectangles, including their position, dimensions, and bounds.
 
 <audio controls>
-  <source src="./audio_en/IRect.mp3" type="audio/mpeg">
+  <source src="./../audio_en/IRect.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
@@ -27,7 +27,7 @@ The `ICollisionEntity` interface defines an entity involved in collision detecti
 This interface integrates components for positioning, collision detection, and physics simulation in a game or simulation system.
 
 <audio controls>
-  <source src="./audio_en/ICollisionEntity.mp3" type="audio/mpeg">
+  <source src="./../audio_en/ICollisionEntity.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
@@ -37,7 +37,7 @@ The `ICollision` interface represents a collision between two entities, `object1
 It also includes two corresponding rectangular bounds, `rect1` and `rect2`, of type `IRect`, which define the areas where the collision occurs.
 
 <audio controls>
-  <source src="./audio_en/ICollision.mp3" type="audio/mpeg">
+  <source src="./../audio_en/ICollision.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
@@ -47,7 +47,7 @@ The `ICollisionCallback` interface defines a function that takes an `ICollision`
 It is used as a callback to handle collision events between two entities.
 
 <audio controls>
-  <source src="./audio_en/ICollisionCallback.mp3" type="audio/mpeg">
+  <source src="./../audio_en/ICollisionCallback.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
@@ -62,7 +62,7 @@ The `ICollisionAlgorithm` interface defines the structure for a collision detect
 This interface provides a framework for managing and evaluating collisions between entities.
 
 <audio controls>
-  <source src="./audio_en/ICollisionAlgorithm.mp3" type="audio/mpeg">
+  <source src="./../audio_en/ICollisionAlgorithm.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
@@ -79,6 +79,6 @@ The `CollisionDetector` class is responsible for managing collision detection an
 The class maintains two maps of callbacks: one for when a collision is detected and one for when no collision is detected, identified by a unique key generated from the involved entities.
 
 <audio controls>
-  <source src="./audio_en/CollisionDetector.mp3" type="audio/mpeg">
+  <source src="./../audio_en/CollisionDetector.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
