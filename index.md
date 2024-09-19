@@ -4,8 +4,8 @@
 
 ## Genesis
 
-1. [Morpheus](content/Morpheus/Index.md)
-2. [MdFolder](content/MdFolder/Index.md)
+1. [Morpheus](content/Morpheus/index.md)
+2. [MdFolder](content/MdFolder/index.md)
 3. [Helios](content/Helios/Index.md)
 4. [MdApi](content/MdApi/Index.md)
 5. [AddressApi](content/AddressApi/Index.md)
