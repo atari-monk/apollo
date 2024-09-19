@@ -154,3 +154,9 @@ In summary, `SpriteRendererV1` manages the lifecycle of sprites, including cachi
     "isOn": true
   }
 ```
+
+### Conclusion
+
+SpriteRendererV1 renders so point used as position will  
+be in top left of sprite.  
+Typicaly, Ecs compoenent transform.position is used as sprite position.

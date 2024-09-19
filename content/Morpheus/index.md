@@ -1,26 +1,26 @@
 # Morpheus
 
-## Journal
+## 1. Journal
 
-1. [Journal](Journal.md)
-2. [Journal Scheme](Journal_Scheme.json)
-3. [Journal Json](Journal_Json.json)
+1. [Journal](./Journal/Journal.md)
+2. [Journal Json](./Journal/Journal_Json.json)
+3. [Journal Scheme](./Journal/Journal_Scheme.json)
 
-## Recommendations
+## 2. [Documentation](./../Morpheus_Documentation/Index.md)
 
-[Policy](Policy.md)
-[Reflection](Reflection.md)
-[Class Versioning](Class_Versioning.md)
-[Script Prompting](Script_Prompting.md)
+## 3. Reflections
 
-## Log
+1. [Policy](Policy.md)
+2. [Reflection](Reflection.md)
+
+## 4. Log
 
 [Nx Setup](Nx_Setup.md)
 
-## Nx
+## 5. Nx
 
 [Nx Cli](Nx_Cli.md)
 
-## How to
+## 6. Misc
 
-[Add System](Add_System.md)
+[Embed Audio](Embed_Audio.md)

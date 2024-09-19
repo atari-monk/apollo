@@ -9,9 +9,7 @@
 23:12 - 23:36, 23:36 - 23:56  
 44 minutes
 
-1. Add score display to scene football_editor 2.0.0.  
-   Updated sytem id from playerState to playerStateV1 in scenes 1.0.0.
-
+1. Score display scene in football 2.0.0.
 2. Introduced this Development Journal doc.
 
 ### 05
@@ -19,9 +17,9 @@
 12:20 - 12:42, 12:55 - 13:17, [13:47 - 14:54, 15:14 - 15:28], 16:15 - 17:30  
 3 hours 20 minutes
 
-1. Add script goto. One word to open files.
+1. Script to open files with command.
 
-2. Add player movement to scene football and football_editor 2.0.0.
+2. Player movement scene in football 2.0.0.
 
 3. Add player movement animations to scene football and football_editor 2.0.0.  
    Add scale multiplication to renderer fliping sprite.
@@ -344,3 +342,9 @@ Feeling: bad, Productivity: terrible confusion.
 15:56 - 17:00, 18:10 - 19:20, 22:54 - 00:00
 
 1. Refactoring, documentation.
+
+### 19
+
+18:07 -
+
+1.
