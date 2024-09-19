@@ -41,6 +41,6 @@
      Although, in markdown, one per page feels and look best.
 
    <audio controls>
-   <source src="./../Morpheus_Documentation/audio_en/IRect.mp3" type="audio/mpeg">
+   <source src="./Documentation/audio_en/IRect.mp3" type="audio/mpeg">
    Your browser does not support the audio element.
    </audio>
