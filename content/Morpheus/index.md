@@ -1,24 +1,9 @@
-## Morpheus
-
-### Journal
+### Morpheus
 
 [Journal](Journal.md)
-
-### [Documentation](Documentation/index.md)
-
-### Reflections
-
+[Documentation](Documentation/index.md)
 [Policy](Policy.md)  
 [Reflection](Reflection.md)
-
-### Log
-
 [Nx Setup](Nx_Setup.md)
-
-### Nx
-
 [Nx Cli](Nx_Cli.md)
-
-### Misc
-
 [Embed Audio](Embed_Audio.md)
