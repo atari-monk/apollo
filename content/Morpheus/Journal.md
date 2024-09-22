@@ -349,6 +349,7 @@ Feeling: bad, Productivity: terrible confusion.
 
 ### 22
 
-15:38 - 18:23, 21:26 - 
+15:38 - 18:23, 21:26 - 23:15
 
 1. Documentation.
+2. Documentation. Refactoring SpriteRendererV2.
