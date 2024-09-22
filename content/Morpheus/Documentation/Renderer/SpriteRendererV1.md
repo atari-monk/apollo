@@ -1,162 +1,123 @@
-# SpriteRendererV1
+### **Class Name:** `SpriteRendererV1`
 
-## Path
+---
 
-- packages\engine\src\ecs_system\SpriteRendererV1.ts
+### **1. Class Purpose**
+- **Description:**  
+  `SpriteRendererV1` is responsible for rendering sprites and managing their animations in a game engine. It interacts with various game entities, handling sprite positions, offsets, and animation updates. It also listens for animation-related events and updates the entities' sprites accordingly.
 
-## Related Path
+---
 
-- packages\engine\src\animator
-- packages\engine\src\animatorV1
-- packages\engine\src\ecs_system_factory\spriteRendererFactory.ts
+### **2. Key Methods and Properties**
 
-## Short Description
+- **Primary Methods:**
 
-- Ecs system extending System class.
-- Used in football 1.0.0.
-- For each entity regisered in system:
-  - Caches sprite animation components Sprite, Transform.
-  - Caches animator object.
-  - Subscribes to AnimationSwitch event.
-  - Updates animator frame.
-  - Renders animator.
-  - Renders in position transform.position + sprite.spriteOffset.
+  - `startEntity(entity: IEntity)`  
+    - **Description:** Initializes and starts tracking the entity's rendering and animation components.
+    - **Behavior:** It creates a cache for the entity, stores it, and subscribes to relevant animation events for the entity.
+    - **Returns:** `void`
+    - **Exceptions:** Throws errors if the entity does not have the required components.
 
-## Longer Description
+  - `createCache(entity: IEntity)`  
+    - **Description:** Constructs and returns a cache of key components (`transform`, `sprite`, `animator`) for a given entity.
+    - **Behavior:** Sets up the cache for the entity and initializes the sprite animator.
+    - **Returns:** `ICache` object, containing `transform`, `sprite`, `positionWithOffset`, and `animator`.
 
-The `SpriteRendererV1` class extends the `System` class and is responsible for managing the rendering and animation of sprites in a game or graphical application. Here’s a breakdown of its functionality:
+  - `subscribeEvent(entity: IEntity, cache: ICache)`  
+    - **Description:** Subscribes to the animation switch event, ensuring the entity's animation can be updated dynamically.
+    - **Behavior:** Registers a callback to handle the animation switching for the entity.
+    - **Returns:** `void`
 
-1. **Constructor**: Initializes the `SpriteRendererV1` with dependencies such as `entityCache`, `renderer`, `eventSystem`, `spriteAnimatorFactory`, and `logger`.
+  - `switchAnimation(entity: IEntity, cache: ICache, data: { id: string; animId: number })`  
+    - **Description:** Switches the animation of the entity based on the event data received.
+    - **Behavior:** If the event's entity ID matches the current entity's ID, it triggers the animation switch.
+    - **Returns:** `void`
 
-2. **startEntity**: Sets up a new entity by creating a cache for it and subscribing to relevant events.
+  - `updateEntity(entity: IEntity, deltaTime: number)`  
+    - **Description:** Updates the entity’s position and animation based on the delta time.
+    - **Behavior:** If no cache exists for the entity, logs an error. Otherwise, updates the position and animation using the cache data.
+    - **Returns:** `void`
 
-3. **createCache**: Constructs a cache object for an entity, including components like `transform`, `sprite`, and an `animator` created using the `spriteAnimatorFactory`.
+  - `logError(entity: IEntity)`  
+    - **Description:** Logs an error if no cache is found for the entity.
+    - **Behavior:** Uses the logger to output the error message to the console or a log file.
+    - **Returns:** `void`
 
-4. **subscribeEvent**: Subscribes to the `AnimationSwitch` event, which triggers the `switchAnimation` method when the event occurs.
+  - `setPosition(cache: ICache)`  
+    - **Description:** Updates the cached position by combining the entity’s transform and sprite offset.
+    - **Behavior:** Adds the sprite offset to the transform position and stores it in the cache.
+    - **Returns:** `void`
 
-5. **switchAnimation**: Changes the animation of the sprite if the event data corresponds to the entity.
+  - `renderEntity(entity: IEntity, _deltaTime: number)`  
+    - **Description:** Renders the entity’s sprite based on its current position and animation state.
+    - **Behavior:** Retrieves the cache for the entity and uses the renderer to draw the sprite.
+    - **Returns:** `void`
 
-6. **updateEntity**: Updates the entity by setting its position and updating its animation based on the `deltaTime`. If the cache for the entity is missing, logs an error.
+- **Key Properties:**
 
-7. **logError**: Logs an error message when the cache for an entity is not found.
+  - `_cache: Map<string, ICache>`  
+    - **Description:** Stores a map of cached components for each entity.
+    - **Behavior:** Contains entities' `transform`, `sprite`, `animator`, and `positionWithOffset` data.
 
-8. **setPosition**: Updates the sprite's position by adding its offset to its current position.
+---
 
-9. **renderEntity**: Renders the entity by drawing the sprite using the animator, its position, and flip state. If the cache for the entity is missing, logs an error.
+### **3. Usage Examples**
 
-In summary, `SpriteRendererV1` manages the lifecycle of sprites, including caching their state, handling animation changes, updating their positions, and rendering them.
+- **Example 1:**
 
-## Test Scene
+    ```typescript
+    const entityCache = new EntityCache()
+    const renderer = new Renderer()
+    const eventSystem = new EventSystem()
+    const spriteAnimatorFactory = new SpriteAnimatorFactory()
+    const logger = new Logger()
 
-1. This scene point is to test spriteRenderer system.
-2. It also uses canvasScaler, witch is in each scene.
-3. Also drawTransformPosition. All in version 1.0.0.
-4. It has four players.
-5. Player1 is at transfrom.position 430,540.  
-   This point is rendered to show that it is top left of the sprite.  
-   **System spriteRenderer 1.0.0 renders transfrom.position as top left point of sprite.**
-6. Player2 is rendered to show use of component sprite.spriteOffset property.  
-   **Component property sprite.spriteOffset is used to translate sprite so point form transform.position is in center of sprite.**
-7. This behavior is just stupid in retrospect, but i didnt know better at 1.0.0.  
-   I dint delete this version becouse a lot of features worked on it and wanted to transfer them.  
-   Even as transfer is done it remains a point to show of what 'not to do'.  
-   Also to show that, at the beggining and always, one makes weird assumptions/decisions.
-8. Also player 3 and 4 was added to test flipping of sprite.  
-   They are 1,2 but flipped and moved by x+100.
-9. To select this scene pass to config:
+    const spriteRenderer = new SpriteRendererV1(entityCache, renderer, eventSystem, spriteAnimatorFactory, logger)
 
-```json
- "select": {
-      "folder": "engine",
-      "subFolder": "",
-      "scene": "renderer100"
-    }
-```
+    const entity = entityCache.getEntity('entity-id')
+    spriteRenderer.startEntity(entity)
+    spriteRenderer.updateEntity(entity, 16)
+    spriteRenderer.renderEntity(entity, 16)
+    ```
 
-## Usage
+---
 
-- Add data to entity.json
+### **4. Dependencies and Interactions**
 
-```json
-"canvas": {
-    "canvasScale": {
-      "scaleFactor": {
-        "x": 1,
-        "y": 1
-      }
-    }
-  },
-  "player1": {
-    "id": "player1",
-    "name": "player1",
-    "transform": {
-      "position": {
-        "x": 430,
-        "y": 540
-      },
-      "scale": {
-        "x": 1,
-        "y": 1
-      },
-      "rotation": 0
-    },
-    "sprite": {
-      "spriteOffset": {
-        "x": -36,
-        "y": -75
-      },
-      "isFlipped": false,
-      "spriteAnimation": [
-        {
-          "imagePath": "./assets/images/football/red-player.png",
-          "frameCount": 20,
-          "frameDuration": 0.05,
-          "frameSize": {
-            "x": 80,
-            "y": 160
-          },
-          "animationType": 1
-        }
-      ],
-      "state": "idle"
-    }
-  }
-```
+- **Dependencies:**
+  - `Sprite`: Represents the visual appearance of the entity.
+  - `ISpriteAnimatorFactory`: Creates animators for managing sprite animations.
+  - `IEntityCache`: Provides access to game entities.
+  - `Transform`: Stores the position, rotation, and scale of the entity.
+  - `IEventSystem`: Handles events in the game, such as animation switching.
+  - `Vector2`: Manages 2D vectors for position and offset calculations.
+  - `IRenderer`: Responsible for rendering the sprites to the screen.
+  - `ISpriteAnimatorV1`: Handles sprite animation logic.
+  - `ILogger`: Logs error messages and other relevant information.
 
--Add system to system.json
+- **Interactions with Other Classes:**
+  - `SpriteRendererV1` interacts closely with `Sprite` and `Transform` components for rendering.
+  - It depends on `IEntityCache` to retrieve entities and their components.
+  - `ISpriteAnimatorFactory` is used to create sprite animators.
+  - The class uses `IEventSystem` to subscribe to animation switch events.
 
-```json
-{
-    "nr": 1,
-    "system": "canvasScaler",
-    "name": "Canvas Scaler",
-    "entity": ["canvas"],
-    "cache": "startSystemCache",
-    "version": "1.0.0",
-    "isOn": true
-  },
-  {
-    "nr": 2,
-    "system": "spriteRenderer",
-    "name": "Sprite Renderer",
-    "entity": ["player1"],
-    "cache": "rendererCache",
-    "version": "1.0.0",
-    "isOn": true
-  },
-  {
-    "nr": 2,
-    "system": "drawTransformPosition",
-    "name": "Sprite Renderer",
-    "entity": ["player1"],
-    "cache": "rendererCache",
-    "version": "1.0.0",
-    "isOn": true
-  }
-```
+---
 
-### Conclusion
+### **5. Limitations and Assumptions**
 
-SpriteRendererV1 renders so point used as position will  
-be in top left of sprite.  
-Typicaly, Ecs compoenent transform.position is used as sprite position.
+- **Known Limitations:**
+  - The class assumes that each entity has a `Sprite` and `Transform` component, and will throw an error if these components are missing.
+  - It is designed to work with a single-threaded environment, meaning concurrent access is not supported.
+
+- **Assumptions:**
+  - The entity passed into the class has the required components (`Sprite`, `Transform`).
+  - The `deltaTime` provided for animation updates is accurate and reflects the time elapsed between frames.
+  - The `IRenderer` provided is compatible with the sprite rendering process.
+
+---
+
+### **6. Additional Notes (Optional)**
+- Future improvements might include support for concurrent access or optimizations for handling larger numbers of entities more efficiently.
+- The version of the sprite animator being used (`ISpriteAnimatorV1`) might change in future versions.
+
+---

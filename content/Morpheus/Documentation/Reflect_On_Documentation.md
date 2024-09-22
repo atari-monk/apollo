@@ -1,8 +1,9 @@
-#Why Question
+# Reflect on Documentation
 
-## Do you think i should document each class in my engine ?
+Documenting each class in your engine is generally a good idea,  
+especially if the engine is complex or intended for use by others (or even your future self).  
 
-Documenting each class in your engine is generally a good idea, especially if the engine is complex or intended for use by others (or even your future self). Here are a few reasons why it's beneficial:
+### Here are a few reasons why it's beneficial:
 
 1. **Clarity and Maintainability**: Well-documented classes make it easier to understand the structure and purpose of the code. This is crucial when revisiting the project after some time or when others need to work on the code. Clear documentation helps in quickly grasping what each class is supposed to do.
 
