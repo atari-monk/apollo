@@ -1,4 +1,3 @@
-```markdown
 # **Class Documentation Template**
 
 ### **Class Name:** `YourClassName`
@@ -78,5 +77,4 @@
 - Any extra details or considerations worth mentioning, such as version compatibility, potential future improvements, etc.
 
 ---
-//Given this template in next prompt i will provide a class to document.
-```
+Given this template in next prompt i will provide a class to document.
