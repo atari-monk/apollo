@@ -1,3 +1,7 @@
+# Prompts
+
+1. Given this template in next prompt i will provide a class to document.
+
 ````markdown
     # **Class Documentation Template**
 
