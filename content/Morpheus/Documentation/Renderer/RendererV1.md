@@ -1,120 +1,94 @@
-## RendererV1 Documentation
-
-### Path
-
-- `packages\engine\src\ecs_system\RendererV1.ts`
-
-### Related Paths
-
-- `packages\engine\src\animator\IAnimationFrame.ts`
-- `packages\engine\src\math\IVector2.ts`
-- `packages\engine\src\math\Vector2.ts`
-- `packages\engine\src\ecs_system\IRendererV1.ts`
+### **Class Name:** `RendererV1`
 
 ---
 
-### Short Description
-
-`RendererV1` is a class that implements the `IRendererV1` interface to handle drawing 2D images (sprites) onto an HTML canvas. It provides methods for rendering sprites both in their normal orientation and flipped horizontally.
-
----
-
-### Longer Description
-
-The `RendererV1` class is responsible for rendering sprites onto a canvas using two primary methods: `drawNormal`, for drawing sprites in their default orientation, and `drawFlipped`, for drawing sprites flipped horizontally. These methods work with animation frames and the canvas' 2D rendering context to ensure that the sprites are rendered accurately in the desired position and orientation.
+### **1. Class Purpose**
+- **Description:**  
+  The `RendererV1` class is responsible for rendering image frames on an HTML canvas. It provides methods to draw both normal and horizontally flipped frames of an image onto the canvas. This is typically used for animating sprites in a 2D game or graphical application.
 
 ---
 
-### Constructor
+### **2. Key Methods and Properties**
+- **Primary Methods:**
 
-The class does not have a custom constructor, as it only provides static functionality through its drawing methods.
+  - `drawNormal(ctx: CanvasRenderingContext2D, image: HTMLImageElement, frame: IAnimationFrame, position: IVector2): void`  
+    - **Description:** Draws a specified frame from the image at the given position on the canvas without any transformations.
+    - **Behavior:**  
+      - Draws the image directly from the specified frame and places it at the specified position on the canvas.
+      - No scaling or rotation is applied, other than the frame cropping itself.
+    - **Returns:** This method doesn't return a value.
+    - **Exceptions:** Throws an error if the canvas context (`ctx`), image, or frame are invalid.
+  
+  - `drawFlipped(ctx: CanvasRenderingContext2D, image: HTMLImageElement, frame: IAnimationFrame, position: IVector2): void`  
+    - **Description:** Draws a horizontally flipped frame of the image at the given position on the canvas.
+    - **Behavior:**  
+      - First saves the current canvas context state.
+      - Translates the canvas horizontally, scales the image to flip it horizontally, and then draws the image.
+      - Restores the canvas state after drawing to avoid affecting subsequent draw calls.
+    - **Returns:** This method doesn't return a value.
+    - **Exceptions:** Throws an error if the canvas context (`ctx`), image, or frame are invalid.
 
----
-
-### Methods
-
-#### 1. **drawNormal**
-
-```typescript
-drawNormal(
-  ctx: CanvasRenderingContext2D,
-  image: HTMLImageElement,
-  frame: IAnimationFrame,
-  position: IVector2
-): void
-```
-
-- **Description**:
-  - This method is used to draw a sprite (or a portion of it) onto the canvas at a specified position without any transformations.
-- **Parameters**:
-  - `ctx: CanvasRenderingContext2D`: The 2D rendering context for the canvas where the image will be drawn.
-  - `image: HTMLImageElement`: The image containing the sprite or animation frames.
-  - `frame: IAnimationFrame`: The specific animation frame to be rendered. Contains details such as the position and size of the frame within the image.
-  - `position: IVector2`: The position on the canvas where the sprite should be drawn.
-- **Functionality**:
-  - The method uses the `drawImage` function from the Canvas API to render the image at the provided position with no additional transformations or effects.
-  - The frame's source position and size (within the sprite sheet) are defined by `frame.framePosition` and `frame.frameSize`, and these values determine which part of the image to render.
+- **Key Properties:**
+  - The `RendererV1` class doesn't expose any properties directly, focusing solely on its rendering methods.
 
 ---
 
-#### 2. **drawFlipped**
+### **3. Usage Examples**
 
-```typescript
-drawFlipped(
-  ctx: CanvasRenderingContext2D,
-  image: HTMLImageElement,
-  frame: IAnimationFrame,
-  position: IVector2
-): void
-```
+- **Example 1:**  
+  Rendering an image frame normally at a specific position.
 
-- **Description**:
-  - This method is used to render a horizontally flipped version of the sprite. The flip is achieved by manipulating the canvas' transformation matrix before drawing the sprite and then resetting the matrix afterward.
-- **Parameters**:
+  ```javascript
+  const renderer = new RendererV1();
+  const frame = { framePosition: { x: 0, y: 0 }, frameSize: { x: 32, y: 32 } }; // Example frame object
+  const position = { x: 100, y: 150 }; // Example position
+  renderer.drawNormal(ctx, image, frame, position);
+  ```
 
-  - `ctx: CanvasRenderingContext2D`: The 2D rendering context for the canvas.
-  - `image: HTMLImageElement`: The image containing the sprite or animation frames.
-  - `frame: IAnimationFrame`: The animation frame to be rendered.
-  - `position: IVector2`: The position on the canvas where the flipped sprite should be drawn.
+- **Example 2:**  
+  Rendering a flipped image frame horizontally at a given position.
 
-- **Functionality**:
-  - The method first saves the current canvas state using `ctx.save()`.
-  - Then it performs a transformation by translating the canvas to the sprite's position and scaling it negatively along the X-axis to achieve a horizontal flip.
-  - After the transformation, it calls the `drawNormal` method to draw the image.
-  - Finally, the method restores the canvas state with `ctx.restore()` to revert the transformations.
+  ```javascript
+  const renderer = new RendererV1();
+  const frame = { framePosition: { x: 0, y: 0 }, frameSize: { x: 32, y: 32 } }; // Example frame object
+  const position = { x: 200, y: 150 }; // Example position
+  renderer.drawFlipped(ctx, image, frame, position);
+  ```
 
 ---
 
-### Example Usage
+### **4. Dependencies and Interactions**
 
-#### Drawing a Normal Sprite:
+- **Dependencies:**  
+  - `IAnimationFrame`: Defines the structure for animation frames, specifying the position and size of the frame within the image.
+  - `IVector2`: Interface for a 2D vector, used for representing positions and dimensions.
+  - `Vector2`: Class for 2D vector operations. Used to perform operations like flipping and positioning.
+  - `CanvasRenderingContext2D`: Native canvas API for 2D drawing.
+  - `HTMLImageElement`: Represents the image to be rendered.
 
-```typescript
-const renderer = new RendererV1()
-renderer.drawNormal(ctx, playerImage, currentFrame, { x: 100, y: 200 })
-```
-
-- This will draw the sprite at position (100, 200) on the canvas using the provided `playerImage` and `currentFrame`.
-
-#### Drawing a Flipped Sprite:
-
-```typescript
-renderer.drawFlipped(ctx, playerImage, currentFrame, { x: 100, y: 200 })
-```
-
-- This will draw a horizontally flipped version of the sprite at position (100, 200) on the canvas.
+- **Interactions with Other Classes:**  
+  - Interacts with the `IAnimationFrame` interface to access frame data (position and size within the image).
+  - Uses `IVector2` for determining the position on the canvas.
+  - Utilizes `Vector2.zero` in `drawFlipped()` to reset the position after translating for flipping.
 
 ---
 
-### Dependencies
+### **5. Limitations and Assumptions**
 
-- **IAnimationFrame**:
-  - Used to define the structure of an animation frame, including its position and size within the image.
-- **IVector2 & Vector2**:
-  - Defines the position on the canvas where the image is drawn. The `Vector2.zero` constant is used to indicate a position of (0, 0) when rendering flipped sprites.
+- **Known Limitations:**  
+  - This class only supports 2D rendering; it doesn't handle 3D transformations or rotations.
+  - The flipping operation only works horizontally; vertical flipping isn't supported.
+  - Does not handle image loading or resource management; assumes the image is fully loaded before rendering.
+  - No error handling is provided for invalid frame or position inputs.
+
+- **Assumptions:**  
+  - Assumes the canvas context (`ctx`) is properly initialized before calling the rendering methods.
+  - The input `IAnimationFrame` and `IVector2` objects are well-formed and valid when passed to the methods.
+  - Assumes `Vector2.zero` provides a valid zero vector for position resetting during flipped rendering.
 
 ---
 
-### Conclusion
+### **6. Additional Notes (Optional)**
 
-`RendererV1` simplifies rendering sprites onto an HTML canvas, offering basic functionality for both normal and horizontally flipped rendering. It is a lightweight, essential component for games or graphical applications that need to render animated sprites with minimal overhead.
+- Future improvements might include adding support for vertical flipping or additional transformations like scaling and rotating frames.
+- Could also extend to handle animations directly, rather than relying on external animation frame management.
