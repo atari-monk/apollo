@@ -4,7 +4,10 @@
 
 ### **1. Class Purpose**
 - **Description:**  
-  `SpriteRendererV1` is responsible for rendering sprites and managing their animations in a game engine. It interacts with various game entities, handling sprite positions, offsets, and animation updates. It also listens for animation-related events and updates the entities' sprites accordingly.
+  `SpriteRendererV1` is responsible for rendering sprites and managing their animations in a game engine.  
+  It interacts with various game entities, handling sprite positions, offsets, and animation updates.  
+  It also listens for animation-related events and updates the entities' sprites accordingly.  
+  **It uses RendererV1 and therefore has its limitations.**
 
 ---
 

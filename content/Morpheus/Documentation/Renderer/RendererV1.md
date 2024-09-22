@@ -5,7 +5,11 @@
 ### **1. Class Purpose**
 
 - **Description:**  
-  The `RendererV1` class is responsible for rendering image frames onto an HTML canvas. It supports drawing both normal and horizontally flipped frames, which is commonly used for rendering sprite animations in 2D games or graphical applications. This class is used in conjunction with `SpriteAnimator` to render animated frames based on the animation state.
+  The `RendererV1` class is responsible for rendering image frames onto an HTML canvas.  
+  It supports drawing both normal and horizontally flipped frames, which is commonly used for rendering sprite animations in 2D games or graphical applications.  
+  This class is used in conjunction with `SpriteAnimator` to render animated frames based on the animation state.  
+  **It renders sprite so that position is in top left of sprite.**  
+  **Dosent use any transformations. For use in fixed resolution.**
 
 ---
 
