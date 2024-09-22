@@ -1,127 +1,77 @@
-## RendererV2 Documentation
-
-### Path
-
-- `packages\engine\src\ecs_system\RendererV2.ts`
-
-### Related Paths
-
-- `packages\engine\src\animator\IAnimationFrame.ts`
-- `packages\engine\src\math\IVector2.ts`
-- `packages\engine\src\math\Vector2.ts`
-- `packages\engine\src\ecs_system\IRenderer.ts`
+### **Class Name:** `RendererV2`
 
 ---
 
-### Short Description
-
-`RendererV2` is an updated class implementing the `IRenderer` interface. It enhances sprite rendering by supporting scaling alongside the normal and flipped rendering of sprites onto an HTML canvas.
-
----
-
-### Longer Description
-
-The `RendererV2` class handles rendering sprites on a canvas with the added functionality of scaling. It provides two main methods: `drawNormal`, which draws sprites with scaling, and `drawFlipped`, which flips sprites horizontally while applying the scaling transformation. This version is an extension of `RendererV1` with scaling support for both normal and flipped rendering.
+### **1. Class Purpose**
+- **Description:**
+  The `RendererV2` class is responsible for rendering images (frames) onto an HTML5 canvas, providing functionality for both normal and horizontally flipped drawings. It integrates with the canvas' `2D` context to draw frames at specific positions and scales.
 
 ---
 
-### Constructor
+### **2. Key Methods and Properties**
+- **Primary Methods:**
+  - `drawNormal(ctx: CanvasRenderingContext2D, image: HTMLImageElement, frame: IAnimationFrame, position: IVector2, scale: IVector2)`
+    - **Description:** Renders an image frame onto the canvas in its normal orientation.
+    - **Behavior:** Draws a specific portion of the image (`frame`) at a defined position and scale on the canvas. The position is multiplied by the scaling factor to ensure proper sizing.
+    - **Returns:** `void` (no return value).
+    - **Exceptions:** No explicit exceptions, but incorrect input values (e.g., invalid canvas context or image) may result in rendering errors.
+  
+  - `drawFlipped(ctx: CanvasRenderingContext2D, image: HTMLImageElement, frame: IAnimationFrame, position: IVector2, scale: IVector2)`
+    - **Description:** Renders an image frame onto the canvas with a horizontal flip.
+    - **Behavior:** Transforms the canvas context by translating and scaling it to flip the image horizontally. After drawing, it restores the canvas' original state. Uses `drawNormal` internally for the actual rendering.
+    - **Returns:** `void` (no return value).
+    - **Exceptions:** As with `drawNormal`, improper input values could cause rendering issues.
 
-Like `RendererV1`, `RendererV2` doesn't require a custom constructor as it only provides static rendering methods.
-
----
-
-### Methods
-
-#### 1. **drawNormal**
-
-```typescript
-drawNormal(
-  ctx: CanvasRenderingContext2D,
-  image: HTMLImageElement,
-  frame: IAnimationFrame,
-  position: IVector2,
-  scale: IVector2
-): void
-```
-
-- **Description**:
-  - This method draws a sprite on the canvas, scaling it based on the given scale vector.
-- **Parameters**:
-
-  - `ctx: CanvasRenderingContext2D`: The 2D rendering context for the canvas.
-  - `image: HTMLImageElement`: The image containing the sprite or animation frames.
-  - `frame: IAnimationFrame`: The animation frame, specifying the source position and size of the sprite.
-  - `position: IVector2`: The position on the canvas where the sprite should be drawn.
-  - `scale: IVector2`: The scale factor applied to both the position and size of the sprite.
-
-- **Functionality**:
-  - The method draws the sprite at the specified position, scaled by the `scale.x` and `scale.y` values. Both the sprite’s position and size are adjusted according to the scale vector, allowing the sprite to be rendered at varying sizes.
+- **Key Properties:**
+  This class does not define any instance properties.
 
 ---
 
-#### 2. **drawFlipped**
+### **3. Usage Examples**
+- **Example 1:**
+  Rendering a normal image frame on the canvas.
 
-```typescript
-drawFlipped(
-  ctx: CanvasRenderingContext2D,
-  image: HTMLImageElement,
-  frame: IAnimationFrame,
-  position: IVector2,
-  scale: IVector2
-): void
-```
+    ```typescript
+    const renderer = new RendererV2();
+    renderer.drawNormal(ctx, image, frame, position, scale);
+    ```
 
-- **Description**:
+- **Example 2:**
+  Rendering a flipped image frame on the canvas.
 
-  - This method renders a horizontally flipped version of the sprite, with the scaling transformation applied.
-
-- **Parameters**:
-
-  - `ctx: CanvasRenderingContext2D`: The 2D rendering context for the canvas.
-  - `image: HTMLImageElement`: The image containing the sprite or animation frames.
-  - `frame: IAnimationFrame`: The animation frame specifying the source position and size of the sprite.
-  - `position: IVector2`: The position on the canvas where the flipped sprite should be drawn.
-  - `scale: IVector2`: The scaling vector applied to both the position and size of the sprite.
-
-- **Functionality**:
-  - The method first saves the canvas state with `ctx.save()`, then translates the canvas to the position where the sprite should be drawn and scales it horizontally by -1 to achieve the flip.
-  - The position and size of the sprite are multiplied by the `scale` vector, ensuring the flip and scaling are applied simultaneously.
-  - After the sprite is drawn, the canvas state is restored using `ctx.restore()` to remove the transformation effect for the next drawing operations.
+    ```typescript
+    const renderer = new RendererV2();
+    renderer.drawFlipped(ctx, image, frame, position, scale);
+    ```
 
 ---
 
-### Example Usage
+### **4. Dependencies and Interactions**
+- **Dependencies:**
+  - `IRenderer`: An interface that `RendererV2` implements.
+  - `IAnimationFrame`: Defines the structure of the animation frame containing the frame's position and size.
+  - `IVector2`: A vector interface for representing two-dimensional positions and sizes.
+  - `Vector2`: A vector utility class that provides helper functions like `zero`.
 
-#### Drawing a Scaled Normal Sprite:
-
-```typescript
-const renderer = new RendererV2()
-const scale = { x: 2, y: 2 }
-renderer.drawNormal(ctx, playerImage, currentFrame, { x: 100, y: 200 }, scale)
-```
-
-- This will draw the sprite at position (100, 200) on the canvas, scaling it to twice its normal size.
-
-#### Drawing a Scaled Flipped Sprite:
-
-```typescript
-renderer.drawFlipped(ctx, playerImage, currentFrame, { x: 100, y: 200 }, scale)
-```
-
-- This will draw a horizontally flipped version of the sprite at position (100, 200) on the canvas, scaling it to twice its normal size.
+- **Interactions with Other Classes:**
+  - This class interacts with the `CanvasRenderingContext2D` to manipulate the canvas for drawing and transformations.
+  - Uses `Vector2.zero` to manage coordinate transformations when flipping images.
 
 ---
 
-### Dependencies
+### **5. Limitations and Assumptions**
+- **Known Limitations:**
+  - This class does not support rotation or other advanced transformations beyond flipping.
+  - Designed to work with 2D contexts only (e.g., `CanvasRenderingContext2D`).
 
-- **IAnimationFrame**:
-  - Defines the structure of an animation frame, including the position and size within the sprite sheet.
-- **IVector2 & Vector2**:
-  - Defines the 2D vectors for both position and scaling, and the `Vector2.zero` constant represents a vector with (0, 0) coordinates, used when rendering flipped sprites.
+- **Assumptions:**
+  - It is assumed that the `image`, `frame`, and other parameters are correctly defined and validated before being passed to the methods.
+  - Assumes that the `scale` values are positive and properly defined to avoid rendering issues.
 
 ---
 
-### Conclusion
+### **6. Additional Notes (Optional)**
+- Future versions of this class could include more advanced rendering features such as rotation or color manipulation.
+- Compatible with most modern browsers that support the HTML5 canvas API.
 
-`RendererV2` builds upon the functionality of `RendererV1` by introducing the ability to scale sprites. This allows for more flexible and dynamic rendering in games or graphical applications, where sprites can be resized and flipped based on game logic or user interactions.
+---

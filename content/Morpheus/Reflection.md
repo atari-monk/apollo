@@ -1,6 +1,6 @@
 # Reflection
 
-## Flattening file system
+### Flattening file system
 
 I have flattened mostly to one folder.  
 Rearly there is second level nesting.  
@@ -12,16 +12,16 @@ I think this simple policy should improve quality, comfort of coding and more.
 
 ---
 
-## Points
+### Points
 
 1. Cli app should be simple script.
 2. What is specific about personal projects ?
 
 ---
 
-## Shadow
+### Shadow
 
-## When i do my project  
+#### When i do my project  
 i enjoy sometimes, sometimes i learn.  
 When i start compare myslef, i dont enjoy and i dont think i learn either.
 
@@ -30,7 +30,7 @@ It’s common to feel this way, especially when you measure your progress agains
 Perhaps focusing on your own progress and celebrating small victories could help shift the perspective back to the joy and learning you find in your projects.  
 Is there anything specific that you find particularly challenging or discouraging when comparing yourself to others?
 
-## What is the point of coding,  
+#### What is the point of coding,  
 it is no loger fun, althou i dont have anything else so i guess i am stuck.
 
 It sounds like you're in a tough spot, where coding no longer feels enjoyable, yet it’s the main thing you have right now.  

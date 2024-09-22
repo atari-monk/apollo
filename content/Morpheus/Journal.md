@@ -349,6 +349,6 @@ Feeling: bad, Productivity: terrible confusion.
 
 ### 22
 
-15:38 - 18:20
+15:38 - 18:23, 21:26 - 
 
 1. Documentation.
