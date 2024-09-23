@@ -1,125 +1,104 @@
-## RendererV3 Documentation
-
-### Path
-
-- `packages\engine\src\ecs_system\RendererV3.ts`
-
-### Related Paths
-
-- `packages\engine\src\animator\IAnimationFrame.ts`
-- `packages\engine\src\math\IVector2.ts`
-- `packages\engine\src\math\Vector2.ts`
-- `packages\engine\src\ecs_system\IRenderer.ts`
+### **Class Name:** `RendererV3`
 
 ---
 
-### Short Description
-
-`RendererV3` is a class implementing the `IRenderer` interface, which enhances sprite rendering by centering sprites at their position and supporting scaling transformations. This version builds on the functionality of `RendererV2` but ensures that the sprites are drawn with their centers aligned to the specified position.
-
----
-
-### Longer Description
-
-`RendererV3` extends the sprite rendering functionality by adjusting the position calculations to center the sprite based on its size, rather than drawing it from the top-left corner. This change ensures that the `position` represents the center of the sprite, which is useful in games and graphical applications that rely on centered sprite positioning. As in `RendererV2`, both normal and flipped sprites can be scaled during rendering.
+### **1. Class Purpose**
+- **Description:**
+  This class is responsible for rendering images to a canvas, providing methods to draw images normally and flipped horizontally.  
+  **It centers sprite around transform.position. Scales sprite. It does this by calculations.  It is deprecated as new versions use canvas transforms not mannual calculations to get same effects.**
 
 ---
 
-### Constructor
+### **2. Key Methods and Properties**
+- **Primary Methods:**
+  - `drawNormal(ctx: CanvasRenderingContext2D, image: HTMLImageElement, frame: IAnimationFrame, position: IVector2, scale: IVector2): void`
+    - **Description:** Renders an image on the canvas at a specified position and scale, using a specific frame from an animation.
+    - **Behavior:** The image is drawn centered on the specified position, adjusted for the frame size and scale.
+    - **Returns:** `void`
+  
+  - `drawFlipped(ctx: CanvasRenderingContext2D, image: HTMLImageElement, frame: IAnimationFrame, position: IVector2, scale: IVector2): void`
+    - **Description:** Renders an image flipped horizontally on the canvas.
+    - **Behavior:** The method saves the current canvas state, applies a horizontal flip transformation, and then calls `drawNormal` to render the image. The canvas state is restored afterward.
+    - **Returns:** `void`
 
-`RendererV3` does not require a custom constructor as it provides static rendering methods for handling sprite drawing operations.
-
----
-
-### Methods
-
-#### 1. **drawNormal**
-
-```typescript
-drawNormal(
-  ctx: CanvasRenderingContext2D,
-  image: HTMLImageElement,
-  frame: IAnimationFrame,
-  position: IVector2,
-  scale: IVector2
-): void
-```
-
-- **Description**:
-  - This method draws a sprite on the canvas with its center aligned to the specified position and scaled based on the provided scale vector.
-- **Parameters**:
-
-  - `ctx: CanvasRenderingContext2D`: The 2D rendering context for the canvas.
-  - `image: HTMLImageElement`: The image containing the sprite or animation frames.
-  - `frame: IAnimationFrame`: The animation frame specifying the source position and size of the sprite.
-  - `position: IVector2`: The position on the canvas where the center of the sprite should be drawn.
-  - `scale: IVector2`: The scaling factor applied to both the position and size of the sprite.
-
-- **Functionality**:
-  - The method first adjusts the position to place the sprite's center at the `position` coordinates by subtracting half of the sprite's width and height. The sprite is then drawn at this adjusted position, with both its size and position scaled based on the `scale` vector.
+- **Key Properties:**
+  - None explicitly defined in this class.
 
 ---
 
-#### 2. **drawFlipped**
+### **3. Usage Examples**
+- **Example 1:**
+  Here’s how to use the `RendererV3` class to draw an image normally.
 
-```typescript
-drawFlipped(
-  ctx: CanvasRenderingContext2D,
-  image: HTMLImageElement,
-  frame: IAnimationFrame,
-  position: IVector2,
-  scale: IVector2
-): void
-```
+  ```typescript
+  const renderer = new RendererV3();
+  const canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d');
+  const image = new Image();
+  image.src = 'path/to/image.png';
+  
+  const frame = {
+      framePosition: new Vector2(0, 0),
+      frameSize: new Vector2(100, 100),
+  };
+  
+  const position = new Vector2(150, 150);
+  const scale = new Vector2(1, 1);
+  
+  image.onload = () => {
+      renderer.drawNormal(ctx, image, frame, position, scale);
+  };
+  ```
 
-- **Description**:
+- **Example 2:**
+  Here’s how to use the `RendererV3` class to draw an image flipped.
 
-  - This method draws a horizontally flipped version of the sprite, with its center aligned to the specified position and scaling applied.
-
-- **Parameters**:
-
-  - `ctx: CanvasRenderingContext2D`: The 2D rendering context for the canvas.
-  - `image: HTMLImageElement`: The image containing the sprite or animation frames.
-  - `frame: IAnimationFrame`: The animation frame specifying the source position and size of the sprite.
-  - `position: IVector2`: The position on the canvas where the center of the flipped sprite should be drawn.
-  - `scale: IVector2`: The scaling factor applied to both the position and size of the sprite.
-
-- **Functionality**:
-  - The method first saves the current canvas state, then translates the canvas to the sprite's center position and scales it horizontally by -1 to achieve the flip. The flipped sprite is drawn at the adjusted position with scaling applied, and the canvas state is restored after drawing to ensure that the transformation doesn't affect future rendering operations.
-
----
-
-### Example Usage
-
-#### Drawing a Centered, Scaled Normal Sprite:
-
-```typescript
-const renderer = new RendererV3()
-const scale = { x: 1.5, y: 1.5 }
-renderer.drawNormal(ctx, playerImage, currentFrame, { x: 300, y: 200 }, scale)
-```
-
-- This will draw the sprite centered at position (300, 200) on the canvas, scaled to 1.5 times its original size.
-
-#### Drawing a Centered, Scaled Flipped Sprite:
-
-```typescript
-renderer.drawFlipped(ctx, playerImage, currentFrame, { x: 300, y: 200 }, scale)
-```
-
-- This will draw a horizontally flipped version of the sprite, centered at position (300, 200), and scaled to 1.5 times its original size.
+  ```typescript
+  const renderer = new RendererV3();
+  const canvas = document.getElementById('myCanvas') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d');
+  const image = new Image();
+  image.src = 'path/to/image.png';
+  
+  const frame = {
+      framePosition: new Vector2(0, 0),
+      frameSize: new Vector2(100, 100),
+  };
+  
+  const position = new Vector2(150, 150);
+  const scale = new Vector2(1, 1);
+  
+  image.onload = () => {
+      renderer.drawFlipped(ctx, image, frame, position, scale);
+  };
+  ```
 
 ---
 
-### Dependencies
+### **4. Dependencies and Interactions**
+- **Dependencies:**
+  - `IRenderer` - This class implements the `IRenderer` interface.
+  - `IAnimationFrame` - Required for defining frame properties used in rendering.
+  - `IVector2` and `Vector2` - Used for managing vector positions and dimensions.
 
-- **IAnimationFrame**:
-  - Defines the structure of an animation frame, including the position and size of the frame in the sprite sheet.
-- **IVector2 & Vector2**:
-  - Represents 2D vectors for position and scaling. The `Vector2.zero` constant is used for rendering flipped sprites without a position shift.
+- **Interactions with Other Classes:**
+  - Interacts with `CanvasRenderingContext2D` to perform drawing operations.
+  - Uses `IAnimationFrame` to determine how to render frames from a sprite sheet.
 
 ---
 
-### Conclusion
+### **5. Limitations and Assumptions**
+- **Known Limitations:**
+  - This class does not handle image loading errors; it assumes images are available before rendering.
+  
+- **Assumptions:**
+  - It assumes that `frame` and `position` parameters are valid and properly defined.
+  - It assumes that the context (`ctx`) is correctly set up before invoking the drawing methods.
 
-`RendererV3` refines the rendering process by aligning sprites to the center of their position, offering greater flexibility and control when managing sprite animations in games or graphical applications. The scaling and flipping capabilities from `RendererV2` are preserved, while the centering adjustment enhances the accuracy and utility of sprite positioning.
+---
+
+### **6. Additional Notes (Optional)**
+- Consider adding error handling for image loading and rendering.
+- Future improvements may include supporting additional transformations or rotation capabilities.
+
+---
