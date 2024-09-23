@@ -5,7 +5,7 @@
 ### **1. Class Purpose**
 - **Description:**
   This class is responsible for rendering images to a canvas, providing methods to draw images normally and flipped horizontally.  
-  **It centers sprite around transform.position. Scales sprite. It does this by calculations.  It is deprecated as new versions use canvas transforms not mannual calculations to get same effects.**
+  **It centers sprite around transform.position. Scales sprite. It does this by calculations.  It is deprecated as new versions donot use mannual calculations, but canvas transforms, to get same effects.**
 
 ---
 
