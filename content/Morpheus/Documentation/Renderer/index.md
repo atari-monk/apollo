@@ -7,8 +7,9 @@
 
 #### Versison 2.0.0
 1. [RendererV2](./RendererV2.md)
-2. [SpriteRendererV1](./SpriteRendererV1.md)
+2. [SpriteRendererV2](./SpriteRendererV2.md)
 3. [DrawSpritePoints](./DrawSpritePoints.md)
+4. [Scene Renderer2.0.0](./Scene_Renderer2.0.0.md)
 
 #### Versison 3.0.0
 1. [RendererV3](./RendererV3.md)
