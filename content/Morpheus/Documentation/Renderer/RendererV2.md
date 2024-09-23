@@ -4,7 +4,10 @@
 
 ### **1. Class Purpose**
 - **Description:**
-  The `RendererV2` class is responsible for rendering images (frames) onto an HTML5 canvas, providing functionality for both normal and horizontally flipped drawings. It integrates with the canvas' `2D` context to draw frames at specific positions and scales.
+  The `RendererV2` class is responsible for rendering images (frames) onto an HTML5 canvas,  
+  providing functionality for both normal and horizontally flipped drawings.  
+  It integrates with the canvas' `2D` context to draw frames at specific positions and scales.
+  **Position is in top left of sprite.  Sprite is scaled by multiplaing by canvas scale component scale. This is deprecated as newer versions use canvas transformations.**
 
 ---
 

@@ -353,3 +353,10 @@ Feeling: bad, Productivity: terrible confusion.
 
 1. Documentation.
 2. Documentation. Refactoring SpriteRendererV2.
+
+### 23
+
+13:58 - 
+
+1. 
+
