@@ -2,11 +2,11 @@
 
 ## 2024-09
 
-x hours x minutes
+0 hours 38 minutes
 
 ### 24
 
-XX:XX - XX:XX  
-X minutes
+14:55 - 15:33
+38 minutes
 
-1. 
+1. ~ 25 send
