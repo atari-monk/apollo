@@ -16,4 +16,5 @@
 14. [Scene Renderer1.0.0](./Scene_Renderer1.0.0.md)
 15. [Scene Renderer2.0.0](./Scene_Renderer2.0.0.md)
 16. [Scene Renderer3.0.0](./Scene_Renderer3.0.0.md)
-17. [DrawSpritePoints](./DrawSpritePoints.md)
+17. [Scene Renderer4.0.0](./Scene_Renderer4.0.0.md)
+18. [DrawSpritePoints](./DrawSpritePoints.md)
