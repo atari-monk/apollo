@@ -292,4 +292,5 @@
 		  _Example: Future versions of this group may include interfaces that support distributed transactions._
 
 		---
+		//Given this template in next prompt i will provide a interface group, fill template with it to produce documentation.
 	```
