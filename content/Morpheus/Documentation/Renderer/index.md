@@ -2,24 +2,18 @@
 
 1. [Animation Interfaces](Animation_Interfaces.md)
 2. [Animation State](Animation_State.md)
-
-1. [RendererV1](./RendererV1.md)
-2. [SpriteRendererV1](./SpriteRendererV1.md)
-3. [Scene Renderer1.0.0](./Scene_Renderer1.0.0.md)
-
-#### Versison 2.0.0
-1. [RendererV2](./RendererV2.md)
-2. [SpriteRendererV2](./SpriteRendererV2.md)
-3. [DrawSpritePoints](./DrawSpritePoints.md)
-4. [Scene Renderer2.0.0](./Scene_Renderer2.0.0.md)
-
-#### Versison 3.0.0
-1. [RendererV3](./RendererV3.md)
-2. [Scene Renderer3.0.0](./Scene_Renderer3.0.0.md)
-
-#### Versison 4.0.0
-
-1. [RendererV4](./RendererV4.md)
-2. [SpriteAnimatorV4](./SpriteAnimatorV4.md)
-3. [SequentialAnimation](./SequentialAnimation.md)
-4. [CyclicAnimation](./CyclicAnimation.md)
+3. [Animation Switcher](AnimationSwitcher.md)
+4. [Animation Switcher Factory](AnimationSwitcherFactory.md)
+5. [CyclicAnimation](CyclicAnimation.md)
+6. [RendererV1](./RendererV1.md)
+7. [RendererV2](./RendererV2.md)
+8. [RendererV3](./RendererV3.md)
+9. [RendererV4](./RendererV4.md)
+10. [SequentialAnimation](./SequentialAnimation.md)
+11. [SpriteAnimator](./SpriteAnimator.md)
+12. [SpriteAnimatorFactory](./SpriteAnimatorFactory)
+13. [SpriteRenderer](./SpriteRenderer.md)
+14. [Scene Renderer1.0.0](./Scene_Renderer1.0.0.md)
+15. [Scene Renderer2.0.0](./Scene_Renderer2.0.0.md)
+16. [Scene Renderer3.0.0](./Scene_Renderer3.0.0.md)
+17. [DrawSpritePoints](./DrawSpritePoints.md)

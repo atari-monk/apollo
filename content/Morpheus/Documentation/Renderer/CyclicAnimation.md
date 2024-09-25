@@ -1,79 +1,81 @@
-## CyclicAnimation Documentation
-
-### Path
-
-- `packages\engine\src\ecs_system\CyclicAnimation.ts`
-
-### Related Paths
-
-- `packages\engine\src\animator\AnimationState.ts`
-- `packages\engine\src\animator\IAnimationStrategy.ts`
+### **Class Name:** `CyclicAnimation`
 
 ---
 
-### Short Description
-
-`CyclicAnimation` is a class that implements the `IAnimationStrategy` interface to manage frame updates in a cyclic manner, where the animation alternates between forward and backward frame progression, creating a ping-pong animation effect.
-
----
-
-### Longer Description
-
-The `CyclicAnimation` class provides a mechanism to animate frames in a cyclic (ping-pong) sequence, advancing frames forward until the last frame is reached, and then reversing the direction to go backward through the frames. It continuously toggles between forward and backward animation, creating a smooth looping effect.
-
-This behavior is achieved by tracking whether the animation is progressing forward or backward using the `isForward` flag in the `AnimationState`. It is useful for animations that require a back-and-forth movement, such as breathing effects or pendulum-like motions.
+### **1. Class Purpose**
+- **Description:**
+  The `CyclicAnimation` class implements an animation strategy that allows animations to cycle through their frames in both forward and backward directions. It manages frame timing and transitions based on elapsed time.
 
 ---
 
-### Constructor
+### **2. Key Methods and Properties**
+- **Primary Methods:**
+  - `update(deltaTime: number, state: AnimationState)`
+      - **Description:** Updates the animation state based on the elapsed time (`deltaTime`) and the current animation state (`state`).
+      - **Behavior:** Increments or decrements the current frame index based on the animation direction and resets the timer when the specified frame duration is reached. It toggles the direction of the animation when the end of the animation sequence is reached.
+      - **Returns:** This method does not return a value.
+      - **Exceptions:** No specific exceptions are thrown; however, it assumes valid state inputs.
 
-`CyclicAnimation` does not require any parameters for its constructor, as it only implements the `update` method as part of the `IAnimationStrategy` interface.
-
----
-
-### Methods
-
-#### 1. **update**
-
-```typescript
-update(deltaTime: number, state: AnimationState): void
-```
-
-- **Description**:
-  - This method updates the current frame of the animation based on the elapsed time (`deltaTime`), moving forward or backward through the frames depending on the `isForward` state. It toggles the direction once the first or last frame is reached.
-- **Parameters**:
-  - `deltaTime: number`: The time passed since the last update, in milliseconds.
-  - `state: AnimationState`: The current state of the animation, containing the frame data, duration, and time since the last frame change.
-- **Functionality**:
-  - Increments `timeSinceLastFrame` by `deltaTime`.
-  - If the accumulated time exceeds the frame duration (`frameDuration`), it advances the frame.
-  - When in the forward state (`isForward = true`), it increments the `currentFrameIndex` until the last frame is reached.
-  - Once the last frame is reached, it toggles the direction (`isForward = false`) and starts decrementing the frame index.
-  - When the first frame is reached, it toggles back to the forward direction (`isForward = true`).
-  - Resets `timeSinceLastFrame` after each frame change to ensure proper timing for the next update.
+- **Key Properties:**
+  - (This class does not define properties; it primarily operates on the `AnimationState` passed to the `update` method.)
 
 ---
 
-### Example Usage
+### **3. Usage Examples**
+- **Example 1:**
+  Demonstrates how to use the `CyclicAnimation` class to update an animation state.
 
-```typescript
-const cyclicAnimation = new CyclicAnimation()
-cyclicAnimation.update(deltaTime, animationState)
-```
+  ```typescript
+  const animationState = new AnimationState();
+  const cyclicAnimation = new CyclicAnimation();
+  
+  // Simulate a deltaTime for the update call
+  const deltaTime = 0.016; // Approximately 60 FPS
+  
+  // Update the animation state
+  cyclicAnimation.update(deltaTime, animationState);
+  ```
 
-- This call updates the current animation state, toggling the frame index forward or backward based on the current direction and elapsed time.
+- **Example 2 (Optional):**
+  Illustrates a more advanced scenario with a predefined animation state.
+
+  ```typescript
+  const animationState = new AnimationState();
+  animationState.currentAnimationIndex = 0;
+  animationState.currentFrameIndex = 0;
+  animationState.frameDurations = [100, 100]; // Duration for each frame
+  animationState.animations = [[/* frames for animation 0 */]];
+  animationState.isForward = true;
+
+  const cyclicAnimation = new CyclicAnimation();
+  
+  // Update the animation multiple times to see the frame change
+  for (let i = 0; i < 10; i++) {
+      cyclicAnimation.update(deltaTime, animationState);
+      console.log(animationState.currentFrameIndex); // Log the current frame index
+  }
+  ```
 
 ---
 
-### Dependencies
+### **4. Dependencies and Interactions**
+- **Dependencies:**
+  - This class relies on the `IAnimationStrategy` interface for type checking.
+  - It also depends on the `AnimationState` class, which holds the current state of the animation.
 
-- **IAnimationStrategy**:
-  - The interface that defines the required `update` method for animation strategies. `CyclicAnimation` implements this to create a cyclic update mechanism.
-- **AnimationState**:
-  - Manages the animation's current frame, direction (forward or backward), and timing data.
+- **Interactions with Other Classes:**
+  - The `CyclicAnimation` class interacts with the `AnimationState` class to manage the current frame and the animation direction. It assumes that `AnimationState` is updated independently elsewhere in the application.
 
 ---
 
-### Conclusion
+### **5. Limitations and Assumptions**
+- **Known Limitations:**
+  - The `CyclicAnimation` class does not support concurrent updates and should be called from a single thread to avoid inconsistent state behavior.
 
-`CyclicAnimation` offers an efficient and flexible way to implement ping-pong style animations, where frames are cycled forward and then backward in a loop. This class is particularly useful for animations with smooth oscillating effects, commonly found in character breathing animations, pendulum movements, or other repetitive actions that need to reverse direction.
+- **Assumptions:**
+  - It assumes that the `AnimationState` object passed to the `update` method is properly initialized and contains valid frame durations and animations.
+
+---
+
+### **6. Additional Notes (Optional)**
+- This class is designed for basic cyclic animations and may be extended for more complex animation behaviors in the future. Consider adding support for event callbacks when an animation completes or when direction changes.
