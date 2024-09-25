@@ -362,6 +362,12 @@ Feeling: bad, Productivity: terrible confusion.
 
 ### 24
 
-14:10
+16:22 - 18:15
 
-1. 
+1. Refactoring renderer.
+
+### 25
+
+14:00 - 15:25, 19:00 - 
+
+1. Refactoring renderer. 

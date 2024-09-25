@@ -10,11 +10,6 @@
 4. [MdApi](content/MdApi/index.md)
 5. [AddressApi](content/AddressApi/index.md)
 
-## React
-
-1. [TicTacReact](content/TicTacReact/index.md)
-2. [FormReact](content/FormReact/index.md)
-
 ## Apollo
 
 1. [Chronologos](content/Chronologos/index.md)
