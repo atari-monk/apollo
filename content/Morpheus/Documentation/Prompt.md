@@ -7,6 +7,9 @@
 - [Interface Group Documentation Template](#interface-group-documentation-template)
 - [Module Documentation Template](#module-documentation-template)
 
+# Class Documentation Template
+[Back to Table of Contents](#table-of-contents)
+
 1. Given this template in next prompt i will provide a class to document.
 
 	````markdown
@@ -92,6 +95,9 @@
 
 		//Given this template in next prompt i will provide a class to document.
 	````
+
+# Scene Documentation Template
+[Back to Table of Contents](#table-of-contents)
 
 2. Given this template in next prompt i will provide a scene description, fill template with it to produce documentation.
 
@@ -186,6 +192,9 @@
 		
 		//Given this template in next prompt i will provide a scene description, fill template with it to produce documentation.
 	```
+
+# Interface Group Documentation Template
+[Back to Table of Contents](#table-of-contents)
 
 3. Given this template in next prompt i will provide a interface group, fill template with it to produce documentation.
 
@@ -301,7 +310,10 @@
 		---
 		//Given this template in next prompt i will provide a interface group, fill template with it to produce documentation.
 	```
-	
+
+# Module Documentation Template
+[Back to Table of Contents](#table-of-contents)
+
 4. Given this template in next prompt i will provide a module with function group, fill template with it to produce documentation.
 
 ```markdown
