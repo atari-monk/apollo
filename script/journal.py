@@ -34,7 +34,7 @@ def calculate_month_total(data):
     }
 
 # Load the JSON data from the file
-with open('./../data/storage001/folder004/file001.json', 'r') as file:
+with open('./../content/Morpheus/Journal_Json.json', 'r') as file:
     journal_data = json.load(file)
 
 # Loop through all the months in the journal data and calculate totals
@@ -43,7 +43,7 @@ for month_data in journal_data:
     calculate_month_total(month_data)
 
 # Write the updated JSON data back to the file
-with open('./../data/storage001/folder004/file001.json', 'w') as file:
+with open('./../content/Morpheus/Journal_Json.json', 'w') as file:
     json.dump(journal_data, file, indent=2)
 
 # Output the result to verify the correctness

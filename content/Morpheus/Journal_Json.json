@@ -486,8 +486,8 @@
     "Year": "2024",
     "Month": "09",
     "Total": {
-      "Hours": 41,
-      "Minutes": 29
+      "Hours": 82,
+      "Minutes": 55
     },
     "Days": [
       {
@@ -701,8 +701,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 4,
+          "Minutes": 1
         }
       },
       {
@@ -726,8 +726,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 9,
+          "Minutes": 56
         }
       },
       {
@@ -747,8 +747,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 4,
+          "Minutes": 21
         }
       },
       {
@@ -760,8 +760,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 2,
+          "Minutes": 18
         }
       },
       {
@@ -773,8 +773,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 1,
+          "Minutes": 9
         }
       },
       {
@@ -794,8 +794,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 3,
+          "Minutes": 20
         }
       },
       {
@@ -811,8 +811,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 4,
+          "Minutes": 34
         }
       },
       {
@@ -828,8 +828,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 2,
+          "Minutes": 26
         }
       },
       {
@@ -841,8 +841,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 1,
+          "Minutes": 53
         }
       },
       {
@@ -858,8 +858,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 5,
+          "Minutes": 10
         }
       },
       {
@@ -871,8 +871,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 2,
+          "Minutes": 18
         }
       }
     ]
