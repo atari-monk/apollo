@@ -368,6 +368,15 @@ Feeling: bad, Productivity: terrible confusion.
 
 ### 25
 
-14:00 - 15:25, 19:30 - 
+14:00 - 15:25, 19:30 -
 
-1. Refactoring renderer. 
+1. Refactoring renderer.
+
+### 26
+
+13:15 - 15:33
+
+1. Run version 1.0.0 and verify functionality (Animation broken, fixed, verified).
+2. Fix animation issue (AnimationSwitch event doesn't fire, bug found, fixed).
+3. Add animation switcher to Renderer100 scene (done).
+4. Run version 4.0.0 and verify functionality (Field Collider renderer broken, fixed latest version and football02 data).

@@ -687,6 +687,193 @@
           "Hours": 3,
           "Minutes": 28
         }
+      },
+      {
+        "Day": "12",
+        "Intervals": [
+          {
+            "Start": "17:42",
+            "End": "18:30"
+          },
+          {
+            "Start": "20:19",
+            "End": "23:32"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "13",
+        "Intervals": [
+          {
+            "Start": "08:47",
+            "End": "12:31"
+          },
+          {
+            "Start": "13:27",
+            "End": "16:03"
+          },
+          {
+            "Start": "19:58",
+            "End": "22:54"
+          },
+          {
+            "Start": "19:00",
+            "End": "19:40"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "15",
+        "Intervals": [
+          {
+            "Start": "17:06",
+            "End": "19:33"
+          },
+          {
+            "Start": "20:44",
+            "End": "22:21"
+          },
+          {
+            "Start": "00:08",
+            "End": "00:25"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "16",
+        "Intervals": [
+          {
+            "Start": "22:36",
+            "End": "00:54"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "17",
+        "Intervals": [
+          {
+            "Start": "17:14",
+            "End": "18:23"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "18",
+        "Intervals": [
+          {
+            "Start": "15:56",
+            "End": "17:00"
+          },
+          {
+            "Start": "18:10",
+            "End": "19:20"
+          },
+          {
+            "Start": "22:54",
+            "End": "00:00"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "22",
+        "Intervals": [
+          {
+            "Start": "15:38",
+            "End": "18:23"
+          },
+          {
+            "Start": "21:26",
+            "End": "23:15"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "23",
+        "Intervals": [
+          {
+            "Start": "14:00",
+            "End": "15:00"
+          },
+          {
+            "Start": "22:01",
+            "End": "23:27"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "24",
+        "Intervals": [
+          {
+            "Start": "16:22",
+            "End": "18:15"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "25",
+        "Intervals": [
+          {
+            "Start": "14:00",
+            "End": "15:25"
+          },
+          {
+            "Start": "19:30",
+            "End": "23:15"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "26",
+        "Intervals": [
+          {
+            "Start": "13:15",
+            "End": "15:33"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
       }
     ]
   }
