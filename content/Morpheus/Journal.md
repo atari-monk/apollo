@@ -380,3 +380,11 @@ Feeling: bad, Productivity: terrible confusion.
 2. Fix animation issue (AnimationSwitch event doesn't fire, bug found, fixed).
 3. Add animation switcher to Renderer100 scene (done).
 4. Run version 4.0.0 and verify functionality (Field Collider renderer broken, fixed latest version and football02 data).
+
+### 27
+
+14:14 - 16:17
+
+1. Separate CollisionBoxRenderer 0.0.1 from DebugRenderer.  
+2. Introduce scene football 4.0.0.  
+3. Separate DrawDirection 1.0.0 from DebugRenderer.
