@@ -6,9 +6,10 @@
 
 1. [Morpheus](content/Morpheus/index.md)
 2. [MdFolder](content/MdFolder/index.md)
-3. [Helios](content/Helios/index.md)
-4. [MdApi](content/MdApi/index.md)
-5. [AddressApi](content/AddressApi/index.md)
+3. [Hypnos](content/Hypnos/index.md)
+4. [Helios](content/Helios/index.md)
+5. [MdApi](content/MdApi/index.md)
+6. [AddressApi](content/AddressApi/index.md)
 
 ## Apollo
 
