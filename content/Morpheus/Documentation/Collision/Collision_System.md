@@ -1,69 +1,101 @@
-# Collision System
+### **Class Name:** `Collision`
 
-This `Collision` class is a system that manages collision detection and handling within an entity-component-system (ECS) architecture. It utilizes various components like `BoxCollider`, `RigidBody`, and `Transform` to detect and process collisions between entities. Below is a breakdown of the class:
+---
 
-### Class Overview:
+### **1. Class Purpose**
 
-- **Inheritance**: The `Collision` class extends a `System` class, which is a core part of an ECS framework, indicating that it's responsible for handling the behavior of entities related to collisions.
-- **Dependencies**: It requires an `IEntityCache` (to store and manage entities), a `CollisionDetector` (for detecting collisions), and a map of collision handlers (`_collisionHandlers`) that define specific collision response behaviors for various objects.
+- **Description:**
+  This class is responsible for managing collisions within the entity-component system. It handles the initialization of collision objects, detection of collisions, and interaction with collision handlers.
 
-### Key Fields:
+---
 
-1. **Cache**:
+### **2. Key Methods and Properties**
 
-   - Caches a list of collision objects for each entity by storing the entity ID as the key and a list of `ICollision` objects as the value.
-   - This cache allows the system to manage ongoing collisions and avoid redundant collision computations.
+- **Primary Methods:**
 
-2. **CollisionDetector**:
-   - The object responsible for performing actual collision detection and determining if two entities have collided.
-3. **CollisionHandlers**:
-   - Maps entity IDs to collision handlers (functions that determine what to do when a collision occurs).
-   - Each collider has an associated set of handlers that are invoked when the collision detector detects an overlap.
+  - `constructor(entityCache: IEntityCache, _collisionDetector: CollisionDetector, _collisionHandlers: Map<string, ICollisionHandler[]>)`
 
-### Key Methods:
+    - **Description:** Initializes the `Collision` system with entity cache, a collision detector, and a map of collision handlers.
+    - **Behavior:** Creates a private cache to store collision information.
 
-1. **startEntity**:
+  - `protected override startEntity(entity: IEntity)`
 
-   - Called when the system is initialized for a specific entity.
-   - Retrieves all `BoxCollider` components of the entity, generates collision objects, and subscribes collision handlers to those objects.
-   - Each collision object is added to the `_cache` for future use.
-   - This method sets up all necessary objects (`ICollisionEntity`, `IRect`, `IVector2`) to represent collision data for two entities.
+    - **Description:** Initializes collision detection for a given entity.
+    - **Behavior:** Retrieves colliders associated with the entity, initializes collision data, and sets up collision handlers. Throws an error if no colliders are found.
+    - **Returns:** No return value.
+    - **Exceptions:** Throws an error if no colliders are present in the entity.
 
-2. **setCollision**:
+  - `protected override updateEntity(entity: IEntity, _deltaTime: number): void`
 
-   - Responsible for setting up the `ICollision` object, which contains two main parts:
-     - `object1`: The entity initiating the collision.
-     - `object2`: The other entity involved in the collision.
-   - Calls helper methods (`setObject1`, `setObject2`) to configure these objects.
+    - **Description:** Updates the collision state of the entity based on the current frame.
+    - **Behavior:** If there are existing collisions for the entity, it updates the collision detector.
 
-3. **setObject1 / setObject2**:
+  - `protected override renderEntity(entity: IEntity, _deltaTime: number): void`
+    - **Description:** Renders the collision visuals for the entity.
+    - **Behavior:** If there are existing collisions for the entity, it draws the collision visuals using the collision detector.
 
-   - These methods set the collision data for the two entities involved in the collision, including their colliders, rigid bodies, and transforms.
+- **Key Properties:**
+  - `_cache`
+    - **Description:** A private map that stores collision data indexed by entity IDs.
+    - **Behavior:** Used to track ongoing collisions for each entity in the system.
 
-4. **getEntity2**:
+---
 
-   - Retrieves the second entity involved in the collision based on a reference stored in the `CollisionObject` component of the first entity.
-   - This lookup happens through the `IEntityCache`, ensuring the system has access to all necessary entities.
+### **3. Usage Examples**
 
-5. **updateEntity**:
+- **Example 1:**
+  Provide an example of how the class and its methods should be used in practice.
 
-   - Updates the state of collisions for an entity, based on time progression or game state changes.
-   - This is called every game update cycle and ensures that the collision detector updates the collision's state.
+  ```javascript
+  const entityCache = /* Your IEntityCache implementation */;
+  const collisionDetector = new CollisionDetector();
+  const collisionHandlers = new Map();
 
-6. **renderEntity**:
-   - Used to visualize or process rendering of the collision (if needed).
-   - The method draws the collision-related data through the `CollisionDetector`, which might visualize collision boundaries or related information.
+  const collisionSystem = new Collision(entityCache, collisionDetector, collisionHandlers);
+  collisionSystem.startEntity(someEntity);
+  ```
 
-### General Flow:
+- **Example 2 (Optional):**
+  Provide a second example for more advanced use or edge cases.
 
-- When an entity is started, the system checks if it has a `BoxCollider`, sets up collision data (`ICollision`), and subscribes the relevant handlers.
-- During each update and render cycle, the system updates the state of the collisions using the collision detector and triggers visual feedback or processing if necessary.
+  ```javascript
+  const entity = /* Some IEntity instance */;
+  const deltaTime = /* time elapsed since last update */;
 
-### Example Use:
+  collisionSystem.updateEntity(entity, deltaTime);
+  collisionSystem.renderEntity(entity, deltaTime);
+  ```
 
-1. **Entity Setup**: An entity with a `BoxCollider` and `RigidBody` is added to the ECS. The system prepares it for collision detection with other entities.
-2. **Collision Detection**: The `CollisionDetector` checks if this entity collides with another entity.
-3. **Collision Handlers**: If a collision occurs, the system triggers the appropriate handlers (like bouncing, damage, or sound effects).
-4. **Rendering**: If required, it draws collision boundaries for debugging or visualization purposes.
+---
 
-This design is typical in physics or game engines where entities with colliders interact, and different handlers are invoked based on collisions between objects.
+### **4. Dependencies and Interactions**
+
+- **Dependencies:**
+
+  - This class relies on the following components:
+    - `BoxCollider`
+    - `RigidBody`
+    - `Transform`
+    - `CollisionObject`
+    - `CollisionDetector`
+    - Various interfaces: `IVector2`, `IEntityCache`, `IEntity`, `ICollisionHandler`, `ICollision`, `ICollisionEntity`, `IRect`
+
+- **Interactions with Other Classes:**
+  - Interacts with `IEntity` instances to manage their collision states and communicate with `ICollisionHandler` instances to process collision events.
+
+---
+
+### **5. Limitations and Assumptions**
+
+- **Known Limitations:**
+  - This class does not handle multiple collision detection in a single frame for the same entity.
+- **Assumptions:**
+  - It assumes that entities are initialized with appropriate collision components (like `BoxCollider` and `CollisionObject`) and that entities do not change colliders mid-update cycle.
+
+---
+
+### **6. Additional Notes (Optional)**
+
+- Future improvements could include adding support for more complex collision shapes or enhancing the collision response mechanism. Additionally, optimizations for batch processing of collisions could improve performance in scenarios with many entities.
+
+---

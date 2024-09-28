@@ -3,12 +3,14 @@
 ---
 
 ### **1. Group Purpose**
+
 - **Description:**
   This group of interfaces is designed to facilitate collision detection and handling in a 2D game or simulation environment. It standardizes the representation of collision entities, algorithms, and callback mechanisms.
 
 ---
 
 ### **2. Common Responsibilities Across Interfaces**
+
 - **Shared Purpose:**
   All interfaces in this group provide functionality for detecting and responding to collisions between game entities. They define the structure of collision data, algorithms to assess collisions, and callbacks to handle collision events.
 
@@ -17,35 +19,51 @@
 ### **3. Key Interfaces and Their Methods**
 
 - **Interface Name:** `ICollision`
-  - **Primary Methods:**
-    - **No explicit methods defined** (this interface serves as a data structure).
+
+  - **Description:** Represents a collision event between two entities, holding necessary information to process the collision.
+  - **Properties:**
+    - `object1: ICollisionEntity`: The first entity involved in the collision.
+    - `object2: ICollisionEntity`: The second entity involved in the collision.
+    - `rect1: IRect`: The rectangle representation of the first entity for collision detection.
+    - `rect2: IRect`: The rectangle representation of the second entity for collision detection.
+    - `point1: IVector2`: The point of impact on the first entity.
+    - `point2: IVector2`: The point of impact on the second entity.
 
 - **Interface Name:** `ICollisionAlgorithm`
+
+  - **Description:** Defines the methods required for implementing a collision detection algorithm.
   - **Primary Methods:**
     - `start(collision: ICollision): void`
       - **Description:** Initiates the collision algorithm with the given collision data.
-      - **Behavior:** Prepares the algorithm to handle collision detection for the specified objects.
       - **Returns:** None.
     - `isColliding(collision: ICollision): boolean`
       - **Description:** Determines if the two objects represented in the collision data are currently colliding.
-      - **Behavior:** Returns true if the objects intersect based on their rectangles; otherwise, false.
       - **Returns:** A boolean indicating collision status.
     - `draw(collision: ICollision): void`
       - **Description:** Renders the collision detection visuals, if applicable.
-      - **Behavior:** May produce visual feedback for debugging or gameplay purposes.
       - **Returns:** None.
 
 - **Interface Name:** `ICollisionCallback`
+
+  - **Description:** A function type used to handle collision events, receiving a collision object as a parameter.
   - **Primary Methods:**
     - **No explicit methods defined** (this interface serves as a function type).
 
 - **Interface Name:** `ICollisionEntity`
-  - **Primary Methods:**
-    - **No explicit methods defined** (this interface serves as a data structure).
+
+  - **Description:** Represents a game entity that can participate in collisions, containing essential components for collision detection.
+  - **Properties:**
+    - `entityId: string`: Unique identifier for the entity.
+    - `transform: ITransform`: The transformation data (position, rotation, scale) of the entity.
+    - `collider: IBoxCollider`: The collider component defining the shape and size for collision detection.
+    - `rigidBody: IRigidBody`: The physics component managing the entity's movement and forces.
 
 - **Interface Name:** `IRect`
-  - **Primary Methods:**
-    - **No explicit methods defined** (this interface serves as a data structure).
+  - **Description:** Defines a rectangle used for collision detection, encompassing position and size.
+  - **Properties:**
+    - `position: IVector2`: The top-left position of the rectangle.
+    - `size: IVector2`: The width and height of the rectangle.
+    - `halfSize: IVector2`: Half of the size, used for calculations related to collision detection.
 
 ---
 
@@ -56,18 +74,18 @@
 
   ```typescript
   class MyCollisionAlgorithm implements ICollisionAlgorithm {
-      start(collision: ICollision): void {
-          // Initialize collision algorithm
-      }
+    start(collision: ICollision): void {
+      // Initialize collision algorithm
+    }
 
-      isColliding(collision: ICollision): boolean {
-          // Perform collision detection
-          return true; // Example return
-      }
+    isColliding(collision: ICollision): boolean {
+      // Perform collision detection
+      return true // Example return
+    }
 
-      draw(collision: ICollision): void {
-          // Draw collision visualization
-      }
+    draw(collision: ICollision): void {
+      // Draw collision visualization
+    }
   }
   ```
 
@@ -102,7 +120,9 @@
 ---
 
 ### **5. Dependencies and Interactions**
+
 - **Dependencies:**
+
   - The interfaces depend on several components: `IVector2`, `IBoxCollider`, `IRigidBody`, and `ITransform` for their functionalities.
 
 - **Interactions with Other Interfaces or Classes:**
@@ -111,7 +131,9 @@
 ---
 
 ### **6. Variations and Extensibility**
+
 - **Known Variations:**
+
   - Variations can exist in collision algorithms; for instance, some may handle bounding box collisions while others may deal with pixel-perfect collisions.
 
 - **Extensibility:**
@@ -120,7 +142,9 @@
 ---
 
 ### **7. Limitations and Assumptions**
+
 - **Known Limitations:**
+
   - The interfaces do not provide methods for managing collision responses or effects; that functionality should be implemented externally.
 
 - **Assumptions:**
@@ -129,6 +153,7 @@
 ---
 
 ### **8. Additional Notes (Optional)**
+
 - Future versions of this group may include interfaces that support enhanced collision detection techniques, such as spatial partitioning methods for more efficient processing in large scenes.
 
 ---

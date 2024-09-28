@@ -1,55 +1,109 @@
-# Collision Detector
+### **Class Name:** `CollisionDetector`
 
-## IRect
+---
 
-Interface describes a rectangle with:
+### **1. Class Purpose**
 
-1. **position**: Coordinates of the rectangle's location.
-2. **size**: Width and height of the rectangle.
-3. **halfSize**: Half of the rectangle’s width and height.
+- **Description:**
+  This class is responsible for detecting collisions between game objects using a specified collision algorithm. It manages collision callbacks for both colliding and non-colliding states.
 
-It provides a structure for handling 2D rectangles, including their position, dimensions, and bounds.
+---
 
-## ICollisionEntity
+### **2. Key Methods and Properties**
 
-Interface defines an entity involved in collision detection and physics. It includes:
+- **Primary Methods:**
 
-1. **entityId**: A unique identifier for the entity.
-2. **transform**: Defines the entity’s position, rotation, and scale.
-3. **collider**: Represents the entity's collision shape as a box.
-4. **rigidBody**: Simulates physical properties like mass and velocity for interaction with the physics system.
+  - `start(collision: ICollision): void`
 
-This interface integrates components for positioning, collision detection, and physics simulation in a game or simulation system.
+    - **Description:** Initiates the collision detection process using the provided collision object.
+    - **Behavior:** This method delegates the start of collision detection to the specified collision algorithm.
+    - **Returns:** Nothing.
 
-## ICollision
+  - `update(collision: ICollision): void`
 
-Interface represents a collision between two entities, `object1` and `object2`, both of type `ICollisionEntity`.
+    - **Description:** Updates the collision state by checking if the specified collision is currently occurring.
+    - **Behavior:** Retrieves the collision key and invokes the appropriate callback based on the collision state.
+    - **Returns:** Nothing.
 
-It also includes two corresponding rectangular bounds, `rect1` and `rect2`, of type `IRect`, which define the areas where the collision occurs.
+  - `subscribe(collision: ICollision, collisionCallback: ICollisionCallback, noCollisionCallback: ICollisionCallback): void`
 
-## ICollisionCallback
+    - **Description:** Registers callback functions to be executed when a collision occurs or when there is no collision.
+    - **Behavior:** Stores the callbacks in maps using a unique key derived from the collision objects.
+    - **Returns:** Nothing.
 
-Interface defines a function that takes an `ICollision` object as a parameter and returns `void`.  
-It is used as a callback to handle collision events between two entities.
+  - `draw(collision: ICollision): void`
+    - **Description:** Renders the collision object using the specified collision algorithm.
+    - **Behavior:** This method is a direct call to the drawing method of the collision algorithm.
+    - **Returns:** Nothing.
 
-## ICollisionAlgorithm
+- **Key Properties:**
 
-Interface defines the structure for a collision detection algorithm. It includes three methods:
+  - `_collisionCallbacks`
 
-- `start`: Initializes or processes the start of a collision.
-- `isColliding`: Returns a boolean indicating if a collision is occurring.
-- `draw`: Visualizes the collision.
+    - **Description:** A map storing callbacks for when a collision is detected.
+    - **Behavior:** Each entry uses a unique key for identifying the specific collision scenario.
 
-This interface provides a framework for managing and evaluating collisions between entities.
+  - `_noCollisionCallbacks`
+    - **Description:** A map storing callbacks for when no collision is detected.
+    - **Behavior:** Similar to `_collisionCallbacks`, it uses keys to manage specific no-collision scenarios.
 
-## CollisionDetector
+---
 
-The class is responsible for managing collision detection and handling in a system. Here's a brief overview of its functionality:
+### **3. Usage Examples**
 
-- **Constructor**: Takes an `ICollisionAlgorithm` instance to handle the specifics of collision detection and visualization.
-- **`start`**: Initializes the collision process using the provided collision algorithm.
-- **`update`**: Checks if a collision is occurring and triggers the appropriate callback based on whether a collision is detected.
-- **`subscribe`**: Registers callbacks to be called when a collision occurs or stops occurring.
-- **`draw`**: Uses the collision algorithm to visualize the collision.
+- **Example 1:**
+  Here’s how to create a collision detector and use it to subscribe to collision events:
 
-The class maintains two maps of callbacks: one for when a collision is detected and one for when no collision is detected, identified by a unique key generated from the involved entities.
+  ```typescript
+  const collisionAlgorithm: ICollisionAlgorithm = ...; // instantiate your collision algorithm
+  const collisionDetector = new CollisionDetector(collisionAlgorithm);
+
+  const collision: ICollision = ...; // create or get your collision object
+
+  collisionDetector.subscribe(
+      collision,
+      (collision) => { console.log('Collision detected!', collision); },
+      (collision) => { console.log('No collision!', collision); }
+  );
+
+  collisionDetector.start(collision);
+  collisionDetector.update(collision);
+  ```
+
+- **Example 2 (Optional):**
+  Drawing the collision state after checking for collisions:
+
+  ```typescript
+  collisionDetector.update(collision)
+  collisionDetector.draw(collision)
+  ```
+
+---
+
+### **4. Dependencies and Interactions**
+
+- **Dependencies:**
+
+  - `ICollision`: Represents the collision data structure.
+  - `ICollisionAlgorithm`: Interface for collision detection algorithms.
+  - `ICollisionCallback`: Interface for collision callback functions.
+
+- **Interactions with Other Classes:**
+  - The `CollisionDetector` interacts with a provided `ICollisionAlgorithm` to perform the actual collision checks and rendering. It also manages the state through the use of callback functions defined in `ICollisionCallback`.
+
+---
+
+### **5. Limitations and Assumptions**
+
+- **Known Limitations:**
+  - The class assumes that collisions are checked and updated in a single-threaded context. Concurrent access might lead to race conditions.
+- **Assumptions:**
+  - It assumes that the `ICollision` objects being passed in are properly initialized and validated before being used.
+
+---
+
+### **6. Additional Notes (Optional)**
+
+- This class can be extended or modified to support additional features, such as handling multiple collision algorithms or integrating with physics engines for more complex interactions. Consider version compatibility when integrating with different versions of the `ICollision`, `ICollisionAlgorithm`, or `ICollisionCallback` interfaces.
+
+---
