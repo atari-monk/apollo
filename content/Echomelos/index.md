@@ -1,5 +1,8 @@
 ### Apollo\Echomelos
 
+Point of this is to be repository for Chatgpt notes.  
+It is not worked over, so it may be considered raw content.
+
 #### Coding
 
 1. [Improvement](Improvement.md)
@@ -39,3 +42,5 @@
 #### Art
 
 1. ['Married with Childern'](Married_Show.md)
+
+### [Learning Adventure](Learning_Adventure/index.md)

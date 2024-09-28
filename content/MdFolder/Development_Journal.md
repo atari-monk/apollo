@@ -121,3 +121,9 @@ x hour xx minutes
 1. Renaming file structure. Put index into it.  
    From strorage001->folder001->file001.md to names from actuall content.  
    Fixed bumch of issues resulted and more. Page looks and feels better.
+
+### 28
+
+17:45 - 18:15, 00:10 - 
+
+1. Clear chatgpt history by moving needed one to Echomellos.
