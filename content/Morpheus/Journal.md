@@ -385,12 +385,12 @@ Feeling: bad, Productivity: terrible confusion.
 
 14:14 - 16:17
 
-1. Separate CollisionBoxRenderer 0.0.1 from DebugRenderer.  
-2. Introduce scene football 4.0.0.  
+1. Separate CollisionBoxRenderer 0.0.1 from DebugRenderer.
+2. Introduce scene football 4.0.0.
 3. Separate DrawDirection 1.0.0 from DebugRenderer.
 
 ### 28
 
 14:35 - 16:00, 16:37 - 17:44
 
-1. 
+1. Document Collision in version 1.0.0.

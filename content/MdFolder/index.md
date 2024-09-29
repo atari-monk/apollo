@@ -2,7 +2,7 @@
 
 ## Project
 
-1. [Development Journal](Development_Journal.md)
+1. [Development Journal](Journal.md)
 2. [MdFolder](MdFolder.md)
 3. [Github Pages](Github_Pages.md)
 
