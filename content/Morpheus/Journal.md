@@ -394,3 +394,9 @@ Feeling: bad, Productivity: terrible confusion.
 14:35 - 16:00, 16:37 - 17:44
 
 1. Document Collision in version 1.0.0.
+
+### 29
+
+20:38 - 00:22
+
+1. Added logger as dependency to system class. That ment updating 80 system classes.
