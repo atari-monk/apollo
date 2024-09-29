@@ -124,6 +124,12 @@ x hour xx minutes
 
 ### 28
 
-17:45 - 18:15, 00:10 - 
+17:45 - 18:15, 00:10 - 01:00
+
+1. Clear chatgpt history by moving needed one to Echomellos.
+
+### 29
+
+14:20 - 15:36
 
 1. Clear chatgpt history by moving needed one to Echomellos.
