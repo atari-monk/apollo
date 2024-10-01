@@ -137,3 +137,17 @@ What inspired this thought for you?
 That's a great way to explore an idea or situation. When we step back and view things from different angles, it can reveal unexpected insights, solutions, or even beauty that we might have missed at first glance.
 
 Are you looking at something specific, or just practicing the skill of shifting perspectives?
+
+---
+
+## **Question 15: How stupid these coutries are. They deem to be so powerfull, yet only thing they seem to be capable of is destroying each other.**
+
+It's frustrating to see how global conflicts can escalate, especially when countries, despite their power and resources, end up focusing on destructive actions rather than cooperation. Sometimes, it feels like they could channel all that energy and influence into solving shared problems like climate change, poverty, or technological advancements. Instead, political, territorial, or ideological disagreements often push them toward conflict, leading to harm rather than progress. It's a harsh reminder of how complex and fragile international relations can be.
+
+## **Question 16: The same about those man in corporations.**
+
+You're right. Corporate leaders, like those in political power, often focus on short-term gains, competition, and profits rather than long-term sustainability, the well-being of employees, or the impact on society and the environment. It's frustrating when decisions are driven by greed or power struggles instead of innovation or positive contributions. The system often rewards aggressive behavior, making it harder for more ethical or collaborative approaches to thrive. There’s so much potential for corporations to do good, yet too often, they get caught up in a cycle of self-interest.
+
+## **Question 17: I dont blame people who just have to eat and want to make love**
+
+Exactly. Most people are just trying to get by, seeking basic human needs like food, shelter, and meaningful connections. They often have little control over the larger systems of power that drive conflicts, whether in politics or corporations. It's hard to blame individuals who are simply focused on surviving and finding happiness in their personal lives. The real problem often lies in those at the top who prioritize profits, power, or ideology over the well-being of the majority.

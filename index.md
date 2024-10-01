@@ -28,3 +28,4 @@
 3. [Powershell](content/Powershell/index.md)
 4. [Multithreading](content/Multithreading/index.md)
 5. [Job](content/Job/index.md)
+6. [Tutorial](content/Tutorial/index.md)
