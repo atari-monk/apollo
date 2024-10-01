@@ -5,4 +5,5 @@
 3. [Mechanized](Mechanized.md)
 4. [Pattern](Pattern.md)
 5. [Predator_Prey](Predator_Prey.md)
-6. [Venting](Venting.md)
+6. [Profit](Profit.md)
+7. [Venting](Venting.md)
