@@ -400,3 +400,12 @@ Feeling: bad, Productivity: terrible confusion.
 20:38 - 00:22
 
 1. Added logger as dependency to system class. That ment updating 80 system classes.
+
+## 2024-10
+
+### 1
+
+22:41 - 00:20
+
+1. Documentation for ecs, system api, System base class, CanvasScaler system.  
+   Project scripts logging goals and steps.
