@@ -409,3 +409,9 @@ Feeling: bad, Productivity: terrible confusion.
 
 1. Documentation for ecs, system api, System base class, CanvasScaler system.  
    Project scripts logging goals and steps.
+
+### 2
+
+22:38 -
+
+1.
