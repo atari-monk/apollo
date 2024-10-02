@@ -412,6 +412,6 @@ Feeling: bad, Productivity: terrible confusion.
 
 ### 2
 
-22:38 -
+22:38 - 23:44
 
-1.
+1. Documentation, refactor, script.
