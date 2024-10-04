@@ -40,3 +40,7 @@ Knowledge
 4. [Multithreading](content/Multithreading/index.md)
 5. [Job](content/Job/index.md)
 6. [Tutorial](content/Tutorial/index.md)
+
+## Action
+
+1. [Diy](content/Diy/index.md)
