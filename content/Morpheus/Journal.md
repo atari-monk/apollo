@@ -406,18 +406,15 @@ Feeling: bad, Productivity: terrible confusion.
 ### 1
 
 22:41 - 00:20
-
-1. Documentation for ecs, system api, System base class, CanvasScaler system.  
-   Project scripts logging goals and steps.
+Documentation for ecs, system api, System base class, CanvasScaler system.  
+Project scripts logging goals and steps.
 
 ### 2
 
 22:38 - 23:44
-
-1. Documentation, refactor, script.
+Documentation, refactor, script.
 
 ### 4
 
-18:08 - 19:04
-
-1. Documentation.
+18:08 - 19:04, 22:53 - 00:14
+Documentation.

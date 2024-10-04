@@ -887,6 +887,89 @@
           "Hours": 2,
           "Minutes": 3
         }
+      },
+      {
+        "Day": "28",
+        "Intervals": [
+          {
+            "Start": "14:35",
+            "End": "16:00"
+          },
+          {
+            "Start": "16:37",
+            "End": "17:44"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "29",
+        "Intervals": [
+          {
+            "Start": "20:38",
+            "End": "00:22"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      }
+    ]
+  },
+  {
+    "Year": "2024",
+    "Month": "10",
+    "Total": {
+      "Hours": 0,
+      "Minutes": 0
+    },
+    "Days": [
+      {
+        "Day": "1",
+        "Intervals": [
+          {
+            "Start": "22:41",
+            "End": "00:20"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "2",
+        "Intervals": [
+          {
+            "Start": "22:38",
+            "End": "23:44"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
+      },
+      {
+        "Day": "4",
+        "Intervals": [
+          {
+            "Start": "18:08",
+            "End": "19:04"
+          },
+          {
+            "Start": "22:53",
+            "End": "00:14"
+          }
+        ],
+        "Total": {
+          "Hours": 0,
+          "Minutes": 0
+        }
       }
     ]
   }
