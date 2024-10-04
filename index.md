@@ -10,12 +10,14 @@
 4. [Helios](content/Helios/index.md)
 5. [MdApi](content/MdApi/index.md)
 6. [AddressApi](content/AddressApi/index.md)
+7. [Script](content/Script/index.md)
 
 ## Apollo
 
 1. [Chronologos](content/Chronologos/index.md)
 2. [Listalogos](content/Listalogos/index.md)
 3. [Echomelos](content/Echomelos/index.md)
+4. [Database](content/Database/index.md)
 
 ## Atlas
 
