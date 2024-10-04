@@ -486,8 +486,8 @@
     "Year": "2024",
     "Month": "09",
     "Total": {
-      "Hours": 84,
-      "Minutes": 58
+      "Hours": 91,
+      "Minutes": 14
     },
     "Days": [
       {
@@ -901,8 +901,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 2,
+          "Minutes": 32
         }
       },
       {
@@ -914,8 +914,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 3,
+          "Minutes": 44
         }
       }
     ]
@@ -924,8 +924,8 @@
     "Year": "2024",
     "Month": "10",
     "Total": {
-      "Hours": 0,
-      "Minutes": 0
+      "Hours": 5,
+      "Minutes": 2
     },
     "Days": [
       {
@@ -937,8 +937,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 1,
+          "Minutes": 39
         }
       },
       {
@@ -950,8 +950,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 1,
+          "Minutes": 6
         }
       },
       {
@@ -967,8 +967,8 @@
           }
         ],
         "Total": {
-          "Hours": 0,
-          "Minutes": 0
+          "Hours": 2,
+          "Minutes": 17
         }
       }
     ]
