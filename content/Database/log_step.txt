@@ -1,0 +1,9 @@
+2024-10-01 23:22:39 - Documented ECS System core, interfaces, and System base class.
+2024-10-01 23:54:10 - Created scripts log_step and log_goal to guide the process.
+2024-10-02 00:15:29 - Documentation of ecs system CanvasScaler.
+2024-10-02 23:04:15 - Updated class documantation templates.
+2024-10-02 23:15:00 - Added KeyboardMapping system documentation.
+2024-10-02 23:33:31 - Added CollisionBoxRendererV4 system documentation.
+2024-10-02 23:36:24 - Added script for sleep watch.
+2024-10-02 23:40:43 - Refactored, tested CollisionBoxRendererV4 system.
+2024-10-05 23:53:39 - New repo for scripts. Scripts testing.
