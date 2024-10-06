@@ -7,3 +7,7 @@
 2024-10-02 23:36:24 - Added script for sleep watch.
 2024-10-02 23:40:43 - Refactored, tested CollisionBoxRendererV4 system.
 2024-10-05 23:53:39 - New repo for scripts. Scripts testing.
+2024-10-06 16:20:50 - Create scene with ball/field collision.
+2024-10-06 16:28:33 - Copy field data.
+2024-10-06 20:51:36 - Seen that only last box of field works in collision. Why ?
+2024-10-07 00:38:47 - Fixed bugs introduced to ball field collision.

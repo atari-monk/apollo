@@ -1,0 +1,3 @@
+1. Create scene with ball/field collision.
+2. Copy field data.
+3. Find out why it works with two box. Why it dosent work for field ?
