@@ -11,3 +11,9 @@
 2024-10-06 16:28:33 - Copy field data.
 2024-10-06 20:51:36 - Seen that only last box of field works in collision. Why ?
 2024-10-07 00:38:47 - Fixed bugs introduced to ball field collision.
+2024-10-07 14:05:21 - Integrated ball/field collision with football scene 4.0.0.
+2024-10-07 17:36:11 - Ball gates collision for version 4.0.0.
+2024-10-07 21:55:14 - Integrated Ball/Gates collision to scene football 4.0.0.
+2024-10-08 17:24:41 - Merged animator renderers.
+2024-10-08 18:33:27 - Refactoring, removed a lot of versions for SpriteAnimator.
+2024-10-09 01:06:25 - Animator rendering scenes tests.

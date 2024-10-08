@@ -1,1 +1,6 @@
 2024-10-01 23:52:14 - Ball and Field Collision Detection Mechanism for Version 4.0.0.
+2024-10-07 13:49:48 - Integrate Ball/Field Collision to scene football 4.0.0.
+2024-10-07 14:07:16 - Ball/Gates collision for version 4.0.0.
+2024-10-07 20:35:22 - Integrate Ball/Gates collision to scene football 4.0.0.
+2024-10-08 15:03:42 - Merge animator renderers.
+2024-10-08 19:00:54 - Fix, order, merge, clean up, document scenes. 

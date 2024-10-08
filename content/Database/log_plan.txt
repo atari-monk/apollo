@@ -1,3 +1,12 @@
 1. Create scene with ball/field collision.
 2. Copy field data.
 3. Find out why it works with two box. Why it dosent work for field ?
+---
+1. Check current scenes with player ball collision.
+2. Integrate ball/field collision with football scene 4.0.0.
+3. Ball gates collision for version 4.0.0.
+4. Integrate Ball/Gates collision to scene football 4.0.0.
+---
+1. 2024-10-08 15:05 - Merge animator renderers.
+---
+1. 2024-10-08 19:00:54 - Fix, order, merge, clean up, document scenes. 
