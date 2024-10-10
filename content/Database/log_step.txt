@@ -20,3 +20,6 @@
 2024-10-09 11:53:10 - Upgraded animator test scene.
 2024-10-09 15:59:35 - Upgraded animator scene more. Fix documentation a bit, not all.
 2024-10-09 22:59:01 - Scene testing collision box renderer. Fixed scale bug.
+2024-10-10 13:49:52 - Ecs, Method to get components.
+2024-10-10 16:52:58 - Flip box in collison box renderer scene.
+2024-10-10 21:03:52 - Started removing/merging collision algorithm to one.
