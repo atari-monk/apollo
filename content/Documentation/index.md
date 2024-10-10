@@ -11,6 +11,7 @@ After this paste code to get documentation.
 2. [Interface Group](./Prompt/Interface_Group.md)
 3. [Function Group](./Prompt/Function_Group.md)
 4. [Scene](./Prompt/Scene.md)
+5. [Script](./Prompt/Script.md)
 
 ## Template
 
@@ -20,6 +21,7 @@ See what is in template.
 2. [Interface Group](./Template/Interface_Group.md)
 3. [Function Group](./Template/Function_Group.md)
 4. [Scene](./Template/Scene.md)
+5. [Script](./Template/Script.md)
 
 ## Reflection
 

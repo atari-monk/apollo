@@ -2,7 +2,7 @@
 
 Prompt: **Given this template in next prompt i will provide a scene description, fill template with it to produce documentation.**
 
-```typescript
+```markdown
 ### **Scene Name:** `YourSceneName`
 
 ---
