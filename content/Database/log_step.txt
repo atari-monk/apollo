@@ -23,3 +23,5 @@
 2024-10-10 13:49:52 - Ecs, Method to get components.
 2024-10-10 16:52:58 - Flip box in collison box renderer scene.
 2024-10-10 21:03:52 - Started removing/merging collision algorithm to one.
+2024-10-11 20:31:20 - Strugling to test all collision cases with new merged collision classes.
+2024-10-11 23:26:50 - Refactor renderers methods for sprites and vector, introduce transformations methods.
