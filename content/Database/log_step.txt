@@ -26,3 +26,4 @@
 2024-10-11 20:31:20 - Strugling to test all collision cases with new merged collision classes.
 2024-10-11 23:26:50 - Refactor renderers methods for sprites and vector, introduce transformations methods.
 2024-10-14 01:43:28 - Test player ball collison scene, only collision boxes.
+2024-10-15 00:58:36 - Player Ball collision scene. Py script to edit system json with ui.
