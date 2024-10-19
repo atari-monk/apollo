@@ -27,3 +27,6 @@
 2024-10-11 23:26:50 - Refactor renderers methods for sprites and vector, introduce transformations methods.
 2024-10-14 01:43:28 - Test player ball collison scene, only collision boxes.
 2024-10-15 00:58:36 - Player Ball collision scene. Py script to edit system json with ui.
+2024-10-16 22:51:14 - 4 or 3 combos for combo menu fix.
+2024-10-16 22:51:24 - Cards playground.
+2024-10-17 00:48:12 - Card sprite deck asset and animator scene.
