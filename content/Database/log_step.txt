@@ -30,3 +30,4 @@
 2024-10-16 22:51:14 - 4 or 3 combos for combo menu fix.
 2024-10-16 22:51:24 - Cards playground.
 2024-10-17 00:48:12 - Card sprite deck asset and animator scene.
+2024-10-19 22:42:19 - Prototyping coin toss. New page for playground tests list.

@@ -5,3 +5,6 @@
 2024-10-08 15:03:42 - Merge animator renderers.
 2024-10-08 19:00:54 - Fix, order, merge, clean up, document scenes. 
 2024-10-14 00:28:52 - Test collision scenes.
+2024-10-19 17:49:27 - Make coint toss. Publish. Reward: Tim Dlon Show.
+2024-10-20 16:51:55 - Refactor Morpheus
+2024-10-20 16:52:12 - Refactor Morpheus. Reward is level of RDR2.
