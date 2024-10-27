@@ -13,6 +13,7 @@ Coding
 5. [MdApi](content/MdApi/index.md)
 6. [AddressApi](content/AddressApi/index.md)
 7. [Script](content/Script/index.md)
+8. [Titan](content/Titan/index.md)
 
 ## Apollo
 
