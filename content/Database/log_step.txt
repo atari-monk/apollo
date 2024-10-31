@@ -31,3 +31,7 @@
 2024-10-16 22:51:24 - Cards playground.
 2024-10-17 00:48:12 - Card sprite deck asset and animator scene.
 2024-10-19 22:42:19 - Prototyping coin toss. New page for playground tests list.
+2024-10-29 17:10:46 - Createad code form. Python form that saves data to json. And viewer variant. 2 hr. :(
+2024-10-29 19:09:00 - Refactored canvas_scaling scene, simplified and documented.
+2024-10-31 11:54:14 - Update script data of log_project. Add projects.
+2024-10-31 12:38:45 - Moved script from engine to script and updrade/fix it.
