@@ -1,6 +1,6 @@
-# Generated Code
+# Generated
 
-## Let's write game engine in c++
+# Question: Let's write game engine in c++
 
 Writing a game engine in C++ is a large and detailed project, but we can break it down into key components. A typical game engine includes systems for rendering, physics, input, and an entity-component system (ECS). Let's start by setting up the structure for the core of the engine and implementing some basic functionality like the ECS and a simple renderer.
 
@@ -248,7 +248,128 @@ add_executable(GameEngine ${SOURCES})
 
 Would you like to start by implementing a specific system, such as the rendering or ECS with JSON configuration?
 
-## Set up more tests
+# Does it make sense to unit test each of this class now?
+
+At this stage, it would make sense to start unit testing some of your classes, especially the more modular parts like the **ECS** (Entity Component System). Unit testing will help catch bugs early as you build out your engine, ensuring the behavior of individual components works as expected. Here's a breakdown of which parts make sense to test now:
+
+### What Makes Sense to Unit Test Now
+
+1. **ECS (Entity and Component System)**
+   - **Entity Class**: Test adding components to an entity and updating them.
+   - **Component Class**: Mock or create simple components and test their interaction with entities.
+2. **Engine Core** (basic testing)
+
+   - Test the basic game loop (`Engine::Run`), and ensure that the update/render cycles function correctly. However, testing a full game loop in a unit test is usually more of an integration test.
+
+3. **Renderer** (later integration testing)
+   - Rendering tests, especially involving graphical output, are difficult to unit test properly. They generally require integration or visual tests. You could mock some of the renderer's dependencies, but for now, testing things like initializing and shutting down the renderer makes sense for basic functional tests.
+
+### How to Implement Unit Tests
+
+You can use a testing framework like **Google Test** for C++ to implement unit tests. Here's an example of how you could set up a unit test for the `Entity` class:
+
+#### Install Google Test (CMake)
+
+First, you can install Google Test using CMake. Update your `CMakeLists.txt` to include Google Test:
+
+```cmake
+cmake_minimum_required(VERSION 3.10)
+project(GameEngine)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Include directories
+include_directories(include)
+
+# Sources for the game engine
+file(GLOB SOURCES "src/*.cpp" "src/Engine/**/*.cpp")
+
+# Add Google Test
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/refs/tags/release-1.11.0.zip
+)
+FetchContent_MakeAvailable(googletest)
+
+enable_testing()
+
+# Link Google Test to the project
+add_executable(GameEngine ${SOURCES})
+add_executable(GameEngineTest tests/test_main.cpp tests/test_entity.cpp)
+
+target_link_libraries(GameEngineTest gtest gtest_main)
+```
+
+#### Example Test for `Entity`
+
+Create a folder `tests/` and add a file `test_entity.cpp`:
+
+```cpp
+#include "gtest/gtest.h"
+#include "Engine/ECS/Entity.h"
+#include "Engine/ECS/Component.h"
+
+// Mock Component to test the ECS
+class MockComponent : public Component {
+public:
+    bool updated = false;
+
+    void Update() override {
+        updated = true;
+    }
+};
+
+// Test that an entity can have a component added and update it
+TEST(EntityTest, AddAndUpdateComponent) {
+    Entity entity;
+    auto component = std::make_shared<MockComponent>();
+
+    entity.AddComponent(component);
+    entity.Update();
+
+    EXPECT_TRUE(component->updated);
+}
+```
+
+#### Test Runner (test_main.cpp)
+
+Create a `test_main.cpp` file to set up and run the tests:
+
+```cpp
+#include "gtest/gtest.h"
+
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
+```
+
+### Running Tests
+
+Once you have added the tests, you can run them using CMake:
+
+```bash
+mkdir build
+cd build
+cmake ..
+make
+./GameEngineTest
+```
+
+### Focus on Testing:
+
+- **Core Logic**: Test how entities and components interact.
+- **Data Management**: Ensure components are added, updated, and removed correctly.
+- **Basic Engine Functionality**: Test initialization, update loops, and shutdown for correctness.
+
+### Avoid Testing (for now):
+
+- **Rendering**: Renderers involve graphical output, which is not ideal for unit tests. Integration tests or visual tests are better suited for this.
+
+Would you like to set up more tests or add any other system first?
+
+# Set up more tests
 
 Let’s set up additional tests for other parts of the game engine. We will focus on testing the **Engine**, **Renderer**, and extending tests for the **ECS** system. Here’s how to expand our testing setup.
 

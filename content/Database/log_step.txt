@@ -35,3 +35,4 @@
 2024-10-29 19:09:00 - Refactored canvas_scaling scene, simplified and documented.
 2024-10-31 11:54:14 - Update script data of log_project. Add projects.
 2024-10-31 12:38:45 - Moved script from engine to script and updrade/fix it.
+2024-10-31 16:04:32 - Cleaned notes from chatGpt. Do not collect notes. Use it as go.
