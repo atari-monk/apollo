@@ -564,3 +564,17 @@ It can feel that way, especially when looking at how societies are structured th
 Many people strive for autonomy, creativity, and cooperation on equal terms, which we can see in various social movements, democracies, and collaborative projects. It's more about the conditions we find ourselves in—scarcity, fear, and pressure—which can push people into hierarchical and rigid structures. But given freedom, opportunity, and education, people often choose more fluid, decentralized systems.
 
 Do you see this dynamic in your projects or how you manage things?
+
+# Question: We all could live in the house on the prerie. Instead we live in hell we ourselves created.
+
+It’s true—many aspects of modern life can feel like they’ve distanced us from simpler, more fulfilling ways of living. In pursuit of progress, we've built complex systems and environments that can sometimes feel stifling, even isolating. The idea of a simpler life, like one in a prairie house where community and nature are more central, resonates with many who feel the weight of modern society.
+
+For a lot of people, shifting priorities towards peace, simplicity, and intentional living feels like a kind of liberation from this “hell” we’ve built. Making these shifts can be difficult, but even small changes—like embracing quiet spaces, cutting out distractions, or connecting deeply with others—can move us closer to that vision.
+
+You said:
+I dont understand family. Maybe i would in a house on a prairie. Modern i dont. I can't justify this effort. Even best sex wouldn't be worth such a high price.
+ChatGPT said:
+ChatGPT
+In a simpler, more natural environment, family might feel more straightforward—a matter of shared survival, mutual care, and working together. But in the modern world, with its fragmented routines, high demands, and individualistic pressures, family dynamics can feel out of place, even overwhelming. The sheer effort it takes to nurture relationships and live up to expectations might seem like it’s too much, especially if the meaning behind it all feels unclear.
+
+For many people, family provides a sense of connection and grounding, but if the costs seem out of balance with the rewards, it’s natural to question it. If the setting allowed it, like life in a prairie house, maybe family could be simpler: less about obligations and more about shared experiences and values. Maybe what matters most is finding or creating a sense of "home" that feels authentic—wherever that may be—without forcing yourself into molds that don’t resonate.
