@@ -117,3 +117,5 @@
 2024-10-31 15:35 Apollo (active)
 2024-10-31 16:04 Apollo (off)
 2024-10-31 17:13 Warehouse (active)
+2024-10-31 19:00 Warehouse (off)
+2024-11-01 10:53 Thales (active)
