@@ -309,3 +309,37 @@ npm start
 ```
 
 This setup gives you a full-stack CRUD app where you can add, edit, view, and delete users using a React frontend and a TypeScript-Express backend connected to MongoDB.
+
+## After testing.
+
+Worked after some tweaks.
+For file system commands:
+
+```bash
+mkdir folder
+```
+
+```bash
+ni ./folder/fileName
+```
+
+Mongoose dosent need config data no more
+
+```typescript
+mongoose
+  .connect(process.env.MONGO_URI || '')
+  .then(() => console.log('MongoDB connected'))
+  .catch((err) => console.log(err))
+```
+
+Resolve problem with error types
+
+```typescript
+;(error as Error).message
+```
+
+Create mongodb atlas.
+Watch if .env file is loaded.
+Do some error checking code.
+
+For some reason create react app worked only after system restart.
